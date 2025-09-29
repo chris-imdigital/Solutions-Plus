@@ -1446,6 +1446,82 @@
         "default": "scheme-5"
       },
       {
+        "type": "color_scheme",
+        "id": "badge_new_color_scheme",
+        "label": "New badge color scheme",
+        "default": "scheme-2"
+      },
+      {
+        "type": "color_scheme",
+        "id": "badge_bestseller_color_scheme",
+        "label": "Bestseller badge color scheme",
+        "default": "scheme-3"
+      },
+      {
+        "type": "color_scheme",
+        "id": "badge_limited_color_scheme",
+        "label": "Limited badge color scheme",
+        "default": "scheme-6"
+      },
+      {
+        "type": "header",
+        "content": "Tag badges"
+      },
+      {
+        "type": "checkbox",
+        "id": "badge_new_enabled",
+        "label": "Enable New badge",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "badge_new_trigger_tag",
+        "label": "New badge trigger tag",
+        "default": "New"
+      },
+      {
+        "type": "text",
+        "id": "badge_new_label",
+        "label": "New badge label",
+        "default": "New"
+      },
+      {
+        "type": "checkbox",
+        "id": "badge_bestseller_enabled",
+        "label": "Enable Bestseller badge",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "badge_bestseller_trigger_tag",
+        "label": "Bestseller badge trigger tag",
+        "default": "Bestseller"
+      },
+      {
+        "type": "text",
+        "id": "badge_bestseller_label",
+        "label": "Bestseller badge label",
+        "default": "Bestseller"
+      },
+      {
+        "type": "checkbox",
+        "id": "badge_limited_enabled",
+        "label": "Enable Limited badge",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "badge_limited_trigger_tag",
+        "label": "Limited badge trigger tag",
+        "default": "Limited"
+      },
+      {
+        "type": "text",
+        "id": "badge_limited_label",
+        "label": "Limited badge label",
+        "default": "Limited"
+      },
+      {
         "type": "header",
         "content": "t:names.typography"
       },
