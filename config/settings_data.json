@@ -47,7 +47,7 @@
     "badge_corner_radius": 100,
     "badge_sale_color_scheme": "scheme-1",
     "badge_sold_out_color_scheme": "scheme-3",
-    "badge_new_color_scheme": "scheme-4",
+    "badge_new_color_scheme": "scheme-5",
     "badge_bestseller_color_scheme": "scheme-5",
     "badge_limited_enabled": true,
     "badge_text_transform": "none",
@@ -272,7 +272,7 @@
       },
       "scheme-5": {
         "settings": {
-          "background": "#ec4837f0",
+          "background": "#ec4837",
           "foreground_heading": "#ffffff",
           "foreground": "#ffffff",
           "primary": "#ffffff",
