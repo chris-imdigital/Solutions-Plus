@@ -49,6 +49,7 @@
     "badge_sold_out_color_scheme": "scheme-3",
     "badge_new_color_scheme": "scheme-5",
     "badge_bestseller_color_scheme": "scheme-4",
+    "badge_limited_color_scheme": "scheme-6",
     "badge_new_label": "New",
     "badge_bestseller_label": "Bestseller",
     "badge_limited_enabled": true,
@@ -313,9 +314,9 @@
       },
       "scheme-6": {
         "settings": {
-          "background": "rgba(0,0,0,0)",
+          "background": "#e6e6fa",
           "foreground_heading": "#ffffff",
-          "foreground": "#ffffff",
+          "foreground": "#333333",
           "primary": "#ffffff",
           "primary_hover": "#ffffffb0",
           "border": "#e6e6e6",
