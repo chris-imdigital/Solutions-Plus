@@ -1,0 +1,444 @@
+{% doc %}
+  @prompt
+    Create a collection hero banner block with a large featured image, collection title overlay, and optional description text that can be customized for each collection
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .collection-hero-{{ ai_gen_id }} {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: {{ block.settings.banner_height }}px;
+    display: flex;
+    align-items: {{ block.settings.text_alignment_vertical }};
+    justify-content: {{ block.settings.text_alignment_horizontal }};
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .collection-hero__image-container-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .collection-hero__image-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: {{ block.settings.image_position }};
+  }
+
+  .collection-hero__image-container-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #f4f4f4;
+  }
+
+  .collection-hero__overlay-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: {{ block.settings.overlay_color }};
+    opacity: {{ block.settings.overlay_opacity | divided_by: 100.0 }};
+    z-index: 2;
+  }
+
+  .collection-hero__content-{{ ai_gen_id }} {
+    position: relative;
+    z-index: 3;
+    text-align: {{ block.settings.text_alignment }};
+    padding: {{ block.settings.content_padding }}px;
+    max-width: {{ block.settings.content_max_width }}px;
+  }
+
+  .collection-hero__title-{{ ai_gen_id }} {
+    margin-top: 0;
+    margin-bottom: {{ block.settings.space_between_elements }}px;
+    color: {{ block.settings.title_color }};
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: {{ block.settings.title_weight }};
+    line-height: 1.2;
+    {% if block.settings.title_text_shadow %}
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    {% endif %}
+  }
+
+  .collection-hero__description-{{ ai_gen_id }} {
+    color: {{ block.settings.description_color }};
+    font-size: {{ block.settings.description_size }}px;
+    line-height: 1.5;
+    {% if block.settings.description_text_shadow %}
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    {% endif %}
+  }
+
+  @media screen and (max-width: 749px) {
+    .collection-hero-{{ ai_gen_id }} {
+      height: {{ block.settings.banner_height_mobile }}px;
+    }
+
+    .collection-hero__title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.title_size | times: 0.7 }}px;
+    }
+
+    .collection-hero__description-{{ ai_gen_id }} {
+      font-size: {{ block.settings.description_size | times: 0.85 }}px;
+    }
+
+    .collection-hero__content-{{ ai_gen_id }} {
+      padding: {{ block.settings.content_padding | times: 0.7 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="collection-hero-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="collection-hero__image-container-{{ ai_gen_id }}">
+    {% if block.settings.use_collection_image and collection.image %}
+      <img
+        src="{{ collection.image | image_url: width: 2000 }}"
+        alt="{{ collection.title | escape }}"
+        class="collection-hero__image-{{ ai_gen_id }}"
+        width="{{ collection.image.width }}"
+        height="{{ collection.image.height }}"
+        loading="lazy"
+      >
+    {% elsif block.settings.image %}
+      <img
+        src="{{ block.settings.image | image_url: width: 2000 }}"
+        alt="{{ block.settings.image.alt | escape }}"
+        class="collection-hero__image-{{ ai_gen_id }}"
+        width="{{ block.settings.image.width }}"
+        height="{{ block.settings.image.height }}"
+        loading="lazy"
+      >
+    {% else %}
+      {{ 'collection-apparel-1' | placeholder_svg_tag }}
+    {% endif %}
+  </div>
+
+  {% if block.settings.show_overlay %}
+    <div class="collection-hero__overlay-{{ ai_gen_id }}"></div>
+  {% endif %}
+
+  <div class="collection-hero__content-{{ ai_gen_id }}">
+    <h1 class="collection-hero__title-{{ ai_gen_id }}">
+      {% if block.settings.custom_title != blank %}
+        {{ block.settings.custom_title }}
+      {% else %}
+        {{ collection.title }}
+      {% endif %}
+    </h1>
+
+    {% if block.settings.show_description %}
+      <div class="collection-hero__description-{{ ai_gen_id }}">
+        {% if block.settings.custom_description != blank %}
+          {{ block.settings.custom_description }}
+        {% elsif collection.description != blank %}
+          {{ collection.description }}
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection Hero",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_collection_image",
+      "label": "Use collection image",
+      "default": true,
+      "info": "If checked, the collection's image will be used. Otherwise, the custom image below will be used."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Custom image"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position",
+      "options": [
+        {
+          "value": "center center",
+          "label": "Center"
+        },
+        {
+          "value": "center top",
+          "label": "Top"
+        },
+        {
+          "value": "center bottom",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center center"
+    },
+    {
+      "type": "range",
+      "id": "banner_height",
+      "min": 200,
+      "max": 800,
+      "step": 20,
+      "unit": "px",
+      "label": "Banner height",
+      "default": 400
+    },
+    {
+      "type": "range",
+      "id": "banner_height_mobile",
+      "min": 100,
+      "max": 500,
+      "step": 20,
+      "unit": "px",
+      "label": "Mobile banner height",
+      "default": 300
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Overlay Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_overlay",
+      "label": "Show overlay",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Overlay opacity",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "text",
+      "id": "custom_title",
+      "label": "Custom title",
+      "info": "Leave blank to use collection title"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "Show description",
+      "default": true
+    },
+    {
+      "type": "richtext",
+      "id": "custom_description",
+      "label": "Custom description",
+      "info": "Leave blank to use collection description"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment_horizontal",
+      "label": "Horizontal position",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment_vertical",
+      "label": "Vertical position",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Middle"
+        },
+        {
+          "value": "flex-end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "content_padding",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Content padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "min": 400,
+      "max": 1200,
+      "step": 50,
+      "unit": "px",
+      "label": "Content max width",
+      "default": 800
+    },
+    {
+      "type": "range",
+      "id": "space_between_elements",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "label": "Space between title and description",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Title Style"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 20,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Title size",
+      "default": 42
+    },
+    {
+      "type": "select",
+      "id": "title_weight",
+      "label": "Title weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semibold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "checkbox",
+      "id": "title_text_shadow",
+      "label": "Add text shadow to title",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Description Style"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Description size",
+      "default": 16
+    },
+    {
+      "type": "checkbox",
+      "id": "description_text_shadow",
+      "label": "Add text shadow to description",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Hero"
+    }
+  ]
+}
+{% endschema %}
