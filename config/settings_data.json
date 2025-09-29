@@ -314,9 +314,9 @@
       },
       "scheme-6": {
         "settings": {
-          "background": "#e6e6fa",
+          "background": "#ffffff00",
           "foreground_heading": "#ffffff",
-          "foreground": "#333333",
+          "foreground": "#ffffff",
           "primary": "#ffffff",
           "primary_hover": "#ffffffb0",
           "border": "#e6e6e6",
