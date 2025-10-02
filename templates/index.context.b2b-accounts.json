@@ -24,6 +24,18 @@
           }
         }
       }
+    },
+    "product_list_qU3bEB": {
+      "settings": {
+        "collection": "b2b-home-page",
+        "horizontal_alignment": "flex-start",
+        "layout_type": "grid",
+        "section_width": "page-width",
+        "mobile_columns": "2",
+        "max_products": 2,
+        "columns": 2
+      },
+      "blocks": {}
     }
   }
 }
