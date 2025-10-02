@@ -12,5 +12,18 @@
   "context": {
     "market": "b2b-accounts"
   },
-  "sections": {}
+  "sections": {
+    "hero_jVaWmY": {
+      "settings": {
+        "image_1": "shopify://shop_images/71--vXxReJL._SL1488.jpg"
+      },
+      "blocks": {
+        "text_iXYWz6": {
+          "settings": {
+            "text": "<h5>Welcome to the B2B Store</h5>"
+          }
+        }
+      }
+    }
+  }
 }
