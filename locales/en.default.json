@@ -307,7 +307,7 @@
   "shopify": {
     "checkout": {
       "order_summary": {
-        "deferred_total_due_date_label_next": "Due Later"
+        "deferred_total_due_date_label_next": "Due later"
       }
     }
   }
