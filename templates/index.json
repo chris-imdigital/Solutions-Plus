@@ -804,14 +804,6 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "custom_liquid_jmVe7w": {
-                  "type": "custom-liquid",
-                  "name": "t:names.custom_liquid",
-                  "settings": {
-                    "custom_liquid": "{% for item in product.metafields.custom.bundle_deal.value %}\n  {{ item }}\n{% endfor %}"
-                  },
-                  "blocks": {}
-                },
                 "text_YXKcFG": {
                   "type": "text",
                   "name": "t:names.text",
@@ -879,7 +871,6 @@
                 }
               },
               "block_order": [
-                "custom_liquid_jmVe7w",
                 "text_YXKcFG",
                 "price_j39xpW",
                 "swatches_k9YMgz"
