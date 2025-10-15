@@ -44,13 +44,13 @@
           "settings": {
             "text": "{{ closest.collection.description }}",
             "width": "100%",
-            "max_width": "normal",
+            "max_width": "none",
             "alignment": "center",
-            "type_preset": "rte",
+            "type_preset": "custom",
             "font": "var(--font-body--family)",
             "font_size": "1rem",
             "line_height": "normal",
-            "letter_spacing": "normal",
+            "letter_spacing": "loose",
             "case": "none",
             "wrap": "pretty",
             "color": "var(--color-foreground)",
@@ -93,7 +93,7 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 36,
+        "padding-block-start": 48,
         "padding-block-end": 36
       }
     },
