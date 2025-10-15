@@ -658,6 +658,7 @@
             "product_list_text_qLCTNF": {
               "type": "_product-list-text",
               "name": "t:names.collection_title",
+              "disabled": true,
               "settings": {
                 "text": "<h3>{{ closest.collection.title }}</h3>",
                 "width": "fit-content",
@@ -687,7 +688,7 @@
               "settings": {
                 "label": "View all",
                 "collection": "{{ closest.collection }}",
-                "open_in_new_tab": false,
+                "open_in_new_tab": true,
                 "style_class": "button-secondary",
                 "width": "fit-content",
                 "custom_width": 100,
@@ -742,7 +743,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<p>{{ product.metafields.custom.bundle_deal.value }}</p>",
+                "text": "",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -803,6 +804,14 @@
                 "padding-inline-end": 0
               },
               "blocks": {
+                "custom_liquid_jmVe7w": {
+                  "type": "custom-liquid",
+                  "name": "t:names.custom_liquid",
+                  "settings": {
+                    "custom_liquid": "{% for item in product.metafields.custom.bundle_deal.value %}\n  {{ item }}\n{% endfor %}"
+                  },
+                  "blocks": {}
+                },
                 "text_YXKcFG": {
                   "type": "text",
                   "name": "t:names.text",
@@ -870,6 +879,7 @@
                 }
               },
               "block_order": [
+                "custom_liquid_jmVe7w",
                 "text_YXKcFG",
                 "price_j39xpW",
                 "swatches_k9YMgz"
