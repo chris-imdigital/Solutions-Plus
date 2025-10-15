@@ -43,7 +43,7 @@
     "type_line_height_h6": "display-loose",
     "page_width": "narrow",
     "card_hover_effect": "none",
-    "badge_position": "top-right",
+    "badge_position": "top-left",
     "badge_corner_radius": 100,
     "badge_sale_color_scheme": "scheme-1",
     "badge_sold_out_color_scheme": "scheme-3",
@@ -53,6 +53,7 @@
     "badge_new_label": "New",
     "badge_bestseller_label": "Bestseller",
     "badge_limited_enabled": true,
+    "badge_font_family": "accent",
     "badge_text_transform": "none",
     "primary_button_border_width": 0,
     "button_border_radius_primary": 14,
@@ -117,11 +118,6 @@
       },
       "13768625480086291342": {
         "type": "shopify://apps/forms/blocks/forms/8744a304-fcb1-4347-b211-bb6b4759a76a",
-        "disabled": false,
-        "settings": {}
-      },
-      "2369874457889669609": {
-        "type": "shopify://apps/rebolt-bundles/blocks/app-embed/0a9e67ff-0413-4374-921d-e70fb17c7dbc",
         "disabled": false,
         "settings": {}
       }
