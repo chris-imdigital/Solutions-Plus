@@ -52,6 +52,18 @@
       display: grid;
     }
   }
+
+  .pc-badge {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 2px 8px;
+    font-size: 12px;
+    line-height: 1.2;
+    border-radius: 9999px;
+    border: 1px solid rgba(0,0,0,.12);
+    background: rgba(0,0,0,.04);
+    white-space: nowrap;
+  }
 {% endstylesheet %}
 
 {% style %}
@@ -135,6 +147,16 @@
     ref="productCardLink"
   >
     {{ children }}
+    
+    {% liquid
+    assign bundle_deal = product.metafields.custom.bundle_deal
+    %}
+
+    {% if onboarding == false and bundle_deal != blank %}
+      <span class="pc-badge" aria-label="Bundle deal">
+        {{ bundle_deal | metafield_text }}
+      </span>
+    {% endif %}
   </a>
 </product-card>
 {%- if settings.transition_to_main_product -%}
