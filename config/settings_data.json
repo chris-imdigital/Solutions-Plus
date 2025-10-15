@@ -120,19 +120,10 @@
         "disabled": false,
         "settings": {}
       },
-      "15683396631634586217": {
-        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+      "2369874457889669609": {
+        "type": "shopify://apps/rebolt-bundles/blocks/app-embed/0a9e67ff-0413-4374-921d-e70fb17c7dbc",
         "disabled": false,
-        "settings": {
-          "button_color": "#063056",
-          "secondary_color": "#FFFFFF",
-          "ternary_color": "#647c72",
-          "button_icon": "team",
-          "button_text": "no_text",
-          "button_horizontal_position": "bottom_right",
-          "button_vertical_position": "lowest",
-          "greeting_message": "We're here to help. Let us know what questions you might have!"
-        }
+        "settings": {}
       }
     },
     "color_schemes": {
