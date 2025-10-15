@@ -195,6 +195,32 @@
                 "padding-inline-end": 0
               },
               "blocks": {
+                "text_rbTr6T": {
+                  "type": "text",
+                  "name": "t:names.text",
+                  "settings": {
+                    "text": "<p>{{ product.metafields.custom.bundle_deal.value }}</p>",
+                    "width": "fit-content",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "paragraph",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "color": "var(--color-foreground)",
+                    "background": true,
+                    "background_color": "#f5f5f5",
+                    "corner_radius": 50,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
                 "product_title_3QjUff": {
                   "type": "product-title",
                   "name": "t:names.product_title",
@@ -218,14 +244,6 @@
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                },
-                "custom_liquid_THAndD": {
-                  "type": "custom-liquid",
-                  "name": "t:names.custom_liquid",
-                  "settings": {
-                    "custom_liquid": "{{ product.metafields.custom.bundle_deal }}"
                   },
                   "blocks": {}
                 },
@@ -269,8 +287,8 @@
                 }
               },
               "block_order": [
+                "text_rbTr6T",
                 "product_title_3QjUff",
-                "custom_liquid_THAndD",
                 "price",
                 "swatches_xWhL7M"
               ]
