@@ -145,7 +145,7 @@
               "type": "_product-card-gallery",
               "settings": {
                 "product": "{{ closest.product }}",
-                "image_ratio": "portrait",
+                "image_ratio": "square",
                 "border": "none",
                 "border_width": 1,
                 "border_opacity": 100,
