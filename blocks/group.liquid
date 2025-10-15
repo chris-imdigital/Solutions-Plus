@@ -1,4 +1,7 @@
-
+{% assign bundle_deal = closest.product.metafields.custom.bundle_deal %}
+{% if bundle_deal != blank %}
+  <span class="pc-badge">{{ bundle_deal | metafield_text }}</span>
+{% endif %}
 
 {% capture children %}
   {% content_for 'blocks' %}
