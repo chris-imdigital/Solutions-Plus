@@ -609,7 +609,39 @@
         "title": "ਸਮੀਖਿਆ",
         "review_title": "ਆਪਣਾ ਆਰਡਰ ਪੂਰਾ ਕਰੋ",
         "review_and_confirm_title": "ਸਮੀਖਿਆ ਕਰੋ ਅਤੇ ਪੁਸ਼ਟੀ ਕਰੋ",
-        "checkout_as_guest": "ਮਹਿਮਾਨ ਵਜੋਂ ਚੈੱਕ ਆਊਟ ਕਰੋ"
+        "checkout_as_guest": "ਮਹਿਮਾਨ ਵਜੋਂ ਚੈੱਕ ਆਊਟ ਕਰੋ",
+        "account_more_actions": "ਇਸ ਖਾਤੇ ਲਈ ਹੋਰ ਕਾਰਵਾਈਆਂ",
+        "checkout_a_different_way": "ਇੱਕ ਵੱਖਰੇ ਤਰੀਕੇ ਨਾਲ ਦੇਖੋ",
+        "blocks": {
+          "contact_method_title": "ਸੰਪਰਕ",
+          "billing_address_title": "ਬਿਲਿੰਗ",
+          "shipping_address_title": "ਭੇਜ ਦਿਓ",
+          "shipping_method_title": "ਸ਼ਿਪਿੰਗ ਵਿਧੀ",
+          "payment_method_title": "ਭੁਗਤਾਨੇ ਦੇ ਢੰਗ",
+          "change_link_label": "ਬਦਲੋ",
+          "change_contact_method_link_label": "ਸੰਪਰਕ ਜਾਣਕਾਰੀ ਬਦਲੋ",
+          "change_billing_address_link_label": "ਬਿਲਿੰਗ ਪਤਾ ਬਦਲੋ",
+          "change_company_location_link_label": "ਕੰਪਨੀ ਦਾ ਸਥਾਨ ਬਦਲੋ",
+          "change_shipping_address_link_label": "ਸ਼ਿਪਿੰਗ ਪਤਾ ਬਦਲੋ",
+          "change_shipping_method_link_label": "ਸ਼ਿਪਿੰਗ ਵਿਧੀ ਬਦਲੋ",
+          "change_payment_method_link_label": "ਭੁਗਤਾਨ ਵਿਧੀ ਬਦਲੋ",
+          "pick_up_in_store_shipping_method_html": "ਸਟੋਰ ਤੋਂ ਪਿਕਅੱਪ · %{location_name}",
+          "purchase_order_number_title": "ਪੀਓ ਨੰਬਰ",
+          "change_purchase_order_number_label": "PO ਨੰਬਰ ਬਦਲੋ",
+          "change_delivery_method_link_label": "ਡਿਲੀਵਰੀ ਵਿਧੀ ਬਦਲੋ",
+          "no_address": "(ਕੋਈ ਪਤਾ ਨਹੀਂ)",
+          "no_purchase_order_number": "(ਕੋਈ PO ਨੰਬਰ ਨਹੀਂ)",
+          "due_after_order_reviewed_html": "ਆਰਡਰ ਦੀ ਸਮੀਖਿਆ ਤੋਂ ਬਾਅਦ ਬਕਾਇਆ",
+          "review_title_free_order": "ਆਪਣੇ ਆਰਡਰ ਦੀ ਸਮੀਖਿਆ ਕਰੋ ਅਤੇ ਪੂਰਾ ਕਰੋ",
+          "payment_method_saved_company_location": "ਇਸ ਟਿਕਾਣੇ ਲਈ ਕਾਰਡ ਰੱਖਿਅਤ ਕਰੋ",
+          "company_location": "ਕੰਪਨੀ ਦਾ ਸਥਾਨ"
+        },
+        "block_title": "ਆਪਣੀ ਜਾਣਕਾਰੀ ਦੀ ਸਮੀਖਿਆ ਕਰੋ",
+        "item_header": {
+          "change_value": "ਮੁੱਲ ਬਦਲੋ",
+          "section": "ਅਨੁਭਾਗ",
+          "value": "ਮੁੱਲ"
+        }
       },
       "payment": {
         "waiting_on_taxes_notice": "ਟੈਕਸਾਂ ਦੀ ਗਣਨਾ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ",
@@ -884,6 +916,124 @@
             "reduction_code": "ਇੱਕ ਵੈਧ ਛੋਟ ਕੋਡ ਜਾਂ ਗਿਫ਼ਟ ਕਾਰਡ ਦਾਖਲ ਕਰੋ",
             "billing_must_match_shipping": "ਸ਼ਿਪਿੰਗ ਪਤੇ ਨਾਲ ਮੇਲ ਖਾਣਾ ਲਾਜ਼ਮੀ ਹੈ",
             "billing_zip": "ਇੱਕ ਵੈਧ ਬਿਲਿੰਗ ਪਤਾ ਜ਼ਿਪ / ਡਾਕ ਕੋਡ ਦਰਜ ਕਰੋ"
+          }
+        }
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "ਮੈਨੂੰ ਖ਼ਬਰਾਂ ਅਤੇ ਪੇਸ਼ਕਸ਼ਾਂ ਨਾਲ ਈਮੇਲ ਕਰੋ",
+        "post_accept_marketing_checkbox_label": "ਤੁਸੀਂ ਈਮੇਲ ਖ਼ਬਰਾਂ ਅਤੇ ਪੇਸ਼ਕਸ਼ਾਂ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਗਾਹਕ ਬਣ ਗਏ ਹੋ।",
+        "pending_accept_marketing_checkbox_label": "ਖ਼ਬਰਾਂ ਅਤੇ ਪੇਸ਼ਕਸ਼ਾਂ ਲਈ ਆਪਣੀ ਗਾਹਕੀ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਆਪਣੀ ਈਮੇਲ ਦੇਖੋ",
+        "accept_sms_checkbox_label": "ਮੈਨੂੰ ਖ਼ਬਰਾਂ ਅਤੇ ਪੇਸ਼ਕਸ਼ਾਂ ਬਾਰੇ ਸੁਨੇਹਾ ਭੇਜੋ",
+        "disclaimer": {
+          "privacy_policy": "ਪਰਾਈਵੇਟ ਨੀਤੀ",
+          "terms_of_service": "ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ"
+        },
+        "sms": {
+          "disclaimer": {
+            "privacy_policy": "ਪਰਾਈਵੇਟ ਨੀਤੀ",
+            "terms_of_service": "ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ",
+            "description_html": "ਟੈਕਸਟ ਰਾਹੀਂ ਸਾਈਨ ਅੱਪ ਕਰਕੇ, ਤੁਸੀਂ ਦਿੱਤੇ ਗਏ ਫ਼ੋਨ ਨੰਬਰ 'ਤੇ ਕਾਰਟ ਰੀਮਾਈਂਡਰ ਸਮੇਤ, ਆਵਰਤੀ ਆਟੋਮੇਟਿਡ ਮਾਰਕੀਟਿੰਗ ਸੁਨੇਹੇ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਸਹਿਮਤ ਹੁੰਦੇ ਹੋ। ਸਹਿਮਤੀ ਖਰੀਦ ਦੀ ਸ਼ਰਤ ਨਹੀਂ ਹੈ। ਗਾਹਕੀ ਰੱਦ ਕਰਨ ਲਈ STOP ਲਿਖੋ। ਮਦਦ ਲਈ HELP ਲਿਖੋ। ਸੁਨੇਹੇ ਦੀ ਬਾਰੰਬਾਰਤਾ ਵੱਖ-ਵੱਖ ਹੁੰਦੀ ਹੈ। ਸੁਨੇਹੇ ਅਤੇ ਡੇਟਾ ਦਰਾਂ ਲਾਗੂ ਹੋ ਸਕਦੀਆਂ ਹਨ। ਸਾਡੀ %{privacy_policy_link} ਅਤੇ %{terms_of_service_link} ਦੇਖੋ।",
+            "description_transactional_html": "ਤੁਹਾਨੂੰ ਆਰਡਰ ਪੁਸ਼ਟੀਕਰਨ ਅਤੇ ਸ਼ਿਪਿੰਗ ਅੱਪਡੇਟ ਨਾਲ ਸਬੰਧਤ ਟੈਕਸਟ ਸੁਨੇਹੇ ਪ੍ਰਾਪਤ ਹੋ ਸਕਦੇ ਹਨ। ਗਾਹਕੀ ਰੱਦ ਕਰਨ ਲਈ STOP ਲਿਖ ਕੇ ਜਵਾਬ ਦਿਓ। ਮਦਦ ਲਈ HELP ਲਿਖ ਕੇ ਜਵਾਬ ਦਿਓ। ਸੁਨੇਹੇ ਦੀ ਬਾਰੰਬਾਰਤਾ ਵੱਖ-ਵੱਖ ਹੁੰਦੀ ਹੈ। ਸੁਨੇਹੇ ਅਤੇ ਡਾਟਾ ਦਰਾਂ ਲਾਗੂ ਹੋ ਸਕਦੀਆਂ ਹਨ। ਸਾਡੀ %{privacy_policy_modal_link} ਅਤੇ %{terms_of_service_modal_link} ਦੇਖੋ।"
+          },
+          "mobile_phone_number": "ਮੋਬਾਈਲ ਫ਼ੋਨ ਨੰਬਰ",
+          "get_offers_by_text": "ਟੈਕਸਟ ਰਾਹੀਂ ਪੇਸ਼ਕਸ਼ਾਂ ਪ੍ਰਾਪਤ ਕਰੋ"
+        },
+        "unsubscribe": {
+          "title": "ਤੁਸੀਂ ਗਾਹਕੀ ਰੱਦ ਕਰ ਦਿੱਤੀ ਹੈ",
+          "description": "ਤੁਹਾਨੂੰ ਸਾਡੇ ਵੱਲੋਂ ਹੋਰ ਕੋਈ ਕਾਰਟ ਰੀਮਾਈਂਡਰ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹੋਣਗੇ।"
+        },
+        "accept_shop_pay_marketing_checkbox_label": "ਇਸ ਸਟੋਰ ਤੋਂ ਖ਼ਬਰਾਂ ਅਤੇ ਪੇਸ਼ਕਸ਼ਾਂ ਲਈ ਮੈਨੂੰ ਸਾਈਨ ਅੱਪ ਕਰੋ"
+      },
+      "shop_policies": {
+        "policy_label": "ਨੀਤੀ",
+        "policies_label": "ਨੀਤੀਆਂ",
+        "select_policy_label": "ਕੋਈ ਨੀਤੀ ਚੁਣੋ",
+        "refund_policy": "ਰਿਫੰਡ ਨੀਤੀ",
+        "privacy_policy": "ਪਰਾਈਵੇਟ ਨੀਤੀ",
+        "terms_of_service": "ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ",
+        "legal_notice": "ਕਾਨੂੰਨੀ ਨੋਟਿਸ",
+        "shipping_policy": "ਸ਼ਿਪਿੰਗ",
+        "terms_of_sale": "ਵਿਕਰੀ ਦੀਆਂ ਸ਼ਰਤਾਂ",
+        "subscription_policy": "ਰੱਦੀਕਰਨ",
+        "purchase_options_policy": "ਖਰੀਦ ਵਿਕਲਪ ਨੀਤੀ",
+        "contact_information": "ਸੰਪਰਕ",
+        "purchase_options_cancellation_policy": "ਰੱਦੀਕਰਨ",
+        "cookie_preferences": "ਕੂਕੀਜ਼"
+      },
+      "remote_policies": {
+        "unavailable_policy": "ਇਸ ਸਟੋਰ ਲਈ ਕੋਈ %{policy_name} ਪ੍ਰਦਾਨ ਨਹੀਂ ਕੀਤਾ ਗਿਆ ਹੈ। ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ, ਕਿਰਪਾ ਕਰਕੇ %{shop_name} ਨਾਲ ਸਿੱਧਾ ਸੰਪਰਕ ਕਰੋ।"
+      },
+      "mor_policies": {
+        "terms_and_conditions": "ਮਰਚੈਂਟ ਆਫ਼ ਰਿਕਾਰਡ ਦੇ ਨਿਯਮ ਅਤੇ ਸ਼ਰਤਾਂ",
+        "privacy_policy": "ਮਰਚੈਂਟ ਆਫ਼ ਰਿਕਾਰਡ ਗੋਪਨੀਯਤਾ ਨੀਤੀ"
+      },
+      "markets": {
+        "invalid_market_manager_error": "ਭੁਗਤਾਨ ਪੂਰਾ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਆਪਣੀ ਸੰਪਰਕ ਜਾਣਕਾਰੀ ਦੀ ਸਮੀਖਿਆ ਕਰੋ"
+      },
+      "notifications": {
+        "title": "ਸੂਚਨਾਵਾਂ"
+      },
+      "order_payment_collection": {
+        "custom_line_item_description": "ਆਰਡਰ %{order_name} ਲਈ ਭੁਗਤਾਨ ਕਰਨ ਵਾਲੀ ਰਕਮ",
+        "changes_summary": {
+          "added": {
+            "one": "ਜੋੜਿਆ ਗਿਆ",
+            "other": "%{count} ਜੋੜਿਆ ਗਿਆ"
+          },
+          "removed": "ਹਟਾਇਆ ਗਿਆ",
+          "subtracted": "%{count} ਹਟਾਇਆ ਗਿਆ",
+          "returned": "ਵਾਪਸ ਕੀਤਾ %{count}",
+          "return_line_item_removed": "ਵਾਪਸੀ ਤੋਂ %{count} ਨੂੰ ਹਟਾਇਆ ਗਿਆ"
+        },
+        "additional_payment_requested": "%{total_outstanding} ਦਾ ਭੁਗਤਾਨ ਕਰਨ ਦੀ ਲੋੜ ਹੈ",
+        "checkout_review_and_pay": "ਤੁਹਾਡਾ ਆਰਡਰ %{order_name} ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ ਸੀ। ਇਹਨਾਂ ਬਦਲਾਵਾਂ ਦੀ ਸਮੀਖਿਆ ਕਰੋ, ਫਿਰ ਆਪਣੇ ਆਰਡਰ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਭੁਗਤਾਨ ਕਰੋ।",
+        "order_updated_on": "ਤੁਹਾਡਾ ਆਰਡਰ %{last_edited_at} ਨੂੰ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ ਸੀ।",
+        "order_review_and_pay": "ਤੁਹਾਡਾ ਆਰਡਰ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ ਸੀ। ਆਪਣੇ ਆਰਡਰ ਦੀ ਸਮੀਖਿਆ ਕਰੋ ਅਤੇ ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਭੁਗਤਾਨ ਕਰੋ।",
+        "pay_now": "ਹੁਣੇ ਭੁਗਤਾਨ ਕਰੋ"
+      },
+      "change_currency": {
+        "currency_button_label": "%{ਮੁਦਰਾ} (%{ਮੁਦਰਾ_ਚਿੰਨ੍ਹ})",
+        "credit_card_will_be_charged_html": "ਤੁਹਾਡੇ ਕ੍ਰੈਡਿਟ ਕਾਰਡ ਤੋਂ %{amount} ਦਾ ਖਰਚਾ ਲਿਆ ਜਾਵੇਗਾ।",
+        "payment_total_label": "ਕੁੱਲ ਭੁਗਤਾਨ",
+        "conversion_rate": "1 %{ਮੁਦਰਾ_ਕੋਡ ਤੋਂ} = %{ਦਰ} %{ਮੁਦਰਾ_ਕੋਡ ਤੋਂ}",
+        "change_currency_link": "%{currency_name} ਵਿੱਚ ਬਦਲੋ",
+        "card_provider_fx_charges_warning": "ਤੁਹਾਡਾ ਕਾਰਡ ਪ੍ਰਦਾਤਾ %{currency_code} ਲੈਣ-ਦੇਣ 'ਤੇ ਫੀਸ ਲੈ ਸਕਦਾ ਹੈ।",
+        "currency_not_supported_by_shop": "ਤੁਹਾਡੇ ਦੁਆਰਾ ਚੁਣੀ ਗਈ ਮੁਦਰਾ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਸਾਰੀਆਂ ਕੀਮਤਾਂ ਹੁਣ %{currency_code} ਵਿੱਚ ਹਨ।"
+      },
+      "change_country": {
+        "cart_updated_based_on_country": "ਤੁਹਾਡੇ ਕਾਰਟ ਨੂੰ ਤੁਹਾਡੇ ਸ਼ਿਪਿੰਗ ਦੇਸ਼ ਦੇ ਆਧਾਰ 'ਤੇ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ ਹੈ।",
+        "cart_and_currency_updated_based_on_country": "ਤੁਹਾਡੇ ਕਾਰਟ ਅਤੇ ਮੁਦਰਾ ਨੂੰ ਤੁਹਾਡੇ ਸ਼ਿਪਿੰਗ ਦੇਸ਼ ਦੇ ਆਧਾਰ 'ਤੇ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ ਹੈ।"
+      },
+      "change_cart_localization": {
+        "verify_shipping_address": "ਤੁਹਾਡਾ ਦੇਸ਼/ਖੇਤਰ ਅੱਪਡੇਟ ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ। ਚੈੱਕਆਉਟ ਜਾਰੀ ਰੱਖਣ ਲਈ ਆਪਣਾ ਸ਼ਿਪਿੰਗ ਪਤਾ ਦਰਜ ਕਰੋ।"
+      },
+      "tips": {
+        "title": "ਸੁਝਾਅ ਸ਼ਾਮਲ ਕਰੋ",
+        "description": "%{shop_name} 'ਤੇ ਟੀਮ ਲਈ ਆਪਣਾ ਸਮਰਥਨ ਦਿਖਾਓ।",
+        "presets_description": "ਟਿਪ ਪ੍ਰਤੀਸ਼ਤ ਚੁਣੋ",
+        "custom_label": "ਕਸਟਮ ਟਿਪ",
+        "add_tip": "ਸੁਝਾਅ ਸ਼ਾਮਲ ਕਰੋ",
+        "update_tip": "ਅੱਪਡੇਟ ਸੁਝਾਅ",
+        "message": "ਧੰਨਵਾਦ, ਅਸੀਂ ਇਸਦੀ ਕਦਰ ਕਰਦੇ ਹਾਂ।",
+        "preset_label": "%{ਟਿਪ_ਪਰਸੈਂਟ}%",
+        "no_tip_label": "ਕੋਈ ਨਹੀਂ"
+      },
+      "open_graph_meta_tag": {
+        "title_with_products": {
+          "zero": "ਖਰੀਦੋ %{product_name}",
+          "one": "%{product_name} ਅਤੇ %{count} ਹੋਰ ਆਈਟਮ ਖਰੀਦੋ",
+          "other": "%{product_name} ਅਤੇ %{count} ਹੋਰ ਆਈਟਮਾਂ ਖਰੀਦੋ"
+        }
+      },
+      "subscriptions": {
+        "recurring_total_intervals": {
+          "day": {
+            "one": "ਦਿਨ",
+            "other": "%{count} ਦਿਨ"
+          },
+          "week": {
+            "one": "ਹਫ਼ਤਾ",
+            "other": "%{count} ਹਫ਼ਤੇ"
           }
         }
       }
