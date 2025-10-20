@@ -390,7 +390,439 @@
         "review_title": "ਆਪਣਾ ਆਰਡਰ ਪੂਰਾ ਕਰੋ",
         "review_and_confirm_title": "ਸਮੀਖਿਆ ਕਰੋ ਅਤੇ ਪੁਸ਼ਟੀ ਕਰੋ",
         "checkout_as_guest": "ਮਹਿਮਾਨ ਵਜੋਂ ਚੈੱਕ ਆਊਟ ਕਰੋ"
+      },
+      "payment": {
+        "waiting_on_taxes_notice": "ਟੈਕਸਾਂ ਦੀ ਗਣਨਾ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ",
+        "payment_method": "ਭੁਗਤਾਨੇ ਦੇ ਢੰਗ",
+        "payment_method_rollup_accessibility_label": "ਭੁਗਤਾਨ ਵਿਧੀ ਦੇ ਵਿਕਲਪ",
+        "expired_payment_method": "ਚੁਣੀ ਗਈ ਭੁਗਤਾਨ ਵਿਧੀ ਦੀ ਮਿਆਦ ਖਤਮ ਹੋ ਗਈ ਹੈ।",
+        "payment_method_update_failed": "ਭੁਗਤਾਨ ਵਿਧੀ ਅੱਪਡੇਟ ਅਸਫਲ ਰਹੀ।",
+        "payment_method_incompatible_with_payment_terms": "ਭੁਗਤਾਨ ਵਿਧੀ ਭੁਗਤਾਨ ਸ਼ਰਤਾਂ ਦੇ ਅਨੁਕੂਲ ਨਹੀਂ ਹੈ।",
+        "proposed_gateway_unavailable": "ਪ੍ਰਸਤਾਵਿਤ ਭੁਗਤਾਨ ਗੇਟਵੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+        "pay_in_installments_split_pay_short": "%{amount} ਦੇ 4 ਭੁਗਤਾਨ",
+        "gift_cards_unavailable": "ਤੁਹਾਡਾ ਗਿਫ਼ਟ ਕਾਰਡ ਹੁਣ ਇਸ ਆਰਡਰ 'ਤੇ ਲਾਗੂ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ ਅਤੇ ਇਸਨੂੰ ਹਟਾ ਦਿੱਤਾ ਗਿਆ ਹੈ।",
+        "payment_flexibility_terms_id_mismatch": "ਭੁਗਤਾਨ ਲਚਕਤਾ ਸ਼ਰਤਾਂ ID ਮੇਲ ਨਹੀਂ ਖਾਂਦੀਆਂ",
+        "payment_option": {
+          "accessibility_label": "ਭੁਗਤਾਨ ਵਿਕਲਪ ਚੁਣੋ"
+        },
+        "bank_account_type": {
+          "checking": "ਜਾਂਚ ਕਰ ਰਿਹਾ ਹੈ",
+          "savings": "ਬੱਚਤ"
+        },
+        "new_bank_account_disclaimer": "ਆਪਣਾ ਆਰਡਰ ਪੂਰਾ ਕਰਕੇ, ਤੁਸੀਂ %{shop_name} ਨੂੰ ਹੇਠਾਂ ਦਿੱਤੇ ਖਾਤੇ ਵਿੱਚੋਂ ACH ਰਾਹੀਂ ਦਿਖਾਈ ਗਈ ਰਕਮ, ਅਤੇ ਸਮੇਂ 'ਤੇ, ਡੈਬਿਟ ਕਰਨ ਦਾ ਅਧਿਕਾਰ ਦਿੰਦੇ ਹੋ।",
+        "bank_account_disclaimer": "ACH ਭੁਗਤਾਨਾਂ ਦੀ ਪ੍ਰਕਿਰਿਆ ਵਿੱਚ 4 ਕਾਰੋਬਾਰੀ ਦਿਨ ਲੱਗ ਸਕਦੇ ਹਨ।",
+        "bank_account_choose": "ਆਪਣੀ ਖਰੀਦਦਾਰੀ ਨੂੰ ਸੁਰੱਖਿਅਤ ਢੰਗ ਨਾਲ ਪੂਰਾ ਕਰਨ ਲਈ ਇੱਕ ਖਾਤਾ ਚੁਣੋ",
+        "bank_account_connect_another": "ਕੋਈ ਹੋਰ ਬੈਂਕ ਖਾਤਾ ਕਨੈਕਟ ਕਰੋ",
+        "bank_account_connect": "ਬੈਂਕ ਖਾਤਾ ਕਨੈਕਟ ਕਰੋ",
+        "bank_account_missing": "ਬੈਂਕ ਖਾਤਾ ਜੁੜਿਆ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।",
+        "bank_account_generic_error": "ਬੈਂਕ ਖਾਤਾ ਨਹੀਂ ਜੋੜਿਆ ਜਾ ਸਕਿਆ। ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+        "separate_payments_label": "ਤੁਹਾਡੀਆਂ ਆਈਟਮਾਂ ਇੱਕ ਤੋਂ ਵੱਧ ਸਟੋਰਾਂ ਤੋਂ ਹਨ। ਤੁਹਾਡੇ ਤੋਂ %{separate_payments_link} ਵਿੱਚ ਖਰਚਾ ਲਿਆ ਜਾਵੇਗਾ।",
+        "separate_payments_text": "ਵੱਖਰੇ ਭੁਗਤਾਨ",
+        "payments": "ਭੁਗਤਾਨ"
+      },
+      "billing": {
+        "billing_address_title": "ਬਿਲ ਕਰੋ",
+        "billing_address_rollup_accessibility_label": "ਵਿਕਲਪਾਂ ਨੂੰ ਬਿੱਲ ਕਰੋ",
+        "same_as_shipping": "ਸ਼ਿਪਿੰਗ ਪਤੇ ਦੇ ਸਮਾਨ",
+        "add_address": "ਇੱਕ ਵੱਖਰਾ ਪਤਾ ਵਰਤੋ",
+        "edit": "ਸੋਧੋ",
+        "delete": "ਮਿਟਾਓ",
+        "address_more": "ਇਸ ਪਤੇ ਲਈ ਹੋਰ ਕਾਰਵਾਈਆਂ",
+        "address_edit": "ਪਤਾ ਸੰਪਾਦਿਤ ਕਰੋ",
+        "address_delete": "ਪਤਾ ਮਿਟਾਓ",
+        "address_confirm": "ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਆਪਣੇ ਖਾਤੇ ਤੋਂ ਇਹ ਪਤਾ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
+        "address_form": {
+          "add_address": "ਪਤਾ ਸ਼ਾਮਲ ਕਰੋ",
+          "save": "ਸੇਵ ਕਰੋ",
+          "cancel": "ਰੱਦ ਕਰੋ"
+        }
+      },
+      "company_location": {
+        "location_title": "ਕੰਪਨੀ ਦਾ ਸਥਾਨ",
+        "location_rollup_accessibility_label": "ਕੰਪਨੀ ਦੇ ਸਥਾਨ ਵਿਕਲਪ"
+      },
+      "payment_summary": {
+        "gift_card_current_balance_notice": "ਮੌਜੂਦਾ ਬਕਾਇਆ %{ਰਕਮ}",
+        "credit_card_expires_on_notice": "%{ਮਹੀਨਾ}/%{ਸਾਲ} ਨੂੰ ਮਿਆਦ ਪੁੱਗਦੀ ਹੈ",
+        "express_payment_gateway_label": "ਐਕਸਪ੍ਰੈਸ",
+        "manual_payment_gateway_label": "ਮੈਨੁਅਲ",
+        "billing_address_title": "ਬਿਲਿੰਗ ਪਤਾ",
+        "free_label": "ਮੁਫ਼ਤ"
+      },
+      "field_errors": {
+        "handle_phone_invalid": "ਇੱਕ ਵੈਧ ਫ਼ੋਨ ਨੰਬਰ ਦਾਖਲ ਕਰੋ",
+        "handle_email_invalid": "ਇੱਕ ਵੈਧ ਈਮੇਲ ਦਰਜ ਕਰੋ",
+        "email_invalid": "ਇੱਕ ਵੈਧ ਈਮੇਲ ਦਰਜ ਕਰੋ",
+        "email_or_phone_blank": "ਈਮੇਲ ਜਾਂ ਫ਼ੋਨ ਨੰਬਰ ਦਰਜ ਕਰੋ",
+        "email_or_phone_invalid": "ਇੱਕ ਵੈਧ ਈਮੇਲ ਜਾਂ ਮੋਬਾਈਲ ਫ਼ੋਨ ਨੰਬਰ ਦਰਜ ਕਰੋ",
+        "address_first_name_blank": "ਪਹਿਲਾ ਨਾਮ ਦਰਜ ਕਰੋ",
+        "address_first_name_too_long": "ਪਹਿਲਾ ਨਾਮ ਬਹੁਤ ਲੰਮਾ ਹੈ (ਵੱਧ ਤੋਂ ਵੱਧ 255 ਅੱਖਰ ਹਨ)",
+        "address_first_name_contains_emojis": "ਪਹਿਲੇ ਨਾਮ ਵਿੱਚ ਇਮੋਜੀ ਨਹੀਂ ਹੋ ਸਕਦੇ",
+        "address_first_name_contains_html_tags": "ਪਹਿਲੇ ਨਾਮ ਵਿੱਚ HTML ਟੈਗ ਨਹੀਂ ਹੋ ਸਕਦੇ।",
+        "address_first_name_contains_url": "ਪਹਿਲੇ ਨਾਮ ਵਿੱਚ URL ਨਹੀਂ ਹੋ ਸਕਦਾ।",
+        "address_first_name_contains_mathematical_symbols": "ਪਹਿਲੇ ਨਾਮ ਵਿੱਚ ਗਣਿਤਿਕ ਚਿੰਨ੍ਹ ਨਹੀਂ ਹੋ ਸਕਦੇ।",
+        "address_last_name_blank": "ਇੱਕ ਆਖਰੀ ਨਾਮ ਦਰਜ ਕਰੋ",
+        "address_last_name_too_long": "ਆਖਰੀ ਨਾਮ ਬਹੁਤ ਲੰਮਾ ਹੈ (ਵੱਧ ਤੋਂ ਵੱਧ 255 ਅੱਖਰ ਹਨ)",
+        "address_last_name_contains_emojis": "ਆਖਰੀ ਨਾਮ ਵਿੱਚ ਇਮੋਜੀ ਨਹੀਂ ਹੋ ਸਕਦੇ",
+        "address_last_name_contains_html_tags": "ਆਖਰੀ ਨਾਮ ਵਿੱਚ HTML ਟੈਗ ਨਹੀਂ ਹੋ ਸਕਦੇ।",
+        "address_last_name_contains_url": "ਆਖਰੀ ਨਾਮ ਵਿੱਚ URL ਨਹੀਂ ਹੋ ਸਕਦਾ",
+        "address_last_name_contains_mathematical_symbols": "ਆਖਰੀ ਨਾਮ ਵਿੱਚ ਗਣਿਤਿਕ ਚਿੰਨ੍ਹ ਨਹੀਂ ਹੋ ਸਕਦੇ।",
+        "address_address1_blank": "ਪਤਾ ਦਰਜ ਕਰੋ",
+        "address_address1_too_long": "ਪਹਿਲੀ ਐਡਰੈੱਸ ਲਾਈਨ ਬਹੁਤ ਲੰਬੀ ਹੈ (ਵੱਧ ਤੋਂ ਵੱਧ 255 ਅੱਖਰ ਹਨ)",
+        "address_address1_contains_emojis": "ਪਤਾ1 ਵਿੱਚ ਇਮੋਜੀ ਨਹੀਂ ਹੋ ਸਕਦੇ।",
+        "address_address1_contains_html_tags": "ਪਤਾ 1 ਵਿੱਚ HTML ਟੈਗ ਨਹੀਂ ਹੋ ਸਕਦੇ।",
+        "address_address1_contains_mathematical_symbols": "ਪਹਿਲੀ ਐਡਰੈੱਸ ਲਾਈਨ ਵਿੱਚ ਗਣਿਤਿਕ ਚਿੰਨ੍ਹ ਨਹੀਂ ਹੋ ਸਕਦੇ।",
+        "address_address2_blank": "ਕਿਸੇ ਅਪਾਰਟਮੈਂਟ, ਸੂਟ, ਆਦਿ ਵਿੱਚ ਦਾਖਲ ਹੋਵੋ।",
+        "address_address2_too_long": "ਦੂਜੀ ਐਡਰੈੱਸ ਲਾਈਨ ਬਹੁਤ ਲੰਬੀ ਹੈ (ਵੱਧ ਤੋਂ ਵੱਧ 255 ਅੱਖਰ ਹਨ)",
+        "address_address2_contains_emojis": "ਐਡਰੈੱਸ2 ਵਿੱਚ ਇਮੋਜੀ ਨਹੀਂ ਹੋ ਸਕਦੇ।",
+        "address_address2_contains_html_tags": "ਐਡਰੈੱਸ2 ਵਿੱਚ HTML ਟੈਗ ਨਹੀਂ ਹੋ ਸਕਦੇ।",
+        "address_address2_contains_mathematical_symbols": "ਦੂਜੀ ਐਡਰੈੱਸ ਲਾਈਨ ਵਿੱਚ ਗਣਿਤਿਕ ਚਿੰਨ੍ਹ ਨਹੀਂ ਹੋ ਸਕਦੇ।",
+        "address_city_blank": "ਕੋਈ ਸ਼ਹਿਰ ਦਾਖਲ ਕਰੋ",
+        "address_city_too_long": "ਸ਼ਹਿਰ ਬਹੁਤ ਲੰਮਾ ਹੈ (ਵੱਧ ਤੋਂ ਵੱਧ 255 ਅੱਖਰ ਹਨ)",
+        "address_city_contains_emojis": "ਸ਼ਹਿਰ ਵਿੱਚ ਇਮੋਜੀ ਨਹੀਂ ਹੋ ਸਕਦੇ",
+        "address_city_contains_html_tags": "ਸ਼ਹਿਰ ਵਿੱਚ HTML ਟੈਗ ਨਹੀਂ ਹੋ ਸਕਦੇ।",
+        "address_city_contains_mathematical_symbols": "ਸ਼ਹਿਰ ਵਿੱਚ ਗਣਿਤਿਕ ਚਿੰਨ੍ਹ ਨਹੀਂ ਹੋ ਸਕਦੇ",
+        "address_country_blank": "ਕੋਈ ਦੇਸ਼/ਖੇਤਰ ਚੁਣੋ",
+        "address_country_not_supported": "ਅਸੀਂ ਇਸ ਦੇਸ਼ ਜਾਂ ਖੇਤਰ ਵਿੱਚ ਨਹੀਂ ਭੇਜਦੇ। ਇੱਕ ਨਵਾਂ ਸ਼ਿਪਿੰਗ ਪਤਾ ਦਰਜ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+        "address_province_blank": "ਕੋਈ ਰਾਜ / ਸੂਬਾ ਚੁਣੋ",
+        "address_province_invalid": "ਇੱਕ ਵੈਧ ਰਾਜ / ਸੂਬਾ ਚੁਣੋ",
+        "address_company_blank": "ਕੰਪਨੀ ਦਾ ਨਾਮ ਦਰਜ ਕਰੋ",
+        "address_company_too_long": "ਕੰਪਨੀ ਦਾ ਨਾਮ ਬਹੁਤ ਲੰਮਾ ਹੈ (ਵੱਧ ਤੋਂ ਵੱਧ 255 ਅੱਖਰ ਹਨ)",
+        "address_company_contains_emojis": "ਕੰਪਨੀ ਇਮੋਜੀ ਨਹੀਂ ਰੱਖ ਸਕਦੀ",
+        "address_company_contains_html_tags": "ਕੰਪਨੀ ਵਿੱਚ HTML ਟੈਗ ਨਹੀਂ ਹੋ ਸਕਦੇ।",
+        "address_company_contains_mathematical_symbols": "ਕੰਪਨੀ ਵਿੱਚ ਗਣਿਤਿਕ ਚਿੰਨ੍ਹ ਨਹੀਂ ਹੋ ਸਕਦੇ",
+        "address_phone_blank": "ਇੱਕ ਵੈਧ ਫ਼ੋਨ ਨੰਬਰ ਦਾਖਲ ਕਰੋ",
+        "address_phone_contains_emojis": "ਫ਼ੋਨ ਨੰਬਰ ਵਿੱਚ ਇਮੋਜੀ ਨਹੀਂ ਹੋ ਸਕਦੇ",
+        "address_phone_invalid": "ਇੱਕ ਵੈਧ ਫ਼ੋਨ ਨੰਬਰ ਦਾਖਲ ਕਰੋ",
+        "address_zip_blank": "ਇੱਕ ਜ਼ਿਪ / ਡਾਕ ਕੋਡ ਦਰਜ ਕਰੋ",
+        "address_zip_blocked_address": "ਇਹ ਟਿਕਾਣਾ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ।",
+        "address_zip_too_long": "ਜ਼ਿਪ / ਡਾਕ ਕੋਡ ਬਹੁਤ ਲੰਮਾ ਹੈ (ਵੱਧ ਤੋਂ ਵੱਧ 255 ਅੱਖਰ ਹਨ)",
+        "address_zip_not_supported": "ਇਹ ਟਿਕਾਣਾ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ।",
+        "address_zip_invalid_for_country": "%{country} ਲਈ ਇੱਕ ਵੈਧ ਜ਼ਿਪ / ਡਾਕ ਕੋਡ ਦਾਖਲ ਕਰੋ।",
+        "address_zip_invalid_for_province": "%{province} ਲਈ ਇੱਕ ਵੈਧ ਜ਼ਿਪ / ਡਾਕ ਕੋਡ ਦਾਖਲ ਕਰੋ।",
+        "address_zip_invalid_for_country_and_province": "%{ਪ੍ਰੋਵਿੰਸ}, %{ਦੇਸ਼} ਲਈ ਇੱਕ ਵੈਧ ਜ਼ਿਪ / ਡਾਕ ਕੋਡ ਦਾਖਲ ਕਰੋ।",
+        "address_zip_contains_emojis": "ਜ਼ਿਪ / ਡਾਕ ਕੋਡ ਵਿੱਚ ਇਮੋਜੀ ਨਹੀਂ ਹੋ ਸਕਦੇ",
+        "address_zip_contains_mathematical_symbols": "ਜ਼ਿਪ / ਡਾਕ ਕੋਡ ਵਿੱਚ ਗਣਿਤਿਕ ਚਿੰਨ੍ਹ ਨਹੀਂ ਹੋ ਸਕਦੇ।",
+        "address_generic_blank": "ਲੋੜੀਂਦਾ ਖੇਤਰ",
+        "address_generic_invalid": "ਅਵੈਧ ਐਂਟਰੀ",
+        "address_generic_error": "ਫੀਲਡ ਗਲਤੀ"
       }
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "twenty_four_hours": "ਆਮ ਤੌਰ 'ਤੇ 24 ਘੰਟਿਆਂ ਵਿੱਚ ਤਿਆਰ ਹੋ ਜਾਂਦਾ ਹੈ",
+        "two_to_four_days": "ਆਮ ਤੌਰ 'ਤੇ 2-4 ਦਿਨਾਂ ਵਿੱਚ ਤਿਆਰ ਹੋ ਜਾਂਦਾ ਹੈ",
+        "five_or_more_days": "ਆਮ ਤੌਰ 'ਤੇ 5+ ਦਿਨਾਂ ਵਿੱਚ ਤਿਆਰ ਹੋ ਜਾਂਦਾ ਹੈ",
+        "zero_to_two_hours": "ਆਮ ਤੌਰ 'ਤੇ 2 ਘੰਟਿਆਂ ਵਿੱਚ ਤਿਆਰ ਹੋ ਜਾਂਦਾ ਹੈ",
+        "two_to_four_hours": "ਆਮ ਤੌਰ 'ਤੇ 4 ਘੰਟਿਆਂ ਵਿੱਚ ਤਿਆਰ ਹੋ ਜਾਂਦਾ ਹੈ",
+        "immediately": "ਹੁਣ ਪਿਕਅੱਪ ਲਈ ਤਿਆਰ ਹੈ",
+        "next_day": "ਅਗਲੇ ਦਿਨ ਪਿਕਅੱਪ ਲਈ ਤਿਆਰ"
+      }
+    },
+    "subscriptions": {
+      "buyer_consent_product": "ਇਹ ਆਈਟਮ ਇੱਕ ਆਵਰਤੀ ਜਾਂ ਮੁਲਤਵੀ ਖਰੀਦ ਹੈ। ਜਾਰੀ ਰੱਖ ਕੇ, ਮੈਂ %{cancellationPolicyLink} ਨਾਲ ਸਹਿਮਤ ਹਾਂ ਅਤੇ ਤੁਹਾਨੂੰ ਇਸ ਪੰਨੇ 'ਤੇ ਸੂਚੀਬੱਧ ਕੀਮਤਾਂ, ਬਾਰੰਬਾਰਤਾ ਅਤੇ ਮਿਤੀਆਂ 'ਤੇ ਮੇਰੀ ਭੁਗਤਾਨ ਵਿਧੀ ਤੋਂ ਚਾਰਜ ਲੈਣ ਲਈ ਅਧਿਕਾਰਤ ਕਰਦਾ ਹਾਂ ਜਦੋਂ ਤੱਕ ਮੇਰਾ ਆਰਡਰ ਪੂਰਾ ਨਹੀਂ ਹੋ ਜਾਂਦਾ ਜਾਂ ਜੇਕਰ ਇਜਾਜ਼ਤ ਹੋਵੇ ਤਾਂ ਮੈਂ ਰੱਦ ਕਰ ਦਿੰਦਾ ਹਾਂ।",
+      "buyer_consent_cart": "ਤੁਹਾਡੇ ਕਾਰਟ ਵਿੱਚ ਇੱਕ ਜਾਂ ਵੱਧ ਆਈਟਮਾਂ ਇੱਕ ਆਵਰਤੀ ਜਾਂ ਮੁਲਤਵੀ ਖਰੀਦ ਹੈ। ਜਾਰੀ ਰੱਖ ਕੇ, ਮੈਂ %{cancellationPolicyLink} ਨਾਲ ਸਹਿਮਤ ਹਾਂ ਅਤੇ ਤੁਹਾਨੂੰ ਇਸ ਪੰਨੇ 'ਤੇ ਸੂਚੀਬੱਧ ਕੀਮਤਾਂ, ਬਾਰੰਬਾਰਤਾ ਅਤੇ ਮਿਤੀਆਂ 'ਤੇ ਮੇਰੀ ਭੁਗਤਾਨ ਵਿਧੀ ਤੋਂ ਚਾਰਜ ਲੈਣ ਲਈ ਅਧਿਕਾਰਤ ਕਰਦਾ ਹਾਂ ਜਦੋਂ ਤੱਕ ਮੇਰਾ ਆਰਡਰ ਪੂਰਾ ਨਹੀਂ ਹੋ ਜਾਂਦਾ ਜਾਂ ਜੇਕਰ ਇਜਾਜ਼ਤ ਹੋਵੇ ਤਾਂ ਮੈਂ ਰੱਦ ਕਰ ਦਿੰਦਾ ਹਾਂ।",
+      "cancellation_policy": "ਰੱਦ ਕਰਨ ਦੀ ਨੀਤੀ"
+    }
+  },
+  "customer_accounts": {
+    "B2B": {
+      "draft_order_details": {
+        "payment_status": {
+          "pending": {
+            "banner_due_today": "ਤੁਹਾਡਾ ਭੁਗਤਾਨ ਅੱਜ ਬਕਾਇਆ ਹੈ।",
+            "title": "ਭੁਗਤਾਨ ਬਾਕੀ ਹੈ",
+            "title_with_date": "ਭੁਗਤਾਨ ਦੀ ਆਖਰੀ ਤਾਰੀਖ {{date}}",
+            "title_due_on_receipt": "ਭੁਗਤਾਨ ਅਜੇ ਬਾਕੀ ਨਹੀਂ ਹੈ",
+            "title_due_on_fulfillment": "ਪੂਰਤੀ 'ਤੇ ਬਕਾਇਆ ਭੁਗਤਾਨ",
+            "description_overdue": "ਤੁਹਾਡਾ ਭੁਗਤਾਨ ਲੇਟ ਹੋ ਗਿਆ ਹੈ।",
+            "description_partially_paid": "ਇਸ ਆਰਡਰ ਦਾ ਅੰਸ਼ਕ ਭੁਗਤਾਨ ਕੀਤਾ ਗਿਆ ਸੀ। ਤੁਹਾਡੇ ਕੋਲ ਬਾਕੀ ਬਕਾਇਆ ਹੈ।",
+            "description_authorized": "ਤੁਹਾਡੀ ਭੁਗਤਾਨ ਵਿਧੀ ਤੋਂ ਨਿਯਤ ਮਿਤੀ 'ਤੇ ਖਰਚਾ ਲਿਆ ਜਾਵੇਗਾ, ਜਾਂ ਤੁਸੀਂ ਹੁਣੇ ਭੁਗਤਾਨ ਕਰ ਸਕਦੇ ਹੋ।",
+            "description_waiting_for_manual_payment": "ਇਸ ਆਰਡਰ ਦਾ ਭੁਗਤਾਨ ਬਕਾਇਆ ਹੈ। ਭੁਗਤਾਨ ਪ੍ਰਾਪਤ ਹੋਣ 'ਤੇ ਬਕਾਇਆ ਰਕਮ ਅੱਪਡੇਟ ਕੀਤੀ ਜਾਵੇਗੀ।",
+            "description_due_on_receipt": "ਭੁਗਤਾਨ ਦੇ ਬਕਾਇਆ ਹੋਣ 'ਤੇ ਤੁਹਾਨੂੰ ਇੱਕ ਇਨਵੌਇਸ ਪ੍ਰਾਪਤ ਹੋਵੇਗਾ।",
+            "description_due_on_receipt_partially_paid": "ਇਸ ਆਰਡਰ ਦਾ ਅੰਸ਼ਕ ਭੁਗਤਾਨ ਕੀਤਾ ਗਿਆ ਸੀ। ਤੁਹਾਡੇ ਕੋਲ ਬਕਾਇਆ ਬਕਾਇਆ ਹੈ। ਭੁਗਤਾਨ ਦੇ ਬਕਾਇਆ ਹੋਣ 'ਤੇ ਤੁਹਾਨੂੰ ਇੱਕ ਇਨਵੌਇਸ ਪ੍ਰਾਪਤ ਹੋਵੇਗਾ।",
+            "description_due_on_fulfillment": "ਇਸ ਆਰਡਰ ਵਿੱਚ ਸਾਰੀਆਂ ਚੀਜ਼ਾਂ ਪੂਰੀਆਂ ਹੋਣ ਤੋਂ ਬਾਅਦ ਭੁਗਤਾਨ ਕਰਨਾ ਪਵੇਗਾ।",
+            "description_due_on_fulfillment_partially_paid": "ਇਸ ਆਰਡਰ ਦਾ ਅੰਸ਼ਕ ਭੁਗਤਾਨ ਕੀਤਾ ਗਿਆ ਸੀ। ਤੁਹਾਡੇ ਕੋਲ ਬਕਾਇਆ ਬਕਾਇਆ ਹੈ। ਇਸ ਆਰਡਰ ਵਿੱਚ ਸਾਰੀਆਂ ਆਈਟਮਾਂ ਪੂਰੀਆਂ ਹੋਣ ਤੋਂ ਬਾਅਦ ਭੁਗਤਾਨ ਕਰਨਾ ਪਵੇਗਾ।"
+          },
+          "draft": {
+            "description": "ਆਰਡਰ ਦੀ ਪੁਸ਼ਟੀ ਹੋਣ 'ਤੇ ਭੁਗਤਾਨ ਵੇਰਵੇ ਤੈਅ ਕੀਤੇ ਜਾਂਦੇ ਹਨ।",
+            "title": "ਭੁਗਤਾਨ ਅਜੇ ਬਾਕੀ ਨਹੀਂ ਹੈ",
+            "in_review": {
+              "description": "ਆਰਡਰ ਦੀ ਪੁਸ਼ਟੀ ਹੋਣ 'ਤੇ ਭੁਗਤਾਨ ਵੇਰਵੇ ਤੈਅ ਕੀਤੇ ਜਾਂਦੇ ਹਨ।",
+              "title": "ਭੁਗਤਾਨ ਅਜੇ ਬਾਕੀ ਨਹੀਂ ਹੈ"
+            },
+            "submitted": {
+              "description": "ਇਸ ਆਰਡਰ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਭੁਗਤਾਨ ਜਮ੍ਹਾਂ ਕਰੋ।",
+              "title": "ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਭੁਗਤਾਨ ਕਰੋ",
+              "deposit": {
+                "title": "ਭੁਗਤਾਨ ਬਾਕੀ ਹੈ",
+                "due_later": "ਬਕਾਇਆ {{translatedName}} ਸ਼ਰਤਾਂ 'ਤੇ ਹੈ ਅਤੇ {{dueDate}} ਨੂੰ ਬਕਾਇਆ ਹੈ।",
+                "due_on_fulfillment": "ਇਸ ਆਰਡਰ ਵਿੱਚ ਸਾਰੀਆਂ ਚੀਜ਼ਾਂ ਪੂਰੀਆਂ ਹੋਣ ਤੋਂ ਬਾਅਦ ਬਕਾਇਆ ਰਕਮ ਬਕਾਇਆ ਹੈ।",
+                "due_on_receipt": "ਤੁਹਾਨੂੰ ਬਾਕੀ ਬਚੇ ਬਕਾਏ ਲਈ ਇੱਕ ਇਨਵੌਇਸ ਪ੍ਰਾਪਤ ਹੋਵੇਗਾ।",
+                "due_on_date": "ਬਕਾਇਆ {{dueDate}} ਨੂੰ ਦੇਣਾ ਹੈ।"
+              }
+            },
+            "deposit": {
+              "due_later": "ਤੁਹਾਡੇ ਆਰਡਰ ਦੀ ਪੁਸ਼ਟੀ ਹੋਣ 'ਤੇ {{depositAmount}} ਬਕਾਇਆ ਹੋਵੇਗਾ। ਬਕਾਇਆ {{translatedName}} ਦੀਆਂ ਸ਼ਰਤਾਂ 'ਤੇ ਹੋਵੇਗਾ।",
+              "due_on_fulfillment": "ਤੁਹਾਡੇ ਆਰਡਰ ਦੀ ਪੁਸ਼ਟੀ ਹੋਣ 'ਤੇ {{depositAmount}} ਬਕਾਇਆ ਹੋਵੇਗਾ। ਬਕਾਇਆ ਰਕਮ ਆਰਡਰ ਪੂਰਾ ਹੋਣ 'ਤੇ ਬਕਾਇਆ ਹੋਵੇਗੀ।",
+              "due_on_receipt": "ਤੁਹਾਡੇ ਆਰਡਰ ਦੀ ਪੁਸ਼ਟੀ ਹੋਣ 'ਤੇ {{depositAmount}} ਬਕਾਇਆ ਹੋਵੇਗਾ। ਬਕਾਇਆ ਬਾਅਦ ਵਿੱਚ ਬਕਾਇਆ ਹੋਵੇਗਾ।",
+              "due_on_date": "ਤੁਹਾਡੇ ਆਰਡਰ ਦੀ ਪੁਸ਼ਟੀ ਹੋਣ 'ਤੇ {{depositAmount}} ਬਕਾਇਆ ਹੋਵੇਗਾ। ਬਕਾਇਆ {{dueDate}} ਨੂੰ ਬਕਾਇਆ ਹੋਵੇਗਾ।"
+            }
+          },
+          "paid": {
+            "title": "ਭੁਗਤਾਨ ਕੀਤਾ",
+            "title_with_date": "ਭੁਗਤਾਨ ਕੀਤਾ ਗਿਆ {{date}}",
+            "description": "ਤੁਹਾਡੇ ਆਰਡਰ ਦਾ ਪੂਰਾ ਭੁਗਤਾਨ ਹੋ ਗਿਆ ਹੈ।"
+          },
+          "refund": {
+            "title": "ਰਿਫੰਡ ਕੀਤਾ ਗਿਆ",
+            "title_with_date": "ਰਿਫੰਡ ਕੀਤਾ ਗਿਆ {{date}}",
+            "description_full_refund": "ਤੁਹਾਨੂੰ ਇਸ ਆਰਡਰ ਲਈ ਪੂਰਾ ਰਿਫੰਡ ਪ੍ਰਾਪਤ ਹੋਇਆ ਹੈ।",
+            "description_single_refund": "ਤੁਹਾਨੂੰ ਇਸ ਆਰਡਰ ਲਈ ਅੰਸ਼ਕ ਰਿਫੰਡ ਪ੍ਰਾਪਤ ਹੋਇਆ ਹੈ।",
+            "description_multiple_refunds": "ਤੁਹਾਨੂੰ ਇਸ ਆਰਡਰ ਲਈ ਅੰਸ਼ਕ ਰਿਫੰਡ ਪ੍ਰਾਪਤ ਹੋਏ ਹਨ।"
+          },
+          "canceled": {
+            "title": "ਭੁਗਤਾਨ ਰੱਦ ਕੀਤਾ ਗਿਆ",
+            "description": "ਤੁਹਾਡੇ ਤੋਂ ਕੋਈ ਚਾਰਜ ਨਹੀਂ ਲਿਆ ਗਿਆ।"
+          },
+          "pay_now": "ਹੁਣੇ ਭੁਗਤਾਨ ਕਰੋ",
+          "pay_now_accessibility_label": "ਆਰਡਰ {{orderName}} ਲਈ ਹੁਣੇ ਭੁਗਤਾਨ ਕਰੋ",
+          "title": "ਭੁਗਤਾਨ ਸਥਿਤੀ"
+        },
+        "order_timeline": {
+          "expand_events_label": "ਵੇਰਵੇ ਦਿਖਾਓ",
+          "expand_events_accessibility_label": "ਡਰਾਫਟ ਆਰਡਰ ਵੇਰਵੇ ਦਿਖਾਓ",
+          "hide_events_label": "ਵੇਰਵੇ ਲੁਕਾਓ",
+          "hide_events_accessibility_label": "ਡਰਾਫਟ ਆਰਡਰ ਵੇਰਵੇ ਲੁਕਾਓ"
+        },
+        "subtitle": "ਸਪੁਰਦ ਕੀਤਾ ਗਿਆ {{date}}",
+        "title": "ਆਰਡਰ {{name}}"
+      },
+      "payment_methods": {
+        "payment_delete": {
+          "description_without_replacement": "ਇਹ ਭੁਗਤਾਨ ਵਿਧੀ ਹੁਣ ਇਸ ਸਥਾਨ ਤੋਂ ਭਵਿੱਖ ਦੀਆਂ ਖਰੀਦਾਂ ਲਈ ਉਪਲਬਧ ਨਹੀਂ ਹੋਵੇਗੀ।",
+          "description_with_replacement": "ਇਸ ਭੁਗਤਾਨ ਵਿਧੀ ਨੂੰ ਮਿਟਾਉਣ ਨਾਲ ਇਸ ਸਥਾਨ ਲਈ ਪਹਿਲਾਂ ਤੋਂ ਅਧਿਕਾਰਤ ਭੁਗਤਾਨ ਪ੍ਰਭਾਵਿਤ ਹੋਣਗੇ। ਆਉਣ ਵਾਲੇ ਆਰਡਰ ਪ੍ਰਾਪਤ ਕਰਨਾ ਜਾਰੀ ਰੱਖਣ ਲਈ ਇਸਨੂੰ ਕਿਸੇ ਵਿਕਲਪਿਕ ਭੁਗਤਾਨ ਵਿਧੀ ਨਾਲ ਬਦਲੋ।"
+        },
+        "payment_details": {
+          "order_label": "ਆਰਡਰ {{name}}",
+          "draft_label": "ਡਰਾਫਟ ਆਰਡਰ {{name}}"
+        }
+      },
+      "purchase_order_number": {
+        "add_accessibility_label": "PO ਨੰਬਰ ਸ਼ਾਮਲ ਕਰੋ",
+        "add_modal_title": "PO ਨੰਬਰ ਸ਼ਾਮਲ ਕਰੋ",
+        "cancel": "ਰੱਦ ਕਰੋ",
+        "close_modal_accessibility_label": "PO ਨੰਬਰ ਮਾਡਲ ਬੰਦ ਕਰੋ",
+        "discard": "ਰੱਦ ਕਰੋ",
+        "discard_changes_modal_title": "ਕੀ ਤਬਦੀਲੀਆਂ ਰੱਦ ਕਰਨੀਆਂ ਹਨ?",
+        "edit_accessibility_label": "PO ਨੰਬਰ ਦਾ ਸੰਪਾਦਨ ਕਰੋ",
+        "edit_modal_title": "PO ਨੰਬਰ ਦਾ ਸੰਪਾਦਨ ਕਰੋ",
+        "empty_state": "ਕੋਈ PO ਨੰਬਰ ਨਹੀਂ",
+        "modal_po_number_input_label": "ਪੀਓ ਨੰਬਰ",
+        "modal_po_number_input_max_length_error": "PO ਨੰਬਰਾਂ ਵਿੱਚ ਵੱਧ ਤੋਂ ਵੱਧ {{maxLength}} ਅੱਖਰ ਹੁੰਦੇ ਹਨ।",
+        "save": "ਸੇਵ ਕਰੋ",
+        "title": "ਪੀਓ # {{poNumber}}"
+      }
+    },
+    "errors": {
+      "address_deletion_error": {
+        "description": "ਇਸ ਪਤੇ ਨੂੰ ਮਿਟਾਉਣ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਆਈ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਪੰਨੇ ਨੂੰ ਰਿਫ੍ਰੈਸ਼ ਕਰੋ।"
+      },
+      "addresses_loading_issue": {
+        "description": "ਕਨੈਕਸ਼ਨ ਗਲਤੀ। ਆਪਣੇ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+      },
+      "banner_title": {
+        "one": "{{count}} ਗਲਤੀ ਹੈ।",
+        "other": "{{count}} ਗਲਤੀਆਂ ਹਨ।"
+      },
+      "failed_address_creation": {
+        "description": "ਤੁਹਾਡਾ ਪਤਾ ਬਣਾਉਣ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਆਈ। ਇਸ ਪੰਨੇ ਨੂੰ ਤਾਜ਼ਾ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਆਪਣੇ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।"
+      },
+      "failed_address_update": {
+        "description": "ਤੁਹਾਡਾ ਪਤਾ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਆਈ। ਇਸ ਪੰਨੇ ਨੂੰ ਰਿਫ੍ਰੈਸ਼ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਆਪਣੇ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।"
+      },
+      "load_address_form_error": {
+        "title": "ਪਤਾ ਫਾਰਮ ਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ",
+        "description": "ਪਤਾ ਫਾਰਮ ਲੋਡ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।",
+        "refresh_button": "ਪੰਨਾ ਰਿਫ੍ਰੈਸ਼ ਕਰੋ"
+      },
+      "load_orders_error": {
+        "title": "ਆਰਡਰ ਲੋਡ ਕਰਨ ਵਿੱਚ ਅਸਮਰੱਥ",
+        "description": "ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਬਾਅਦ ਵਿੱਚ ਵਾਪਸ ਆਓ।",
+        "retry_button": "ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ"
+      },
+      "load_paypal_error": {
+        "description": "PayPal ਲੋਡ ਕਰਨ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+      },
+      "logout_everywhere": {
+        "description": "ਸਾਈਨ-ਆਊਟ ਦੌਰਾਨ ਕੁਝ ਗਲਤ ਹੋ ਗਿਆ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+      },
+      "no_access_to_locations": {
+        "description": "ਤੁਹਾਡੇ ਕੋਲ ਕਿਸੇ ਵੀ ਟਿਕਾਣੇ ਤੱਕ ਪਹੁੰਚ ਨਹੀਂ ਹੈ।"
+      },
+      "not_found": {
+        "description": "URL ਦੀ ਜਾਂਚ ਕਰੋ ਜਾਂ ਕੁਝ ਮਿੰਟਾਂ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+        "title": "ਇਸ ਪੰਨੇ ਨੂੰ ਲੋਡ ਕਰਨ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਹੈ।"
+      },
+      "order_not_found": {
+        "description": "ਇਹ ਆਰਡਰ ਮੌਜੂਦ ਨਹੀਂ ਹੈ ਜਾਂ ਤੁਹਾਡੇ ਕੋਲ ਇਸਨੂੰ ਦੇਖਣ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ।",
+        "title": "ਆਰਡਰ ਨਹੀਂ ਮਿਲਿਆ"
+      },
+      "profile_update_error": {
+        "description": "ਤੁਹਾਡੀ ਪ੍ਰੋਫਾਈਲ ਨੂੰ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਆਈ। ਇਸ ਪੰਨੇ ਨੂੰ ਰਿਫ੍ਰੈਸ਼ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਆਪਣੇ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।"
+      },
+      "profile_name_update_error": {
+        "description": "ਤੁਹਾਡਾ ਨਾਮ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਆਈ। ਇਸ ਪੰਨੇ ਨੂੰ ਤਾਜ਼ਾ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਆਪਣੇ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।"
+      },
+      "retry_action_label": "ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
+      "resend_link": {
+        "too_many_requests": "ਬਹੁਤ ਜ਼ਿਆਦਾ ਬੇਨਤੀਆਂ। ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+        "generic": "ਅਸਫਲ ਬੇਨਤੀ"
+      },
+      "load_extension_error": {
+        "title": "ਗਲਤੀ",
+        "description": "ਇਸ ਪੰਨੇ ਨੂੰ ਰਿਫ੍ਰੈਸ਼ ਕਰੋ ਜਾਂ ਕੁਝ ਮਿੰਟਾਂ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+        "refresh_button": "ਪੰਨਾ ਰਿਫ੍ਰੈਸ਼ ਕਰੋ"
+      }
+    },
+    "throttle": {
+      "too_many_attempts": {
+        "message": "ਬਹੁਤ ਜ਼ਿਆਦਾ ਕੋਸ਼ਿਸ਼ਾਂ",
+        "description": "ਕਿਰਪਾ ਕਰਕੇ ਕੁਝ ਮਿੰਟਾਂ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+      }
+    },
+    "payment_methods": {
+      "replacement_payment_method_title": "ਬਦਲੀ ਭੁਗਤਾਨ ਵਿਧੀ",
+      "title": "ਭੁਗਤਾਨ ਵਿਧੀਆਂ",
+      "add_payment_method_button": "ਭੁਗਤਾਨ ਵਿਧੀ ਸ਼ਾਮਲ ਕਰੋ",
+      "add_payment_method_dropdown": {
+        "bank_account_consent": "ਭੁਗਤਾਨ ਵਿਧੀ ਜੋੜ ਕੇ, ਤੁਸੀਂ ਆਪਣੇ ਕਾਰਡ ਤੋਂ ਪੈਸੇ ਲੈਣ ਜਾਂ ਤੁਹਾਡੇ ਵੱਲੋਂ ਮਨਜ਼ੂਰ ਕੀਤੀਆਂ ਗਈਆਂ ਭਵਿੱਖੀ ਖਰੀਦਾਂ ਲਈ ਬੈਂਕ ਖਾਤੇ ਤੋਂ ਪੈਸੇ ਲੈਣ ਦਾ ਅਧਿਕਾਰ ਦਿੰਦੇ ਹੋ, ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ ਰੱਦ ਨਹੀਂ ਕਰਦੇ।"
+      },
+      "bank_account": {
+        "loading_accessibility_message": "ਬੈਂਕ ਖਾਤਾ ਬਟਨ ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ",
+        "iframe_title_accessibility_label": "ਬੈਂਕ ਖਾਤਾ ਸੈੱਟਅੱਪ",
+        "display_name": "ਬੈਂਕ ਖਾਤਾ"
+      }
+    },
+    "date": {
+      "humanize": {
+        "lessThanOneHourAgo": {
+          "one": "{{count}} ਮਿੰਟ ਪਹਿਲਾਂ",
+          "other": "{{count}} ਮਿੰਟ ਪਹਿਲਾਂ"
+        },
+        "lessThanOneMinuteAgo": "ਹੁਣੇ",
+        "yesterday": "ਕੱਲ੍ਹ {{time}} ਵਜੇ",
+        "today": "ਅੱਜ {{time}} ਵਜੇ",
+        "tomorrow": "ਕੱਲ੍ਹ {{time}} ਵਜੇ"
+      }
+    },
+    "enable_javascript": "ਆਪਣਾ ਖਾਤਾ ਦੇਖਣ ਲਈ, ਆਪਣੀਆਂ ਬ੍ਰਾਊਜ਼ਰ ਸੈਟਿੰਗਾਂ ਵਿੱਚ JavaScript ਨੂੰ ਸਮਰੱਥ ਬਣਾਓ ਜਾਂ ਕਿਸੇ ਹੋਰ ਬ੍ਰਾਊਜ਼ਰ ਨਾਲ ਸਾਈਨ ਇਨ ਕਰੋ।",
+    "navigation_and_structure": {
+      "account_menu": {
+        "hide_accessibility_label": "ਖਾਤਾ ਮੀਨੂ ਲੁਕਾਓ",
+        "label": "ਖਾਤਾ",
+        "show_accessibility_label": "ਖਾਤਾ ਮੀਨੂ ਦਿਖਾਓ",
+        "nav_accessibility_label": "ਖਾਤਾ ਨੈਵੀਗੇਸ਼ਨ",
+        "open_menu_accessibility_label": "ਖਾਤਾ ਨੈਵੀਗੇਸ਼ਨ ਖੋਲ੍ਹੋ",
+        "close_menu_accessibility_label": "ਖਾਤਾ ਨੈਵੀਗੇਸ਼ਨ ਬੰਦ ਕਰੋ",
+        "loading_message": "ਖਾਤਾ ਨੈਵੀਗੇਸ਼ਨ ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
+      },
+      "action_menu_accessibility_label": "ਹੋਰ ਕਾਰਵਾਈਆਂ",
+      "close_menu_accessibility_label": "ਮੁੱਖ ਨੈਵੀਗੇਸ਼ਨ ਬੰਦ ਕਰੋ",
+      "contact_email_subject": "{{shopName}} ਔਨਲਾਈਨ ਸਟੋਰ ਤੋਂ ਸੰਪਰਕ ਕਰੋ",
+      "contact_link": "ਸੰਪਰਕ ਜਾਣਕਾਰੀ",
+      "delete_confirmation": {
+        "cancel": "ਰੱਦ ਕਰੋ",
+        "delete": "ਮਿਟਾਓ"
+      },
+      "dismiss_toast": "ਖਾਰਜ ਕਰੋ",
+      "document_title": "{{sectionName}} - {{shopName}} - ਖਾਤਾ",
+      "go_to_store_link": "ਸਟੋਰ ਤੇ ਜਾਓ",
+      "loading_message": "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ",
+      "loading_policy_content_accessibility_label": "ਨੀਤੀ ਸਮੱਗਰੀ ਲੋਡ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ",
+      "log_out_link": "ਸਾਇਨ ਆਉਟ",
+      "logout_overlay_label": "ਸਾਈਨ ਆਊਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",
+      "nav_label_accessibility_label": "ਮੁੱਖ ਨੈਵੀਗੇਸ਼ਨ",
+      "navigation_accessibility_message": "ਤੁਸੀਂ {{sectionName}} 'ਤੇ ਨੈਵੀਗੇਟ ਕੀਤਾ",
+      "open_menu_accessibility_label": "ਮੁੱਖ ਨੈਵੀਗੇਸ਼ਨ ਖੋਲ੍ਹੋ",
+      "orders_link_label": "ਆਰਡਰ",
+      "shop_logo_accessibility_label": "{{shopName}} ਲੋਗੋ",
+      "subscriptions_link_label": "ਗਾਹਕੀਆਂ",
+      "settings_link": "ਸੈਟਿੰਗਾਂ",
+      "country_switcher_toast_message": "ਦੇਸ਼ ਨੂੰ {{countryName}} ਵਿੱਚ ਬਦਲ ਦਿੱਤਾ ਗਿਆ",
+      "switch_country": "ਦੇਸ਼ ਬਦਲੋ",
+      "no_countries_found": "ਕੋਈ ਦੇਸ਼ ਨਹੀਂ ਮਿਲਿਆ",
+      "location_switcher_toast_message": "ਟਿਕਾਣਾ ਬਦਲ ਕੇ {{locationName}} ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ",
+      "switch_location": "ਟਿਕਾਣਾ ਬਦਲੋ",
+      "no_locations_found": "ਕੋਈ ਟਿਕਾਣਾ ਨਹੀਂ ਮਿਲਿਆ",
+      "try_new_search": "ਇੱਕ ਨਵੀਂ ਖੋਜ ਅਜ਼ਮਾਓ",
+      "view_details": "ਵੇਰਵੇ ਵੇਖੋ",
+      "company_location": "ਕੰਪਨੀ ਦਾ ਸਥਾਨ",
+      "search": "ਖੋਜ",
+      "skip_to_content": "ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ"
+    },
+    "announcement_bar": {
+      "expand_label": "ਐਲਾਨ ਬਾਰ ਦਾ ਵਿਸਤਾਰ ਕਰੋ",
+      "collapse_label": "ਐਲਾਨ ਪੱਟੀ ਨੂੰ ਸਮੇਟੋ",
+      "close_label": "ਐਲਾਨ ਪੱਟੀ ਬੰਦ ਕਰੋ"
+    },
+    "account_information": {
+      "loading_accessibility_message": "ਖਾਤਾ ਜਾਣਕਾਰੀ ਲੋਡ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ",
+      "loading_finished_accessibility_message": "ਖਾਤਾ ਜਾਣਕਾਰੀ ਲੋਡ ਹੋ ਗਈ ਹੈ।",
+      "profile_card": {
+        "cancel": "ਰੱਦ ਕਰੋ",
+        "cancel_accessibility_label": "ਪ੍ਰੋਫਾਈਲ ਦਾ ਸੰਪਾਦਨ ਰੱਦ ਕਰੋ",
+        "edit": "ਸੋਧੋ",
+        "edit_accessibility_label": "ਪ੍ਰੋਫਾਈਲ ਸੰਪਾਦਿਤ ਕਰੋ",
+        "email_help_text": "ਈਮੇਲ ਦਾ ਸੰਪਾਦਨ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।",
+        "editable_email_help_text": "ਇਹ ਈਮੇਲ ਸਾਈਨ-ਇਨ ਅਤੇ ਆਰਡਰ ਅੱਪਡੇਟ ਲਈ ਵਰਤੀ ਜਾਂਦੀ ਹੈ।",
+        "first_name": "ਪਹਿਲਾ ਨਾਂ",
+        "last_name": "ਆਖਰੀ ਨਾਂਮ",
+        "email": "ਈਮੇਲ",
+        "no_name_provided_accessibility_label": "ਕੋਈ ਨਾਮ ਨਹੀਂ ਜੋੜਿਆ ਗਿਆ",
+        "phone_number_help_text": "ਫ਼ੋਨ ਨੰਬਰ ਦਾ ਸੰਪਾਦਨ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।",
+        "save": "ਸੇਵ ਕਰੋ",
+        "save_accessibility_label": "ਪ੍ਰੋਫਾਈਲ ਸੇਵ ਕਰੋ",
+        "title": "ਪ੍ਰੋਫਾਈਲ",
+        "errors": {
+          "name_too_long": "{{fieldName}} ਬਹੁਤ ਲੰਮਾ ਹੈ (ਵੱਧ ਤੋਂ ਵੱਧ 255 ਅੱਖਰ ਹਨ)",
+          "name_cannot_contain_url": "{{fieldName}} ਵਿੱਚ URL ਨਹੀਂ ਹੋ ਸਕਦਾ।",
+          "name_cannot_contain_html_tags": "{{fieldName}} ਵਿੱਚ HTML ਟੈਗ ਨਹੀਂ ਹੋ ਸਕਦੇ।",
+          "email_cant_be_blank": "ਈਮੇਲ ਖਾਲੀ ਨਹੀਂ ਹੋ ਸਕਦੀ",
+          "invalid_email_format": "ਇੱਕ ਵੈਧ ਈਮੇਲ ਦਰਜ ਕਰੋ"
+        }
+      },
+      "verify_new_email_modal": {
+        "title": "ਈਮੇਲ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ",
+        "description": "{{email}} ਤੇ ਭੇਜਿਆ ਗਿਆ ਕੋਡ ਦਰਜ ਕਰੋ।",
+        "one_time_password_label": "6-ਅੰਕਾਂ ਵਾਲਾ ਕੋਡ",
+        "email_resend_button": "ਕੋਡ ਦੁਬਾਰਾ ਭੇਜੋ",
+        "email_resend_button_accessibility_label": "ਪੁਸ਼ਟੀਕਰਨ ਕੋਡ ਦੁਬਾਰਾ ਭੇਜੋ",
+        "verify_button": "ਪੁਸ਼ਟੀ ਕਰੋ",
+        "verify_button_accessibility_label": "ਇੱਕ ਵਾਰ ਪਾਸਵਰਡ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ",
+        "cancel_button": "ਰੱਦ ਕਰੋ",
+        "cancel_button_accessibility_label": "ਈਮੇਲ ਸੰਪਾਦਿਤ ਕਰਨਾ ਰੱਦ ਕਰੋ",
+        "email_resend_button_success_toast_message": "ਪੁਸ਼ਟੀਕਰਨ ਕੋਡ ਭੇਜਿਆ ਗਿਆ",
+        "email_resend_button_error_banner_message": "ਪੁਸ਼ਟੀਕਰਨ ਕੋਡ ਭੇਜਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ"
+      },
+      "email_update_success_modal": {
+        "title": "ਈਮੇਲ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ",
+        "description": "ਈਮੇਲ ਸਫਲਤਾਪੂਰਵਕ ਅੱਪਡੇਟ ਕੀਤੀ ਗਈ। ਲੌਗਇਨ 'ਤੇ ਰੀਡਾਇਰੈਕਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ।"
+      },
+      "profile_update_confirmation_message": "ਪ੍ਰੋਫਾਈਲ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ",
+      "email_update_confirmation_message": "ਈਮੇਲ ਨੂੰ {{email}} ਵਿੱਚ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ",
+      "title": "ਪ੍ਰੋਫਾਈਲ",
+      "people": {
+        "pagination": {
+          "load_more": "ਹੋਰ ਲੋਡ ਕਰੋ",
+          "load_more_accessibility_label": "ਹੋਰ ਲੋਕਾਂ ਨੂੰ ਲੋਡ ਕਰੋ",
+          "loading_accessibility_label": "ਲੋਕਾਂ ਨੂੰ ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
+        }
+      },
+      "add_button": "ਜੋੜੋ"
+    },
+    "orders": {
+      "list_layout_accessibility_label": "ਲੇਆਉਟ ਵਿਕਲਪ"
     }
   }
 }
