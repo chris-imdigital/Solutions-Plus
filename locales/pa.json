@@ -726,6 +726,166 @@
         "address_generic_blank": "ਲੋੜੀਂਦਾ ਖੇਤਰ",
         "address_generic_invalid": "ਅਵੈਧ ਐਂਟਰੀ",
         "address_generic_error": "ਫੀਲਡ ਗਲਤੀ"
+      },
+      "notice_banner": {
+        "shipping_address_incomplete_title": "ਸ਼ਿਪਿੰਗ ਪਤਾ ਅਧੂਰਾ ਹੈ",
+        "calculating_shipping": "ਸ਼ਿਪਿੰਗ ਦੀ ਗਣਨਾ ਅਜੇ ਵੀ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ। ਕੁਝ ਸਕਿੰਟਾਂ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਤੁਹਾਡੇ ਤੋਂ ਕੋਈ ਖਰਚਾ ਨਹੀਂ ਲਿਆ ਗਿਆ ਹੈ।",
+        "calculating_taxes": "ਟੈਕਸਾਂ ਦੀ ਗਣਨਾ ਅਜੇ ਵੀ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ। ਕੁਝ ਸਕਿੰਟਾਂ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਤੁਹਾਡੇ ਤੋਂ ਕੋਈ ਖਰਚਾ ਨਹੀਂ ਲਿਆ ਗਿਆ ਹੈ।",
+        "generic_processing_error": {
+          "title": "ਤੁਹਾਡੇ ਆਰਡਰ ਦੀ ਪ੍ਰਕਿਰਿਆ ਕਰਨ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਆਈ",
+          "body": "ਤੁਹਾਡੇ ਤੋਂ ਖਰਚਾ ਨਹੀਂ ਲਿਆ ਗਿਆ ਹੈ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਵੱਖਰੀ ਭੁਗਤਾਨ ਵਿਧੀ ਵਰਤੋ।"
+        },
+        "payment_method_not_available_with_payment_terms": "ਤੁਹਾਡੇ ਦੁਆਰਾ ਚੁਣੀ ਗਈ ਭੁਗਤਾਨ ਵਿਧੀ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ ਕਿਉਂਕਿ ਇਸ ਆਰਡਰ ਲਈ ਭੁਗਤਾਨ ਹੁਣ {{paymentTerms}} ਸ਼ਰਤਾਂ 'ਤੇ ਹੈ।",
+        "payment_method_not_available_with_fulfillment_terms": "ਤੁਹਾਡੇ ਦੁਆਰਾ ਚੁਣੀ ਗਈ ਭੁਗਤਾਨ ਵਿਧੀ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ ਕਿਉਂਕਿ ਇਸ ਆਰਡਰ ਲਈ ਭੁਗਤਾਨ ਹੁਣ ਪੂਰਤੀ 'ਤੇ ਬਕਾਇਆ ਹੈ।",
+        "payment_method_not_available_with_fixed_terms": "ਤੁਹਾਡੇ ਦੁਆਰਾ ਚੁਣੀ ਗਈ ਭੁਗਤਾਨ ਵਿਧੀ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ ਕਿਉਂਕਿ ਇਸ ਆਰਡਰ ਲਈ ਭੁਗਤਾਨ ਬਾਅਦ ਵਿੱਚ ਕਰਨਾ ਹੈ।",
+        "payment_method_not_available_with_review_requirement": "ਤੁਹਾਡੇ ਦੁਆਰਾ ਚੁਣੀ ਗਈ ਭੁਗਤਾਨ ਵਿਧੀ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ ਕਿਉਂਕਿ ਭੁਗਤਾਨ ਤੁਹਾਡੇ ਆਰਡਰ ਦੀ ਪੁਸ਼ਟੀ ਹੋਣ ਤੋਂ ਬਾਅਦ ਹੀ ਕੀਤਾ ਜਾਵੇਗਾ।",
+        "contact_information": {
+          "title": "ਸੰਪਰਕ ਜਾਣਕਾਰੀ ਅਵੈਧ ਹੈ।",
+          "header": "ਆਪਣੀ ਜਾਣਕਾਰੀ ਨੂੰ ਅੱਪਡੇਟ ਕਰਨ ਲਈ, {{emailLink}} ।",
+          "email_link": "ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ"
+        }
+      },
+      "review_address_modal": {
+        "title": "ਪਤੇ ਦੀ ਸਮੀਖਿਆ ਕਰੋ",
+        "subtitle": {
+          "one": "ਇਹ ਆਰਡਰ {{merchant}} ਦੁਆਰਾ ਦਿੱਤੇ ਗਏ ਪਤੇ 'ਤੇ ਭੇਜਿਆ ਜਾਵੇਗਾ।",
+          "other": "ਇਹ ਆਰਡਰ {{merchant}} ਦੁਆਰਾ ਦਿੱਤੇ ਗਏ ਪਤੇ 'ਤੇ ਭੇਜਿਆ ਜਾਵੇਗਾ। ਇੱਕ ਸ਼ਿਪਿੰਗ ਪਤਾ ਚੁਣੋ।"
+        },
+        "subtitle_no_match": "ਇਹ ਪਤਾ ਤੁਹਾਡੇ ਕਿਸੇ ਵੀ ਸੁਰੱਖਿਅਤ ਕੀਤੇ ਪਤੇ ਨਾਲ ਮੇਲ ਨਹੀਂ ਖਾਂਦਾ।",
+        "subtitle_must_use": "ਤੁਹਾਡਾ ਆਰਡਰ ਇਸ ਪਤੇ 'ਤੇ ਭੇਜ ਦਿੱਤਾ ਜਾਵੇਗਾ।",
+        "continue": "ਇਸ ਪਤੇ ਨਾਲ ਜਾਰੀ ਰੱਖੋ",
+        "use_saved_address": "ਇੱਕ ਵੱਖਰਾ ਪਤਾ ਵਰਤੋ",
+        "return_to_cart": "ਕਾਰਟ ਤੇ ਵਾਪਸ ਜਾਓ"
+      },
+      "marketplaces": {
+        "legal_notice": {
+          "legal_text": "ਸਮੀਖਿਆ",
+          "link_label": "{{partnerDisplayName}} ਨਿਯਮ ਅਤੇ ਸ਼ਰਤਾਂ"
+        }
+      },
+      "online_store_chat": {
+        "title": "ਕੋਈ ਸਵਾਲ ਹੈ? ਸਾਡੇ ਨਾਲ ਗੱਲਬਾਤ ਕਰੋ"
+      },
+      "local_pickup": {
+        "location_address_search_label": "ਪਤਾ",
+        "location_information": {
+          "one": "ਤੁਹਾਡੇ ਨੇੜੇ ਸਟਾਕ ਵਾਲਾ %{count} ਸਥਾਨ ਹੈ।",
+          "other": "ਤੁਹਾਡੇ ਨੇੜੇ ਸਟਾਕ ਵਾਲੇ %{count} ਸਥਾਨ ਹਨ।"
+        },
+        "toggle_location": "ਟਿਕਾਣਾ ਬਦਲੋ",
+        "or": "ਜਾਂ",
+        "cancel": "ਰੱਦ ਕਰੋ",
+        "your_location": "ਤੁਹਾਡਾ ਟਿਕਾਣਾ",
+        "search_button": "ਸਟੋਰ ਲੱਭੋ",
+        "no_stores_found": "ਕੋਈ ਸਟੋਰ ਨਹੀਂ ਮਿਲਿਆ।",
+        "all_stores_far_away": {
+          "title": "ਸਭ ਤੋਂ ਨੇੜਲੇ ਸਥਾਨ %{distance} ਤੋਂ ਵੱਧ ਦੂਰ ਹਨ।",
+          "description": "ਕੋਈ ਟਿਕਾਣਾ ਚੁਣੋ ਜਾਂ %{ship_to_address_link}",
+          "ship_to_address_link": "ਪਤੇ 'ਤੇ ਭੇਜੋ"
+        },
+        "selected_pickup_option_no_longer_available": {
+          "title": "ਤੁਹਾਡਾ ਪਹਿਲਾਂ ਚੁਣਿਆ ਗਿਆ ਟਿਕਾਣਾ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+          "description": "ਇੱਕ ਨਵਾਂ ਟਿਕਾਣਾ ਚੁਣੋ ਜਾਂ %{ship_to_address_link}",
+          "ship_to_address_link": "ਪਤੇ 'ਤੇ ਭੇਜੋ"
+        },
+        "could_not_resolve_address": "ਤੁਹਾਡਾ ਪਤਾ ਨਹੀਂ ਮਿਲ ਸਕਿਆ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਕੋਈ ਵੱਖਰਾ ਪਤਾ ਵਰਤੋ।",
+        "paginator": {
+          "accessibility_label": "ਸਥਾਨਕ ਪਿਕਅੱਪ ਪੰਨਾਬੰਦੀ",
+          "previous": "ਪਿਛਲਾ ਪੰਨਾ",
+          "next": "ਅਗਲਾ ਪੰਨਾ",
+          "label": {
+            "one": "%{ਪਹਿਲਾ} - %{ਗਿਣਤੀ} ਸਟੋਰ ਦਾ %{ਆਖਰੀ}",
+            "other": "%{ਪਹਿਲਾ} - %{ਗਿਣਤੀ} ਸਟੋਰਾਂ ਵਿੱਚੋਂ %{ਆਖਰੀ}"
+          }
+        },
+        "reveal_more_label": {
+          "one": "%{count} ਹੋਰ ਟਿਕਾਣਾ ਦਿਖਾਓ",
+          "other": "%{count} ਹੋਰ ਸਥਾਨ ਦਿਖਾਓ"
+        }
+      },
+      "captcha": {
+        "title": "ਜਾਰੀ ਰੱਖਣ ਲਈ ਕੈਪਚਾ ਪੂਰਾ ਕਰੋ",
+        "errors": {
+          "not_solved": "ਜਾਰੀ ਰੱਖਣ ਲਈ ਕੈਪਚਾ ਪੂਰਾ ਕਰੋ"
+        }
+      },
+      "clipboard": {
+        "copied": "ਕਾਪੀ ਕੀਤਾ ਗਿਆ",
+        "failed_to_copy": "ਕਾਪੀ ਕਰਨ ਵਿੱਚ ਅਸਫਲ"
+      },
+      "discount_errors": {
+        "generic_error": "ਤੁਹਾਡੇ ਆਰਡਰ 'ਤੇ ਪ੍ਰਕਿਰਿਆ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ ਕਿਉਂਕਿ ਤੁਹਾਡਾ ਛੋਟ ਕੋਡ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਆਪਣੇ ਆਰਡਰ ਦੇ ਕੁੱਲ ਦੀ ਸਮੀਖਿਆ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+      },
+      "b2b_errors": {
+        "lost_b2b_purchasing_permissions": "ਤੁਹਾਡੇ ਕੋਲ ਹੁਣ B2B ਆਰਡਰ ਦੇਣ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ। ਇਸਦੀ ਬਜਾਏ ਨਿੱਜੀ ਆਰਡਰ ਦੇਣ ਲਈ %{logout_url}।",
+        "log_out_link_text": "ਸਾਇਨ ਆਉਟ",
+        "lost_permissions_subtitle": "ਤੁਹਾਡੇ ਕੋਲ ਹੁਣ B2B ਆਰਡਰ ਦੇਣ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ। ਨਿੱਜੀ ਆਰਡਰ ਦੇਣ ਲਈ ਸਾਈਨ ਆਊਟ ਕਰੋ।",
+        "lost_permissions_title": "ਕੋਈ ਟਿਕਾਣਾ ਇਜਾਜ਼ਤਾਂ ਨਹੀਂ"
+      },
+      "shop_pay_external": {
+        "title": "ਦੁਕਾਨ ਦਾ ਭੁਗਤਾਨ ਚੈੱਕਆਉਟ",
+        "errors": {
+          "problem_loading": "Shop Pay ਲੋਡ ਕਰਨ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਆ ਰਹੀ ਹੈ",
+          "try_again_later": "ਆਪਣੇ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ ਜਾਂ ਇਸ ਵਿੰਡੋ ਨੂੰ ਬੰਦ ਕਰੋ ਅਤੇ ਕੁਝ ਪਲਾਂ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+          "checkout_has_expired": "ਤੁਹਾਡੇ ਚੈੱਕਆਉਟ ਦੀ ਮਿਆਦ ਖਤਮ ਹੋ ਗਈ ਹੈ। ਇਸ ਵਿੰਡੋ ਨੂੰ ਬੰਦ ਕਰੋ ਅਤੇ {{shopName}} ਤੋਂ ਦੁਬਾਰਾ ਚੈੱਕ ਆਊਟ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+        },
+        "return_to_store": "{{shopName}} ਤੇ ਵਾਪਸ ਜਾਓ",
+        "return_to_store_simple": "ਸਟੋਰ ਤੇ ਵਾਪਸ ਜਾਓ"
+      },
+      "wallets": {
+        "return_to_store": "ਸਟੋਰ ਤੇ ਵਾਪਸ ਜਾਓ",
+        "return_to_checkout": "ਚੈੱਕਆਉਟ 'ਤੇ ਵਾਪਸ ਜਾਓ",
+        "redirect_hint": "ਤੁਹਾਨੂੰ {{walletName}} ਨਾਲ ਸਾਈਨ ਇਨ ਕਰਨ ਲਈ ਕਿਹਾ ਜਾਵੇਗਾ।",
+        "logged_in": "{{email}} ਨਾਲ ਜੁੜਿਆ ਹੋਇਆ",
+        "shipping_line_label": "ਸ਼ਿਪਿੰਗ",
+        "payment_in_progress_title": "ਭੁਗਤਾਨ ਜਾਰੀ ਹੈ",
+        "payment_in_progress_body": "ਤੁਹਾਡੇ ਭੁਗਤਾਨ 'ਤੇ ਪ੍ਰਕਿਰਿਆ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ। ਤੁਹਾਡਾ ਆਰਡਰ ਜਲਦੀ ਹੀ ਪੂਰਾ ਹੋ ਜਾਵੇਗਾ।",
+        "call_to_action": "{{walletName}} ਨਾਲ ਭੁਗਤਾਨ ਕਰੋ",
+        "redirection_notice": "\" {{buttonLabel}} \" 'ਤੇ ਕਲਿੱਕ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਤੁਹਾਨੂੰ ਆਪਣੀ ਖਰੀਦਦਾਰੀ ਨੂੰ ਸੁਰੱਖਿਅਤ ਢੰਗ ਨਾਲ ਪੂਰਾ ਕਰਨ ਲਈ {{walletName}} ਤੇ ਰੀਡਾਇਰੈਕਟ ਕੀਤਾ ਜਾਵੇਗਾ।",
+        "errors": {
+          "unavailable": {
+            "title": "{{walletName}} ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+            "description": "{{walletName}} ਉਪਲਬਧ ਨਹੀਂ ਸੀ। ਕੋਈ ਵੱਖਰੀ ਭੁਗਤਾਨ ਵਿਧੀ ਵਰਤੋ ਜਾਂ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+            "instructions": "{{walletName}} ਨਾਲ ਕੋਈ ਸਮੱਸਿਆ ਸੀ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰਨ ਲਈ ਸਟੋਰ 'ਤੇ ਵਾਪਸ ਜਾਓ ਜਾਂ ਕੋਈ ਹੋਰ ਤਰੀਕਾ ਦੇਖੋ।",
+            "unavailable_for_country": "{{walletName}} {{countryName}} ਵਿੱਚ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਆਪਣੀ ਖਰੀਦਦਾਰੀ ਪੂਰੀ ਕਰਨ ਲਈ ਇੱਕ ਵੱਖਰੀ ਭੁਗਤਾਨ ਵਿਧੀ ਚੁਣੋ।"
+          },
+          "unavailable_terminal": {
+            "instructions": "{{walletName}} ਇਸ ਵੇਲੇ ਤੁਹਾਡੇ ਆਰਡਰ ਲਈ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਆਪਣੀ ਖਰੀਦ ਜਾਰੀ ਰੱਖਣ ਲਈ, ਕੋਈ ਹੋਰ ਚੈੱਕਆਉਟ ਵਿਧੀ ਚੁਣੋ।"
+          },
+          "generic": "{{walletName}} ਨਾਲ ਕੋਈ ਸਮੱਸਿਆ ਸੀ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਕੋਈ ਵੱਖਰੀ ਭੁਗਤਾਨ ਵਿਧੀ ਵਰਤੋ।",
+          "discount_code": "ਇਸ ਛੋਟ ਕੋਡ ਨੂੰ ਲਾਗੂ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ। ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਕੋਡ ਦੀ ਸਮੀਖਿਆ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+          "terminal": "{{walletName}} ਨਾਲ ਕੋਈ ਸਮੱਸਿਆ ਸੀ। ਕਿਰਪਾ ਕਰਕੇ ਕੋਈ ਵੱਖਰੀ ਭੁਗਤਾਨ ਵਿਧੀ ਵਰਤੋ।",
+          "detour": {
+            "stock_problems": "ਕੁਝ ਆਈਟਮਾਂ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹਨ। {{walletName}} ਨੂੰ ਬੰਦ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+            "price_change": "ਕੁਝ ਚੀਜ਼ਾਂ ਦੀਆਂ ਕੀਮਤਾਂ ਬਦਲ ਗਈਆਂ ਹਨ। ਆਪਣੇ ਆਰਡਰ ਦੀ ਸਮੀਖਿਆ ਕਰਨ ਲਈ {{walletName}} ਨੂੰ ਬੰਦ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+            "queue": "ਤੁਹਾਨੂੰ ਚੈੱਕਆਉਟ ਲਈ ਇੱਕ ਕਤਾਰ ਵਿੱਚ ਰੱਖਿਆ ਗਿਆ ਹੈ। ਜਾਰੀ ਰੱਖਣ ਲਈ {{walletName}} ਨੂੰ ਬੰਦ ਕਰੋ।",
+            "currency_change": "ਤੁਸੀਂ {{walletName}} ਨਾਲ ਕੋਈ ਵੱਖਰਾ ਪਤਾ ਨਹੀਂ ਵਰਤ ਸਕਦੇ। ਅਸਲ ਪਤਾ ਵਰਤੋ, ਜਾਂ ਕੋਈ ਵੱਖਰੀ ਭੁਗਤਾਨ ਵਿਧੀ ਅਜ਼ਮਾਓ।"
+          },
+          "unsupported": {
+            "address": "ਵਪਾਰੀ ਇਸ ਪਤੇ 'ਤੇ ਡਿਲੀਵਰੀ ਨਹੀਂ ਕਰ ਸਕਦਾ।",
+            "wallet_is_unavailable": "ਇਸ ਪਤੇ ਨਾਲ {{walletName}} ਵਰਤੋਂ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ। ਆਪਣੀ ਖਰੀਦਦਾਰੀ ਪੂਰੀ ਕਰਨ ਲਈ ਕੋਈ ਵੱਖਰਾ ਪਤਾ ਚੁਣੋ ਜਾਂ {{walletName}} ਨੂੰ ਬੰਦ ਕਰੋ।",
+            "postal_code": "ਇਹ ਟਿਕਾਣਾ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ।"
+          },
+          "outdated": {
+            "shipping_method": "ਤੁਹਾਡੇ ਆਰਡਰ ਲਈ ਸ਼ਿਪਿੰਗ ਵਿਕਲਪ ਬਦਲ ਗਏ ਹਨ। ਆਪਣੀ ਚੋਣ ਦੀ ਸਮੀਖਿਆ ਕਰੋ।",
+            "payment_terms": "ਭੁਗਤਾਨ ਦੀਆਂ ਸ਼ਰਤਾਂ ਬਦਲ ਗਈਆਂ ਹਨ। ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਆਰਡਰ ਦੀ ਸਮੀਖਿਆ ਕਰੋ।"
+          },
+          "invalid": {
+            "shipping_address": "ਇੱਕ ਵੈਧ ਸ਼ਿਪਿੰਗ ਪਤਾ ਦਾਖਲ ਕਰੋ",
+            "billing_address": "ਇੱਕ ਵੈਧ ਬਿਲਿੰਗ ਪਤਾ ਦਾਖਲ ਕਰੋ",
+            "shipping_option": "ਇੱਕ ਵੈਧ ਸ਼ਿਪਿੰਗ ਵਿਕਲਪ ਚੁਣੋ",
+            "email": "ਇੱਕ ਵੈਧ ਈਮੇਲ ਦਰਜ ਕਰੋ",
+            "zone": "ਇੱਕ ਵੈਧ ਰਾਜ / ਸੂਬਾ ਦਾਖਲ ਕਰੋ",
+            "billing_zone": "ਇੱਕ ਵੈਧ ਬਿਲਿੰਗ ਪਤਾ ਰਾਜ / ਪ੍ਰਾਂਤ ਦਾਖਲ ਕਰੋ",
+            "emirate": "ਇੱਕ ਵੈਧ ਅਮੀਰਾਤ ਦਾਖਲ ਕਰੋ",
+            "postal_code": "ਇੱਕ ਵੈਧ ਜ਼ਿਪ / ਡਾਕ ਕੋਡ ਦਾਖਲ ਕਰੋ",
+            "phone": "ਇੱਕ ਵੈਧ ਫ਼ੋਨ ਨੰਬਰ ਦਾਖਲ ਕਰੋ",
+            "billing_phone": "ਇੱਕ ਵੈਧ ਬਿਲਿੰਗ ਪਤਾ ਫ਼ੋਨ ਨੰਬਰ ਦਾਖਲ ਕਰੋ",
+            "reduction_code": "ਇੱਕ ਵੈਧ ਛੋਟ ਕੋਡ ਜਾਂ ਗਿਫ਼ਟ ਕਾਰਡ ਦਾਖਲ ਕਰੋ",
+            "billing_must_match_shipping": "ਸ਼ਿਪਿੰਗ ਪਤੇ ਨਾਲ ਮੇਲ ਖਾਣਾ ਲਾਜ਼ਮੀ ਹੈ",
+            "billing_zip": "ਇੱਕ ਵੈਧ ਬਿਲਿੰਗ ਪਤਾ ਜ਼ਿਪ / ਡਾਕ ਕੋਡ ਦਰਜ ਕਰੋ"
+          }
+        }
       }
     },
     "store_availability": {
