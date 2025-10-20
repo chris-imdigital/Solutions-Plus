@@ -243,8 +243,97 @@
             "token_missing": "ਇਸ ਚੈੱਕਆਉਟ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਇੱਕ ਕੈਪਚਾ ਟੋਕਨ ਪ੍ਰਦਾਨ ਕਰਨਾ ਲਾਜ਼ਮੀ ਹੈ।",
             "job_enqueue_failed": "ਕੈਪਚਾ ਪ੍ਰਮਾਣਿਕਤਾ ਕੰਮ ਨੂੰ ਕਤਾਰਬੱਧ ਕਰਨ ਵਿੱਚ ਅਸਫਲ ਰਿਹਾ।",
             "job_already_queued": "ਇਸ ਕੈਪਚਾ ਟੋਕਨ ਲਈ ਕੈਪਚਾ ਪ੍ਰਮਾਣਿਕਤਾ ਪਹਿਲਾਂ ਹੀ ਕਤਾਰ ਵਿੱਚ ਹੈ।",
-            "token_expired": "ਦਿੱਤੇ ਗਏ ਕੈਪਚਾ ਟੋਕਨ ਦੀ ਮਿਆਦ ਪੁੱਗ ਗਈ ਹੈ। ਚੈੱਕਆਉਟ ਜਾਰੀ ਰੱਖਣ ਲਈ ਇੱਕ ਨਵਾਂ ਕੈਪਚਾ ਪੂਰਾ ਕਰੋ।"
+            "token_expired": "ਦਿੱਤੇ ਗਏ ਕੈਪਚਾ ਟੋਕਨ ਦੀ ਮਿਆਦ ਪੁੱਗ ਗਈ ਹੈ। ਚੈੱਕਆਉਟ ਜਾਰੀ ਰੱਖਣ ਲਈ ਇੱਕ ਨਵਾਂ ਕੈਪਚਾ ਪੂਰਾ ਕਰੋ।",
+            "token_invalid": "ਦਿੱਤਾ ਗਿਆ ਕੈਪਚਾ ਟੋਕਨ ਅਵੈਧ ਸੀ। ਚੈੱਕਆਉਟ ਜਾਰੀ ਰੱਖਣ ਲਈ ਇੱਕ ਨਵਾਂ ਕੈਪਚਾ ਭਰੋ।",
+            "token_not_valid_for_session": "ਇਸ ਚੈੱਕਆਉਟ ਨਾਲ ਦਿੱਤਾ ਗਿਆ ਕੈਪਚਾ ਨਹੀਂ ਵਰਤਿਆ ਜਾ ਸਕਦਾ।"
+          },
+          "fx_reconciliation_override": {
+            "shop_currency_mismatch": "ਪ੍ਰਾਪਤ ਹੋਈ ਰਕਮ ਸਟੋਰ ਦੀ ਮੁਦਰਾ ਵਿੱਚ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ।"
+          },
+          "checkout_source": {
+            "revoked": "ਇਹ ਚੈੱਕਆਉਟ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।"
           }
+        },
+        "full_price": "ਪੂਰੀ ਕੀਮਤ:",
+        "title": "ਚੈੱਕਆਉਟ - {{shopName}}",
+        "full_title": "{{pageTitle}} - {{shopName}} - ਚੈੱਕਆਉਟ",
+        "loading": "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...",
+        "loading_title": "ਚੈੱਕਆਉਟ - {{shopName}}",
+        "google_map_title": "ਗੂਗਲ ਮੈਪ",
+        "confirm_order_button_label": "ਆਰਡਰ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ",
+        "submit_order_button_label": "ਆਰਡਰ ਸਪੁਰਦ ਕਰੋ",
+        "submit_for_review_button_label": "ਸਮੀਖਿਆ ਲਈ ਸਪੁਰਦ ਕਰੋ",
+        "submit_for_review_notice_label": "ਤੁਹਾਡੇ ਆਰਡਰ ਦੀ ਸਮੀਖਿਆ ਹੋਣ ਤੱਕ ਭੁਗਤਾਨ ਨਹੀਂ ਕੀਤਾ ਜਾਵੇਗਾ।",
+        "continue_to_payment_plans_button_label": "ਭੁਗਤਾਨ ਯੋਜਨਾਵਾਂ 'ਤੇ ਜਾਰੀ ਰੱਖੋ",
+        "back_button_label": "ਵਾਪਸੀ",
+        "choose_delivery_strategy": "ਡਿਲੀਵਰੀ ਵਿਧੀ ਚੁਣੋ",
+        "autocomplete_zero_item": "ਕੋਈ ਆਈਟਮ ਉਪਲਬਧ ਨਹੀਂ ਹੈ",
+        "autocomplete_powered_by_google": "{{brandName}} ਦੁਆਰਾ ਸੰਚਾਲਿਤ",
+        "submit": "ਜਮ੍ਹਾਂ ਕਰੋ",
+        "processing": "ਪ੍ਰਕਿਰਿਆ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ...",
+        "stepper": {
+          "increase": "{{type}} ਵਧਾਓ",
+          "decrease": "ਘਟਾਓ {{type}}",
+          "minimum_reached": "ਘੱਟੋ-ਘੱਟ {{value}} ਤੱਕ ਪਹੁੰਚ ਗਿਆ",
+          "maximum_reached": "ਵੱਧ ਤੋਂ ਵੱਧ {{value}} ਤੱਕ ਪਹੁੰਚ ਗਿਆ"
+        },
+        "remove_chip": "ਆਈਟਮ ਹਟਾਓ",
+        "remove_item": "%{ਲੇਬਲ} ਹਟਾਓ",
+        "remove_tag": "ਟੈਗ ਹਟਾਓ",
+        "dates": {
+          "weekdays": {
+            "monday": "ਸੋਮਵਾਰ",
+            "tuesday": "ਮੰਗਲਵਾਰ",
+            "wednesday": "ਬੁੱਧਵਾਰ",
+            "thursday": "ਵੀਰਵਾਰ",
+            "friday": "ਸ਼ੁੱਕਰਵਾਰ",
+            "saturday": "ਸ਼ਨੀਵਾਰ",
+            "sunday": "ਐਤਵਾਰ"
+          },
+          "weekdays_abbreviation": {
+            "monday": "ਮੋ",
+            "tuesday": "ਟੂ",
+            "wednesday": "ਅਸੀਂ",
+            "thursday": "ਵ",
+            "friday": "ਸ਼੍ਰੀ",
+            "saturday": "ਸ਼ਨੀ",
+            "sunday": "ਸੁ"
+          },
+          "months": {
+            "january": "ਜਨਵਰੀ",
+            "february": "ਫਰਵਰੀ",
+            "march": "ਮਾਰਚ",
+            "april": "ਅਪ੍ਰੈਲ",
+            "may": "ਮਈ",
+            "june": "ਜੂਨ",
+            "july": "ਜੁਲਾਈ",
+            "august": "ਅਗਸਤ",
+            "september": "ਸਤੰਬਰ",
+            "october": "ਅਕਤੂਬਰ",
+            "november": "ਨਵੰਬਰ",
+            "december": "ਦਸੰਬਰ"
+          }
+        },
+        "datepicker": {
+          "show_previous_month": "ਪਿਛਲਾ ਮਹੀਨਾ ਦਿਖਾਓ, {{month}} {{year}}",
+          "show_next_month": "ਅਗਲਾ ਮਹੀਨਾ ਦਿਖਾਓ, {{month}} {{year}}",
+          "range_start": "ਰੇਂਜ ਸ਼ੁਰੂ",
+          "in_range": "ਰੇਂਜ ਵਿੱਚ",
+          "range_end": "ਰੇਂਜ ਦਾ ਅੰਤ"
+        },
+        "map": {
+          "cluster_title": {
+            "one": "{{number}} ਮਾਰਕਰ ਦਾ ਸਮੂਹ",
+            "other": "{{number}} ਮਾਰਕਰਾਂ ਦਾ ਸਮੂਹ"
+          }
+        },
+        "sheet": {
+          "expand": "ਫੈਲਾਓ"
+        },
+        "dropzone": {
+          "add_file": "ਫਾਈਲ ਸ਼ਾਮਲ ਕਰੋ",
+          "invalid_file_type": "ਫਾਈਲ ਕਿਸਮ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ",
+          "dragged_over": "ਅੱਪਲੋਡ ਕਰਨ ਲਈ ਫ਼ਾਈਲ ਛੱਡੋ"
         }
       },
       "order_summary": {
@@ -1069,7 +1158,42 @@
         "different_shipping_address_text": "ਇਸ ਆਰਡਰ ਲਈ ਇੱਕ ਵਾਰ ਵਰਤਿਆ ਜਾਣ ਵਾਲਾ ਪਤਾ ਵਰਤੋ",
         "change_company_location_link_label": "ਕੰਪਨੀ ਦਾ ਸਥਾਨ ਬਦਲੋ",
         "change_location_link_label": "ਟਿਕਾਣਾ ਬਦਲੋ",
-        "ship_to_company": "{{companyName}} ਨੂੰ ਭੇਜੋ"
+        "ship_to_company": "{{companyName}} ਨੂੰ ਭੇਜੋ",
+        "title": "ਜਾਣਕਾਰੀ",
+        "address_title": "ਪਤਾ",
+        "shipping_used_as_billing_notice": "ਇਸ ਆਰਡਰ ਲਈ ਇਸਨੂੰ ਤੁਹਾਡੇ ਬਿਲਿੰਗ ਪਤੇ ਵਜੋਂ ਵੀ ਵਰਤਿਆ ਜਾਵੇਗਾ।",
+        "delivery_option_title": "ਡਿਲੀਵਰੀ ਵਿਧੀ",
+        "contact_method_title": "ਸੰਪਰਕ",
+        "email_label": "ਈਮੇਲ",
+        "email_rollup_accessibility_label": "ਈਮੇਲ ਵਿਕਲਪ",
+        "email_placeholder": "ਈਮੇਲ",
+        "email_or_phone_label": "ਈਮੇਲ ਜਾਂ ਮੋਬਾਈਲ ਫ਼ੋਨ ਨੰਬਰ",
+        "email_or_phone_placeholder": "ਈਮੇਲ ਜਾਂ ਮੋਬਾਈਲ ਫ਼ੋਨ ਨੰਬਰ",
+        "stored_addresses_label": "ਸੁਰੱਖਿਅਤ ਕੀਤੇ ਪਤੇ",
+        "available_addresses_label": "ਉਪਲਬਧ ਪਤੇ",
+        "new_address_label": "ਇੱਕ ਨਵਾਂ ਪਤਾ ਵਰਤੋ",
+        "first_name_label": "ਪਹਿਲਾ ਨਾਂ",
+        "optional_first_name_label": "ਪਹਿਲਾ ਨਾਮ (ਵਿਕਲਪਿਕ)",
+        "last_name_label": "ਆਖਰੀ ਨਾਂਮ",
+        "company_label": "ਕੰਪਨੀ",
+        "company_attention_label": "ਕੰਪਨੀ/ਧਿਆਨ",
+        "optional_company_attention_label": "ਕੰਪਨੀ/ਧਿਆਨ (ਵਿਕਲਪਿਕ)",
+        "optional_company_label": "ਕੰਪਨੀ (ਵਿਕਲਪਿਕ)",
+        "address1_label": "ਪਤਾ",
+        "address2_label": "ਅਪਾਰਟਮੈਂਟ, ਸੂਟ, ਆਦਿ।",
+        "optional_address2_label": "ਅਪਾਰਟਮੈਂਟ, ਸੂਟ, ਆਦਿ (ਵਿਕਲਪਿਕ)",
+        "city_label": "ਸ਼ਹਿਰ",
+        "country_label": "ਦੇਸ਼/ਖੇਤਰ",
+        "country_code": "ਦੇਸ਼/ਖੇਤਰ ਕੋਡ",
+        "province_label": "ਸੂਬਾ",
+        "province_placeholder": "ਸੂਬਾ",
+        "county_label": "ਕਾਉਂਟੀ",
+        "county_placeholder": "ਕਾਉਂਟੀ",
+        "state_label": "ਰਾਜ",
+        "state_placeholder": "ਰਾਜ",
+        "region_label": "ਖੇਤਰ",
+        "region_placeholder": "ਖੇਤਰ",
+        "region_none": "ਕੋਈ ਨਹੀਂ ਚੁਣਿਆ ਗਿਆ"
       },
       "delivery_options": {
         "free_total_label": "ਮੁਫ਼ਤ",
