@@ -1,0 +1,254 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "shopify": {
+    "sentence": {
+      "two_words_connector": " ਅਤੇ ",
+      "last_word_connector": ", ਅਤੇ "
+    },
+    "checkout": {
+      "address_management": {
+        "confirm_address_deletion": "ਕੀ ਤੁਸੀਂ ਪੱਕਾ ਪਤਾ {{address}} ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+      },
+      "general": {
+        "page_title": "ਕਮਰਾ ਛੱਡ ਦਿਓ",
+        "error_page_title": "ਗਲਤੀ",
+        "skip_to_content": "ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ",
+        "breadcrumb": "ਬਰੈੱਡਕ੍ਰੰਬ",
+        "continue_button_label": "ਜਾਰੀ ਰੱਖੋ",
+        "complete_purchase_button_label": "ਆਰਡਰ ਪੂਰਾ ਕਰੋ",
+        "pay_now_button_label": "ਹੁਣੇ ਭੁਗਤਾਨ ਕਰੋ",
+        "authenticate_purchase_button_label": "ਭੁਗਤਾਨ ਪ੍ਰਮਾਣਿਤ ਕਰੋ",
+        "edit_link_label": "ਸੋਧੋ",
+        "all_rights_reserved": "ਸਾਰੇ ਹੱਕ ਰਾਖਵੇਂ ਹਨ %{shop_name}",
+        "print_policies_link_label": "ਪ੍ਰਿੰਟ",
+        "cart": "ਕਾਰਟ",
+        "close_modal_label": "ਬੰਦ ਕਰੋ",
+        "close_notice_label": "ਬੰਦ ਕਰੋ",
+        "expand_notice_label": "ਹੋਰ ਵੇਖੋ",
+        "continue_to_shipping_method": "ਸ਼ਿਪਿੰਗ ਜਾਰੀ ਰੱਖੋ",
+        "continue_to_payment_method": "ਭੁਗਤਾਨ ਜਾਰੀ ਰੱਖੋ",
+        "continue_to_review": "ਆਰਡਰ ਦੀ ਸਮੀਖਿਆ ਕਰੋ",
+        "back_to_cart": "ਕਾਰਟ ਤੇ ਵਾਪਸ ਜਾਓ",
+        "back_to_contact_information": "ਜਾਣਕਾਰੀ ਤੇ ਵਾਪਸ ਜਾਓ",
+        "back_to_shipping_method": "ਸ਼ਿਪਿੰਗ 'ਤੇ ਵਾਪਸ ਜਾਓ",
+        "back_to_payment_method": "ਭੁਗਤਾਨ 'ਤੇ ਵਾਪਸ ਜਾਓ",
+        "choose_shipping_method": "ਇੱਕ ਸ਼ਿਪਿੰਗ ਵਿਧੀ ਚੁਣੋ",
+        "choose_payment_method": "ਭੁਗਤਾਨ ਵਿਧੀ ਚੁਣੋ",
+        "choose_billing_address": "ਇੱਕ ਬਿਲਿੰਗ ਪਤਾ ਚੁਣੋ",
+        "contact_us_html": "ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।",
+        "autocomplete_title": "ਸੁਝਾਅ",
+        "autocomplete_single_item": "1 ਆਈਟਮ ਉਪਲਬਧ ਹੈ",
+        "autocomplete_multi_item": "{{number}} ਆਈਟਮਾਂ ਉਪਲਬਧ ਹਨ",
+        "autocomplete_close": "ਸੁਝਾਅ ਬੰਦ ਕਰੋ",
+        "forwarding_indicator": {
+          "new_window": "ਇੱਕ ਨਵੀਂ ਵਿੰਡੋ ਵਿੱਚ ਖੁੱਲ੍ਹਦਾ ਹੈ।",
+          "external": "ਬਾਹਰੀ ਵੈੱਬਸਾਈਟ ਖੋਲ੍ਹਦਾ ਹੈ।",
+          "external_and_new_window": "ਬਾਹਰੀ ਵੈੱਬਸਾਈਟ ਨੂੰ ਇੱਕ ਨਵੀਂ ਵਿੰਡੋ ਵਿੱਚ ਖੋਲ੍ਹਦਾ ਹੈ।"
+        },
+        "checkout_context": {
+          "step_one": "%{shop_name} - ਚੈੱਕਆਉਟ"
+        },
+        "tooltip_accessibility_label": "ਹੋਰ ਜਾਣਕਾਰੀ",
+        "qr_code": "QR ਕੋਡ",
+        "errors": {
+          "only_empty_terms_accepted": "ਇਹ ਨੀਤੀ ਸਿਰਫ਼ ਖਾਲੀ ਸ਼ਰਤਾਂ ਨੂੰ ਸਵੀਕਾਰ ਕਰਦੀ ਹੈ।",
+          "session_identifier_not_unique_error": "ਤੁਹਾਡੇ ਆਰਡਰ ਵਿੱਚ ਕੁਝ ਗਲਤ ਹੋ ਗਿਆ, ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਜਾਂਚ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+          "line_item_limit_reached": "ਲਾਈਨ ਆਈਟਮਾਂ ਦੀ ਵੱਧ ਤੋਂ ਵੱਧ ਗਿਣਤੀ ਪੂਰੀ ਹੋ ਗਈ ਹੈ।",
+          "session_is_already_finished": "ਇਸ ਚੈੱਕਆਉਟ ਸੈਸ਼ਨ ਨੂੰ ਪਹਿਲਾਂ ਹੀ ਅੰਤਿਮ ਰੂਪ ਦਿੱਤਾ ਜਾ ਚੁੱਕਾ ਹੈ।",
+          "merchandise": {
+            "only_value_constraint": "ਵਪਾਰਕ ਮਾਲ ਇਨਪੁੱਟ ਵਿੱਚ ਸਿਰਫ਼ ਸਹੀ ਮੁੱਲਾਂ ਦੀ ਆਗਿਆ ਹੈ।",
+            "merchandise_not_found": "ਉਤਪਾਦ ਨਹੀਂ ਮਿਲਿਆ।",
+            "merchandise_variant_not_found": "ਉਤਪਾਦ ਦਾ ਰੂਪ ਨਹੀਂ ਮਿਲਿਆ।",
+            "merchandise_not_applicable": "ਉਤਪਾਦ ਰੂਪ ਖਰੀਦਿਆ ਨਹੀਂ ਜਾ ਸਕਦਾ।",
+            "mixed_currencies": "ਚੈੱਕਆਉਟ ਵਿੱਚ ਵੱਖ-ਵੱਖ ਮੁਦਰਾਵਾਂ ਵਾਲੀਆਂ ਲਾਈਨ ਆਈਟਮਾਂ ਸ਼ਾਮਲ ਹਨ।",
+            "bundle_products_not_supported_for_b2b": "ਇਸ ਸਥਾਨ ਲਈ B2B ਆਰਡਰਾਂ ਵਿੱਚ ਬੰਡਲ ਕੀਤੀਆਂ ਆਈਟਮਾਂ ਸ਼ਾਮਲ ਨਹੀਂ ਕੀਤੀਆਂ ਜਾ ਸਕਦੀਆਂ।",
+            "gift_card_quantity_mismatch": "ਗਿਫਟ ​​ਕਾਰਡ ਕੋਡ ਨਿਰਧਾਰਤ ਕਰਦੇ ਸਮੇਂ, ਲਾਈਨ ਆਈਟਮ ਦੀ ਮਾਤਰਾ ਅਤੇ ਗਿਫਟ ਕਾਰਡ ਕੋਡਾਂ ਦੀ ਗਿਣਤੀ ਮੇਲ ਖਾਂਦੀ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ।",
+            "gift_card_not_supported": "ਇਸ ਚੈੱਕਆਉਟ 'ਤੇ ਗਿਫਟ ਕਾਰਡ ਸਮਰਥਿਤ ਨਹੀਂ ਹਨ।",
+            "gift_card_not_unique": "ਇਸ ਚੈੱਕਆਉਟ ਵਿੱਚ {{code}} ਕੋਡ ਵਾਲਾ ਗਿਫਟ ਕਾਰਡ ਇੱਕ ਤੋਂ ਵੱਧ ਵਾਰ ਆਉਂਦਾ ਹੈ। ਤੁਲਨਾ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਕੋਡ ਫਾਰਮੈਟ ਕੀਤੇ ਜਾਂਦੇ ਹਨ।",
+            "gift_card_used": "ਗਿਫਟ ​​ਕਾਰਡ ਕੋਡ {{code}} ਪਹਿਲਾਂ ਹੀ ਇੱਕ ਗਿਫਟ ਕਾਰਡ ਨੂੰ ਦਿੱਤਾ ਗਿਆ ਹੈ। ਤੁਲਨਾ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਕੋਡ ਫਾਰਮੈਟ ਕੀਤੇ ਜਾਂਦੇ ਹਨ।",
+            "gift_card_invalid": "ਗਿਫਟ ​​ਕਾਰਡ ਕੋਡ {{code}} ਅਵੈਧ ਹੈ।",
+            "gift_card_code_changed": "ਫਾਰਮੈਟਿੰਗ ਨਿਯਮਾਂ ਦੇ ਅਨੁਸਾਰ ਗਿਫਟ ਕਾਰਡ ਕੋਡ {{proposed_code}} ਨੂੰ {{formatted_code}} ਵਿੱਚ ਬਦਲ ਦਿੱਤਾ ਗਿਆ ਸੀ।",
+            "gift_card_with_attributes_not_supported": "ਇਸ ਚੈੱਕਆਉਟ 'ਤੇ ਕਸਟਮ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਵਾਲੇ ਗਿਫਟ ਕਾਰਡ ਸਮਰਥਿਤ ਨਹੀਂ ਹਨ।",
+            "gift_card_with_components_not_supported": "ਇਸ ਚੈੱਕਆਉਟ 'ਤੇ ਕੰਪੋਨੈਂਟਾਂ ਵਾਲੇ ਗਿਫਟ ਕਾਰਡ ਸਮਰਥਿਤ ਨਹੀਂ ਹਨ।",
+            "selling_plan_mismatch": "ਗਾਹਕੀ ਅੱਪਡੇਟ ਕਰ ਦਿੱਤੀ ਗਈ ਹੈ।",
+            "selling_plan_not_supported": "ਗਾਹਕੀਆਂ ਸਮਰਥਿਤ ਨਹੀਂ ਹਨ।",
+            "selling_plan_not_supported_b2b": "B2B ਚੈੱਕਆਉਟ ਲਈ ਗਾਹਕੀਆਂ ਸਮਰਥਿਤ ਨਹੀਂ ਹਨ।",
+            "price_mismatch": "ਇਸ ਵਪਾਰਕ ਮਾਲ ਲਈ ਪਹਿਲਾਂ ਪ੍ਰਸਤਾਵਿਤ ਕੀਮਤ ਅਵੈਧ ਸੀ ਅਤੇ ਇਸਨੂੰ ਅੱਪਡੇਟ ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ।",
+            "inventory_not_found": "ਇਸ ਵਪਾਰਕ ਮਾਲ ਲਈ ਕੋਈ ਵਸਤੂ ਸੂਚੀ ਨਹੀਂ ਮਿਲੀ।",
+            "product_not_published": "ਉਤਪਾਦ ਪ੍ਰਕਾਸ਼ਿਤ ਨਹੀਂ ਕੀਤਾ ਗਿਆ ਹੈ।",
+            "product_not_published_in_buyer_location": "ਉਤਪਾਦ ਖਰੀਦਦਾਰ ਦੇ ਸਥਾਨ 'ਤੇ ਪ੍ਰਕਾਸ਼ਿਤ ਨਹੀਂ ਕੀਤਾ ਗਿਆ ਹੈ।",
+            "duplicated_stable_id": "ਇਸ ਵਪਾਰਕ ਲਾਈਨ ਦਾ ਉਹੀ ਸਥਿਰ-ਆਈਡੀ ਹੈ ਜੋ ਦੂਜੀ ਲਾਈਨ ਦਾ ਹੈ।",
+            "minimum_quantity_not_met": "ਕੁਝ ਚੀਜ਼ਾਂ ਦੀ ਮਾਤਰਾ ਘੱਟੋ-ਘੱਟ ਲੋੜੀਂਦੀ ਮਾਤਰਾ ਨੂੰ ਪੂਰਾ ਨਹੀਂ ਕਰਦੀ।",
+            "maximum_quantity_exceeded": "ਕੁਝ ਚੀਜ਼ਾਂ ਦੀ ਮਾਤਰਾ ਵੱਧ ਤੋਂ ਵੱਧ ਆਗਿਆ ਦਿੱਤੀ ਗਈ ਸੀਮਾ ਤੋਂ ਵੱਧ ਹੈ।",
+            "quantity_increment_not_met": "ਕੁਝ ਚੀਜ਼ਾਂ ਦੀ ਮਾਤਰਾ ਆਰਡਰ ਸੀਮਾਵਾਂ ਨੂੰ ਪੂਰਾ ਨਹੀਂ ਕਰਦੀ।",
+            "quantity_rules_not_met": "ਕੁਝ ਚੀਜ਼ਾਂ ਦੀ ਮਾਤਰਾ ਆਰਡਰ ਸੀਮਾਵਾਂ ਨੂੰ ਪੂਰਾ ਨਹੀਂ ਕਰਦੀ।",
+            "bundle_requires_components": "ਇਸ ਬੰਡਲ ਵਸਤੂ ਦੇ ਕੋਈ ਹਿੱਸੇ ਨਹੀਂ ਹਨ।",
+            "title_too_long": "ਵਪਾਰਕ ਮਾਲ ਦਾ ਸਿਰਲੇਖ ਬਹੁਤ ਲੰਮਾ ਹੈ।",
+            "title_empty": "ਵਪਾਰਕ ਮਾਲ ਦਾ ਸਿਰਲੇਖ ਖਾਲੀ ਹੈ।"
+          },
+          "buyer_identity": {
+            "business_customer_does_not_match_company": "ਕੰਪਨੀ ਦੇ ਸੰਪਰਕ ਵਿਅਕਤੀ ਕੋਲ ਕੰਪਨੀ ਤੱਕ ਪਹੁੰਚ ਨਹੀਂ ਹੈ।",
+            "customer_account_required": "ਜਾਰੀ ਰੱਖਣ ਲਈ ਤੁਹਾਨੂੰ ਸਾਈਨ ਇਨ ਕਰਨਾ ਪਵੇਗਾ।",
+            "company_location_required": "ਗਾਹਕ ਨੂੰ ਜਾਰੀ ਰੱਖਣ ਲਈ ਕੰਪਨੀ ਦਾ ਸਥਾਨ ਚੁਣਨਾ ਪਵੇਗਾ।",
+            "company_purchase_permission_required": "ਗਾਹਕ ਨੂੰ ਕੰਪਨੀ ਦੇ ਆਰਡਰ ਦੇਣ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ।",
+            "personal_order_not_allowed": "ਇਸ ਦੁਕਾਨ ਲਈ ਨਿੱਜੀ ਆਰਡਰ ਦੀ ਆਗਿਆ ਨਹੀਂ ਹੈ।",
+            "lost_access_to_company": "ਗਾਹਕ ਨੇ ਕਿਸੇ ਵੀ ਕੰਪਨੀ ਤੱਕ ਪਹੁੰਚ ਗੁਆ ਦਿੱਤੀ।",
+            "contact_info_does_not_match_customer_account": "ਸੰਪਰਕ ਜਾਣਕਾਰੀ ਉਸ ਖਾਤੇ ਨਾਲ ਮੇਲ ਖਾਂਦੀ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ ਜਿਸ ਵਿੱਚ ਤੁਸੀਂ ਸਾਈਨ ਇਨ ਕੀਤਾ ਹੋਇਆ ਹੈ।",
+            "phone_number_does_not_match_expected_pattern": "ਦਿੱਤਾ ਗਿਆ ਫ਼ੋਨ ਨੰਬਰ ਉਮੀਦ ਕੀਤੇ ਪੈਟਰਨ ਨਾਲ ਮੇਲ ਨਹੀਂ ਖਾਂਦਾ।",
+            "email_required": "ਜਦੋਂ ਗਾਹਕੀ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਵਪਾਰਕ ਸਮਾਨ ਖਰੀਦਿਆ ਜਾਂਦਾ ਹੈ ਤਾਂ ਇੱਕ ਈਮੇਲ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ।",
+            "email_domain_is_invalid": "ਇਸ ਨਿਰਧਾਰਤ ਡੋਮੇਨ ਨੂੰ ਹੱਲ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।",
+            "missing_contact_method": "ਇੱਕ ਵੈਧ ਸੰਪਰਕ ਵਿਧੀ ਗੁੰਮ ਹੈ।",
+            "checkout_completion_target_is_missing": "ਚੈੱਕਆਉਟ ਪੂਰਾ ਕਰਨ ਦਾ ਟੀਚਾ ਗੁੰਮ ਹੈ।",
+            "invalid_customer_profile": "ਇੱਕ ਅਵੈਧ ਗਾਹਕ ਪ੍ਰੋਫਾਈਲ ਪ੍ਰਦਾਨ ਕੀਤਾ ਗਿਆ ਸੀ।",
+            "customer_profile_access_restricted": "ਚੈੱਕਆਉਟ ਨੂੰ ਗਾਹਕ ਪ੍ਰੋਫਾਈਲ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ।",
+            "checkout_completion_target_is_invalid_proc": "ਅਵੈਧ ਚੈੱਕਆਉਟ ਪੂਰਾ ਕਰਨ ਦਾ ਟੀਚਾ।",
+            "buyer_identity_presentment_currency_does_not_match": "ਤੁਹਾਡੇ ਆਰਡਰ ਦੀ ਪ੍ਰਕਿਰਿਆ ਕਰਨ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਆਈ। ਕੁਝ ਮਿੰਟਾਂ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+          },
+          "delivery": {
+            "only_one_delivery_line_allowed": "ਕਾਰਟ ਵਿੱਚ ਸਿਰਫ਼ ਇੱਕ ਹੀ ਡਿਲੀਵਰੀ ਲਾਈਨ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ।",
+            "wrong_number_of_delivery_lines": "ਹਰੇਕ ਵਪਾਰਕ ਸਮੂਹ ਲਈ ਇੱਕ ਡਿਲੀਵਰੀ ਲਾਈਨ ਨਿਰਧਾਰਤ ਕੀਤੀ ਜਾਣੀ ਚਾਹੀਦੀ ਹੈ।",
+            "external_delivery_promise_error": "ਇੱਕ ਬਾਹਰੀ ਡਿਲੀਵਰੀ ਵਾਅਦਾ ਪ੍ਰਾਪਤ ਕਰਨ ਵਿੱਚ ਗਲਤੀ।",
+            "options_instructions_invalid": "ਦੱਸੇ ਗਏ ਨਿਰਦੇਸ਼ ਉਮੀਦ ਕੀਤੇ ਪੈਟਰਨ ਨਾਲ ਮੇਲ ਨਹੀਂ ਖਾਂਦੇ।",
+            "destination_address_required": "ਜਾਰੀ ਰੱਖਣ ਲਈ ਇੱਕ ਮੰਜ਼ਿਲ ਪਤਾ ਲੋੜੀਂਦਾ ਹੈ।",
+            "pickup_points_unavailable": "ਪਿਕਅੱਪ ਪੁਆਇੰਟ ਇਸ ਵੇਲੇ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।",
+            "local_pickup_delivery_line_detail_changed": "ਜਾਰੀ ਰੱਖਣ ਲਈ ਮੌਜੂਦਾ ਸਥਾਨਕ ਪਿਕਅੱਪ ਡਿਲੀਵਰੀ ਰਣਨੀਤੀ ਨੂੰ ਬਦਲਣਾ ਪਵੇਗਾ।",
+            "selected_pickup_option_no_longer_available": "ਪਹਿਲਾਂ ਚੁਣਿਆ ਗਿਆ ਪਿਕਅੱਪ ਵਿਕਲਪ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+            "local_pickup_no_delivery_strategy_available": "ਕੋਈ ਉਪਲਬਧ ਸਥਾਨਕ ਪਿਕਅੱਪ ਡਿਲੀਵਰੀ ਰਣਨੀਤੀ ਨਹੀਂ ਮਿਲੀ।",
+            "origin_location_id_required": "ਜਦੋਂ RETAIL ਡਿਲੀਵਰੀ ਵਿਧੀ ਦੀ ਬੇਨਤੀ ਕੀਤੀ ਜਾਂਦੀ ਹੈ ਤਾਂ ਇੱਕ ਮੂਲ ਸਥਾਨ ID ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ।",
+            "invalid_origin_location_id": "ਮੂਲ ਸਥਾਨ ID ਨਾਲ ਮੇਲ ਖਾਂਦਾ ਸਥਾਨ ਨਹੀਂ ਲੱਭ ਸਕਿਆ।"
+          }
+        }
+      },
+      "order_summary": {
+        "cart_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> ਛੂਟ ਕੋਡ ਤੁਹਾਡੇ ਕਾਰਟ ਵਿਚਲੀਆਂ ਆਈਟਮਾਂ ਲਈ ਵੈਧ ਨਹੀਂ ਹੈ।",
+        "discount_requires_customer_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> ਛੂਟ ਕੋਡ ਲਾਗੂ ਕਰਨ ਲਈ ਆਪਣੀ ਸ਼ਿਪਿੰਗ ਜਾਣਕਾਰੀ ਦਰਜ ਕਰੋ।",
+        "customer_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> ਛੂਟ ਕੋਡ ਇਸ ਵੇਲੇ ਤੁਹਾਡੇ ਲਈ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+        "eligible_customer_missing_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> ਛੂਟ ਕੋਡ ਲਈ ਯੋਗ ਗਾਹਕ ਦੀ ਲੋੜ ਹੈ",
+        "shipping_information_does_not_meet_discount_requirements_notice": "ਤੁਹਾਡੇ ਸ਼ਿਪਿੰਗ ਪਤੇ ਲਈ <strong style=\"text-transform:uppercase\">%{code}</strong> ਛੋਟ ਕੋਡ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+        "customer_already_used_once_per_customer_discount_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> ਛੂਟ ਕੋਡ ਪਹਿਲਾਂ ਹੀ ਵਰਤਿਆ ਜਾ ਚੁੱਕਾ ਹੈ।",
+        "subtotal_label": "ਉਪ-ਕੁੱਲ",
+        "subtotal_label_with_quantity": {
+          "one": "ਉਪ-ਕੁੱਲ · %{count} ਆਈਟਮ",
+          "other": "ਉਪ-ਕੁੱਲ · %{count} ਆਈਟਮਾਂ"
+        },
+        "shipping_label": "ਸ਼ਿਪਿੰਗ",
+        "pickup_label": "ਸਟੋਰ ਤੋਂ ਪਿਕਅੱਪ",
+        "no_pickup_location": "ਕੋਈ ਪਿਕਅੱਪ ਸਥਾਨ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+        "pickup_unavailable_banner_title": {
+          "one": "ਤੁਹਾਡੀ ਆਈਟਮ ਲਈ ਕੋਈ ਸਟੋਰ ਉਪਲਬਧ ਨਹੀਂ ਹੈ",
+          "other": "ਤੁਹਾਡੀਆਂ ਆਈਟਮਾਂ ਲਈ ਕੋਈ ਸਟੋਰ ਉਪਲਬਧ ਨਹੀਂ ਹੈ"
+        },
+        "pickup_unavailable_banner_body": {
+          "ship_to_address": "ਪਤੇ 'ਤੇ ਭੇਜੋ",
+          "ship_to_address_instead_html": "ਇਸਦੀ ਬਜਾਏ %{ਲਿੰਕ}"
+        },
+        "tip_label": "ਸੁਝਾਅ",
+        "unconfirmed_label": "ਪੁਸ਼ਟੀ ਨਹੀਂ ਹੋਈ",
+        "calculating_shipping": "ਗਣਨਾ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ...",
+        "calculating": "ਗਣਨਾ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ...",
+        "shipping_default_value": "ਅਗਲੇ ਪੜਾਅ 'ਤੇ ਗਣਨਾ ਕੀਤੀ ਗਈ",
+        "shipping_discount_title": "ਸ਼ਿਪਿੰਗ ਛੋਟ",
+        "shipping_pending_message": "ਅਜੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ",
+        "shipping_policy_link": "ਸ਼ਿਪਿੰਗ ਲਾਗਤਾਂ",
+        "taxes_label": "ਟੈਕਸ",
+        "estimated_taxes_label": "ਅਨੁਮਾਨਿਤ ਟੈਕਸ",
+        "estimated_taxes_label_short": "ਅਨੁਮਾਨਿਤ",
+        "information_estimated_taxes_label": "ਟੈਕਸ (ਅਨੁਮਾਨਿਤ)",
+        "estimated_taxes_finalization_tooltip_content": "ਤੁਹਾਡੇ ਆਰਡਰ ਦੇਣ ਤੋਂ ਬਾਅਦ ਅੰਤਿਮ ਟੈਕਸ ਅਤੇ ਕੁੱਲ ਰਕਮ ਦੀ ਪੁਸ਼ਟੀ ਈਮੇਲ ਜਾਂ ਟੈਕਸਟ ਦੁਆਰਾ ਕੀਤੀ ਜਾਵੇਗੀ।",
+        "order_total_label": "ਕੁੱਲ ਆਰਡਰ",
+        "price_before_discount_aria_text": "ਅਸਲ ਕੀਮਤ",
+        "price_after_discount_aria_text": "ਛੋਟ ਵਾਲੀ ਕੀਮਤ",
+        "discount_code_aria_text": "ਛੋਟ ਕੋਡ",
+        "total_savings": "ਕੁੱਲ ਬੱਚਤ",
+        "total_label": "ਕੁੱਲ",
+        "total_due_label": "ਕੁੱਲ ਬਕਾਇਆ",
+        "total_paid_label": "ਕੁੱਲ ਭੁਗਤਾਨ ਕੀਤਾ ਗਿਆ",
+        "total_price_label": "ਕੁੱਲ ਕੀਮਤ",
+        "total_outstanding_label": "ਭੁਗਤਾਨ ਕਰਨ ਵਾਲੀ ਰਕਮ",
+        "deposit_label": "ਜਮ੍ਹਾਂ ਕਰੋ",
+        "total_due_today_label": "ਅੱਜ ਕੁੱਲ ਬਕਾਇਆ",
+        "total_due_later_label": "ਕੁੱਲ ਬਕਾਇਆ ਬਾਅਦ ਵਿੱਚ",
+        "partial_total_label": "ਕੁੱਲ",
+        "free_total_label": "ਮੁਫ਼ਤ",
+        "free_shipping_total_label": "ਮੁਫ਼ਤ",
+        "paid_label": "ਭੁਗਤਾਨ ਕੀਤਾ",
+        "payment_due_label": "ਭੁਗਤਾਨ ਬਾਕੀ ਹੈ",
+        "vat_label_html": "ਟੈਕਸਾਂ ਵਿੱਚ %{amount} ਸ਼ਾਮਲ ਕਰਨਾ",
+        "duties_included_label": "ਕੁੱਲ ਵਿੱਚ ਟੈਕਸ ਅਤੇ ਡਿਊਟੀਆਂ ਸ਼ਾਮਲ ਹਨ। ਡਿਲੀਵਰੀ 'ਤੇ ਕੋਈ ਵਾਧੂ ਖਰਚਾ ਨਹੀਂ ਹੈ।",
+        "discount_and_gift_card_savings_notice": "ਛੋਟਾਂ ਵਿੱਚ %{discount_amount} ਅਤੇ ਗਿਫਟ ਕਾਰਡਾਂ ਵਿੱਚ %{gift_card_amount} ਤੋਂ ਬਾਅਦ",
+        "discount_savings_notice": "%{discount_amount} ਛੋਟਾਂ ਤੋਂ ਬਾਅਦ",
+        "gift_card_savings_notice": "ਗਿਫਟ ​​ਕਾਰਡਾਂ ਵਿੱਚ %{gift_card_amount} ਤੋਂ ਬਾਅਦ",
+        "cost_table_title": "ਲਾਗਤ ਦਾ ਸਾਰ",
+        "cost_table_item_column_header": "ਆਈਟਮ",
+        "cost_table_value_column_header": "ਮੁੱਲ",
+        "description_label": "ਵੇਰਵਾ",
+        "price_label": "ਕੀਮਤ",
+        "price_per_item": {
+          "accessibility_label": "ਪ੍ਰਤੀ ਆਈਟਮ %{ਕੀਮਤ}",
+          "label": "%{ਕੀਮਤ}/ਈਏ"
+        },
+        "quantity_label": "ਮਾਤਰਾ",
+        "product_change_label": "ਬਦਲੋ",
+        "product_image_label": "ਉਤਪਾਦ ਚਿੱਤਰ",
+        "product_image_quantity_label": "ਮਾਤਰਾ",
+        "scroll_order_summary": "ਹੋਰ ਆਈਟਮਾਂ ਲਈ ਸਕ੍ਰੌਲ ਕਰੋ",
+        "expand_order_summary_short": "ਦਿਖਾਓ",
+        "collapse_order_summary_short": "ਲੁਕਾਓ",
+        "expand_order_summary": "ਆਰਡਰ ਸਾਰਾਂਸ਼ ਦਿਖਾਓ",
+        "collapse_order_summary": "ਆਰਡਰ ਸਾਰਾਂਸ਼ ਲੁਕਾਓ",
+        "original_price": "ਅਸਲ ਕੀਮਤ",
+        "sale_price": "ਵਿਕਰੀ ਕੀਮਤ",
+        "total_updated_label": "ਅੱਪਡੇਟ ਕੀਤੀ ਕੁੱਲ ਕੀਮਤ:",
+        "order_total_updated_label": "ਅੱਪਡੇਟ ਕੀਤਾ ਕੁੱਲ",
+        "total_already_paid_label": "ਭੁਗਤਾਨ ਕੀਤਾ",
+        "unit_price": {
+          "accessible_separator": "ਪ੍ਰਤੀ",
+          "content_html": "%{ਕੀਮਤ}%{ਪਹੁੰਚਯੋਗ_ਵੱਖਰੇ}%{ਪ੍ਰਤੀ_ਯੂਨਿਟ}",
+          "per_item": {
+            "single": "%{ਕੀਮਤ} ਹਰੇਕ",
+            "one": "%{ਕੀਮਤ} ਪ੍ਰਤੀ %{ਕਾਊਂਟ} ਆਈਟਮ",
+            "other": "%{ਕੀਮਤ} ਪ੍ਰਤੀ %{ਗਿਣਤੀ} ਆਈਟਮਾਂ"
+          },
+          "per_unit": {
+            "single": "%{ਕੀਮਤ}/%{ਯੂਨਿਟ}",
+            "plural": "%{ਕੀਮਤ}/%{ਗਿਣਤੀ}%{ਯੂਨਿਟ}"
+          }
+        },
+        "gift_card_ending": "%{last_characters} ਨਾਲ ਖਤਮ ਹੋਣ ਵਾਲਾ ਗਿਫਟ ਕਾਰਡ",
+        "estimated_tax_label": "ਅਨੁਮਾਨਿਤ ਟੈਕਸ",
+        "multiple_shipping_lines_label": "ਕੁੱਲ ਸ਼ਿਪਿੰਗ",
+        "recurring_subtotal_label": "ਆਵਰਤੀ ਉਪ-ਜੋੜ",
+        "recurring_total_label": "ਆਵਰਤੀ ਕੁੱਲ",
+        "recurring_total_tooltip": "ਇਸ ਵਿੱਚ ਸ਼ਿਪਿੰਗ, ਟੈਕਸ, ਡਿਊਟੀਆਂ, ਜਾਂ ਕੋਈ ਵੀ ਲਾਗੂ ਛੋਟ ਸ਼ਾਮਲ ਨਹੀਂ ਹੈ।",
+        "confirmation_number_label": "ਪੁਸ਼ਟੀ #%{ਪੁਸ਼ਟੀ_ਨੰਬਰ}",
+        "higher_value_discount_applied": "<strong style=\"text-transform:uppercase\">%{code} ਨੂੰ</strong> ਤੁਹਾਡੀਆਂ ਮੌਜੂਦਾ ਛੋਟਾਂ ਨਾਲ ਨਹੀਂ ਵਰਤਿਆ ਜਾ ਸਕਦਾ।",
+        "percent_off_shipping": "ਸ਼ਿਪਿੰਗ 'ਤੇ %{percent}% ਛੋਟ",
+        "amount_off_shipping": "ਸ਼ਿਪਿੰਗ 'ਤੇ %{amount} ਦੀ ਛੋਟ",
+        "deferred_payment_info": {
+          "title": "%{amount_due} ਦਾ ਭੁਗਤਾਨ %{due_at} ਨੂੰ ਬਕਾਇਆ ਹੈ।",
+          "description_html": "ਤੁਹਾਡੇ ਆਰਡਰ ਬਾਰੇ ਸਵਾਲਾਂ ਲਈ, %{contact_us}.",
+          "paid_today": "ਅੱਜ ਕੁੱਲ ਭੁਗਤਾਨ ਕੀਤਾ ਗਿਆ",
+          "paid_today_next": "ਅੱਜ ਭੁਗਤਾਨ ਕੀਤਾ ਗਿਆ",
+          "due_on_fulfillment_title": "%{amount_due} ਦਾ ਭੁਗਤਾਨ ਪੂਰਤੀ 'ਤੇ ਬਕਾਇਆ ਹੈ",
+          "due_on_receipt_title": "%{amount_due} ਦਾ ਭੁਗਤਾਨ ਰਸੀਦ 'ਤੇ ਦੇਣਾ ਪਵੇਗਾ।"
+        },
+        "deferred_balance_info": {
+          "title": "{{amount_due}} ਦਾ ਬਕਾਇਆ {{due_at}} ਨੂੰ ਬਕਾਇਆ ਹੈ।",
+          "due_on_fulfillment_title": "{{amount_due}} ਦਾ ਬਕਾਇਆ ਪੂਰਤੀ 'ਤੇ ਬਕਾਇਆ ਹੈ।"
+        },
+        "payment_terms_totals": {
+          "due_today": "ਅੱਜ ਕੁੱਲ ਬਕਾਇਆ",
+          "due_today_next": "ਅੱਜ ਦੇਣਯੋਗ ਹੈ"
+        }
+      }
+    }
+  }
+}
