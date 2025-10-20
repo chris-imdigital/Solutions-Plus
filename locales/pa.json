@@ -2266,6 +2266,134 @@
       "sundayAbbreviation": "ਸੁ",
       "showNextMonth": "ਅਗਲਾ ਮਹੀਨਾ ਦਿਖਾਓ, {{month}} {{year}}",
       "showPreviousMonth": "ਪਿਛਲਾ ਮਹੀਨਾ ਦਿਖਾਓ, {{month}} {{year}}"
+    },
+    "order_details": {
+      "shipping": {
+        "summary": "ਸ਼ਿਪਿੰਗ",
+        "free": "ਮੁਫ਼ਤ",
+        "free_shipping_discount": "ਮੁਫਤ ਸ਼ਿਪਿੰਗ",
+        "one_time": "ਇੱਕ ਵਾਰ ਸ਼ਿਪਿੰਗ",
+        "subscription": "ਗਾਹਕੀ ਸ਼ਿਪਿੰਗ"
+      },
+      "pickup": {
+        "pickup": "ਚੁੱਕਣਾ",
+        "pickup_location": "ਪਿਕਅੱਪ ਟਿਕਾਣਾ",
+        "pickup_point": "ਪਿਕਅੱਪ ਪੁਆਇੰਟ"
+      },
+      "show_items": "ਆਈਟਮਾਂ ਦਿਖਾਓ",
+      "show_order_summary": "ਆਰਡਰ ਸਾਰਾਂਸ਼ ਦਿਖਾਓ",
+      "hide_order_summary": "ਆਰਡਰ ਸਾਰਾਂਸ਼ ਲੁਕਾਓ",
+      "subtitle": "ਪੁਸ਼ਟੀ ਕੀਤੀ ਗਈ {{date}}",
+      "subtotal": "ਉਪ-ਕੁੱਲ",
+      "summary_list_title_accessibility_label": "ਆਈਟਮਾਂ ਆਰਡਰ ਕਰੋ",
+      "summary_title": "ਆਰਡਰ ਸਾਰਾਂਸ਼",
+      "summary_totals_title_accessibility_label": "ਆਰਡਰ ਦੇ ਕੁੱਲ",
+      "shop_order_tracking": {
+        "download_shop_to_track": "ਪੈਕੇਜ ਨੂੰ ਟਰੈਕ ਕਰਨ ਲਈ ਦੁਕਾਨ ਡਾਊਨਲੋਡ ਕਰੋ",
+        "track_order_with_shop": "ਦੁਕਾਨ ਨਾਲ ਆਰਡਰ ਟ੍ਰੈਕ ਕਰੋ",
+        "title_header": "ਆਪਣੇ ਫ਼ੋਨ ਨਾਲ ਸਕੈਨ ਕਰੋ",
+        "real_time_delivery_updates": "ਤੁਹਾਡਾ ਆਰਡਰ ਭੇਜੇ ਜਾਣ ਤੋਂ ਬਾਅਦ, ਦੁਕਾਨ ਤੁਹਾਨੂੰ ਰੀਅਲ-ਟਾਈਮ ਡਿਲੀਵਰੀ ਅੱਪਡੇਟ ਭੇਜੇਗੀ।"
+      },
+      "edit_summary": {
+        "added": "ਜੋੜਿਆ ਗਿਆ",
+        "added_with_quantity": "{{quantity}} ਜੋੜਿਆ ਗਿਆ",
+        "removed": "ਹਟਾਇਆ ਗਿਆ",
+        "removed_with_quantity": "{{quantity}} ਹਟਾਇਆ ਗਿਆ",
+        "updated_at": "ਤੁਹਾਡਾ ਆਰਡਰ {{date}} ਨੂੰ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ ਸੀ।",
+        "returned": "ਵਾਪਸ ਕੀਤਾ",
+        "returned_with_quantities": "{ {{total}} ਵਿੱਚੋਂ {{delta}} ਵਾਪਸ ਕੀਤੇ ਗਏ",
+        "removed_with_quantities": "{ {{total}} ਵਿੱਚੋਂ {{delta}} ਹਟਾਏ ਗਏ",
+        "return_line_item_removed": "ਵਾਪਸੀ ਤੋਂ ਹਟਾਇਆ ਗਿਆ",
+        "return_line_item_removed_with_quantities": "ਵਾਪਸੀ ਤੋਂ {{delta}} ਨੂੰ ਹਟਾਇਆ ਗਿਆ"
+      },
+      "shop_pay": {
+        "order_completed_with": "ਆਰਡਰ ਇਸ ਨਾਲ ਪੂਰਾ ਹੋਇਆ",
+        "learn_more": "ਜਿਆਦਾ ਜਾਣੋ"
+      },
+      "taxes": "ਟੈਕਸ",
+      "taxes_included": "ਟੈਕਸਾਂ ਵਿੱਚ {{amount}} ਸ਼ਾਮਲ ਕਰਨਾ",
+      "duties_and_taxes_included": "ਕੁੱਲ ਵਿੱਚ ਡਿਊਟੀਆਂ ਅਤੇ ਟੈਕਸ ਸ਼ਾਮਲ ਹਨ। ਡਿਲੀਵਰੀ 'ਤੇ ਕੋਈ ਵਾਧੂ ਖਰਚਾ ਨਹੀਂ ਹੈ।",
+      "duties": "ਡਿਊਟੀਆਂ",
+      "ok_duties_tooltip": "ਇਹ ਆਰਡਰ ਕਿਸੇ ਹੋਰ ਦੇਸ਼ ਤੋਂ ਭੇਜਿਆ ਜਾ ਰਿਹਾ ਹੈ, ਇਸ ਲਈ ਤੁਹਾਡੇ ਆਰਡਰ ਦੇ ਕੁੱਲ ਵਿੱਚ ਡਿਊਟੀਆਂ ਜੋੜ ਦਿੱਤੀਆਂ ਗਈਆਂ ਹਨ।",
+      "error_duties_tooltip": "ਇਹ ਆਰਡਰ ਕਿਸੇ ਹੋਰ ਦੇਸ਼ ਤੋਂ ਭੇਜਿਆ ਜਾ ਰਿਹਾ ਹੈ, ਇਸ ਲਈ ਡਿਲੀਵਰੀ 'ਤੇ ਡਿਊਟੀਆਂ ਅਤੇ ਟੈਕਸ ਲਏ ਜਾ ਸਕਦੇ ਹਨ।",
+      "zero_duties_tooltip": "ਇਹ ਆਰਡਰ ਕਿਸੇ ਹੋਰ ਦੇਸ਼ ਤੋਂ ਭੇਜਿਆ ਜਾ ਰਿਹਾ ਹੈ। ਇਸ ਮੁੱਲ ਦੇ ਆਰਡਰ 'ਤੇ ਡਿਊਟੀਆਂ ਨਹੀਂ ਲਈਆਂ ਜਾਂਦੀਆਂ।",
+      "tip": "ਸੁਝਾਅ",
+      "title": "ਆਰਡਰ {{name}}",
+      "total": "ਕੁੱਲ",
+      "unit_price": "{{price}} /ਈਏ",
+      "pagination": {
+        "load_more": "ਹੋਰ ਲੋਡ ਕਰੋ",
+        "load_more_accessibility_label": "ਹੋਰ ਆਈਟਮਾਂ ਲੋਡ ਕਰੋ",
+        "loading_accessibility_label": "ਆਈਟਮਾਂ ਲੋਡ ਕੀਤੀਆਂ ਜਾ ਰਹੀਆਂ ਹਨ"
+      },
+      "login_to_view_all_order_details": "ਸਾਰੇ ਆਰਡਰ ਵੇਰਵੇ ਦੇਖਣ ਲਈ ਸਾਈਨ ਇਨ ਕਰੋ।",
+      "log_in": "ਸਾਈਨ - ਇਨ",
+      "logged_in_account_no_permission_to_order": "ਤੁਸੀਂ {{email}} ਵਜੋਂ ਸਾਈਨ ਇਨ ਕੀਤਾ ਹੈ। ਇਸ ਖਾਤੇ ਨੂੰ ਇਸ ਆਰਡਰ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ।",
+      "log_in_to_a_different_account": "ਕਿਸੇ ਵੱਖਰੇ ਖਾਤੇ ਵਿੱਚ ਸਾਈਨ ਇਨ ਕਰੋ",
+      "fees": {
+        "restocking_fee": "ਰੀਸਟਾਕਿੰਗ ਫੀਸ",
+        "return_shipping_fee": "ਵਾਪਸ ਸ਼ਿਪਿੰਗ"
+      },
+      "vat_invoices": {
+        "title": "ਵੈਟ ਇਨਵੌਇਸ"
+      },
+      "link_sent": "ਲਿੰਕ ਭੇਜਿਆ ਗਿਆ",
+      "cash_rounding": "ਨਕਦ ਰਾਊਂਡਿੰਗ",
+      "adjusted_payment": "ਐਡਜਸਟ ਕੀਤਾ ਭੁਗਤਾਨ",
+      "adjusted_total": "ਐਡਜਸਟ ਕੀਤਾ ਕੁੱਲ",
+      "due_on_date": "ਅਦਾਇਗੀ {{date}}",
+      "due_on_fulfillment": "ਪੂਰਤੀ 'ਤੇ ਬਕਾਇਆ",
+      "due_on_receipt": "ਰਸੀਦ 'ਤੇ ਬਕਾਇਆ"
+    },
+    "addresses": {
+      "add_button": "ਪਤਾ ਸ਼ਾਮਲ ਕਰੋ",
+      "add_button_text": "ਜੋੜੋ",
+      "add_button_accessibility_label": "ਪਤਾ ਸ਼ਾਮਲ ਕਰੋ",
+      "back_button": "ਪਿੱਛੇ",
+      "back_button_accessibility_label": "ਐਡਿਟਿੰਗ ਐਡਰੈੱਸ {{address}} ਤੇ ਵਾਪਸ ਜਾਓ",
+      "add_address_banner": "ਚੈੱਕਆਉਟ ਵੇਲੇ ਵਰਤਣ ਲਈ ਪਤੇ ਸ਼ਾਮਲ ਕਰੋ",
+      "no_addresses_banner": "ਕੋਈ ਪਤਾ ਨਹੀਂ ਜੋੜਿਆ ਗਿਆ",
+      "address_deleted_notification": "ਪਤਾ ਮਿਟਾਇਆ ਗਿਆ",
+      "cancel_adding_address_accessibility_label": "ਪਤਾ ਜੋੜਨਾ ਰੱਦ ਕਰੋ",
+      "cancel_deletion_button": "ਰੱਦ ਕਰੋ",
+      "cancel_deletion_button_accessibility_label": "{{address}} ਨੂੰ ਮਿਟਾਉਣਾ ਰੱਦ ਕਰੋ",
+      "default_address": {
+        "title": "ਡਿਫਾਲਟ ਪਤਾ",
+        "title_accessibility_label": "ਡਿਫਾਲਟ ਪਤਾ: {{address}}"
+      },
+      "delete_button": "ਮਿਟਾਓ",
+      "delete_button_accessibility_label": "{{address}} ਮਿਟਾਓ",
+      "delete_confirmation_button": "ਪਤਾ ਮਿਟਾਓ",
+      "delete_confirmation_button_accessibility_label": "{{address}} ਮਿਟਾਓ",
+      "delete_confirmation_message": "ਕੀ ਪਤਾ ਮਿਟਾਉਣਾ ਹੈ? ਮੌਜੂਦਾ ਆਰਡਰ ਪ੍ਰਭਾਵਿਤ ਨਹੀਂ ਹੁੰਦੇ।",
+      "delete_confirmation_title": "ਕੀ ਪਤਾ ਮਿਟਾਉਣਾ ਹੈ?",
+      "delete_confirmation_description": "ਮੌਜੂਦਾ ਆਰਡਰ ਪ੍ਰਭਾਵਿਤ ਨਹੀਂ ਹੁੰਦੇ।",
+      "edit_button": "ਸੋਧੋ",
+      "edit_button_accessibility_label": "{{address}} ਸੋਧੋ",
+      "edit_section_accessibility_label": "{{address}} ਸੋਧੋ",
+      "edit_modal_title": {
+        "default": "ਪਤਾ ਸੰਪਾਦਿਤ ਕਰੋ",
+        "billing": "ਬਿਲਿੰਗ ਪਤਾ ਸੰਪਾਦਿਤ ਕਰੋ",
+        "shipping": "ਸ਼ਿਪਿੰਗ ਪਤਾ ਸੰਪਾਦਿਤ ਕਰੋ"
+      },
+      "loading_accessibility_message": "ਪਤਾ ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ",
+      "loading_addresses_accessibility_message": "ਪਤੇ ਲੋਡ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ",
+      "loading_billing_accessibility_message": "ਬਿਲਿੰਗ ਪਤਾ ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ",
+      "loading_finished_accessibility_message": "ਪਤਿਆਂ ਦਾ ਨਵਾਂ ਪੰਨਾ ਲੋਡ ਹੋ ਗਿਆ ਹੈ।",
+      "loading_shipping_accessibility_message": "ਸ਼ਿਪਿੰਗ ਪਤਾ ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ",
+      "pagination": {
+        "load_more": "ਹੋਰ ਲੋਡ ਕਰੋ",
+        "load_more_accessibility_label": "ਹੋਰ ਪਤੇ ਲੋਡ ਕਰੋ"
+      },
+      "save_new_address_accessibility_label": "ਪਤਾ ਰੱਖਿਅਤ ਕਰੋ",
+      "title": "ਪਤੇ",
+      "billing_address_dropdown_placeholder": "ਬਿਲਿੰਗ ਪਤਾ"
+    },
+    "address_form": {
+      "attention": "ਧਿਆਨ ਦਿਓ",
+      "attention_company": "ਕੰਪਨੀ/ਧਿਆਨ",
+      "attention_help_text": "ਕਿਸੇ ਵਿਅਕਤੀ ਜਾਂ ਵਿਭਾਗ ਦਾ ਨਾਮ",
+      "auto_complete_close_accessibility_label": "ਸੁਝਾਅ ਬੰਦ ਕਰੋ"
     }
   },
   "accessibility": {
