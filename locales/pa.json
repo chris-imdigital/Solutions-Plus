@@ -2697,7 +2697,25 @@
           }
         },
         "show_order_actions_accessibility_label": "ਆਰਡਰ {{name}} ਲਈ ਆਰਡਰ ਕਾਰਵਾਈਆਂ ਦਿਖਾਓ"
-      }
+      },
+      "order_status": {
+        "delivery_promise": {
+          "details_modal": {
+            "shop_cash_claim": {
+              "claim_shop_cash_title": "ਸ਼ਾਪ ਕੈਸ਼ ਵਿੱਚ {{amount}} ਦਾ ਦਾਅਵਾ ਕਰਨ ਲਈ ਸਕੈਨ ਕਰੋ",
+              "claim_shop_cash_description": "ਤੁਸੀਂ ਸ਼ਾਪ ਐਪ ਵਿੱਚ ਭਵਿੱਖ ਦੀਆਂ ਖਰੀਦਦਾਰੀ ਲਈ ਆਪਣੇ ਸ਼ਾਪ ਕੈਸ਼ ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦੇ ਹੋ।"
+            }
+          }
+        }
+      },
+      "status_mark_as_delivered": "ਡਿਲੀਵਰ ਕੀਤੇ ਵਜੋਂ ਨਿਸ਼ਾਨਦੇਹੀ ਕਰੋ",
+      "fulfillment_status_title": "ਪੂਰਤੀ ਸਥਿਤੀ: {{status}}",
+      "buy_again": "ਦੁਬਾਰਾ ਖਰੀਦੋ",
+      "buy_again_accessibility_label": "ਆਰਡਰ {{orderId}} ਲਈ ਦੁਬਾਰਾ ਖਰੀਦੋ",
+      "manage": "ਪ੍ਰਬੰਧਿਤ ਕਰੋ",
+      "manage_accessiblity_label": "ਆਰਡਰ {{orderId}} ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ",
+      "group_title_label": "ਇਸਦਾ ਹਿੱਸਾ: {{groupTitle}}",
+      "group_title_label_with_parent": "ਲਈ: {{groupTitle}}"
     },
     "payment_method_brands": {
       "visa": "ਵੀਜ਼ਾ",
@@ -2772,7 +2790,10 @@
         "free": "ਮੁਫ਼ਤ",
         "free_shipping_discount": "ਮੁਫਤ ਸ਼ਿਪਿੰਗ",
         "one_time": "ਇੱਕ ਵਾਰ ਸ਼ਿਪਿੰਗ",
-        "subscription": "ਗਾਹਕੀ ਸ਼ਿਪਿੰਗ"
+        "subscription": "ਗਾਹਕੀ ਸ਼ਿਪਿੰਗ",
+        "address": "ਸ਼ਿਪਿੰਗ ਪਤਾ",
+        "address_map_marker": "ਸ਼ਿਪਿੰਗ ਪਤਾ",
+        "method": "ਸ਼ਿਪਿੰਗ ਵਿਧੀ"
       },
       "pickup": {
         "pickup": "ਚੁੱਕਣਾ",
@@ -2842,7 +2863,126 @@
       "adjusted_total": "ਐਡਜਸਟ ਕੀਤਾ ਕੁੱਲ",
       "due_on_date": "ਅਦਾਇਗੀ {{date}}",
       "due_on_fulfillment": "ਪੂਰਤੀ 'ਤੇ ਬਕਾਇਆ",
-      "due_on_receipt": "ਰਸੀਦ 'ਤੇ ਬਕਾਇਆ"
+      "due_on_receipt": "ਰਸੀਦ 'ਤੇ ਬਕਾਇਆ",
+      "shipment_timeline": {
+        "expand_events_label": "ਵੇਰਵੇ ਦਿਖਾਓ",
+        "expand_events_accessibility_label": "ਆਰਡਰ ਭੇਜਣ ਦੇ ਵੇਰਵੇ ਦਿਖਾਓ",
+        "hide_events_label": "ਵੇਰਵੇ ਲੁਕਾਓ",
+        "hide_events_accessibility_label": "ਆਰਡਰ ਭੇਜਣ ਦੇ ਵੇਰਵੇ ਲੁਕਾਓ"
+      },
+      "addresses_section_title": "ਬਿਲਿੰਗ ਅਤੇ ਸ਼ਿਪਿੰਗ",
+      "order_details": "ਆਰਡਰ ਵੇਰਵੇ",
+      "order_details_skeleton_accessibility_label": "ਸਾਰੇ ਆਰਡਰ ਵੇਰਵੇ ਦੇਖਣ ਲਈ ਸਾਈਨ ਇਨ ਕਰੋ।",
+      "billing_address": "ਬਿਲਿੰਗ ਪਤਾ",
+      "card_ending_with": "{{lastDigits}} ਨਾਲ ਖਤਮ ਹੁੰਦਾ ਹੈ",
+      "contact_information": "ਸੰਪਰਕ ਜਾਣਕਾਰੀ",
+      "company": "ਕੰਪਨੀ",
+      "company_and_location": "ਕੰਪਨੀ ਅਤੇ ਸਥਾਨ",
+      "fully_refunded_label": "ਰਿਫੰਡ ਕੀਤਾ ਗਿਆ",
+      "group_title_label": "ਇਸਦਾ ਹਿੱਸਾ: {{groupTitle}}",
+      "group_title_label_with_parent": "ਲਈ: {{groupTitle}}",
+      "view_controls": {
+        "gallery": "ਗੈਲਰੀ",
+        "list": "ਸੂਚੀ"
+      },
+      "grouped_view_components": {
+        "expand_line_items": "{{count}} ਆਈਟਮਾਂ ਦਿਖਾਓ",
+        "collapse_line_items": "{{count}} ਆਈਟਮਾਂ ਲੁਕਾਓ",
+        "line_item_summary_list_accessibility_label": "{{productTitle}} ਬੰਡਲ ਵਿੱਚ ਆਈਟਮਾਂ"
+      },
+      "discount": "ਛੋਟ",
+      "hide_items": "ਆਈਟਮਾਂ ਲੁਕਾਓ",
+      "loading": "ਆਰਡਰ ਵੇਰਵੇ ਲੋਡ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ",
+      "loading_finished_accessibility_message": "ਆਰਡਰ ਵੇਰਵੇ ਲੋਡ ਕੀਤੇ ਗਏ ਹਨ।",
+      "location": "ਟਿਕਾਣਾ",
+      "image_gallery": {
+        "next": "ਅਗਲੀਆਂ ਆਈਟਮਾਂ ਦਿਖਾਓ",
+        "previous": "ਪਿਛਲੀਆਂ ਆਈਟਮਾਂ ਦਿਖਾਓ",
+        "load_more_items": {
+          "one": "{{count}} ਹੋਰ ਆਈਟਮਾਂ ਲੋਡ ਕਰੋ",
+          "other": "{{count}} ਹੋਰ ਆਈਟਮਾਂ ਲੋਡ ਕਰੋ"
+        }
+      },
+      "mobile_summary_toggle_button": {
+        "open": "ਆਰਡਰ ਸਾਰਾਂਸ਼ ਦਿਖਾਓ",
+        "closed": "ਆਰਡਰ ਸਾਰਾਂਸ਼ ਲੁਕਾਓ"
+      },
+      "no_data": "ਕੋਈ ਨਹੀਂ",
+      "no_data_provided_accessibility_label": "{{fieldName}} ਖਾਲੀ ਹੈ।",
+      "not_applicable": "ਲਾਗੂ ਨਹੀਂ",
+      "paid_amount": "ਭੁਗਤਾਨ ਕੀਤਾ",
+      "partially_refunded_label": "ਅੰਸ਼ਕ ਤੌਰ 'ਤੇ ਰਿਫੰਡ ਕੀਤਾ ਗਿਆ",
+      "payment": {
+        "status_in_review": "ਸਮੀਖਿਆ ਤੋਂ ਬਾਅਦ ਭੁਗਤਾਨ ਬਕਾਇਆ",
+        "status_unpaid": "ਭੁਗਤਾਨ {{date}} ਨੂੰ ਬਾਕੀ ਹੈ",
+        "title": "ਭੁਗਤਾਨ",
+        "payment_type": {
+          "gift_card": "ਗਿਫਟ ​​ਕਾਰਡ",
+          "store_credit": "ਸਟੋਰ ਕ੍ਰੈਡਿਟ",
+          "money_order": "ਮਨੀ ਆਰਡਰ",
+          "cash_on_delivery": "ਕੈਸ਼ ਆਨ ਡਿਲੀਵਰੀ (COD)",
+          "bank_deposit": "ਬੈਂਕ ਜਮ੍ਹਾਂ ਰਕਮ",
+          "manual": "ਮੈਨੁਅਲ"
+        },
+        "card_payment_details": "{{lastDigits}} - {{formattedTransactionAmount}} ਨਾਲ ਖਤਮ ਹੁੰਦਾ ਹੈ",
+        "gift_card_payment_details": "{{lastDigits}} - {{formattedTransactionAmount}} ਨਾਲ ਖਤਮ ਹੁੰਦਾ ਹੈ",
+        "store_credit_payment_details": "ਸਟੋਰ ਕ੍ਰੈਡਿਟ - {{formattedTransactionAmount}}",
+        "shop_pay_installments": {
+          "paid_in_installments": "ਦੁਕਾਨ ਪੇ ਕਿਸ਼ਤਾਂ ਨਾਲ ਭੁਗਤਾਨ ਕੀਤਾ ਗਿਆ",
+          "view_schedule": "ਸਮਾਂ-ਸਾਰਣੀ ਵੇਖੋ"
+        },
+        "manual_payment_methods": {
+          "money_order": "ਮਨੀ ਆਰਡਰ - {{formattedTransactionAmount}}",
+          "cash_on_delivery": "ਕੈਸ਼ ਆਨ ਡਿਲੀਵਰੀ (COD) - {{formattedTransactionAmount}}",
+          "bank_deposit": "ਬੈਂਕ ਜਮ੍ਹਾਂ ਰਕਮ - {{formattedTransactionAmount}}",
+          "manual": "ਮੈਨੂਅਲ - {{formattedTransactionAmount}}"
+        },
+        "transactions": {
+          "show_all": "ਸਭ ਦਿਖਾਓ",
+          "show_less": "ਘੱਟ ਦਿਖਾਓ",
+          "details": "ਵੇਰਵੇ",
+          "payment_details": "ਭੁਗਤਾਨ ਵੇਰਵੇ"
+        },
+        "emv_details": {
+          "auth": "ਪ੍ਰਮਾਣਿਕਤਾ:",
+          "aid": "ਸਹਾਇਤਾ:",
+          "source": "ਸਰੋਤ:"
+        }
+      },
+      "paid_with_shop_pay_installments_card": {
+        "paid_with_shop_pay_installments": "ਦੁਕਾਨ ਦੀ ਤਨਖਾਹ ਦੀਆਂ ਕਿਸ਼ਤਾਂ ਨਾਲ ਭੁਗਤਾਨ ਕੀਤਾ ਗਿਆ",
+        "description": "ਦੁਕਾਨ ਐਪ ਵਿੱਚ ਰੀਮਾਈਂਡਰਾਂ ਨਾਲ ਆਪਣੇ ਭੁਗਤਾਨ ਸ਼ਡਿਊਲ ਦੇ ਸਿਖਰ 'ਤੇ ਰਹੋ।",
+        "payment_reminders_button": "ਭੁਗਤਾਨ ਰੀਮਾਈਂਡਰ ਪ੍ਰਾਪਤ ਕਰੋ",
+        "desktop_qr_code_content": {
+          "title": "ਰੀਮਾਈਂਡਰਾਂ ਲਈ ਸਕੈਨ ਕਰੋ",
+          "description": "ਦੁਕਾਨ ਨਾਲ ਆਪਣੀਆਂ ਕਿਸ਼ਤਾਂ ਦੇ ਰੀਮਾਈਂਡਰ ਪ੍ਰਾਪਤ ਕਰੋ।"
+        }
+      },
+      "refunded_amount": "ਰਿਫੰਡ ਕੀਤਾ ਗਿਆ",
+      "request_return_failed": "ਤੁਹਾਡੀ ਬੇਨਤੀ 'ਤੇ ਪ੍ਰਕਿਰਿਆ ਕਰਨ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਆਈ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+      "login_card": {
+        "resend_link_and_login": "ਆਪਣੇ ਆਰਡਰ ਵੇਰਵੇ ਦੇਖਣ ਲਈ, ਸਾਈਨ ਇਨ ਕਰੋ ਜਾਂ ਚੈੱਕਆਉਟ ਵੇਲੇ ਵਰਤੇ ਗਏ ਈਮੇਲ ਜਾਂ ਫ਼ੋਨ ਨੰਬਰ 'ਤੇ ਇੱਕ ਨਵਾਂ ਲਿੰਕ ਭੇਜੋ।",
+        "resend_link_only": "ਆਪਣੇ ਆਰਡਰ ਵੇਰਵੇ ਦੇਖਣ ਲਈ, ਚੈੱਕਆਉਟ ਵੇਲੇ ਵਰਤੇ ਗਏ ਈਮੇਲ ਜਾਂ ਫ਼ੋਨ ਨੰਬਰ 'ਤੇ ਇੱਕ ਨਵਾਂ ਲਿੰਕ ਭੇਜੋ।",
+        "log_in": "ਸਾਈਨ - ਇਨ",
+        "resend_link": "ਨਵਾਂ ਲਿੰਕ ਭੇਜੋ",
+        "link_expired": "ਲਿੰਕ ਦੀ ਮਿਆਦ ਸਮਾਪਤ ਹੋ ਗਈ"
+      },
+      "remaining_amount": "ਬਾਕੀ",
+      "marketing_section_title": "ਖ਼ਬਰਾਂ ਅਤੇ ਪੇਸ਼ਕਸ਼ਾਂ",
+      "marketing_description": "ਤੁਹਾਨੂੰ ਮਾਰਕੀਟਿੰਗ ਈਮੇਲ ਪ੍ਰਾਪਤ ਹੋਣਗੇ। ਤੁਸੀਂ ਕਿਸੇ ਵੀ ਸਮੇਂ ਗਾਹਕੀ ਰੱਦ ਕਰ ਸਕਦੇ ਹੋ।",
+      "marketing_checkbox_label": "ਖ਼ਬਰਾਂ ਅਤੇ ਪੇਸ਼ਕਸ਼ਾਂ ਨਾਲ ਮੈਨੂੰ ਈਮੇਲ ਕਰੋ",
+      "marketing_checkmark_label": "ਤੁਸੀਂ ਈਮੇਲ ਖ਼ਬਰਾਂ ਅਤੇ ਪੇਸ਼ਕਸ਼ਾਂ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਗਾਹਕ ਬਣ ਗਏ ਹੋ।",
+      "returns": {
+        "expand_events_label": "ਵੇਰਵੇ ਦਿਖਾਓ",
+        "hide_events_label": "ਵੇਰਵੇ ਲੁਕਾਓ",
+        "ineligible_return_message": "ਇਸ ਆਰਡਰ ਵਿੱਚ ਕੋਈ ਵੀ ਆਈਟਮ ਵਾਪਸੀ ਦੇ ਯੋਗ ਨਹੀਂ ਹੈ।",
+        "ineligible_return_message_when_returned": "ਇਸ ਆਰਡਰ ਵਿੱਚ ਕੋਈ ਵੀ ਵਾਧੂ ਆਈਟਮ ਵਾਪਸੀ ਦੇ ਯੋਗ ਨਹੀਂ ਹੈ।",
+        "print_shipping_label": "ਸ਼ਿਪਿੰਗ ਲੇਬਲ ਪ੍ਰਿੰਟ ਕਰੋ",
+        "return_and_refund_modal_header": "ਰਿਫੰਡ ਨੀਤੀ",
+        "tracking_number": "ਟਰੈਕਿੰਗ ਨੰਬਰ:",
+        "exchange_header": "ਵਸਤੂਆਂ ਦਾ ਵਟਾਂਦਰਾ ਕਰੋ",
+        "exchange_subheader": "ਵਾਪਸੀ ਪੂਰੀ ਹੋਣ ਤੋਂ ਬਾਅਦ ਐਕਸਚੇਂਜ ਆਈਟਮਾਂ ਆਰਡਰ ਵਿੱਚ ਜੋੜੀਆਂ ਜਾਣਗੀਆਂ।"
+      }
     },
     "addresses": {
       "add_button": "ਪਤਾ ਸ਼ਾਮਲ ਕਰੋ",
@@ -3133,7 +3273,30 @@
     "issued": {
       "how_to_use_gift_card": "ਗਿਫਟ ​​ਕਾਰਡ ਕੋਡ ਨੂੰ ਔਨਲਾਈਨ ਜਾਂ ਸਟੋਰ ਵਿੱਚ QR ਕੋਡ ਦੀ ਵਰਤੋਂ ਕਰੋ",
       "title": "ਇਹ ਰਿਹਾ ਤੁਹਾਡਾ { {{ shop }} {{ value }} ਗਿਫਟ ਕਾਰਡ ਬੈਲੇਂਸ!",
-      "subtext": "ਤੁਹਾਡਾ ਗਿਫ਼ਟ ਕਾਰਡ"
+      "subtext": "ਤੁਹਾਡਾ ਗਿਫ਼ਟ ਕਾਰਡ",
+      "shop_link": "ਔਨਲਾਈਨ ਸਟੋਰ 'ਤੇ ਜਾਓ",
+      "add_to_apple_wallet": "ਐਪਲ ਵਾਲਿਟ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ",
+      "qr_image_alt": "QR ਕੋਡ — ਗਿਫਟ ਕਾਰਡ ਰੀਡੀਮ ਕਰਨ ਲਈ ਸਕੈਨ ਕਰੋ",
+      "copy_code": "ਗਿਫ਼ਟ ਕਾਰਡ ਕੋਡ ਕਾਪੀ ਕਰੋ",
+      "expiration_date": "ਮਿਆਦ ਖਤਮ ਹੋ ਰਹੀ ਹੈ {{ expires_on }}",
+      "copy_code_success": "ਕੋਡ ਸਫਲਤਾਪੂਰਵਕ ਕਾਪੀ ਕੀਤਾ ਗਿਆ",
+      "expired": "ਮਿਆਦ ਪੁੱਗ ਗਈ"
+    }
+  },
+  "placeholders": {
+    "password": "ਪਾਸਵਰਡ",
+    "search": "ਖੋਜ",
+    "product_title": "ਉਤਪਾਦ ਦਾ ਸਿਰਲੇਖ",
+    "collection_title": "ਸੰਗ੍ਰਹਿ ਦਾ ਸਿਰਲੇਖ"
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "ਠੇਲ੍ਹੇ ਵਿੱਚ ਪਾਓ",
+      "adding_to_cart": "ਜੋੜ ਰਿਹਾ ਹੈ...",
+      "added_to_cart": "ਕਾਰਟ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤਾ ਗਿਆ",
+      "add_to_cart_error": "ਕਾਰਟ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰਨ ਵੇਲੇ ਗੜਬੜ ਹੋਈ",
+      "sold_out": "ਸਭ ਵਿੱਕ ਗਇਆ",
+      "unavailable": "ਉਪਲਬਧ ਨਹੀਂ"
     }
   }
 }
