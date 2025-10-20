@@ -455,8 +455,48 @@
         },
         "payment_terms_totals": {
           "due_today": "ਅੱਜ ਕੁੱਲ ਬਕਾਇਆ",
-          "due_today_next": "ਅੱਜ ਦੇਣਯੋਗ ਹੈ"
-        }
+          "due_today_next": "ਅੱਜ ਦੇਣਯੋਗ ਹੈ",
+          "due_later": "ਕੁੱਲ ਬਕਾਇਆ %{due_at}",
+          "due_on_fulfillment": "ਪੂਰਤੀ 'ਤੇ ਕੁੱਲ ਬਕਾਇਆ",
+          "due_on_fulfillment_next": "ਪੂਰਤੀ 'ਤੇ ਬਕਾਇਆ",
+          "due_on_receipt": "ਰਸੀਦ 'ਤੇ ਕੁੱਲ ਬਕਾਇਆ",
+          "due_later_checkout_to_draft": "ਕੁੱਲ ਬਕਾਇਆ ਬਾਅਦ ਵਿੱਚ",
+          "total_paid": "ਕੁੱਲ ਭੁਗਤਾਨ ਕੀਤਾ ਗਿਆ"
+        },
+        "maximum_discount_code_limit_reached": "ਤੁਸੀਂ ਛੂਟ ਕੋਡਾਂ ਦੀ ਵੱਧ ਤੋਂ ਵੱਧ ਗਿਣਤੀ 'ਤੇ ਪਹੁੰਚ ਗਏ ਹੋ। <strong style=\"text-transform:uppercase\">%{code}</strong> ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ ਇੱਕ ਮੌਜੂਦਾ ਕੋਡ ਹਟਾਓ।",
+        "discount_code_application_failed": "<strong style=\"text-transform:uppercase\">%{code}</strong> ਇਸ ਵੇਲੇ ਕੰਮ ਨਹੀਂ ਕਰ ਰਿਹਾ ਹੈ। ਮਦਦ ਲਈ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।",
+        "due_on_fulfillment": "ਪੂਰਤੀ 'ਤੇ ਬਕਾਇਆ",
+        "gift_card_masked": "•••• %{ਆਖਰੀ_ਅੱਖਰ}",
+        "subscriptions": "ਗਾਹਕੀਆਂ",
+        "duties_label": "ਡਿਊਟੀਆਂ",
+        "duties_and_taxes_label": "ਡਿਊਟੀਆਂ ਅਤੇ ਟੈਕਸ",
+        "error_duties_tooltip": "ਇਹ ਆਰਡਰ ਕਿਸੇ ਹੋਰ ਦੇਸ਼ ਤੋਂ ਭੇਜਿਆ ਜਾ ਰਿਹਾ ਹੈ, ਇਸ ਲਈ ਡਿਲੀਵਰੀ 'ਤੇ ਡਿਊਟੀਆਂ ਅਤੇ ਟੈਕਸ ਲਏ ਜਾ ਸਕਦੇ ਹਨ।",
+        "may_be_charged_on_delivery": "ਡਿਲੀਵਰੀ 'ਤੇ ਖਰਚਾ ਲਿਆ ਜਾ ਸਕਦਾ ਹੈ",
+        "total_updated_label_with_price": "ਅੱਪਡੇਟ ਕੀਤੀ ਕੁੱਲ ਕੀਮਤ: %{totalPrice}",
+        "updated_shipping_method": "ਅੱਪਡੇਟ ਕੀਤਾ ਸ਼ਿਪਿੰਗ ਤਰੀਕਾ: %{shipping_method}",
+        "recurring_payments": "ਆਵਰਤੀ ਭੁਗਤਾਨ",
+        "recurring_total_multiple_label": "ਇਸ ਆਰਡਰ ਵਿੱਚ ਕਈ ਆਈਟਮਾਂ ਲਈ ਇੱਕ ਆਵਰਤੀ ਖਰਚਾ ਹੈ।",
+        "deferred_total_due_date_label": "ਕੁੱਲ ਬਕਾਇਆ {{date}}",
+        "deferred_total_due_date_label_next": "ਬਾਅਦ ਵਿੱਚ ਦੇਣਯੋਗ",
+        "full_price": "ਪੂਰੀ ਕੀਮਤ: %{ਕੀਮਤ}",
+        "custom_discount": "ਕਸਟਮ ਛੋਟ",
+        "expand_component_information": {
+          "one": "%{count} ਆਈਟਮ ਦਿਖਾਓ",
+          "other": "%{count} ਆਈਟਮਾਂ ਦਿਖਾਓ"
+        },
+        "collapse_component_information": {
+          "one": "%{count} ਆਈਟਮ ਲੁਕਾਓ",
+          "other": "%{count} ਆਈਟਮਾਂ ਲੁਕਾਓ"
+        },
+        "component_quantity_title": "%{ਮਾਤਰਾ} × %{ਉਤਪਾਦ_ਸਿਰਲੇਖ}",
+        "discount_discovery": {
+          "add_code": "ਛੋਟ ਸ਼ਾਮਲ ਕਰੋ",
+          "merchandise_quantity_label": {
+            "one": "%{count} ਆਈਟਮ",
+            "other": "%{count} ਆਈਟਮਾਂ"
+          }
+        },
+        "alternative_payment_currency_total": "%{amount_due} ਵਜੋਂ ਚਾਰਜ ਕੀਤਾ ਗਿਆ"
       },
       "thank_you": {
         "delivered": "ਡਿਲੀਵਰ ਕੀਤਾ ਗਿਆ",
@@ -1729,6 +1769,106 @@
         "money_order_label": "ਮਨੀ ਆਰਡਰ",
         "debit_card_label": "ਡੈਬਿਟ ਕਾਰਡ",
         "deferred_payment_label": "ਬਾਅਦ ਵਿੱਚ ਭੁਗਤਾਨ ਵਿਧੀ ਚੁਣੋ"
+      },
+      "shipping": {
+        "title": "ਸ਼ਿਪਿੰਗ",
+        "delivery_title": "ਡਿਲਿਵਰੀ",
+        "shipping_method_title": "ਸ਼ਿਪਿੰਗ ਵਿਧੀ",
+        "shipping_method_rollup_accessibility_label": "ਸ਼ਿਪਿੰਗ ਵਿਧੀ ਦੇ ਵਿਕਲਪ",
+        "shipping_method_one_time_purchase_group_title": "ਇੱਕ ਵਾਰ ਦੀ ਖਰੀਦ",
+        "shipping_method_first_shipment_group_title": {
+          "one": "ਪਹਿਲੀ ਸ਼ਿਪਮੈਂਟ",
+          "other": "ਪਹਿਲੀ ਸ਼ਿਪਮੈਂਟ"
+        },
+        "shipping_method_subscription_group_title": "ਗਾਹਕੀ",
+        "shipping_method_recurring_shipments_group_title": {
+          "one": "ਆਵਰਤੀ ਸ਼ਿਪਮੈਂਟ",
+          "other": "ਆਵਰਤੀ ਸ਼ਿਪਮੈਂਟ"
+        },
+        "subscription_shipping": "ਗਾਹਕੀ ਸ਼ਿਪਿੰਗ",
+        "subscription_local_delivery": "ਗਾਹਕੀ ਸਥਾਨਕ ਡਿਲੀਵਰੀ",
+        "subscription_pickup": "ਗਾਹਕੀ ਪਿਕਅੱਪ",
+        "waiting_on_rate_notice": "ਉਪਲਬਧ ਸ਼ਿਪਿੰਗ ਦਰਾਂ ਪ੍ਰਾਪਤ ਕੀਤੀਆਂ ਜਾ ਰਹੀਆਂ ਹਨ…",
+        "waiting_on_pickup_location_notice": "ਉਪਲਬਧ ਪਿਕਅੱਪ ਸਥਾਨ ਪ੍ਰਾਪਤ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ...",
+        "no_rates_for_cart_or_destination_notice": "ਤੁਹਾਡੇ ਕਾਰਟ ਜਾਂ ਪਤੇ ਲਈ ਕੋਈ ਸ਼ਿਪਿੰਗ ਵਿਧੀਆਂ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।",
+        "no_pickup_location_notice": "ਤੁਹਾਡੇ ਉਤਪਾਦਾਂ ਵਿੱਚੋਂ ਘੱਟੋ-ਘੱਟ ਇੱਕ ਪਿਕਅੱਪ ਲਈ ਉਪਲਬਧ ਨਹੀਂ ਹੈ",
+        "no_rates_for_country_notice": "ਇਸ ਪਤੇ ਲਈ ਕੋਈ ਸ਼ਿਪਿੰਗ ਦਰਾਂ ਨਹੀਂ ਮਿਲੀਆਂ।",
+        "no_rates_contact_notice": "ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।",
+        "free_rate_label": "ਮੁਫ਼ਤ",
+        "cheapest_rate_label": "ਸਭ ਤੋਂ ਸਸਤਾ",
+        "please_enter_your_shipping_information_notice": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਸ਼ਿਪਿੰਗ ਜਾਣਕਾਰੀ ਦਰਜ ਕਰੋ।",
+        "estimated_delivery_date": {
+          "one": "%{count} ਕਾਰੋਬਾਰੀ ਦਿਨ",
+          "other": "%{count} ਕਾਰੋਬਾਰੀ ਦਿਨ"
+        },
+        "estimated_delivery_date_range": "%{ਘੱਟੋ-ਘੱਟ} ਤੋਂ %{ਵੱਧ ਤੋਂ ਵੱਧ} ਕਾਰੋਬਾਰੀ ਦਿਨ",
+        "delivery_date_range": "%{ਘੱਟੋ-ਘੱਟ_ਸਮਾਂ}–%{ਵੱਧ ਤੋਂ ਵੱਧ_ਸਮਾਂ}",
+        "estimated_delivery_time": "ਅਨੁਮਾਨਿਤ ਡਿਲੀਵਰੀ %{ਸਮਾਂ}",
+        "estimated_delivery_time_range": "ਅਨੁਮਾਨਿਤ ਡਿਲੀਵਰੀ %{min_time}–%{max_time}",
+        "delivery_today": "ਉਸੇ ਦਿਨ ਡਿਲੀਵਰੀ %{time}",
+        "delivery_tomorrow": "ਅਗਲੇ ਦਿਨ ਡਿਲੀਵਰੀ %{time}",
+        "two_day_delivery": "2-ਦਿਨ ਡਿਲੀਵਰੀ %{ਸਮਾਂ}",
+        "delivery": "ਅਦਾਇਗੀ ਸਮਾਂ}",
+        "arrives_time": "ਪਹੁੰਚਦਾ ਹੈ %{time}",
+        "arrives_time_range": "ਪਹੁੰਚਦਾ ਹੈ %{min_time}–%{max_time}",
+        "estimated_time": "ਅੰਦਾਜ਼ਨ %{ਸਮਾਂ}",
+        "estimated_time_range": "ਅੰਦਾਜ਼ਨ %{ਘੱਟੋ-ਘੱਟ_ਸਮਾਂ}–%{ਵੱਧ ਤੋਂ ਵੱਧ_ਸਮਾਂ}",
+        "default_description": "1 ਕਾਰੋਬਾਰੀ ਦਿਨ ਵਿੱਚ ਭੇਜਿਆ ਜਾਵੇਗਾ",
+        "unbranded_default_description": "ਭੇਜਣ ਲਈ ਤਿਆਰ",
+        "shipping_line_phone_label": "ਮੋਬਾਈਲ ਫ਼ੋਨ ਨੰਬਰ (ਲੋੜੀਂਦਾ)",
+        "shipping_line_phone": "ਤੁਹਾਡਾ ਕੋਰੀਅਰ ਤੁਹਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰਨ ਲਈ ਇਸ ਨੰਬਰ ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦਾ ਹੈ।",
+        "shipping_line_delivery_phone_label": "ਮੋਬਾਈਲ ਫ਼ੋਨ ਨੰਬਰ",
+        "shipping_line_delivery_phone": "ਤੁਹਾਡੀ ਡਿਲੀਵਰੀ ਬਾਰੇ ਅੱਪਡੇਟ ਲਈ ਤੁਹਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।",
+        "optional_shipping_line_delivery_instructions_label": "ਡਿਲੀਵਰੀ ਨਿਰਦੇਸ਼ (ਵਿਕਲਪਿਕ)",
+        "shipping_line_delivery_instructions": "ਜ਼ਰੂਰੀ ਜਾਣਕਾਰੀ ਦਰਜ ਕਰੋ ਜਿਵੇਂ ਕਿ ਦਰਵਾਜ਼ੇ ਦੇ ਕੋਡ ਜਾਂ ਡਰਾਪ-ਆਫ ਨਿਰਦੇਸ਼।",
+        "other_method": {
+          "zero": "ਕੋਈ ਹੋਰ ਢੰਗ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।",
+          "one": "%{count} ਹੋਰ ਤਰੀਕਾ ਉਪਲਬਧ ਹੈ",
+          "other": "%{count} ਹੋਰ ਤਰੀਕੇ ਉਪਲਬਧ ਹਨ ਜੋ ਇਸ ਤੋਂ ਸ਼ੁਰੂ ਹੁੰਦੇ ਹਨ"
+        },
+        "shipping_rate_discounted_amount": "ਸੀ: %{original_amount}। ਹੁਣ: %{amount}",
+        "local_delivery": "ਸਥਾਨਕ ਡਿਲੀਵਰੀ",
+        "prime_not_available": {
+          "default": "ਤੁਹਾਡੇ ਆਰਡਰ ਲਈ ਪ੍ਰਾਈਮ ਡਿਲੀਵਰੀ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਤੁਹਾਡੇ ਸ਼ਿਪਿੰਗ ਵਿਕਲਪ ਅੱਪਡੇਟ ਕਰ ਦਿੱਤੇ ਗਏ ਹਨ।"
+        },
+        "subscription_delivery_description": {
+          "free_shipping_cycles": {
+            "one": "%{count} ਹੋਰ ਡਿਲੀਵਰੀ ਲਈ ਮੁਫ਼ਤ ਸ਼ਿਪਿੰਗ",
+            "other": "%{count} ਹੋਰ ਡਿਲੀਵਰੀਆਂ ਲਈ ਮੁਫ਼ਤ ਸ਼ਿਪਿੰਗ"
+          },
+          "free_shipping_cycles_delivery_not_included": {
+            "one": "%{count} ਡਿਲੀਵਰੀ ਲਈ ਮੁਫ਼ਤ ਸ਼ਿਪਿੰਗ",
+            "other": "%{count} ਡਿਲੀਵਰੀਆਂ ਲਈ ਮੁਫ਼ਤ ਸ਼ਿਪਿੰਗ"
+          },
+          "first_n_order_free_with_cycle": {
+            "one": "%{count} ਹੋਰ ਡਿਲੀਵਰੀ ਲਈ ਮੁਫ਼ਤ ਸ਼ਿਪਿੰਗ, ਫਿਰ %{recurring_order_shipping_price}",
+            "other": "%{count} ਹੋਰ ਡਿਲੀਵਰੀਆਂ ਲਈ ਮੁਫ਼ਤ ਸ਼ਿਪਿੰਗ, ਫਿਰ %{recurring_order_shipping_price}"
+          },
+          "first_n_order_free_with_cycle_delivery_not_included": {
+            "one": "%{count} ਡਿਲੀਵਰੀ ਲਈ ਮੁਫ਼ਤ ਸ਼ਿਪਿੰਗ, ਫਿਰ %{recurring_order_shipping_price}",
+            "other": "%{count} ਡਿਲੀਵਰੀਆਂ ਲਈ ਮੁਫ਼ਤ ਸ਼ਿਪਿੰਗ, ਫਿਰ %{recurring_order_shipping_price}"
+          },
+          "max_cycles_base_shipping": {
+            "one": "%{shipping_price} ਲਈ %{count} ਹੋਰ ਡਿਲੀਵਰੀ",
+            "other": "%{shipping_price} ਪ੍ਰਤੀ ਡਿਲੀਵਰੀ ਲਈ %{count} ਹੋਰ ਡਿਲੀਵਰੀਆਂ"
+          },
+          "max_cycles_base_shipping_delivery_not_included": {
+            "one": "%{shipping_price} ਲਈ %{count} ਡਿਲੀਵਰੀ",
+            "other": "%{shipping_price} ਪ੍ਰਤੀ ਡਿਲੀਵਰੀ ਲਈ %{count} ਹੋਰ ਡਿਲੀਵਰੀਆਂ"
+          },
+          "prepaid_free_shipping_with_cycles": {
+            "one": "ਪਹਿਲੇ %{cycle} ਲਈ ਮੁਫ਼ਤ ਸ਼ਿਪਿੰਗ, ਉਸ ਤੋਂ ਬਾਅਦ %{recurring_order_shipping_price}",
+            "other": "ਪਹਿਲੇ %{cycle} ਲਈ ਮੁਫ਼ਤ ਸ਼ਿਪਿੰਗ, ਉਸ ਤੋਂ ਬਾਅਦ %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_one_cycle": {
+            "one": "%{count} ਹੋਰ ਡਿਲੀਵਰੀ ਲਈ %{shipping_price}",
+            "other": "%{count} ਹੋਰ ਡਿਲੀਵਰੀਆਂ ਲਈ %{shipping_price} (%{per_delivery_cost})"
+          },
+          "prepaid_order_one_cycle_delivery_not_included": {
+            "one": "%{count} ਡਿਲੀਵਰੀ ਲਈ %{shipping_price}",
+            "other": "%{count} ਡਿਲੀਵਰੀਆਂ ਲਈ %{ਸ਼ਿਪਿੰਗ_ਕੀਮਤ} (%{per_delivery_cost})"
+          }
+        }
       }
     },
     "store_availability": {
