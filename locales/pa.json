@@ -248,6 +248,148 @@
           "due_today": "ਅੱਜ ਕੁੱਲ ਬਕਾਇਆ",
           "due_today_next": "ਅੱਜ ਦੇਣਯੋਗ ਹੈ"
         }
+      },
+      "thank_you": {
+        "delivered": "ਡਿਲੀਵਰ ਕੀਤਾ ਗਿਆ",
+        "delivered_title": "ਤੁਹਾਡਾ ਆਰਡਰ ਡਿਲੀਵਰ ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ।",
+        "delivered_description_html": "ਤੁਹਾਡਾ ਆਰਡਰ ਤੁਹਾਡੇ ਦੁਆਰਾ ਦਿੱਤੇ ਗਏ ਪਤੇ 'ਤੇ ਪਹੁੰਚਾ ਦਿੱਤਾ ਗਿਆ ਹੈ। ਜੇਕਰ ਤੁਹਾਨੂੰ ਇਹ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹੋਇਆ ਹੈ, ਜਾਂ ਜੇਕਰ ਤੁਹਾਨੂੰ ਕੋਈ ਹੋਰ ਸਮੱਸਿਆ ਹੈ, ਤਾਂ %{contact_us} ਨਾਲ ਸੰਪਰਕ ਕਰੋ।",
+        "delivered_local_title": "ਤੁਹਾਡਾ ਆਰਡਰ ਡਿਲੀਵਰ ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ।",
+        "delivered_local_description_html": "ਕੀ ਤੁਹਾਡਾ ਆਰਡਰ ਨਹੀਂ ਮਿਲਿਆ? %{let_us_know}।",
+        "choose_payment_method_later": "ਬਾਅਦ ਵਿੱਚ ਭੁਗਤਾਨ ਵਿਧੀ ਚੁਣੋ",
+        "picked_up_title": "ਤੁਹਾਡਾ ਆਰਡਰ ਚੁੱਕਿਆ ਗਿਆ ਹੈ।",
+        "picked_up_description_html": "ਤੁਹਾਡਾ ਆਰਡਰ %{location_name} 'ਤੇ %{date} ਨੂੰ ਚੁੱਕਿਆ ਗਿਆ ਸੀ।",
+        "contact_us": "ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ",
+        "contact_us_lowercase": "ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ",
+        "contact_us_html": "ਮਦਦ ਦੀ ਲੋੜ ਹੈ? %{contact_us}",
+        "updated_time": "%{time_ago} ਪਹਿਲਾਂ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ",
+        "failure": "ਡਿਲੀਵਰ ਨਹੀਂ ਕੀਤਾ ਗਿਆ",
+        "failed_title": "ਤੁਹਾਡਾ ਆਰਡਰ ਡਿਲੀਵਰ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।",
+        "failed_contact_merchant": "ਡਿਲੀਵਰੀ ਦਾ ਪ੍ਰਬੰਧ ਕਰਨ ਲਈ %{company} ਨਾਲ ਸੰਪਰਕ ਕਰੋ।",
+        "failed_contact_merchant_no_company": "ਡਿਲੀਵਰੀ ਦਾ ਪ੍ਰਬੰਧ ਕਰਨ ਲਈ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।",
+        "non_shippable_title": "ਤੁਹਾਡਾ ਆਰਡਰ ਪੂਰਾ ਹੋ ਗਿਆ ਹੈ।",
+        "let_us_know": "ਸਾਨੂੰ ਦੱਸੋ",
+        "login_title": "ਸਾਰੇ ਆਰਡਰ ਵੇਰਵੇ ਦੇਖਣ ਲਈ ਸਾਈਨ ਇਨ ਕਰੋ",
+        "login_description": "ਤੁਸੀਂ ਆਪਣਾ ਆਰਡਰ ਨੰਬਰ ਈਮੇਲ ਰਾਹੀਂ ਪ੍ਰਾਪਤ ਹੋਈ ਰਸੀਦ ਵਿੱਚ ਲੱਭ ਸਕਦੇ ਹੋ।",
+        "login_description_phone": "ਤੁਸੀਂ ਆਪਣਾ ਆਰਡਰ ਨੰਬਰ ਟੈਕਸਟ ਸੁਨੇਹੇ ਰਾਹੀਂ ਪ੍ਰਾਪਤ ਹੋਈ ਰਸੀਦ ਵਿੱਚ ਲੱਭ ਸਕਦੇ ਹੋ।",
+        "login_not_customer_html": "ਕੀ %{name} ਨਹੀਂ? ਤੁਸੀਂ %{link} ਕਰ ਸਕਦੇ ਹੋ",
+        "login_reorder_link_text": {
+          "one": "ਇਹ ਉਤਪਾਦ ਵੀ ਖਰੀਦੋ",
+          "other": "ਇਹ ਉਤਪਾਦ ਵੀ ਖਰੀਦੋ"
+        },
+        "customer_information_hidden_fields_message": "ਗਾਹਕ ਦੀ ਸਾਰੀ ਜਾਣਕਾਰੀ ਦੇਖਣ ਲਈ ਸਾਈਨ ਇਨ ਕਰੋ।",
+        "cancelled_title": "ਤੁਹਾਡਾ ਆਰਡਰ ਰੱਦ ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ।",
+        "cancelled_description": "ਤੁਹਾਡਾ ਆਰਡਰ %{date} ਨੂੰ ਰੱਦ ਕਰ ਦਿੱਤਾ ਗਿਆ ਸੀ। ਜੇਕਰ ਤੁਹਾਡੇ ਕੋਈ ਸਵਾਲ ਹਨ ਤਾਂ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।",
+        "order_number_label": "ਕ੍ਰਮ ਸੰਖਿਆ",
+        "customer_validation_error": "ਇੱਕ ਵੈਧ ਈਮੇਲ ਜਾਂ ਆਰਡਰ ਨੰਬਰ ਦਰਜ ਕਰੋ।",
+        "customer_validation_error_phone": "ਇੱਕ ਵੈਧ ਫ਼ੋਨ ਜਾਂ ਆਰਡਰ ਨੰਬਰ ਦਾਖਲ ਕਰੋ।",
+        "login": "ਸਾਈਨ - ਇਨ",
+        "unfulfilled_items_title": "ਸ਼ਿਪਿੰਗ ਲਈ ਤਿਆਰੀ",
+        "unfulfilled_items_description": "ਅਸੀਂ ਇਸ ਵੇਲੇ ਇਹਨਾਂ ਚੀਜ਼ਾਂ ਨੂੰ ਭੇਜਣ ਲਈ ਤਿਆਰ ਕਰ ਰਹੇ ਹਾਂ।",
+        "marker": {
+          "current": "ਮੌਜੂਦਾ ਸ਼ਿਪਮੈਂਟ ਸਥਾਨ",
+          "shipping": "ਸ਼ਿਪਿੰਗ ਪਤਾ"
+        },
+        "pick_up_in_store_marker": {
+          "current": "ਮੌਜੂਦਾ ਸ਼ਿਪਮੈਂਟ ਸਥਾਨ",
+          "shipping": "ਪਿਕਅੱਪ ਟਿਕਾਣਾ"
+        },
+        "fulfillment": {
+          "fulfilled_table_title": "ਇਸ ਸ਼ਿਪਮੈਂਟ ਵਿੱਚ ਆਈਟਮਾਂ",
+          "unfulfilled_table_title": "ਸ਼ਿਪਿੰਗ ਲਈ ਤਿਆਰ ਕੀਤੀਆਂ ਜਾਣ ਵਾਲੀਆਂ ਚੀਜ਼ਾਂ",
+          "product_image_label": "ਉਤਪਾਦ ਚਿੱਤਰ",
+          "description_label": "ਵੇਰਵਾ",
+          "quantity_label": "ਮਾਤਰਾ"
+        },
+        "order_updates_description_missing": "ਤੁਹਾਨੂੰ ਸ਼ਿਪਿੰਗ ਅੱਪਡੇਟ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹੋ ਰਹੇ ਹਨ।",
+        "order_updates_subscribe_to_email_notifications": "ਈਮੇਲ ਰਾਹੀਂ ਸ਼ਿਪਿੰਗ ਅੱਪਡੇਟ ਪ੍ਰਾਪਤ ਕਰੋ",
+        "order_updates_subscribe_to_email_or_phone_notifications": "ਈਮੇਲ ਜਾਂ ਟੈਕਸਟ ਰਾਹੀਂ ਸ਼ਿਪਿੰਗ ਅੱਪਡੇਟ ਪ੍ਰਾਪਤ ਕਰੋ",
+        "order_updates_subscribe_to_phone_notifications": "ਟੈਕਸਟ ਰਾਹੀਂ ਸ਼ਿਪਿੰਗ ਅੱਪਡੇਟ ਪ੍ਰਾਪਤ ਕਰੋ",
+        "order_updates_submit_subscription": "ਜਮ੍ਹਾਂ ਕਰੋ",
+        "track_shipment": "ਸ਼ਿਪਮੈਂਟ ਨੂੰ ਟਰੈਕ ਕਰੋ",
+        "other_options": "ਹੋਰ ਵਿਕਲਪ",
+        "delivery_information_label": "ਡਿਲੀਵਰੀ ਜਾਣਕਾਰੀ:",
+        "gift_card_sent_confirmation": "ਗਿਫ਼ਟ ਕਾਰਡ ਭੇਜੇ ਗਏ",
+        "qr_code": {
+          "send_link_to_phone": "ਜਾਂ ਆਪਣੇ ਫ਼ੋਨ 'ਤੇ ਇੱਕ ਲਿੰਕ ਭੇਜੋ",
+          "title": "ਆਪਣੇ ਫ਼ੋਨ 'ਤੇ ਟਰੈਕ ਕਰੋ"
+        },
+        "shop_qr_with_sms_upsell": {
+          "qr_code": {
+            "title": "ਆਪਣੇ ਫ਼ੋਨ ਨਾਲ ਸਕੈਨ ਕਰੋ"
+          },
+          "sms": {
+            "title": "ਜਾਂ ਆਪਣੇ ਫ਼ੋਨ 'ਤੇ ਇੱਕ ਲਿੰਕ ਭੇਜੋ"
+          }
+        },
+        "view_business_customer_account": "ਖਾਤਾ ਵੇਖੋ",
+        "breadcrumbs_submitted": "ਸਪੁਰਦ ਕੀਤਾ ਗਿਆ",
+        "breadcrumbs_in_review": "ਸਮੀਖਿਆ ਅਧੀਨ",
+        "breadcrumbs_confirmed": "ਪੁਸ਼ਟੀ ਕੀਤੀ ਗਈ",
+        "missing_shipping_address_banner": {
+          "title": "ਆਰਡਰ ਦਾ ਸ਼ਿਪਿੰਗ ਪਤਾ ਨਹੀਂ ਹੈ",
+          "text_html": "ਆਪਣਾ ਪਤਾ ਜੋੜਨ ਲਈ %{contact_us} 'ਤੇ ਕਲਿੱਕ ਕਰੋ",
+          "contact_us": "ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ"
+        },
+        "first_payment_complete": "ਪਹਿਲਾ ਭੁਗਤਾਨ ਪੂਰਾ ਹੋਇਆ",
+        "in_store_purchase": "ਸਟੋਰ-ਅੰਦਰ ਖਰੀਦਦਾਰੀ",
+        "company_location_section_title": "ਕੰਪਨੀ ਅਤੇ ਸਥਾਨ",
+        "thank_you_ready_for_picked_up": "ਤੁਹਾਡਾ ਆਰਡਰ %{address} 'ਤੇ ਚੁੱਕਿਆ ਗਿਆ ਸੀ।",
+        "ready_for_delivery": "ਡਿਲੀਵਰੀ ਲਈ ਤਿਆਰ",
+        "order_updates_subscribe_to_email_notifications_failed": "ਅਸੀਂ ਇਸ ਈਮੇਲ ਨੂੰ ਅੱਪਡੇਟ ਲਈ ਸਟੋਰ ਨਹੀਂ ਕਰ ਸਕਦੇ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਕੋਈ ਹੋਰ ਈਮੇਲ ਵਰਤੋ।",
+        "order_updates_subscribe_to_email_notifications_email_already_exists": "ਤੁਹਾਡੇ ਵੱਲੋਂ ਦਰਜ ਕੀਤੀ ਗਈ ਈਮੇਲ ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ।",
+        "subscriptions_management": {
+          "title": "ਗਾਹਕੀ",
+          "description": "ਆਪਣੀਆਂ ਗਾਹਕੀਆਂ ਨੂੰ ਦੇਖਣ ਅਤੇ ਪ੍ਰਬੰਧਿਤ ਕਰਨ ਲਈ ਆਪਣੇ ਖਾਤੇ 'ਤੇ ਜਾਰੀ ਰੱਖੋ।",
+          "button_label": "ਆਪਣੀ ਗਾਹਕੀ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ"
+        },
+        "manage_order_label": "ਆਪਣੇ ਆਰਡਰ ਦਾ ਪ੍ਰਬੰਧਨ ਕਰੋ",
+        "gift_card_confirmation_by_text_typ": {
+          "one": "ਤੁਹਾਨੂੰ ਕੁਝ ਮਿੰਟਾਂ ਵਿੱਚ ਤੁਹਾਡੇ ਗਿਫਟ ਕਾਰਡ ਦੇ ਨਾਲ ਇੱਕ ਟੈਕਸਟ ਸੁਨੇਹਾ ਪ੍ਰਾਪਤ ਹੋਵੇਗਾ।",
+          "other": "ਤੁਹਾਨੂੰ ਕੁਝ ਮਿੰਟਾਂ ਵਿੱਚ ਤੁਹਾਡੇ ਗਿਫਟ ਕਾਰਡਾਂ ਦੇ ਨਾਲ ਇੱਕ ਟੈਕਸਟ ਸੁਨੇਹਾ ਪ੍ਰਾਪਤ ਹੋਵੇਗਾ।"
+        },
+        "gift_card_confirmation_by_email_typ": {
+          "one": "ਤੁਹਾਨੂੰ ਕੁਝ ਮਿੰਟਾਂ ਵਿੱਚ ਤੁਹਾਡੇ ਗਿਫਟ ਕਾਰਡ ਵਾਲੀ ਇੱਕ ਈਮੇਲ ਪ੍ਰਾਪਤ ਹੋਵੇਗੀ।",
+          "other": "ਤੁਹਾਨੂੰ ਕੁਝ ਮਿੰਟਾਂ ਵਿੱਚ ਤੁਹਾਡੇ ਗਿਫਟ ਕਾਰਡਾਂ ਵਾਲੀ ਇੱਕ ਈਮੇਲ ਪ੍ਰਾਪਤ ਹੋਵੇਗੀ।"
+        },
+        "gift_card_email_title": {
+          "one": "ਗਿਫ਼ਟ ਕਾਰਡ ਈਮੇਲ ਰਾਹੀਂ ਭੇਜਿਆ ਗਿਆ ਸੀ।",
+          "other": "ਗਿਫਟ ​​ਕਾਰਡ ਈਮੇਲ ਰਾਹੀਂ ਭੇਜੇ ਗਏ ਸਨ।"
+        },
+        "gift_card_text_title": {
+          "one": "ਗਿਫ਼ਟ ਕਾਰਡ ਟੈਕਸਟ ਸੁਨੇਹੇ ਰਾਹੀਂ ਭੇਜਿਆ ਗਿਆ ਸੀ",
+          "other": "ਗਿਫ਼ਟ ਕਾਰਡ ਟੈਕਸਟ ਸੁਨੇਹੇ ਰਾਹੀਂ ਭੇਜੇ ਗਏ ਸਨ।"
+        },
+        "resend_gift_cards_by_email": "ਈਮੇਲ ਦੁਬਾਰਾ ਭੇਜੋ",
+        "resend_gift_cards_by_text": "ਟੈਕਸਟ ਸੁਨੇਹਾ ਦੁਬਾਰਾ ਭੇਜੋ",
+        "gift_card_resent_confirmation": {
+          "one": "ਗਿਫ਼ਟ ਕਾਰਡ ਦੁਬਾਰਾ ਭੇਜਿਆ ਗਿਆ।",
+          "other": "ਗਿਫਟ ​​ਕਾਰਡ ਦੁਬਾਰਾ ਭੇਜੇ ਗਏ ਸਨ।"
+        },
+        "gift_card_resend_failure": {
+          "one": "ਤੁਹਾਡਾ ਗਿਫ਼ਟ ਕਾਰਡ ਦੁਬਾਰਾ ਭੇਜਣ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਆਈ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।",
+          "other": "ਤੁਹਾਡੇ ਗਿਫ਼ਟ ਕਾਰਡ ਦੁਬਾਰਾ ਭੇਜਣ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਆਈ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।"
+        },
+        "vat_invoices": {
+          "title": "ਵੈਟ ਇਨਵੌਇਸ"
+        },
+        "verify_shop_account_title": "ਆਪਣੇ ਦੁਕਾਨ ਖਾਤੇ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ",
+        "verify_shop_account_message": "ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ Shop ਨਾਲ ਸੁਰੱਖਿਅਤ ਕੀਤੀ ਗਈ ਸੀ, ਲੱਖਾਂ ਸਟੋਰਾਂ 'ਤੇ ਇਸਨੂੰ ਆਪਣੇ ਆਪ ਵਰਤਣ ਲਈ ਆਪਣੇ ਖਾਤੇ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ।",
+        "verify_shop_account_cta": "ਆਪਣੇ ਖਾਤੇ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ",
+        "verify_shop_account_confirmation": "ਚੈੱਕਆਉਟ ਵੇਰਵੇ ਰੱਖਿਅਤ ਕੀਤੇ ਗਏ",
+        "announcement": {
+          "close": "ਬੰਦ ਕਰੋ",
+          "expand": "ਫੈਲਾਓ",
+          "collapse": "ਸਮੇਟਣਾ"
+        }
+      },
+      "vaulted": {
+        "change_button": "ਬਦਲੋ"
+      },
+      "review": {
+        "title": "ਸਮੀਖਿਆ",
+        "review_title": "ਆਪਣਾ ਆਰਡਰ ਪੂਰਾ ਕਰੋ",
+        "review_and_confirm_title": "ਸਮੀਖਿਆ ਕਰੋ ਅਤੇ ਪੁਸ਼ਟੀ ਕਰੋ",
+        "checkout_as_guest": "ਮਹਿਮਾਨ ਵਜੋਂ ਚੈੱਕ ਆਊਟ ਕਰੋ"
       }
     }
   }
