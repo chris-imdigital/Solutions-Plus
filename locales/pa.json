@@ -2098,7 +2098,15 @@
             "description_due_on_receipt": "ਭੁਗਤਾਨ ਦੇ ਬਕਾਇਆ ਹੋਣ 'ਤੇ ਤੁਹਾਨੂੰ ਇੱਕ ਇਨਵੌਇਸ ਪ੍ਰਾਪਤ ਹੋਵੇਗਾ।",
             "description_due_on_receipt_partially_paid": "ਇਸ ਆਰਡਰ ਦਾ ਅੰਸ਼ਕ ਭੁਗਤਾਨ ਕੀਤਾ ਗਿਆ ਸੀ। ਤੁਹਾਡੇ ਕੋਲ ਬਕਾਇਆ ਬਕਾਇਆ ਹੈ। ਭੁਗਤਾਨ ਦੇ ਬਕਾਇਆ ਹੋਣ 'ਤੇ ਤੁਹਾਨੂੰ ਇੱਕ ਇਨਵੌਇਸ ਪ੍ਰਾਪਤ ਹੋਵੇਗਾ।",
             "description_due_on_fulfillment": "ਇਸ ਆਰਡਰ ਵਿੱਚ ਸਾਰੀਆਂ ਚੀਜ਼ਾਂ ਪੂਰੀਆਂ ਹੋਣ ਤੋਂ ਬਾਅਦ ਭੁਗਤਾਨ ਕਰਨਾ ਪਵੇਗਾ।",
-            "description_due_on_fulfillment_partially_paid": "ਇਸ ਆਰਡਰ ਦਾ ਅੰਸ਼ਕ ਭੁਗਤਾਨ ਕੀਤਾ ਗਿਆ ਸੀ। ਤੁਹਾਡੇ ਕੋਲ ਬਕਾਇਆ ਬਕਾਇਆ ਹੈ। ਇਸ ਆਰਡਰ ਵਿੱਚ ਸਾਰੀਆਂ ਆਈਟਮਾਂ ਪੂਰੀਆਂ ਹੋਣ ਤੋਂ ਬਾਅਦ ਭੁਗਤਾਨ ਕਰਨਾ ਪਵੇਗਾ।"
+            "description_due_on_fulfillment_partially_paid": "ਇਸ ਆਰਡਰ ਦਾ ਅੰਸ਼ਕ ਭੁਗਤਾਨ ਕੀਤਾ ਗਿਆ ਸੀ। ਤੁਹਾਡੇ ਕੋਲ ਬਕਾਇਆ ਬਕਾਇਆ ਹੈ। ਇਸ ਆਰਡਰ ਵਿੱਚ ਸਾਰੀਆਂ ਆਈਟਮਾਂ ਪੂਰੀਆਂ ਹੋਣ ਤੋਂ ਬਾਅਦ ਭੁਗਤਾਨ ਕਰਨਾ ਪਵੇਗਾ।",
+            "banner_overdue": {
+              "one": "ਤੁਹਾਡਾ ਭੁਗਤਾਨ {{count}} ਦਿਨ ਦੀ ਬਕਾਇਆ ਹੈ।",
+              "other": "ਤੁਹਾਡਾ ਭੁਗਤਾਨ {{count}} ਦਿਨ ਲੇਟ ਹੋ ਗਿਆ ਹੈ।"
+            },
+            "banner_due": {
+              "one": "ਤੁਹਾਡਾ ਭੁਗਤਾਨ {{count}} ਦਿਨ ਵਿੱਚ ਬਕਾਇਆ ਹੈ।",
+              "other": "ਤੁਹਾਡਾ ਭੁਗਤਾਨ {{count}} ਦਿਨਾਂ ਵਿੱਚ ਬਕਾਇਆ ਹੈ।"
+            }
           },
           "draft": {
             "description": "ਆਰਡਰ ਦੀ ਪੁਸ਼ਟੀ ਹੋਣ 'ਤੇ ਭੁਗਤਾਨ ਵੇਰਵੇ ਤੈਅ ਕੀਤੇ ਜਾਂਦੇ ਹਨ।",
@@ -2152,7 +2160,10 @@
           "hide_events_accessibility_label": "ਡਰਾਫਟ ਆਰਡਰ ਵੇਰਵੇ ਲੁਕਾਓ"
         },
         "subtitle": "ਸਪੁਰਦ ਕੀਤਾ ਗਿਆ {{date}}",
-        "title": "ਆਰਡਰ {{name}}"
+        "title": "ਆਰਡਰ {{name}}",
+        "draft_order_subtitle": "ਆਰਡਰ {{draftOrderName}} ਤੋਂ {{date}} ਦੀ ਪੁਸ਼ਟੀ ਕੀਤੀ ਗਈ",
+        "loading": "ਆਰਡਰ ਵੇਰਵੇ ਲੋਡ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ",
+        "loading_finished_accessibility_message": "ਆਰਡਰ ਵੇਰਵੇ ਲੋਡ ਕੀਤੇ ਗਏ ਹਨ।"
       },
       "payment_methods": {
         "payment_delete": {
@@ -2178,6 +2189,103 @@
         "modal_po_number_input_max_length_error": "PO ਨੰਬਰਾਂ ਵਿੱਚ ਵੱਧ ਤੋਂ ਵੱਧ {{maxLength}} ਅੱਖਰ ਹੁੰਦੇ ਹਨ।",
         "save": "ਸੇਵ ਕਰੋ",
         "title": "ਪੀਓ # {{poNumber}}"
+      },
+      "account_information": {
+        "company_card_name_label": "ਕੰਪਨੀ ਦਾ ਨਾਂ",
+        "company_card_section_accessibility_label": "ਕੰਪਨੀ"
+      },
+      "locations": {
+        "contact_email": "ਈਮੇਲ",
+        "contact_list_title": "ਲੋਕ",
+        "contact_name": "ਨਾਮ",
+        "contact_permissions": "ਇਜਾਜ਼ਤਾਂ",
+        "contact_phone_number": "ਫੋਨ ਨੰਬਰ",
+        "location_picker_label": "ਸਥਾਨ ਦਾ ਨਾਮ",
+        "location_picker_accessibility_label": "ਸਥਾਨ ਦਾ ਨਾਮ: {{locationName}}",
+        "net_payment_terms_description": "{{name}} : {{numberOfDays}} ਦਿਨਾਂ ਦੇ ਅੰਦਰ ਭੁਗਤਾਨ",
+        "deposit_percentage": "{{percentage}} ਜਮ੍ਹਾਂ ਰਕਮ",
+        "own_role_contact_name": "ਤੁਸੀਂ",
+        "pagination": {
+          "load_more": "ਹੋਰ ਲੋਡ ਕਰੋ",
+          "load_more_accessibility_label": "ਹੋਰ ਟਿਕਾਣੇ ਲੋਡ ਕਰੋ"
+        },
+        "payment_details_title": "ਭੁਗਤਾਨ ਵੇਰਵੇ",
+        "payment_terms": "ਭੁਗਤਾਨ ਦੀਆਂ ਸ਼ਰਤਾਂ",
+        "permissions_label": "ਤੁਹਾਡੀਆਂ ਇਜਾਜ਼ਤਾਂ",
+        "permissions_title": "ਇਜਾਜ਼ਤਾਂ",
+        "section_title": "ਟਿਕਾਣਾ",
+        "shipping_address_required": "ਆਰਡਰ ਦੇਣਾ ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਇਸ ਸਥਾਨ 'ਤੇ ਇੱਕ ਸ਼ਿਪਿੰਗ ਪਤਾ ਸ਼ਾਮਲ ਕਰੋ।",
+        "staff_and_permissions_title": "ਸਟਾਫ਼ ਅਤੇ ਇਜਾਜ਼ਤਾਂ",
+        "tax_details_title": "ਟੈਕਸ ਵੇਰਵੇ",
+        "tax_id": "ਟੈਕਸ ਆਈਡੀ",
+        "tax_exemptions": "ਟੈਕਸ ਛੋਟਾਂ",
+        "multiple_tax_exemptions": "{{taxExemptionsCount}} ਹੋਰ",
+        "multiple_tax_exemptions_and": "ਅਤੇ",
+        "tax_exemptions_modal_close": "ਬੰਦ ਕਰੋ",
+        "taxes_none": "ਕੋਈ ਨਹੀਂ",
+        "tax_exemption_not_applicable": "ਲਾਗੂ ਨਹੀਂ",
+        "tax_exemptions_modal_button_accessibility_label": "ਸਾਰੀਆਂ ਟੈਕਸ ਛੋਟਾਂ ਵੇਖੋ"
+      },
+      "location_selection": {
+        "continue_to_store": "ਸਟੋਰ ਕਰਨਾ ਜਾਰੀ ਰੱਖੋ",
+        "description": "ਜੇਕਰ ਤੁਹਾਡੇ ਕੋਲ ਪਹਿਲਾਂ ਹੀ ਤੁਹਾਡੀ ਕਾਰਟ ਵਿੱਚ ਚੀਜ਼ਾਂ ਹਨ, ਤਾਂ ਸਥਾਨ ਬਦਲਣ ਨਾਲ ਕਾਰਟ ਦੀਆਂ ਕੀਮਤਾਂ ਅਤੇ ਮਾਤਰਾਵਾਂ ਪ੍ਰਭਾਵਿਤ ਹੋ ਸਕਦੀਆਂ ਹਨ।",
+        "description_switch_later": "ਤੁਸੀਂ ਹਮੇਸ਼ਾ ਬਾਅਦ ਵਿੱਚ ਬਦਲ ਸਕਦੇ ਹੋ",
+        "list_accessibility_label": "ਸਥਾਨਾਂ ਦੀ ਸੂਚੀ",
+        "list_item_without_address_accessibility_label": "{{name}} : ਕੋਈ ਪਤਾ ਨਹੀਂ",
+        "list_loading_accessibility_message": "ਟਿਕਾਣਿਆਂ ਦੀ ਸੂਚੀ ਲੋਡ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ",
+        "list_loading_address_accessibility_message": "{{locationName}} ਲਈ ਪਤਾ ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ",
+        "list_loading_finished_accessibility_message": "ਟਿਕਾਣਿਆਂ ਦੀ ਸੂਚੀ ਲੋਡ ਹੋ ਗਈ ਹੈ",
+        "loading_store_accessibility_message": "ਸਟੋਰ ਜਾ ਰਿਹਾ ਹਾਂ",
+        "no_location_title": "ਸਿਰਫ਼ ਨਿੱਜੀ ਆਰਡਰ",
+        "no_location_description": "ਤੁਹਾਡੇ ਕੋਲ ਹੁਣ {{company}} ਲਈ ਆਰਡਰ ਦੇਣ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ। ਤੁਸੀਂ ਅਜੇ ਵੀ ਨਿੱਜੀ ਆਰਡਰ ਦੇ ਸਕਦੇ ਹੋ।",
+        "no_locations_found": "ਕੋਈ ਟਿਕਾਣਾ ਨਹੀਂ ਮਿਲਿਆ",
+        "search": "ਟਿਕਾਣੇ ਖੋਜੋ",
+        "search_location_title": "ਕੋਈ ਟਿਕਾਣਾ ਚੁਣੋ",
+        "selection_cancel_button": "ਰੱਦ ਕਰੋ",
+        "selection_confirmation_button": "ਟਿਕਾਣਾ ਚੁਣੋ",
+        "selection_continue_button": "ਜਾਰੀ ਰੱਖੋ",
+        "title": "ਤੁਸੀਂ ਕਿਸ ਜਗ੍ਹਾ ਲਈ ਖਰੀਦ ਰਹੇ ਹੋ?",
+        "title_choose_location": "ਕੋਈ ਸਥਾਨ ਚੁਣੋ",
+        "clear_search": "ਖੋਜ ਸਾਫ਼ ਕਰੋ",
+        "try_new_search": "ਇੱਕ ਨਵੀਂ ਖੋਜ ਅਜ਼ਮਾਓ"
+      },
+      "addresses": {
+        "add_billing_address_button": "ਬਿਲਿੰਗ ਪਤਾ ਸ਼ਾਮਲ ਕਰੋ",
+        "add_billing_address_section_accessibility_label": "ਬਿਲਿੰਗ ਪਤਾ ਸ਼ਾਮਲ ਕਰੋ",
+        "add_shipping_address_button": "ਸ਼ਿਪਿੰਗ ਪਤਾ ਸ਼ਾਮਲ ਕਰੋ",
+        "add_shipping_address_section_accessibility_label": "ਸ਼ਿਪਿੰਗ ਪਤਾ ਸ਼ਾਮਲ ਕਰੋ",
+        "billing_address_card_title": "ਬਿਲਿੰਗ ਪਤਾ",
+        "cancel_adding_billing_address_accessibility_label": "ਬਿਲਿੰਗ ਪਤਾ ਸ਼ਾਮਲ ਕਰਨਾ ਰੱਦ ਕਰੋ",
+        "cancel_adding_shipping_address_accessibility_label": "ਸ਼ਿਪਿੰਗ ਪਤਾ ਸ਼ਾਮਲ ਕਰਨਾ ਰੱਦ ਕਰੋ",
+        "save_new_billing_address_accessibility_label": "ਬਿਲਿੰਗ ਪਤਾ ਰੱਖਿਅਤ ਕਰੋ",
+        "save_new_shipping_address_accessibility_label": "ਸ਼ਿਪਿੰਗ ਪਤਾ ਰੱਖਿਅਤ ਕਰੋ",
+        "shipping_address_card_title": "ਸ਼ਿਪਿੰਗ ਪਤਾ"
+      },
+      "orders": {
+        "draft_order_list": {
+          "hide_all": "ਸਭ ਲੁਕਾਓ",
+          "show_all": "ਸਭ ਦਿਖਾਓ",
+          "hide_all_accessibility_label": "ਸਮੀਖਿਆ ਅਧੀਨ ਸਾਰੇ ਆਰਡਰ ਲੁਕਾਓ",
+          "show_all_accessibility_label": "ਸਾਰੇ ਆਰਡਰ ਸਮੀਖਿਆ ਅਧੀਨ ਦਿਖਾਓ",
+          "show_all_orders_in_review": "ਸਾਰੇ ਆਰਡਰ ਸਮੀਖਿਆ ਅਧੀਨ ਦਿਖਾਓ",
+          "show_less_orders_in_review": "ਸਮੀਖਿਆ ਅਧੀਨ ਘੱਟ ਆਰਡਰ ਦਿਖਾਓ",
+          "title": "ਵਿਚਾਰ-ਅਧੀਨ",
+          "pending_tab_accessibility_label": {
+            "no_pending_orders": "ਤੁਹਾਡੇ ਕੋਈ ਵੀ ਬਕਾਇਆ ਆਰਡਰ ਨਹੀਂ ਹਨ।",
+            "pending_orders": {
+              "one": "ਤੁਹਾਡਾ {{count}} ਆਰਡਰ ਲੰਬਿਤ ਹੈ।",
+              "other": "ਤੁਹਾਡੇ ਕੋਲ {{count}} ਆਰਡਰ ਲੰਬਿਤ ਹਨ।"
+            },
+            "more_than_pagination_length": "ਤੁਹਾਡੇ ਕੋਲ {{count}} ਤੋਂ ਵੱਧ ਆਰਡਰ ਲੰਬਿਤ ਹਨ।"
+          },
+          "pending_orders_count_more_than_pagination_length": "{{count}} +",
+          "pagination": {
+            "nav_accessibility_label": "ਸਮੀਖਿਆ ਵਿੱਚ ਆਰਡਰ ਨੈਵੀਗੇਸ਼ਨ ਬਟਨ"
+          }
+        },
+        "order_list_column_headers_location": "ਟਿਕਾਣਾ",
+        "order_list_column_headers_status": "ਸਥਿਤੀ",
+        "removed_company_contact_tooltip": "ਕੰਪਨੀ ਤੋਂ ਹਟਾ ਦਿੱਤਾ ਗਿਆ"
       }
     },
     "errors": {
@@ -3032,7 +3140,23 @@
       "attention": "ਧਿਆਨ ਦਿਓ",
       "attention_company": "ਕੰਪਨੀ/ਧਿਆਨ",
       "attention_help_text": "ਕਿਸੇ ਵਿਅਕਤੀ ਜਾਂ ਵਿਭਾਗ ਦਾ ਨਾਮ",
-      "auto_complete_close_accessibility_label": "ਸੁਝਾਅ ਬੰਦ ਕਰੋ"
+      "auto_complete_close_accessibility_label": "ਸੁਝਾਅ ਬੰਦ ਕਰੋ",
+      "auto_complete_title": "ਸੁਝਾਅ",
+      "billing_address": "ਬਿਲਿੰਗ ਪਤੇ ਵਜੋਂ ਵਰਤੋਂ",
+      "cancel": "ਰੱਦ ਕਰੋ",
+      "cancel_accessibility_label": "{{address}} ਪਤੇ ਦਾ ਸੰਪਾਦਨ ਰੱਦ ਕਰੋ",
+      "creation_success_notification": "ਪਤਾ ਜੋੜਿਆ ਗਿਆ",
+      "default_address": "ਇਹ ਮੇਰਾ ਡਿਫਾਲਟ ਪਤਾ ਹੈ।",
+      "default_address_creation_success_notification": "ਪੂਰਵ-ਨਿਰਧਾਰਤ ਪਤਾ ਜੋੜਿਆ ਗਿਆ",
+      "default_address_update_success_notification": "ਡਿਫਾਲਟ ਪਤਾ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ",
+      "loading_add_form_accessibility_message": "ਨਵਾਂ ਪਤਾ ਫਾਰਮ ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ",
+      "loading_edit_form_accessibility_message": "ਐਡਰੈੱਸ ਐਡਰੈੱਸ ਫਾਰਮ ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ",
+      "loading_form_accessibility_message": "ਪਤਾ ਫਾਰਮ ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ",
+      "loading_finished_accessibility_message": "ਪਤਾ ਫਾਰਮ ਲੋਡ ਹੋ ਗਿਆ ਹੈ।",
+      "save": "ਸੇਵ ਕਰੋ",
+      "save_accessibility_label": "ਪਤਾ {{address}} ਸੇਵ ਕਰੋ",
+      "section_title_accessibility_label": "ਪਤਾ ਸ਼ਾਮਲ ਕਰੋ",
+      "update_success_notification": "ਪਤਾ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ"
     }
   },
   "accessibility": {
