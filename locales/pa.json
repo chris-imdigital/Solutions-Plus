@@ -1081,12 +1081,16 @@
       "bank_account": {
         "loading_accessibility_message": "ਬੈਂਕ ਖਾਤਾ ਬਟਨ ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ",
         "iframe_title_accessibility_label": "ਬੈਂਕ ਖਾਤਾ ਸੈੱਟਅੱਪ",
-        "display_name": "ਬੈਂਕ ਖਾਤਾ"
+        "display_name": "ਬੈਂਕ ਖਾਤਾ",
+        "generic_error": "ਬੈਂਕ ਖਾਤਾ ਨਹੀਂ ਜੋੜਿਆ ਜਾ ਸਕਿਆ। ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
       },
       "card_fields": {
         "tooltip": {
           "card_verification_value_explanation": "3-ਅੰਕਾਂ ਵਾਲਾ ਸੁਰੱਖਿਆ ਕੋਡ ਆਮ ਤੌਰ 'ਤੇ ਤੁਹਾਡੇ ਕਾਰਡ ਦੇ ਪਿਛਲੇ ਪਾਸੇ ਪਾਇਆ ਜਾਂਦਾ ਹੈ। ਅਮਰੀਕਨ ਐਕਸਪ੍ਰੈਸ ਕਾਰਡਾਂ ਵਿੱਚ 4-ਅੰਕਾਂ ਵਾਲਾ ਕੋਡ ਸਾਹਮਣੇ ਵਾਲਾ ਹੁੰਦਾ ਹੈ।",
-          "card_security_notice": "ਸਾਰੇ ਲੈਣ-ਦੇਣ ਸੁਰੱਖਿਅਤ ਅਤੇ ਏਨਕ੍ਰਿਪਟਡ ਹਨ।"
+          "card_security_notice": "ਸਾਰੇ ਲੈਣ-ਦੇਣ ਸੁਰੱਖਿਅਤ ਅਤੇ ਏਨਕ੍ਰਿਪਟਡ ਹਨ।",
+          "tooltip_accessibility_label": "ਹੋਰ ਜਾਣਕਾਰੀ",
+          "card_verification_value_explanation_amex": "ਤੁਹਾਡੇ ਕਾਰਡ ਦੇ ਅਗਲੇ ਪਾਸੇ 4-ਅੰਕਾਂ ਵਾਲਾ ਸੁਰੱਖਿਆ ਕੋਡ",
+          "card_verification_value_explanation_other": "ਤੁਹਾਡੇ ਕਾਰਡ ਦੇ ਪਿੱਛੇ 3-ਅੰਕਾਂ ਵਾਲਾ ਸੁਰੱਖਿਆ ਕੋਡ"
         },
         "field_errors": {
           "credit_card_name_invalid": "ਆਪਣਾ ਨਾਮ ਬਿਲਕੁਲ ਉਸੇ ਤਰ੍ਹਾਂ ਦਰਜ ਕਰੋ ਜਿਵੇਂ ਇਹ ਤੁਹਾਡੇ ਕਾਰਡ 'ਤੇ ਲਿਖਿਆ ਹੈ।",
@@ -1098,7 +1102,17 @@
           "text": "ਕ੍ਰੈਡਿਟ ਅਤੇ ਡੈਬਿਟ ਕਾਰਡ ਭੁਗਤਾਨ ਇਸ ਵੇਲੇ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।",
           "link_text": "ਇਸ ਪੰਨੇ ਨੂੰ ਤਾਜ਼ਾ ਕਰੋ",
           "suffix": "ਜਾਂ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
-        }
+        },
+        "card_number_label": "ਕਾਰਡ ਨੰਬਰ",
+        "card_number_placeholder": "ਕਾਰਡ ਨੰਬਰ",
+        "name_on_card_label": "ਕਾਰਡ 'ਤੇ ਨਾਮ",
+        "name_on_card_placeholder": "ਕਾਰਡ 'ਤੇ ਨਾਮ",
+        "card_expiry_label": "ਮਿਆਦ ਪੁੱਗਣ ਦੀ ਤਾਰੀਖ (MM / YY)",
+        "card_expiry_placeholder": "ਮਿਆਦ ਪੁੱਗਣ ਦੀ ਤਾਰੀਖ (MM / YY)",
+        "card_verification_value_label": "ਸੁਰੱਖਿਆ ਕੋਡ",
+        "card_verification_value_placeholder": "ਸੁਰੱਖਿਆ ਕੋਡ",
+        "card_start_label": "ਜਾਰੀ ਕਰਨ ਦੀ ਮਿਤੀ (ਮਹੀਨਾ / ਸਾਲ)",
+        "card_start_placeholder": "ਜਾਰੀ ਕਰਨ ਦੀ ਮਿਤੀ (ਮਹੀਨਾ / ਸਾਲ)"
       },
       "payment_delete": {
         "title": "ਭੁਗਤਾਨ ਵਿਧੀ ਮਿਟਾਓ",
@@ -1141,6 +1155,114 @@
       },
       "three_d_secure": {
         "title": "3D ਸੁਰੱਖਿਅਤ"
+      },
+      "add_payment_method_banner": "ਤੇਜ਼ ਚੈੱਕਆਉਟ ਜਾਂ ਪਹਿਲਾਂ ਤੋਂ ਅਧਿਕਾਰਤ ਸੇਵਾਵਾਂ ਲਈ ਭੁਗਤਾਨ ਵਿਧੀ ਸ਼ਾਮਲ ਕਰੋ",
+      "no_payment_methods_banner": "ਕੋਈ ਭੁਗਤਾਨ ਵਿਧੀਆਂ ਸ਼ਾਮਲ ਨਹੀਂ ਕੀਤੀਆਂ ਗਈਆਂ",
+      "edit_payment_method_button_accessibility_label": "{{lastDigits}} ਨਾਲ ਖਤਮ ਹੋਣ ਵਾਲੇ {{paymentMethodName}} } ਨੂੰ ਸੰਪਾਦਿਤ ਕਰੋ।",
+      "edit_payment_method_brand_button_accessibility_label": "{{paymentMethodName}} ਨੂੰ ਸੋਧੋ",
+      "delete_payment_method_button": "ਮਿਟਾਓ",
+      "delete_payment_method_button_accessibility_label": "{{paymentMethodName}} ਨੂੰ ਮਿਟਾਓ",
+      "back_button": "ਪਿੱਛੇ",
+      "back_button_accessibility_label": "{{paymentMethodStepTitle}} ਤੇ ਵਾਪਸ ਜਾਓ",
+      "default": "ਡਿਫਾਲਟ",
+      "generic_card": "ਕਾਰਡ",
+      "expiration_warning_button_accessibility_label": "{{lastDigits}} {{paymentMethodName}} } ਲਈ ਮਿਆਦ ਪੁੱਗਣ ਦੀ ਚੇਤਾਵਨੀ ਦਿਖਾਓ।",
+      "expires_soon": "ਇਸ ਕਾਰਡ ਦੀ ਮਿਆਦ ਜਲਦੀ ਹੀ ਸਮਾਪਤ ਹੋ ਰਹੀ ਹੈ।",
+      "expired": "ਇਹ ਕਾਰਡ ਦੀ ਮਿਤੀ ਲੰਘ ਗਈ ਹੈ",
+      "card_update_consent": "ਇਹ ਭੁਗਤਾਨ ਵਿਧੀ ਭਵਿੱਖ ਦੀਆਂ ਖਰੀਦਾਂ ਲਈ ਸੁਰੱਖਿਅਤ ਕੀਤੀ ਜਾਵੇਗੀ।",
+      "card_update_consent_subscriptions": "ਇਹ ਭੁਗਤਾਨ ਵਿਧੀ ਭਵਿੱਖ ਦੀਆਂ ਖਰੀਦਾਂ ਲਈ ਸੁਰੱਖਿਅਤ ਕੀਤੀ ਜਾਵੇਗੀ ਅਤੇ ਕਿਸੇ ਵੀ ਆਵਰਤੀ ਜਾਂ ਮੁਲਤਵੀ ਖਰੀਦ ਲਈ ਵਰਤੀ ਜਾ ਸਕਦੀ ਹੈ।",
+      "digital_wallet_title": "ਡਿਜੀਟਲ ਵਾਲਿਟ",
+      "credit_or_debit_card_title": "ਕ੍ਰੈਡਿਟ ਜਾਂ ਡੈਬਿਟ ਕਾਰਡ",
+      "google_pay": {
+        "iframe_title_accessibility_label": "Google Pay ਭੁਗਤਾਨ ਵਿਧੀ ਸ਼ਾਮਲ ਕਰੋ",
+        "loading_accessibility_message": "Google Pay ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ",
+        "loading": "Google Pay ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ",
+        "errors": {
+          "generic": "Google Pay ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਸੀ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਕੋਈ ਵੱਖਰੀ ਭੁਗਤਾਨ ਵਿਧੀ ਵਰਤੋ।",
+          "missing_billing_address": "Google Pay ਨੂੰ ਇੱਕ ਬਿਲਿੰਗ ਪਤਾ ਚਾਹੀਦਾ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਖਾਤੇ ਵਿੱਚ ਇੱਕ ਸ਼ਾਮਲ ਕਰੋ।"
+        }
+      },
+      "pay_pal": {
+        "iframe_title_accessibility_label": "PayPal ਭੁਗਤਾਨ ਵਿਧੀ ਸ਼ਾਮਲ ਕਰੋ",
+        "loading_accessibility_message": "PayPal ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
+      },
+      "apple_pay": {
+        "loading": "ਐਪਲ ਪੇ ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ",
+        "errors": {
+          "generic": "Apple Pay ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਸੀ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਕੋਈ ਵੱਖਰੀ ਭੁਗਤਾਨ ਵਿਧੀ ਵਰਤੋ।",
+          "not_available": "ਇਸ ਡਿਵਾਈਸ 'ਤੇ ਐਪਲ ਪੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+          "missing_billing_address": "ਐਪਲ ਪੇਅ ਲਈ ਇੱਕ ਬਿਲਿੰਗ ਪਤਾ ਲੋੜੀਂਦਾ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਖਾਤੇ ਵਿੱਚ ਇੱਕ ਸ਼ਾਮਲ ਕਰੋ।"
+        }
+      },
+      "store_credit": {
+        "label": "ਸਟੋਰ ਕ੍ਰੈਡਿਟ",
+        "accesibility_label": "ਸਟੋਰ ਕ੍ਰੈਡਿਟ - {{formattedBalance}}",
+        "expirable_amounts_button": "ਮਿਆਦ ਪੁੱਗਣ ਵਾਲੀਆਂ ਰਕਮਾਂ ਵੇਖੋ",
+        "expirable_amounts_label": "ਮਿਆਦ ਪੁੱਗਣ ਵਾਲੀਆਂ ਰਕਮਾਂ",
+        "details_modal": {
+          "title": "ਮਿਆਦ ਪੁੱਗਣ ਵਾਲਾ ਸਟੋਰ ਕ੍ਰੈਡਿਟ",
+          "balance_label": "ਬਕਾਇਆ",
+          "expiration_date_label": "ਅੰਤ ਦੀ ਤਾਰੀਖ",
+          "amount_label": "ਰਕਮ",
+          "date_label": "ਮਿਤੀ",
+          "event_label": "ਘਟਨਾ",
+          "events": {
+            "adjustment": "ਸਮਾਯੋਜਨ",
+            "order_payment": "ਆਰਡਰ ਭੁਗਤਾਨ",
+            "order_refund": "ਆਰਡਰ ਰਿਫੰਡ",
+            "payment_failure": "ਭੁਗਤਾਨ ਅਸਫਲਤਾ",
+            "payment_returned": "ਭੁਗਤਾਨ ਵਾਪਸ ਕਰ ਦਿੱਤਾ ਗਿਆ",
+            "order_cancellation": "ਆਰਡਰ ਰੱਦ ਕਰਨਾ",
+            "tax_finalization": "ਟੈਕਸ ਅੰਤਿਮ ਰੂਪ ਦੇਣਾ"
+          },
+          "expirable_balance_info": "ਤੁਹਾਡੇ ਕੁਝ ਬਕਾਏ ਦੀ ਮਿਆਦ ਭਵਿੱਖ ਦੀ ਕਿਸੇ ਮਿਤੀ ਨੂੰ ਖਤਮ ਹੋ ਜਾਵੇਗੀ।",
+          "expirable_amount_label": "ਕੁੱਲ ਮਿਆਦ ਪੁੱਗਣ ਵਾਲੀ ਰਕਮ",
+          "expirable_amounts_info": "ਜਲਦੀ ਮਿਆਦ ਪੁੱਗਣ ਵਾਲੀਆਂ ਰਕਮਾਂ ਪਹਿਲਾਂ ਚੈੱਕਆਉਟ ਵੇਲੇ ਲਾਗੂ ਕੀਤੀਆਂ ਜਾਂਦੀਆਂ ਹਨ।",
+          "expirable_amounts_button": "ਵੇਖੋ",
+          "expired_amounts_button": "ਮਿਆਦ ਪੁੱਗ ਚੁੱਕੀਆਂ ਰਕਮਾਂ ਵੇਖੋ",
+          "pagination": {
+            "load_more_label": "ਹੋਰ ਲੋਡ ਕਰੋ",
+            "load_more_accessibility_label": "ਹੋਰ ਮਿਆਦ ਪੁੱਗਣ ਯੋਗ ਮਾਤਰਾਵਾਂ ਲੋਡ ਕਰੋ"
+          }
+        }
+      },
+      "payment_details": {
+        "title": "ਭੁਗਤਾਨ ਵਿਧੀ ਦੇ ਵੇਰਵੇ",
+        "credit_card_details_accessibility_label": "{{lastDigits}} ਨਾਲ ਖਤਮ ਹੁੰਦਾ ਹੈ",
+        "billing_title": "ਬਿਲਿੰਗ ਪਤਾ",
+        "card_info_title": "ਕਾਰਡ ਜਾਣਕਾਰੀ",
+        "payment_method_expiring_on": "{{expiryDate}} ਨੂੰ ਮਿਆਦ ਪੁੱਗ ਰਹੀ ਹੈ",
+        "payment_method_expired_on": "{{expiryDate}} ਨੂੰ ਮਿਆਦ ਪੁੱਗ ਗਈ",
+        "preauthorized_payments": "ਪਹਿਲਾਂ ਤੋਂ ਅਧਿਕਾਰਤ ਭੁਗਤਾਨ",
+        "close_payment_modal": "ਬੰਦ ਕਰੋ",
+        "close_payment_modal_accessibility_label": "ਭੁਗਤਾਨ ਵਿਧੀ ਦੇ ਵੇਰਵਿਆਂ ਦਾ ਮਾਡਲ ਬੰਦ ਕਰੋ",
+        "payment_method_not_found_error": "ਭੁਗਤਾਨ ਵਿਧੀ ਨਹੀਂ ਲੱਭੀ ਜਾ ਸਕੀ",
+        "payment_details_loading": "ਭੁਗਤਾਨ ਵਿਧੀ ਵੇਰਵੇ ਲੋਡ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ",
+        "pre_authorized_payments": "ਪਹਿਲਾਂ ਤੋਂ ਅਧਿਕਾਰਤ ਭੁਗਤਾਨ",
+        "total_amount_of_subscription_line_items_left": "ਅਤੇ {{total}} ਹੋਰ",
+        "total_amount_of_subscription_line_items_left_accessibility_label": "{{totalItems}} ਆਈਟਮਾਂ ਕੁੱਲ, {{totalItemsToDisplay}} ਆਈਟਮਾਂ ਪ੍ਰਦਰਸ਼ਿਤ ਕਰ ਰਿਹਾ ਹੈ।",
+        "next_payment_due": "ਅਗਲਾ ਭੁਗਤਾਨ {{dueDateInMonthDayYear}} ਬਕਾਇਆ ਹੈ",
+        "edit_payment_method_button": "ਸੋਧੋ",
+        "edit_payment_method_button_accessibility_label": "{{lastDigits}} ਨਾਲ ਖਤਮ ਹੋਣ ਵਾਲੀ ਭੁਗਤਾਨ ਵਿਧੀ ਦਾ ਸੰਪਾਦਨ ਕਰੋ",
+        "loading_shop_pay": "ਦੁਕਾਨ ਦਾ ਭੁਗਤਾਨ ਲੋਡ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ",
+        "invalid_payment_method": "ਅਵੈਧ ਭੁਗਤਾਨ ਵਿਧੀ",
+        "invalid_payment_method_message": "ਆਉਣ ਵਾਲੇ ਆਰਡਰ ਪ੍ਰਾਪਤ ਕਰਨਾ ਜਾਰੀ ਰੱਖਣ ਲਈ ਇੱਕ ਨਵੇਂ ਕ੍ਰੈਡਿਟ ਕਾਰਡ ਦੀ ਵਰਤੋਂ ਕਰੋ।",
+        "replace_payment_method": "ਭੁਗਤਾਨ ਵਿਧੀ ਬਦਲੋ",
+        "checkout_card_banner": "ਇਸ ਭੁਗਤਾਨ ਵਿਧੀ ਦੀ ਵਰਤੋਂ ਸਿਰਫ਼ ਪਹਿਲਾਂ ਤੋਂ ਅਧਿਕਾਰਤ ਭੁਗਤਾਨਾਂ ਲਈ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ। ਜੇਕਰ ਤੁਸੀਂ ਇਸ ਸਟੋਰ ਵਿੱਚ ਸਾਈਨ ਇਨ ਕੀਤਾ ਹੈ ਤਾਂ ਇਹ ਚੈੱਕਆਉਟ 'ਤੇ ਦਿਖਾਈ ਨਹੀਂ ਦੇਵੇਗਾ। ",
+        "default_checkbox": "ਡਿਫਾਲਟ ਦੇ ਤੌਰ ਤੇ ਸੈੱਟ ਕਰੋ",
+        "default_checkbox_accessibility_label": "ਇਸ ਭੁਗਤਾਨ ਵਿਧੀ ਨੂੰ ਡਿਫੌਲਟ ਵਜੋਂ ਸੈੱਟ ਕਰੋ",
+        "replace_payment_method_button": "ਬਦਲੋ"
+      },
+      "edit_payment_method": {
+        "title": "ਭੁਗਤਾਨ ਵਿਧੀ ਦਾ ਸੰਪਾਦਨ ਕਰੋ",
+        "save_payment_method_button": "ਸੇਵ ਕਰੋ",
+        "cancel_edit_payment_method_button": "ਰੱਦ ਕਰੋ",
+        "payment_method_updated_toast": "ਭੁਗਤਾਨ ਵਿਧੀ ਅੱਪਡੇਟ ਕੀਤੀ ਗਈ",
+        "billing_address": "ਬਿਲਿੰਗ ਪਤਾ",
+        "billing_address_add_new": "ਨਵਾਂ ਸ਼ਾਮਲ ਕਰੋ",
+        "billing_address_choose_from_list": "ਸੂਚੀ ਵਿੱਚੋਂ ਚੁਣੋ",
+        "future_purchases_notice": "ਇਹ ਭੁਗਤਾਨ ਵਿਧੀ ਭਵਿੱਖ ਦੀਆਂ ਖਰੀਦਾਂ ਲਈ ਸੁਰੱਖਿਅਤ ਕੀਤੀ ਜਾਵੇਗੀ।",
+        "generic_error": "ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਆਈ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
       }
     },
     "date": {
