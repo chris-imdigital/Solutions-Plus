@@ -1036,6 +1036,126 @@
             "other": "%{count} ਹਫ਼ਤੇ"
           }
         }
+      },
+      "contact": {
+        "prefecture_label": "ਪ੍ਰੀਫੈਕਚਰ",
+        "prefecture_placeholder": "ਪ੍ਰੀਫੈਕਚਰ",
+        "governorate_label": "ਗਵਰਨੋਰੇਟ",
+        "governorate_placeholder": "ਗਵਰਨੋਰੇਟ",
+        "emirate_label": "ਅਮੀਰਾਤ",
+        "emirate_placeholder": "ਅਮੀਰਾਤ",
+        "state_and_territory_label": "ਰਾਜ/ਖੇਤਰ",
+        "state_and_territory_placeholder": "ਰਾਜ/ਖੇਤਰ",
+        "phone_label": "ਫ਼ੋਨ",
+        "phone_rollup_accessibility_label": "ਫ਼ੋਨ ਵਿਕਲਪ",
+        "optional_phone_label": "ਫ਼ੋਨ (ਵਿਕਲਪਿਕ)",
+        "phone_placeholder": "ਫ਼ੋਨ",
+        "phone_tooltip": "ਜੇਕਰ ਸਾਨੂੰ ਤੁਹਾਡੇ ਆਰਡਰ ਬਾਰੇ ਤੁਹਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰਨ ਦੀ ਲੋੜ ਹੈ",
+        "zip_code_label": "ਜ਼ਿਪ ਕੋਡ",
+        "optional_zip_code_label": "ਜ਼ਿਪ ਕੋਡ (ਵਿਕਲਪਿਕ)",
+        "zip_code_placeholder": "ਜ਼ਿਪ ਕੋਡ",
+        "postal_code_label": "ਡਾਕ ਕੋਡ",
+        "optional_postal_code_label": "ਡਾਕ ਕੋਡ (ਵਿਕਲਪਿਕ)",
+        "postal_code_placeholder": "ਡਾਕ ਕੋਡ",
+        "postcode_label": "ਪੋਸਟਕੋਡ",
+        "optional_postcode_label": "ਪੋਸਟਕੋਡ (ਵਿਕਲਪਿਕ)",
+        "postcode_placeholder": "ਪੋਸਟਕੋਡ",
+        "pincode_label": "ਪਿੰਨ ਕੋਡ",
+        "optional_pincode_label": "ਪਿੰਨ ਕੋਡ (ਵਿਕਲਪਿਕ)",
+        "pincode_placeholder": "ਪਿੰਨ ਕੋਡ",
+        "civic_number_warning": "ਜੇਕਰ ਤੁਹਾਡੇ ਕੋਲ ਘਰ ਦਾ ਨੰਬਰ ਹੈ ਤਾਂ ਉਸਨੂੰ ਸ਼ਾਮਲ ਕਰੋ।",
+        "optional_last_name_label": "ਆਖਰੀ ਨਾਮ (ਵਿਕਲਪਿਕ)",
+        "different_shipping_address_label": "ਕਿਸੇ ਵੱਖਰੇ ਪਤੇ 'ਤੇ ਭੇਜੋ",
+        "different_shipping_address_text": "ਇਸ ਆਰਡਰ ਲਈ ਇੱਕ ਵਾਰ ਵਰਤਿਆ ਜਾਣ ਵਾਲਾ ਪਤਾ ਵਰਤੋ",
+        "change_company_location_link_label": "ਕੰਪਨੀ ਦਾ ਸਥਾਨ ਬਦਲੋ",
+        "change_location_link_label": "ਟਿਕਾਣਾ ਬਦਲੋ",
+        "ship_to_company": "{{companyName}} ਨੂੰ ਭੇਜੋ"
+      },
+      "delivery_options": {
+        "free_total_label": "ਮੁਫ਼ਤ",
+        "ship": "ਜਹਾਜ਼",
+        "ship_to_address": "ਪਤੇ 'ਤੇ ਭੇਜੋ",
+        "shipping_address": "ਸ਼ਿਪਿੰਗ ਪਤਾ",
+        "pick_up": "ਚੁੱਕਣਾ",
+        "pick_up_from_store": "ਸਟੋਰ ਤੋਂ ਪਿਕਅੱਪ",
+        "pick_up_locations": "ਪਿਕਅੱਪ ਸਥਾਨ",
+        "pick_up_in_one_hour": "ਆਮ ਤੌਰ 'ਤੇ 1 ਘੰਟੇ ਵਿੱਚ ਤਿਆਰ ਹੋ ਜਾਂਦਾ ਹੈ",
+        "pick_up_in_two_hours": "ਆਮ ਤੌਰ 'ਤੇ 2 ਘੰਟਿਆਂ ਵਿੱਚ ਤਿਆਰ ਹੋ ਜਾਂਦਾ ਹੈ",
+        "pick_up_in_four_hours": "ਆਮ ਤੌਰ 'ਤੇ 4 ਘੰਟਿਆਂ ਵਿੱਚ ਤਿਆਰ ਹੋ ਜਾਂਦਾ ਹੈ",
+        "pick_up_in_twenty_four_hours": "ਆਮ ਤੌਰ 'ਤੇ 24 ਘੰਟਿਆਂ ਵਿੱਚ ਤਿਆਰ ਹੋ ਜਾਂਦਾ ਹੈ",
+        "pick_up_in_two_to_four_days": "ਆਮ ਤੌਰ 'ਤੇ 2-4 ਦਿਨਾਂ ਵਿੱਚ ਤਿਆਰ ਹੋ ਜਾਂਦਾ ਹੈ",
+        "pick_up_in_five_or_more_days": "ਆਮ ਤੌਰ 'ਤੇ 5+ ਦਿਨਾਂ ਵਿੱਚ ਤਿਆਰ ਹੋ ਜਾਂਦਾ ਹੈ",
+        "pick_up_in_zero_to_two_hours": "2 ਘੰਟਿਆਂ ਵਿੱਚ ਪਿਕਅੱਪ ਲਈ ਤਿਆਰ",
+        "pick_up_in_two_to_four_hours": "4 ਘੰਟਿਆਂ ਵਿੱਚ ਪਿਕਅੱਪ ਲਈ ਤਿਆਰ",
+        "pick_up_immediately": "ਹੁਣ ਪਿਕਅੱਪ ਲਈ ਤਿਆਰ ਹੈ",
+        "pick_up_next_day": "ਅਗਲੇ ਦਿਨ ਪਿਕਅੱਪ ਲਈ ਤਿਆਰ",
+        "pickup_point_method_definition": "ਪਿਕਅੱਪ ਪੁਆਇੰਟ 'ਤੇ ਭੇਜੋ",
+        "retail_method_definition": "ਪ੍ਰਚੂਨ ਸ਼ਿਪਿੰਗ",
+        "company_location_no_address_banner": "ਬਿਨਾਂ ਪਤੇ ਵਾਲੇ ਸਥਾਨਾਂ 'ਤੇ ਭੇਜਣ ਵਾਲੇ ਆਰਡਰ ਸਮੀਖਿਆ ਲਈ ਜਮ੍ਹਾਂ ਕੀਤੇ ਜਾਣਗੇ।",
+        "none_method_definition": "ਕੋਈ ਸ਼ਿਪਿੰਗ ਨਹੀਂ",
+        "subscription_pickup_information": "ਇਹ ਡਿਲੀਵਰੀ ਵਿਧੀ ਇਸ ਆਰਡਰ ਵਿੱਚ ਸਾਰੀਆਂ ਆਈਟਮਾਂ ਅਤੇ ਇਸ ਗਾਹਕੀ ਲਈ ਭਵਿੱਖ ਦੇ ਸਾਰੇ ਆਰਡਰਾਂ 'ਤੇ ਲਾਗੂ ਹੋਵੇਗੀ।"
+      },
+      "customer_account": {
+        "not_user_label": "%{first_name} ਨਹੀਂ?",
+        "have_an_account_label": "ਕੀ ਕੋਈ ਖਾਤਾ ਹੈ?",
+        "sign_in_link_label": "ਸਾਈਨ - ਇਨ",
+        "sign_out_link_label": "ਸਾਇਨ ਆਉਟ",
+        "save_my_information_label": "ਇਸ ਜਾਣਕਾਰੀ ਨੂੰ ਅਗਲੀ ਵਾਰ ਲਈ ਸੰਭਾਲ ਕੇ ਰੱਖੋ।",
+        "invalid_address": "ਚੁਣਿਆ ਗਿਆ ਪਤਾ ਅਵੈਧ ਹੈ। %{update_address_link} ਜਾਂ ਕੋਈ ਵੱਖਰਾ ਪਤਾ ਚੁਣੋ।",
+        "incomplete_address": "ਚੁਣਿਆ ਗਿਆ ਪਤਾ ਅਧੂਰਾ ਹੈ। %{update_address_link} ਜਾਂ ਕੋਈ ਵੱਖਰਾ ਪਤਾ ਚੁਣੋ।",
+        "rollup_label": "ਖਾਤਾ",
+        "rollup_accessibility_label": "ਖਾਤਾ ਵਿਕਲਪ",
+        "invalid_shipping_method_summary": "ਉਪਲਬਧ ਸ਼ਿਪਿੰਗ ਵਿਧੀਆਂ ਦੇਖਣ ਲਈ ਇੱਕ ਵੈਧ ਸ਼ਿਪਿੰਗ ਪਤਾ ਚੁਣੋ।",
+        "saved_address_option_description": {
+          "one": "ਤੁਹਾਡੇ ਕੋਲ {{count}} ਸੇਵ ਕੀਤਾ ਪਤਾ ਹੈ।",
+          "other": "ਤੁਹਾਡੇ ਕੋਲ {{count}} ਸੇਵ ਕੀਤੇ ਪਤੇ ਹਨ।"
+        },
+        "saved_address_option_link": "ਇੱਕ ਰੱਖਿਅਤ ਕੀਤਾ ਪਤਾ ਵਰਤੋ",
+        "saved_address_modal_title": "ਮੇਰਾ ਸੇਵ ਕੀਤਾ ਪਤਾ ਵਰਤੋ"
+      },
+      "remote_merchandise_only": {
+        "title": "ਆਪਣੀ ਖਰੀਦ ਪੂਰੀ ਕਰੋ",
+        "remote_only_notice": "ਇਹ ਚੀਜ਼ਾਂ ਦੂਜੇ ਸਟੋਰਾਂ ਦੁਆਰਾ ਵੇਚੀਆਂ ਅਤੇ ਭੇਜੀਆਂ ਜਾਂਦੀਆਂ ਹਨ। ਆਪਣੀ ਖਰੀਦ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਹਰੇਕ ਸਟੋਰ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।",
+        "return_to_store_label": "ਸਟੋਰ ਤੇ ਵਾਪਸ ਜਾਓ",
+        "detail_item_label": {
+          "one": "{{count}} ਆਈਟਮ",
+          "other": "{{count}} ਆਈਟਮਾਂ"
+        },
+        "checkout_on_shop_label": "%{shop_name} 'ਤੇ ਦੇਖੋ",
+        "single_shop_transition": "ਤੁਹਾਡੀ ਖਰੀਦ ਪੂਰੀ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ %{advertiser} ਵੱਲ ਰੀਡਾਇਰੈਕਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ।"
+      },
+      "stock": {
+        "page_title": "ਵਸਤੂ ਸੂਚੀ ਸੰਬੰਧੀ ਸਮੱਸਿਆਵਾਂ",
+        "title": "ਖਤਮ ਹੈ",
+        "items_unavailable_notice": "ਕੁਝ ਆਈਟਮਾਂ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।",
+        "product_column_header": "ਉਤਪਾਦ",
+        "quantity_column_header": "ਮਾਤਰਾ",
+        "price_column_header": "ਕੀਮਤ",
+        "status_column_header": "ਸਥਿਤੀ",
+        "removed_from_cart_notice": "ਕਾਰਟ ਤੋਂ ਹਟਾਇਆ ਗਿਆ",
+        "sold_out_label": "ਸਭ ਵਿੱਕ ਗਇਆ",
+        "reduced_label": "ਘਟਾ ਦਿੱਤਾ ਗਿਆ",
+        "reduced_with_quantity_label": "ਸਿਰਫ਼ %{quantity_available} ਬਾਕੀ ਹੈ",
+        "remove_from_cart_button_label": "ਕਾਰਟ ਵਿੱਚੋਂ ਹਟਾਓ",
+        "continue_shopping_button_label": "ਜਾਰੀ ਰੱਖੋ",
+        "go_back_to_cart_button_label": "ਮੇਰੇ ਕਾਰਟ 'ਤੇ ਵਾਪਸ ਜਾਓ।",
+        "remove": "ਹਟਾਓ",
+        "return_to_store_label": "ਸਟੋਰ ਤੇ ਵਾਪਸ ਜਾਓ",
+        "continue_cta_label": "ਚੈੱਕਆਉਟ ਜਾਰੀ ਰੱਖੋ",
+        "item_label": {
+          "one": "{{count}} ਆਈਟਮ",
+          "other": "{{count}} ਆਈਟਮਾਂ"
+        },
+        "empty_cart_label": "ਤੁਹਾਡਾ ਕਾਰਟ ਖਾਲੀ ਹੈ।",
+        "quantity_update": {
+          "page_title": "ਮਾਤਰਾ ਅੱਪਡੇਟ",
+          "title": "ਮਾਤਰਾ ਅੱਪਡੇਟ",
+          "description": "ਇਹਨਾਂ ਆਈਟਮਾਂ ਲਈ ਉਪਲਬਧ ਮਾਤਰਾਵਾਂ ਬਦਲ ਗਈਆਂ ਹਨ ਅਤੇ ਤੁਹਾਡੀ ਕਾਰਟ ਵਿੱਚ ਅੱਪਡੇਟ ਕੀਤੀਆਂ ਗਈਆਂ ਹਨ।"
+        },
+        "unpurchasable_product": {
+          "title": "ਨਾ ਖਰੀਦਿਆ ਜਾਣ ਵਾਲਾ ਉਤਪਾਦ",
+          "header": "ਕੁਝ ਆਈਟਮਾਂ ਤੁਹਾਡੇ ਕਾਰਟ ਵਿੱਚੋਂ ਹਟਾ ਦਿੱਤੀਆਂ ਗਈਆਂ ਸਨ।"
+        }
       }
     },
     "store_availability": {
