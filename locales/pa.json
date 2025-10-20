@@ -496,7 +496,67 @@
             "other": "%{count} ਆਈਟਮਾਂ"
           }
         },
-        "alternative_payment_currency_total": "%{amount_due} ਵਜੋਂ ਚਾਰਜ ਕੀਤਾ ਗਿਆ"
+        "alternative_payment_currency_total": "%{amount_due} ਵਜੋਂ ਚਾਰਜ ਕੀਤਾ ਗਿਆ",
+        "title": "ਆਰਡਰ ਦਾ ਸਾਰ",
+        "group_title_label": "\"%{group_title}\" ਦਾ ਹਿੱਸਾ",
+        "for_add_on": "ਲਈ: %{group_title}",
+        "from_shop_heading": "%{shop_name} ਤੋਂ",
+        "from_other_stores_heading": "ਹੋਰ ਸਟੋਰਾਂ ਤੋਂ",
+        "number_items": {
+          "one": "%{count} ਆਈਟਮ",
+          "other": "%{count} ਆਈਟਮਾਂ"
+        },
+        "view_all_items": {
+          "one": "%{count} ਆਈਟਮ ਵੇਖੋ",
+          "other": "ਸਾਰੀਆਂ %{count} ਆਈਟਮਾਂ ਵੇਖੋ"
+        },
+        "more_items_modal": {
+          "search_item": "ਖੋਜ",
+          "clear_search": "ਖੋਜ ਸਾਫ਼ ਕਰੋ",
+          "empty_results": "\"%{searchText}\" ਲਈ ਕੋਈ ਨਤੀਜਾ ਨਹੀਂ ਮਿਲਿਆ। ਸਪੈਲਿੰਗ ਦੀ ਜਾਂਚ ਕਰੋ ਜਾਂ ਕੋਈ ਵੱਖਰਾ ਸ਼ਬਦ ਜਾਂ ਵਾਕੰਸ਼ ਵਰਤੋ।",
+          "number_items_shown": "%{totalNumber} ਆਈਟਮਾਂ ਵਿੱਚੋਂ %{shownNumber}"
+        },
+        "order_name_label": "ਆਰਡਰ %{ਨਾਮ}",
+        "shopping_cart_label": "ਖਰੀਦਾਰੀ ਠੇਲ੍ਹਾ",
+        "discount_title": "ਛੋਟ",
+        "discount_title_stacking": {
+          "one": "ਛੋਟ",
+          "other": "ਛੋਟਾਂ"
+        },
+        "discount_order_stacking": {
+          "one": "ਆਰਡਰ ਛੋਟ",
+          "other": "ਛੋਟਾਂ ਦਾ ਆਰਡਰ ਦਿਓ"
+        },
+        "discount_label": "ਛੋਟ ਕੋਡ",
+        "discount_not_found": "ਦਰਜ ਕੀਤੇ ਕੋਡ ਨਾਲ ਮੇਲ ਖਾਂਦੀ ਕੋਈ ਵੈਧ ਛੋਟ ਨਹੀਂ ਮਿਲ ਸਕੀ।",
+        "discount_placeholder": "ਛੋਟ ਕੋਡ",
+        "discount_code_applied": "ਛੋਟ ਕੋਡ ਲਾਗੂ ਕੀਤਾ ਗਿਆ",
+        "discount_code_allocations_mismatch": "ਤੁਹਾਡਾ <strong style=\"text-transform:uppercase\">%{code}</strong> ਛੋਟ ਕੋਡ ਬਦਲ ਗਿਆ ਹੈ। ਆਪਣੇ ਕਾਰਟ ਦੀ ਸਮੀਖਿਆ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+        "order_discounts_apply_to_local_shop": "ਆਰਡਰ ਛੋਟ ਸਿਰਫ਼ %{shop_name} ਤੋਂ ਆਈਟਮਾਂ 'ਤੇ ਲਾਗੂ ਹੁੰਦੀ ਹੈ।",
+        "gift_card_applied": "ਗਿਫ਼ਟ ਕਾਰਡ ਲਾਗੂ ਕੀਤਾ ਗਿਆ",
+        "enter_shipping_address": "ਸ਼ਿਪਿੰਗ ਪਤਾ ਦਰਜ ਕਰੋ",
+        "gift_card_title": "ਗਿਫਟ ​​ਕਾਰਡ",
+        "gift_card_label": "ਗਿਫਟ ​​ਕਾਰਡ",
+        "gift_card_placeholder": "ਗਿਫਟ ​​ਕਾਰਡ",
+        "gift_card_and_discount_title": "ਛੂਟ ਕੋਡ ਜਾਂ ਗਿਫਟ ਕਾਰਡ",
+        "gift_card_and_discount_label": "ਛੂਟ ਕੋਡ ਜਾਂ ਗਿਫਟ ਕਾਰਡ",
+        "gift_card_and_discount_placeholder": "ਛੂਟ ਕੋਡ ਜਾਂ ਗਿਫਟ ਕਾਰਡ",
+        "gift_cards_apply_to_local_shop": "ਗਿਫਟ ​​ਕਾਰਡ ਸਿਰਫ਼ %{shop_name} ਤੋਂ ਆਈਟਮਾਂ 'ਤੇ ਲਾਗੂ ਹੁੰਦੇ ਹਨ।",
+        "add_discount_or_gift_card": "ਛੂਟ ਕੋਡ ਜਾਂ ਗਿਫ਼ਟ ਕਾਰਡ ਸ਼ਾਮਲ ਕਰੋ",
+        "remove_gift_card_label": "ਗਿਫ਼ਟ ਕਾਰਡ ਸਾਫ਼ ਕਰੋ",
+        "remove_discount_label": "ਛੋਟ ਹਟਾਓ",
+        "return_restocking_fee_label": "ਰੀਸਟਾਕਿੰਗ ਫੀਸ",
+        "return_shipping_fee_label": "ਵਾਪਸ ਸ਼ਿਪਿੰਗ",
+        "free_shipping_discount_label": "ਮੁਫਤ ਸ਼ਿਪਿੰਗ",
+        "applied_free_shipping_discount_label": "ਲਾਗੂ ਕੀਤਾ",
+        "apply_discount_button_label": "ਲਾਗੂ ਕਰੋ",
+        "applied_discount_message": "ਕੁੱਲ ਆਰਡਰ ਕੀਮਤ 'ਤੇ %{amount} ਦੀ ਛੋਟ",
+        "discount_has_been_applied": "ਛੋਟ ਲਾਗੂ ਕਰ ਦਿੱਤੀ ਗਈ ਹੈ।",
+        "discount_has_been_removed": "ਛੋਟ ਹਟਾ ਦਿੱਤੀ ਗਈ ਹੈ।",
+        "gift_card_has_been_applied": "ਗਿਫ਼ਟ ਕਾਰਡ ਲਾਗੂ ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ",
+        "gift_card_has_been_removed": "ਗਿਫ਼ਟ ਕਾਰਡ ਹਟਾ ਦਿੱਤਾ ਗਿਆ ਹੈ",
+        "gift_card_subscriptions_notice": "ਗਿਫ਼ਟ ਕਾਰਡ ਸਿਰਫ਼ ਤੁਹਾਡੇ ਪਹਿਲੇ ਭੁਗਤਾਨ 'ਤੇ ਲਾਗੂ ਹੋਣਗੇ",
+        "discount_already_applied": "ਇਸ ਆਰਡਰ 'ਤੇ ਛੋਟ ਲਾਗੂ ਕੀਤੀ ਗਈ ਹੈ। ਤੁਸੀਂ ਕੋਈ ਹੋਰ ਛੋਟ ਨਹੀਂ ਜੋੜ ਸਕਦੇ।"
       },
       "thank_you": {
         "delivered": "ਡਿਲੀਵਰ ਕੀਤਾ ਗਿਆ",
@@ -1597,8 +1657,53 @@
         },
         "unpurchasable_product": {
           "title": "ਨਾ ਖਰੀਦਿਆ ਜਾਣ ਵਾਲਾ ਉਤਪਾਦ",
-          "header": "ਕੁਝ ਆਈਟਮਾਂ ਤੁਹਾਡੇ ਕਾਰਟ ਵਿੱਚੋਂ ਹਟਾ ਦਿੱਤੀਆਂ ਗਈਆਂ ਸਨ।"
-        }
+          "header": "ਕੁਝ ਆਈਟਮਾਂ ਤੁਹਾਡੇ ਕਾਰਟ ਵਿੱਚੋਂ ਹਟਾ ਦਿੱਤੀਆਂ ਗਈਆਂ ਸਨ।",
+          "message": "ਇਹ ਚੀਜ਼ਾਂ B2B ਆਰਡਰਾਂ ਲਈ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।",
+          "status_column_header": "ਉਪਲਭਦ ਨਹੀ"
+        },
+        "unpurchasable_product_generic": {
+          "title": "ਨਾ ਖਰੀਦਿਆ ਜਾਣ ਵਾਲਾ ਉਤਪਾਦ",
+          "header": "ਕੁਝ ਆਈਟਮਾਂ ਤੁਹਾਡੇ ਕਾਰਟ ਵਿੱਚੋਂ ਹਟਾ ਦਿੱਤੀਆਂ ਗਈਆਂ ਸਨ।",
+          "message": "ਇਹ ਚੀਜ਼ਾਂ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।",
+          "status_column_header": "ਉਪਲਭਦ ਨਹੀ"
+        },
+        "unfulfillable_product": {
+          "title": "ਡਿਲੀਵਰੀ ਉਪਲਬਧ ਨਹੀਂ ਹੈ",
+          "message": {
+            "one": "ਇਸ ਆਈਟਮ ਲਈ %{delivery_method} ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+            "other": "ਇਹਨਾਂ ਆਈਟਮਾਂ ਲਈ %{delivery_method} ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।"
+          },
+          "default_message": {
+            "one": "ਇਸ ਆਈਟਮ ਲਈ ਚੁਣਿਆ ਗਿਆ ਡਿਲੀਵਰੀ ਤਰੀਕਾ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+            "other": "ਇਹਨਾਂ ਆਈਟਮਾਂ ਲਈ ਚੁਣਿਆ ਗਿਆ ਡਿਲੀਵਰੀ ਤਰੀਕਾ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।"
+          }
+        },
+        "unshippable_product": {
+          "title": "ਕੋਈ ਡਿਲੀਵਰੀ ਉਪਲਬਧ ਨਹੀਂ ਹੈ",
+          "header": {
+            "one": "%{count} ਆਈਟਮ ਲਈ ਕੋਈ ਡਿਲੀਵਰੀ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+            "other": "%{count} ਆਈਟਮਾਂ ਲਈ ਕੋਈ ਡਿਲੀਵਰੀ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।"
+          },
+          "message": {
+            "one": "ਇਸ ਆਈਟਮ ਨੂੰ ਤੁਹਾਡੇ ਕਾਰਟ ਤੋਂ ਹਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ ਕਿਉਂਕਿ ਤੁਹਾਡੇ ਪਤੇ ਲਈ ਕੋਈ ਡਿਲੀਵਰੀ ਵਿਧੀਆਂ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।",
+            "other": "ਇਹਨਾਂ ਆਈਟਮਾਂ ਨੂੰ ਤੁਹਾਡੇ ਕਾਰਟ ਤੋਂ ਹਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ ਕਿਉਂਕਿ ਤੁਹਾਡੇ ਪਤੇ ਲਈ ਕੋਈ ਡਿਲੀਵਰੀ ਵਿਧੀ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।"
+          },
+          "status_column_header": "ਡਿਲੀਵਰੀ ਨਹੀਂ"
+        },
+        "price_update": {
+          "title": "ਕੀਮਤ ਅੱਪਡੇਟ",
+          "description": "ਇਹਨਾਂ ਆਈਟਮਾਂ ਦੀਆਂ ਕੀਮਤਾਂ ਬਦਲ ਗਈਆਂ ਹਨ ਅਤੇ ਤੁਹਾਡੀ ਕਾਰਟ ਵਿੱਚ ਅੱਪਡੇਟ ਕੀਤੀਆਂ ਗਈਆਂ ਹਨ।",
+          "updated_price": "ਅੱਪਡੇਟ ਕੀਤੀ ਕੀਮਤ"
+        },
+        "price_and_quantity_update": {
+          "title": "ਕੀਮਤ ਅਤੇ ਮਾਤਰਾ ਅੱਪਡੇਟ",
+          "description": "ਇਹਨਾਂ ਚੀਜ਼ਾਂ ਦੀਆਂ ਕੀਮਤਾਂ ਅਤੇ ਉਪਲਬਧ ਮਾਤਰਾਵਾਂ ਬਦਲ ਗਈਆਂ ਹਨ ਅਤੇ ਤੁਹਾਡੇ ਕਾਰਟ ਵਿੱਚ ਅੱਪਡੇਟ ਕੀਤੀਆਂ ਗਈਆਂ ਹਨ।"
+        },
+        "out_of_stock": {
+          "description": "ਇਹ ਆਈਟਮਾਂ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹਨ ਅਤੇ ਤੁਹਾਡੇ ਕਾਰਟ ਤੋਂ ਹਟਾ ਦਿੱਤੀਆਂ ਗਈਆਂ ਹਨ।",
+          "items_unavailable": "ਕੁਝ ਆਈਟਮਾਂ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹਨ ਅਤੇ ਤੁਹਾਡੇ ਕਾਰਟ ਤੋਂ ਹਟਾ ਦਿੱਤੀਆਂ ਗਈਆਂ ਹਨ।"
+        },
+        "out_of_stock_in_context_label": "ਇਹ ਉਤਪਾਦ ਤੁਹਾਡੇ ਦੇਸ਼/ਖੇਤਰ ਵਿੱਚ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।"
       },
       "note": {
         "length_exceeds_maximum": "ਨੋਟ ਦਾ ਆਕਾਰ 5000 ਜਾਂ ਘੱਟ ਅੱਖਰਾਂ ਤੱਕ ਘਟਾਓ।"
@@ -1979,6 +2084,53 @@
         "duplicate_variant_id": "%{position} %{name} ਵਪਾਰਕ ਹਦਾਇਤ ਵਿੱਚ ਇੱਕ ਡੁਪਲੀਕੇਟ ਵੇਰੀਐਂਟ ID %{variant_id} ਹੈ।",
         "invalid_variant_id_target": "%{name} ਵਪਾਰਕ ਹਦਾਇਤ ਵੇਰੀਐਂਟ ID %{variant_id} ਦਾ ਹਵਾਲਾ ਦਿੰਦੀ ਹੈ, ਪਰ ਉਹ ਵੇਰੀਐਂਟ ਵਪਾਰਕ ਲਾਈਨਾਂ ਵਿੱਚ ਨਹੀਂ ਹੈ।",
         "invalid_price_override_target": "ਲਾਈਨ ਆਈਟਮ %{stable_id} ਲਈ ਕੀਮਤ ਓਵਰਰਾਈਡ ਵਪਾਰਕ ਨਿਰਦੇਸ਼ ਅਵੈਧ ਹੈ ਕਿਉਂਕਿ ਇਹ ਇੱਕ ਬੰਡਲ ਕੰਪੋਨੈਂਟ ਹੈ।"
+      },
+      "contextual_availability": {
+        "title": {
+          "one": "ਅਣਉਪਲਬਧ ਉਤਪਾਦ",
+          "other": "ਅਣਉਪਲਬਧ ਉਤਪਾਦ"
+        },
+        "products_not_available": {
+          "one": "ਇਹ ਉਤਪਾਦ ਤੁਹਾਡੇ ਕਾਰਟ ਤੋਂ ਹਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ ਕਿਉਂਕਿ ਇਹ ਤੁਹਾਡੇ ਦੇਸ਼/ਖੇਤਰ ਵਿੱਚ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+          "other": "ਇਹਨਾਂ ਉਤਪਾਦਾਂ ਨੂੰ ਤੁਹਾਡੀ ਕਾਰਟ ਤੋਂ ਹਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ ਕਿਉਂਕਿ ਇਹ ਤੁਹਾਡੇ ਦੇਸ਼/ਖੇਤਰ ਵਿੱਚ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।"
+        },
+        "all_products_in_cart_unavailable": {
+          "one": "ਇਹ ਉਤਪਾਦ ਤੁਹਾਡੇ ਦੇਸ਼/ਖੇਤਰ ਵਿੱਚ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+          "other": "ਇਹ ਉਤਪਾਦ ਤੁਹਾਡੇ ਦੇਸ਼/ਖੇਤਰ ਵਿੱਚ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।"
+        },
+        "unavailable_label": "ਉਪਲਬਧ ਨਹੀਂ"
+      },
+      "merchandise_unavailable_in_buyer_location": {
+        "banner_title": {
+          "some_products_one": "ਇਹ ਉਤਪਾਦ %{location_name} ਨੂੰ ਡਿਲੀਵਰੀ ਲਈ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+          "some_products_other": "ਇਹ ਉਤਪਾਦ %{location_name} ਨੂੰ ਡਿਲੀਵਰੀ ਲਈ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।",
+          "all_products_one": "ਤੁਹਾਡੀ ਕਾਰਟ ਵਿੱਚ ਉਤਪਾਦ %{location_name} ਨੂੰ ਡਿਲੀਵਰੀ ਲਈ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+          "all_products_other": "ਤੁਹਾਡੇ ਕਾਰਟ ਵਿਚਲੇ ਉਤਪਾਦ %{location_name} ਨੂੰ ਡਿਲੀਵਰੀ ਲਈ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।"
+        },
+        "missing_country_fallback": "ਤੁਹਾਡਾ ਦੇਸ਼",
+        "indeterminate_location_fallback": "ਤੁਹਾਡਾ ਟਿਕਾਣਾ",
+        "cart_updated": "ਤੁਹਾਡਾ ਕਾਰਟ ਅੱਪਡੇਟ ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ।",
+        "change_address_only": "ਜਾਰੀ ਰੱਖਣ ਲਈ ਡਿਲੀਵਰੀ ਪਤਾ ਬਦਲੋ।",
+        "change_address_or_remove": "ਡਿਲੀਵਰੀ ਪਤਾ ਜਾਂ %{remove_action} ਬਦਲੋ।",
+        "remove_items_action": {
+          "one": "ਅਣਉਪਲਬਧ ਆਈਟਮ ਹਟਾਓ",
+          "other": "ਅਣਉਪਲਬਧ ਚੀਜ਼ਾਂ ਨੂੰ ਹਟਾਓ"
+        },
+        "empty_cart_action": "ਖਾਲੀ ਕਾਰਟ ਅਤੇ ਸਟੋਰ ਤੇ ਵਾਪਸ ਜਾਓ",
+        "unavailable_line_item": "%{ਉਤਪਾਦ_ਨਾਮ} / %{ਵੇਰੀਐਂਟ_ਲੇਬਲ}"
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "title": {
+            "one": "%{count} ਆਈਟਮ ਲਈ ਕੋਈ ਡਿਲੀਵਰੀ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+            "other": "%{count} ਆਈਟਮਾਂ ਲਈ ਕੋਈ ਡਿਲੀਵਰੀ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।"
+          },
+          "message": {
+            "one": "ਇਸ ਆਈਟਮ ਨੂੰ ਤੁਹਾਡੇ ਕਾਰਟ ਤੋਂ ਹਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ ਕਿਉਂਕਿ ਤੁਹਾਡੇ ਪਤੇ ਲਈ ਕੋਈ ਡਿਲੀਵਰੀ ਵਿਧੀਆਂ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।",
+            "other": "ਇਹਨਾਂ ਆਈਟਮਾਂ ਨੂੰ ਤੁਹਾਡੇ ਕਾਰਟ ਤੋਂ ਹਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ ਕਿਉਂਕਿ ਤੁਹਾਡੇ ਪਤੇ ਲਈ ਕੋਈ ਡਿਲੀਵਰੀ ਵਿਧੀ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।"
+          },
+          "label": "ਡਿਲੀਵਰੀ ਨਹੀਂ"
+        }
       }
     },
     "store_availability": {
