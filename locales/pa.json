@@ -903,6 +903,146 @@
       "buyer_consent_product": "ਇਹ ਆਈਟਮ ਇੱਕ ਆਵਰਤੀ ਜਾਂ ਮੁਲਤਵੀ ਖਰੀਦ ਹੈ। ਜਾਰੀ ਰੱਖ ਕੇ, ਮੈਂ %{cancellationPolicyLink} ਨਾਲ ਸਹਿਮਤ ਹਾਂ ਅਤੇ ਤੁਹਾਨੂੰ ਇਸ ਪੰਨੇ 'ਤੇ ਸੂਚੀਬੱਧ ਕੀਮਤਾਂ, ਬਾਰੰਬਾਰਤਾ ਅਤੇ ਮਿਤੀਆਂ 'ਤੇ ਮੇਰੀ ਭੁਗਤਾਨ ਵਿਧੀ ਤੋਂ ਚਾਰਜ ਲੈਣ ਲਈ ਅਧਿਕਾਰਤ ਕਰਦਾ ਹਾਂ ਜਦੋਂ ਤੱਕ ਮੇਰਾ ਆਰਡਰ ਪੂਰਾ ਨਹੀਂ ਹੋ ਜਾਂਦਾ ਜਾਂ ਜੇਕਰ ਇਜਾਜ਼ਤ ਹੋਵੇ ਤਾਂ ਮੈਂ ਰੱਦ ਕਰ ਦਿੰਦਾ ਹਾਂ।",
       "buyer_consent_cart": "ਤੁਹਾਡੇ ਕਾਰਟ ਵਿੱਚ ਇੱਕ ਜਾਂ ਵੱਧ ਆਈਟਮਾਂ ਇੱਕ ਆਵਰਤੀ ਜਾਂ ਮੁਲਤਵੀ ਖਰੀਦ ਹੈ। ਜਾਰੀ ਰੱਖ ਕੇ, ਮੈਂ %{cancellationPolicyLink} ਨਾਲ ਸਹਿਮਤ ਹਾਂ ਅਤੇ ਤੁਹਾਨੂੰ ਇਸ ਪੰਨੇ 'ਤੇ ਸੂਚੀਬੱਧ ਕੀਮਤਾਂ, ਬਾਰੰਬਾਰਤਾ ਅਤੇ ਮਿਤੀਆਂ 'ਤੇ ਮੇਰੀ ਭੁਗਤਾਨ ਵਿਧੀ ਤੋਂ ਚਾਰਜ ਲੈਣ ਲਈ ਅਧਿਕਾਰਤ ਕਰਦਾ ਹਾਂ ਜਦੋਂ ਤੱਕ ਮੇਰਾ ਆਰਡਰ ਪੂਰਾ ਨਹੀਂ ਹੋ ਜਾਂਦਾ ਜਾਂ ਜੇਕਰ ਇਜਾਜ਼ਤ ਹੋਵੇ ਤਾਂ ਮੈਂ ਰੱਦ ਕਰ ਦਿੰਦਾ ਹਾਂ।",
       "cancellation_policy": "ਰੱਦ ਕਰਨ ਦੀ ਨੀਤੀ"
+    },
+    "errors": {
+      "discount_expired": "ਇਹ ਛੋਟ ਹੁਣ ਵੈਧ ਨਹੀਂ ਹੈ।",
+      "discount_limit_reached": "ਇਹ ਛੋਟ ਆਪਣੀ ਵਰਤੋਂ ਸੀਮਾ 'ਤੇ ਪਹੁੰਚ ਗਈ ਹੈ।",
+      "discount_not_found": "ਦਰਜ ਕੀਤੇ ਕੋਡ ਨਾਲ ਮੇਲ ਖਾਂਦੀ ਕੋਈ ਵੈਧ ਛੋਟ ਨਹੀਂ ਮਿਲ ਸਕੀ।",
+      "customer_already_used_once_per_customer_discount_notice": "ਇਹ ਛੋਟ ਆਪਣੀ ਵਰਤੋਂ ਸੀਮਾ 'ਤੇ ਪਹੁੰਚ ਗਈ ਹੈ।",
+      "gift_card_already_applied": "ਕੋਡ ਪਹਿਲਾਂ ਹੀ ਤੁਹਾਡੇ ਚੈੱਕਆਉਟ 'ਤੇ ਲਾਗੂ ਕੀਤਾ ਜਾ ਚੁੱਕਾ ਹੈ।",
+      "gift_card_code_invalid": "ਕੋਡ ਅਵੈਧ ਹੈ",
+      "gift_card_currency_mismatch": "ਤੁਹਾਡਾ ਗਿਫਟ ਕਾਰਡ %{gift_card_currency} ਵਿੱਚ ਹੈ। ਇਸਨੂੰ %{checkout_currency} ਵਿੱਚ ਦੁਬਾਰਾ ਜਾਰੀ ਕਰਨ ਲਈ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।",
+      "gift_card_depleted": "ਇਸ ਗਿਫਟ ਕਾਰਡ 'ਤੇ ਕੋਈ ਫੰਡ ਨਹੀਂ ਬਚਿਆ ਹੈ।",
+      "gift_card_disabled": "ਗਿਫ਼ਟ ਕਾਰਡ ਬੰਦ ਹੈ",
+      "gift_card_expired": "ਗਿਫ਼ਟ ਕਾਰਡ ਦੀ ਮਿਆਦ ਪੁੱਗ ਗਈ ਹੈ",
+      "invalid": "ਅਵੈਧ ਹੈ",
+      "bad_domain": "ਇੱਕ ਅਵੈਧ ਡੋਮੇਨ ਨਾਮ ਸ਼ਾਮਲ ਹੈ",
+      "taken": "ਪਹਿਲਾਂ ਹੀ ਲਿਆ ਜਾ ਚੁੱਕਿਆ ਹੈ",
+      "contains_html_tags": "HTML ਟੈਗ ਨਹੀਂ ਹੋ ਸਕਦੇ",
+      "too_short": "ਬਹੁਤ ਛੋਟਾ ਹੈ (ਘੱਟੋ-ਘੱਟ %{count} ਅੱਖਰ ਹਨ)",
+      "too_long": "ਬਹੁਤ ਲੰਮਾ ਹੈ (ਵੱਧ ਤੋਂ ਵੱਧ %{count} ਅੱਖਰ ਹਨ)",
+      "password_mismatch": "ਦਿੱਤੇ ਗਏ ਪਾਸਵਰਡ ਨਾਲ ਮੇਲ ਖਾਂਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ",
+      "contains_spaces": "ਸਪੇਸ ਨਾਲ ਸ਼ੁਰੂ ਜਾਂ ਖਤਮ ਹੁੰਦਾ ਹੈ।",
+      "invalid_for_country": "%{country} ਲਈ ਵੈਧ ਨਹੀਂ ਹੈ",
+      "invalid_for_country_and_province": "%{ਪ੍ਰਾਂਤ} ਅਤੇ %{ਦੇਸ਼} ਲਈ ਵੈਧ ਨਹੀਂ ਹੈ",
+      "invalid_province_in_country": "%{country} ਵਿੱਚ ਇੱਕ ਵੈਧ ਸੂਬਾ ਨਹੀਂ ਹੈ",
+      "invalid_state_in_country": "%{country} ਵਿੱਚ ਇੱਕ ਵੈਧ ਰਾਜ ਨਹੀਂ ਹੈ",
+      "invalid_region_in_country": "%{country} ਵਿੱਚ ਇੱਕ ਵੈਧ ਖੇਤਰ ਨਹੀਂ ਹੈ",
+      "less_than_or_equal_to": "%{count} ਤੋਂ ਘੱਟ ਜਾਂ ਇਸਦੇ ਬਰਾਬਰ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ",
+      "not_supported": "ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ",
+      "full_name_required": "ਪਹਿਲਾ ਨਾਮ ਅਤੇ ਆਖਰੀ ਨਾਮ ਦਰਜ ਕਰੋ",
+      "invalid_for_card_type": "ਵੈਧ ਨਹੀਂ ਹੈ",
+      "invalid_type": "ਮਾਫ਼ ਕਰਨਾ, ਅਸੀਂ ਇਸ ਕਿਸਮ ਦੇ ਕਾਰਡ ਸਵੀਕਾਰ ਨਹੀਂ ਕਰਦੇ।",
+      "invalid_format": "ਫਾਰਮੈਟ ਵੈਧ ਨਹੀਂ ਹੈ।",
+      "expired": "ਮਿਆਦ ਪੁੱਗ ਗਈ ਹੈ",
+      "invalid_start_date_or_issue_number_for_debit": "ਇੱਕ ਵੈਧ ਸ਼ੁਰੂਆਤੀ ਮਿਤੀ ਜਾਂ ਜਾਰੀ ਨੰਬਰ ਲੋੜੀਂਦਾ ਹੈ।",
+      "invalid_expiry_year": "ਇੱਕ ਵੈਧ ਮਿਆਦ ਪੁੱਗਣ ਦਾ ਸਾਲ ਨਹੀਂ ਹੈ",
+      "reset_password_html": "ਇਹ ਈਮੇਲ ਪਤਾ ਪਹਿਲਾਂ ਹੀ ਕਿਸੇ ਖਾਤੇ ਨਾਲ ਜੁੜਿਆ ਹੋਇਆ ਹੈ। ਜੇਕਰ ਇਹ ਖਾਤਾ ਤੁਹਾਡਾ ਹੈ, ਤਾਂ ਤੁਸੀਂ <a href=\"/account/login#recover\">ਆਪਣਾ ਪਾਸਵਰਡ ਰੀਸੈਟ ਕਰ</a> ਸਕਦੇ ਹੋ।",
+      "verify_email": "ਅਸੀਂ %{customer_email} 'ਤੇ ਇੱਕ ਈਮੇਲ ਭੇਜੀ ਹੈ, ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਈਮੇਲ ਪਤੇ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਦਿੱਤੇ ਲਿੰਕ 'ਤੇ ਕਲਿੱਕ ਕਰੋ।",
+      "product_not_available": "ਇਸ ਗਾਹਕ ਲਈ ਉਤਪਾਦ ਪ੍ਰਕਾਸ਼ਿਤ ਨਹੀਂ ਕੀਤਾ ਗਿਆ ਹੈ।",
+      "shop_404": {
+        "title": "ਇੱਕ ਈ-ਕਾਮਰਸ ਵੈੱਬਸਾਈਟ ਬਣਾਓ ਅਤੇ ਔਨਲਾਈਨ ਵੇਚੋ! Shopify ਦੁਆਰਾ ਈ-ਕਾਮਰਸ ਸੌਫਟਵੇਅਰ",
+        "heros": {
+          "store_unavailable": "ਮਾਫ਼ ਕਰਨਾ, ਇਹ ਸਟੋਰ ਇਸ ਵੇਲੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+          "store_not_exist": "ਇਹ ਸਟੋਰ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।",
+          "no_storefront": "ਇਸ ਸਟੋਰ ਦੀ ਅਜੇ ਕੋਈ ਵੈੱਬਸਾਈਟ ਨਹੀਂ ਹੈ।"
+        },
+        "links": {
+          "explore_other_stores": "ਹੋਰ ਸਟੋਰਾਂ ਦੀ ਪੜਚੋਲ ਕਰੋ",
+          "start_free_trial": "ਇੱਕ ਮੁਫ਼ਤ ਪਰਖ ਸ਼ੁਰੂ ਕਰੋ"
+        },
+        "owner_ctas": {
+          "header": "ਕੀ ਤੁਸੀਂ ਦੁਕਾਨ ਦੇ ਮਾਲਕ ਹੋ?",
+          "fix_domain": "ਆਪਣਾ ਨਵਾਂ ਵੈੱਬ ਪਤਾ ਸੈੱਟਅੱਪ ਕਰਨਾ ਪੂਰਾ ਕਰੋ, %{domain_settings_link} 'ਤੇ ਜਾਓ। \"Connect domain\" 'ਤੇ ਕਲਿੱਕ ਕਰੋ ਅਤੇ ਇਹ ਦਰਜ ਕਰੋ: %{domain}।<br> ਜੇਕਰ ਤੁਹਾਨੂੰ ਆਪਣੇ ਸਟੋਰ ਵਿੱਚ ਜਾਣ ਵਿੱਚ ਮੁਸ਼ਕਲ ਆ ਰਹੀ ਹੈ, ਤਾਂ %{forgot_your_store_link} ਪੰਨੇ ਨੂੰ ਅਜ਼ਮਾਓ।",
+          "fix_domain_link_text": "ਤੁਹਾਡੀਆਂ ਡੋਮੇਨ ਸੈਟਿੰਗਾਂ",
+          "forgot_your_store_link_text": "ਆਪਣੀ ਦੁਕਾਨ ਭੁੱਲ ਗਿਆ",
+          "add_storefront": "ਤੁਸੀਂ ਆਪਣੇ %{admin_link} ਵਿੱਚ ਔਨਲਾਈਨ ਸਟੋਰ ਚੈਨਲ ਜੋੜ ਕੇ ਆਪਣੀ ਵੈੱਬਸਾਈਟ ਸੈੱਟ ਕਰ ਸਕਦੇ ਹੋ। ਜੇਕਰ ਤੁਹਾਨੂੰ ਆਪਣੇ ਸਟੋਰ ਵਿੱਚ ਜਾਣ ਵਿੱਚ ਮੁਸ਼ਕਲ ਆ ਰਹੀ ਹੈ, ਤਾਂ %{forgot_your_store_link} ਪੰਨੇ ਨੂੰ ਅਜ਼ਮਾਓ।",
+          "admin_link_text": "ਐਡਮਿਨ"
+        },
+        "ctas": {
+          "sell_in_person": {
+            "header": "ਖੁਦ ਵੇਚੋ",
+            "caption": "ਆਪਣਾ ਰਿਟੇਲ ਸਟੋਰ ਚਲਾਉਣ ਲਈ ਲੋੜੀਂਦੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਪ੍ਰਾਪਤ ਕਰੋ, ਭਾਵੇਂ ਤੁਸੀਂ ਸ਼ੁਰੂਆਤ ਕਰ ਰਹੇ ਹੋ ਜਾਂ ਵਧਾ ਰਹੇ ਹੋ।",
+            "link_text": "ਮੁਫ਼ਤ ਪਰਖ ਸ਼ੁਰੂ ਕਰੋ"
+          },
+          "open_a_store": {
+            "header": "ਇੱਕ ਨਵਾਂ Shopify ਸਟੋਰ ਖੋਲ੍ਹੋ",
+            "caption": "3-ਦਿਨਾਂ ਦੀ ਮੁਫ਼ਤ ਪਰਖ ਸ਼ੁਰੂ ਕਰੋ, ਫਿਰ ਅਗਲੇ 3 ਮਹੀਨਿਆਂ ਲਈ $1/ਮਹੀਨੇ 'ਤੇ ਜਾਰੀ ਰੱਖੋ।",
+            "link_text": "ਹੁਣੇ ਸਾਈਨ ਅੱਪ ਕਰੋ"
+          },
+          "editions": {
+            "header": "Shopify ਐਡੀਸ਼ਨ ਦੇਖੋ",
+            "caption": "100+ ਉਤਪਾਦ ਅੱਪਡੇਟਾਂ ਦੇ ਨਾਲ, ਤੁਸੀਂ ਆਪਣੀ ਕਲਪਨਾ ਨਾਲੋਂ ਕਿਤੇ ਜ਼ਿਆਦਾ ਉਤਪਾਦਕ ਅਤੇ ਰਚਨਾਤਮਕ, ਅਤੇ ਵਪਾਰ ਵਿੱਚ ਸ਼ਕਤੀਸ਼ਾਲੀ ਬਣ ਸਕਦੇ ਹੋ।",
+            "link_text": "ਨਵੀਨਤਮ ਐਡੀਸ਼ਨਾਂ ਦੀ ਪੜਚੋਲ ਕਰੋ"
+          },
+          "store_owner": {
+            "header": "ਕੀ ਤੁਸੀਂ ਦੁਕਾਨ ਦੇ ਮਾਲਕ ਹੋ?",
+            "caption": "ਕੀ ਤੁਹਾਨੂੰ ਆਪਣੇ ਸਟੋਰ ਵਿੱਚ ਜਾਣ ਵਿੱਚ ਮੁਸ਼ਕਲ ਆ ਰਹੀ ਹੈ? %{forgot_your_store_link} ਵਿਸ਼ੇਸ਼ਤਾ ਅਜ਼ਮਾਓ। ਜੇਕਰ ਤੁਸੀਂ ਆਪਣੇ ਸਟੋਰ ਨੂੰ ਦੁਬਾਰਾ ਸਰਗਰਮ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ %{shopify_support_link} ਨਾਲ ਸੰਪਰਕ ਕਰੋ।",
+            "shopify_support_link_text": "Shopify ਸਹਾਇਤਾ"
+          }
+        }
+      }
+    },
+    "notices": {
+      "customer": {
+        "password_reset_error": "ਪਾਸਵਰਡ ਰੀਸੈਟ ਗਲਤੀ",
+        "subscribe_error": "ਗਾਹਕ ਬਣਨ ਸੰਬੰਧੀ ਗੜਬੜ",
+        "unsubscribe_error": "ਗਾਹਕੀ ਹਟਾਉਣ ਵਿੱਚ ਗੜਬੜ",
+        "no_account_found": "ਉਸ ਈਮੇਲ ਵਾਲਾ ਕੋਈ ਖਾਤਾ ਨਹੀਂ ਮਿਲਿਆ।",
+        "invalid_credentials": "ਗਲਤ ਈਮੇਲ ਜਾਂ ਪਾਸਵਰਡ।",
+        "denylisted_reset_password": "ਤੁਹਾਡੇ ਖਾਤੇ ਤੱਕ ਪਹੁੰਚ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ ਕਿਉਂਕਿ ਮੌਜੂਦਾ ਪਾਸਵਰਡ ਸੁਰੱਖਿਅਤ ਨਹੀਂ ਹੈ। ਤੁਹਾਨੂੰ ਆਪਣਾ ਪਾਸਵਰਡ ਅੱਪਡੇਟ ਕਰਨ ਲਈ ਇੱਕ ਈਮੇਲ ਪ੍ਰਾਪਤ ਹੋਵੇਗੀ।",
+        "signup_disabled": "ਗਾਹਕ ਖਾਤਾ ਬਣਾਉਣਾ ਬੰਦ ਕਰ ਦਿੱਤਾ ਗਿਆ ਹੈ।"
+      },
+      "address": {
+        "updated": "ਪਤਾ ਸਫਲਤਾਪੂਰਵਕ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ।",
+        "error_updating": "ਪਤਾ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਗੜਬੜ ਹੋਈ",
+        "created": "ਪਤਾ ਸਫਲਤਾਪੂਰਵਕ ਬਣਾਇਆ ਗਿਆ",
+        "error_creating": "ਪਤਾ ਬਣਾਉਣ ਵਿੱਚ ਗਲਤੀ।",
+        "deleted": "ਪਤਾ ਸਫਲਤਾਪੂਰਵਕ ਮਿਟਾਇਆ ਗਿਆ",
+        "error_deleting": "ਪਤਾ ਮਿਟਾਉਣ ਵਿੱਚ ਗਲਤੀ।"
+      },
+      "line_item": {
+        "item_status": {
+          "add_variant": "%{ਡੈਲਟਾ} ਜੋੜਿਆ ਗਿਆ",
+          "increment_item": "%{ਡੈਲਟਾ} ਜੋੜਿਆ ਗਿਆ",
+          "decrement_item": "%{ਕੁੱਲ} ਵਿੱਚੋਂ %{ਡੈਲਟਾ} ਹਟਾਇਆ ਗਿਆ",
+          "decrement_fulfilled_line_item": "%{ਕੁੱਲ} ਵਿੱਚੋਂ %{ਡੈਲਟਾ} ਵਾਪਸ ਕੀਤਾ ਗਿਆ",
+          "decrement_return_line_item": "ਵਾਪਸੀ ਤੋਂ %{delta} ਨੂੰ ਹਟਾਇਆ ਗਿਆ"
+        }
+      },
+      "order": {
+        "not_available": "ਇਹ ਆਰਡਰ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
+        "financial_status": {
+          "authorized": "ਅਧਿਕਾਰਤ",
+          "pending": "ਵਿਚਾਰ-ਅਧੀਨ",
+          "paid": "ਭੁਗਤਾਨ ਕੀਤਾ",
+          "unpaid": "ਬਿਨਾਂ ਭੁਗਤਾਨ ਕੀਤੇ",
+          "voided": "ਖਾਲੀ",
+          "partially_paid": "ਅੰਸ਼ਕ ਤੌਰ 'ਤੇ ਭੁਗਤਾਨ ਕੀਤਾ ਗਿਆ",
+          "partially_refunded": "ਅੰਸ਼ਕ ਤੌਰ 'ਤੇ ਰਿਫੰਡ ਕੀਤਾ ਗਿਆ",
+          "refunded": "ਰਿਫੰਡ ਕੀਤਾ ਗਿਆ",
+          "expired": "ਮਿਆਦ ਪੁੱਗ ਗਈ"
+        },
+        "fulfillment_status": {
+          "fulfilled": "ਪੂਰਾ ਹੋਇਆ",
+          "complete": "ਪੂਰਾ",
+          "partial": "ਅੰਸ਼ਕ",
+          "unfulfilled": "ਅਧੂਰਾ",
+          "restocked": "ਮੁੜ-ਸਟਾਕ ਕੀਤਾ ਗਿਆ"
+        },
+        "transaction_status": {
+          "success": "ਸਫਲਤਾ",
+          "pending": "ਵਿਚਾਰ-ਅਧੀਨ",
+          "failure": "ਅਸਫਲਤਾ",
+          "error": "ਗਲਤੀ"
+        },
+        "cancel_reason": {
+          "declined": "ਭੁਗਤਾਨ ਅਸਵੀਕਾਰ ਕੀਤਾ ਗਿਆ",
+          "inventory": "ਆਈਟਮਾਂ ਉਪਲਬਧ ਨਹੀਂ ਹਨ",
+          "fraud": "ਧੋਖਾਧੜੀ ਵਾਲਾ ਆਰਡਰ",
+          "customer": "ਗਾਹਕ ਨੇ ਆਰਡਰ ਬਦਲਿਆ/ਰੱਦ ਕੀਤਾ"
+        }
+      }
     }
   },
   "customer_accounts": {
@@ -1716,6 +1856,120 @@
     }
   },
   "content": {
-    "account_title": "ਖਾਤਾ"
+    "account_title": "ਖਾਤਾ",
+    "account_title_personalized": "ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ {{ first_name }}",
+    "account_orders": "ਆਰਡਰ",
+    "account_profile": "ਪ੍ਰੋਫਾਈਲ",
+    "cart_estimated_total": "ਅੰਦਾਜ਼ਨ ਕੁੱਲ",
+    "cart_title": "ਕਾਰਟ",
+    "cart_subtotal": "ਉਪ-ਕੁੱਲ",
+    "cart_total": "ਕਾਰਟ ਦਾ ਕੁੱਲ ਖਰਚਾ",
+    "checkout": "ਕਮਰਾ ਛੱਡ ਦਿਓ",
+    "collection_placeholder": "ਸੰਗ੍ਰਹਿ ਦਾ ਸਿਰਲੇਖ",
+    "discount_code": "ਛੋਟ ਕੋਡ",
+    "discount_code_error": "ਛੂਟ ਕੋਡ ਤੁਹਾਡੇ ਕਾਰਟ 'ਤੇ ਲਾਗੂ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।",
+    "discounts": "ਛੋਟਾਂ",
+    "duties_and_taxes_included": "ਡਿਊਟੀਆਂ ਅਤੇ ਟੈਕਸ ਸ਼ਾਮਲ ਹਨ।",
+    "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "ਡਿਊਟੀਆਂ ਅਤੇ ਟੈਕਸ ਸ਼ਾਮਲ ਹਨ। ਛੋਟਾਂ ਅਤੇ <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">ਸ਼ਿਪਿੰਗ ਦੀ</a> ਗਣਨਾ ਚੈੱਕਆਉਟ 'ਤੇ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।",
+    "duties_and_taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "ਡਿਊਟੀਆਂ ਅਤੇ ਟੈਕਸ ਸ਼ਾਮਲ ਹਨ। ਸ਼ਿਪਿੰਗ ਦੀ ਗਣਨਾ ਚੈੱਕਆਉਟ 'ਤੇ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।",
+    "duties_and_taxes_included_shipping_at_checkout_without_policy": "ਡਿਊਟੀਆਂ ਅਤੇ ਟੈਕਸ ਸ਼ਾਮਲ ਹਨ। ਛੋਟਾਂ ਅਤੇ ਸ਼ਿਪਿੰਗ ਦੀ ਗਣਨਾ ਚੈੱਕਆਉਟ 'ਤੇ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।",
+    "duties_and_taxes_included_shipping_at_checkout_without_policy_without_discounts": "ਡਿਊਟੀਆਂ ਅਤੇ ਟੈਕਸ ਸ਼ਾਮਲ ਹਨ। ਸ਼ਿਪਿੰਗ ਦੀ ਗਣਨਾ ਚੈੱਕਆਉਟ 'ਤੇ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।",
+    "duties_included": "ਡਿਊਟੀਆਂ ਸ਼ਾਮਲ ਹਨ।",
+    "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "ਡਿਊਟੀਆਂ ਸ਼ਾਮਲ ਹਨ। ਟੈਕਸ, ਛੋਟਾਂ ਅਤੇ <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">ਸ਼ਿਪਿੰਗ ਦੀ</a> ਗਣਨਾ ਚੈੱਕਆਉਟ ਵੇਲੇ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।",
+    "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_without_discounts_html": "ਡਿਊਟੀਆਂ ਸ਼ਾਮਲ ਹਨ। ਸ਼ਿਪਿੰਗ ਦੀ ਗਣਨਾ ਚੈੱਕਆਉਟ 'ਤੇ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।",
+    "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "ਡਿਊਟੀਆਂ ਸ਼ਾਮਲ ਹਨ। ਟੈਕਸ, ਛੋਟਾਂ ਅਤੇ ਸ਼ਿਪਿੰਗ ਦੀ ਗਣਨਾ ਚੈੱਕਆਉਟ ਵੇਲੇ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।",
+    "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy_without_discounts": "ਡਿਊਟੀਆਂ ਸ਼ਾਮਲ ਹਨ। ਸ਼ਿਪਿੰਗ ਦੀ ਗਣਨਾ ਚੈੱਕਆਉਟ 'ਤੇ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।",
+    "featured_products": "ਖਾਸ ਸਮਾਨ",
+    "filters": "ਫਿਲਟਰ",
+    "grid_view": {
+      "default_view": "ਡਿਫਾਲਟ",
+      "grid_fieldset": "ਕਾਲਮ ਗਰਿੱਡ",
+      "single_item": "ਸਿੰਗਲ",
+      "zoom_out": "ਜ਼ੂਮ ਆਊਟ ਕਰੋ"
+    },
+    "inventory_low_stock_show_count": {
+      "one": "{{ count }} ਬਾਕੀ",
+      "other": "{{ count }} ਬਾਕੀ"
+    },
+    "inventory_low_stock": "ਘੱਟ ਸਟਾਕ",
+    "inventory_in_stock": "ਭੰਡਾਰ ਵਿੱਚ",
+    "inventory_out_of_stock": "ਖਤਮ ਹੈ",
+    "item_count": {
+      "one": "{{ count }} ਆਈਟਮ",
+      "other": "{{ count }} ਆਈਟਮਾਂ"
+    },
+    "language": "ਭਾਸ਼ਾ",
+    "localization_region_and_language": "ਖੇਤਰ ਅਤੇ ਭਾਸ਼ਾ",
+    "no_products_found": "ਕੋਈ ਉਤਪਾਦ ਨਹੀਂ ਮਿਲਿਆ।",
+    "no_results_found": "ਕੋਈ ਨਤੀਜਾ ਨਹੀਂ ਮਿਲਿਆ",
+    "page_placeholder_title": "ਪੰਨਾ ਸਿਰਲੇਖ",
+    "page_placeholder_content": "ਇੱਕ ਪੰਨੇ ਦੀ ਸਮੱਗਰੀ ਦਿਖਾਉਣ ਲਈ ਉਸਦੀ ਚੋਣ ਕਰੋ।",
+    "pickup_available_at_html": "ਪਿਕਅੱਪ <b>{{ location }}</b> ਤੋਂ ਉਪਲਬਧ ਹੈ।",
+    "pickup_available_in": "ਪਿਕਅੱਪ ਉਪਲਬਧ ਹੈ, {{ pickup_time }}",
+    "pickup_not_available": "ਪਿਕਅੱਪ ਇਸ ਵੇਲੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ",
+    "price": "ਕੀਮਤ",
+    "price_compare_at": "ਕੀਮਤ 'ਤੇ ਤੁਲਨਾ ਕਰੋ",
+    "price_from": "{{ price }} ਤੋਂ",
+    "price_regular": "ਨਿਯਮਤ ਕੀਮਤ",
+    "price_sale": "ਵਿਕਰੀ ਕੀਮਤ",
+    "price_filter": "ਸਭ ਤੋਂ ਵੱਧ ਕੀਮਤ {{ price }} ਹੈ।",
+    "product_image": "ਉਤਪਾਦ ਚਿੱਤਰ",
+    "product_information": "ਉਤਪਾਦ ਦੀ ਜਾਣਕਾਰੀ",
+    "product_total": "ਕੁੱਲ ਉਤਪਾਦ",
+    "product_badge_sold_out": "ਸਭ ਵਿੱਕ ਗਇਆ",
+    "product_badge_sale": "ਵਿਕਰੀ",
+    "product_card_placeholder": "ਉਤਪਾਦ ਦਾ ਸਿਰਲੇਖ",
+    "placeholder_image": "ਪਲੇਸਹੋਲਡਰ ਚਿੱਤਰ",
+    "quantity": "ਮਾਤਰਾ",
+    "recently_viewed_products": "ਹਾਲ ਹੀ ਵਿੱਚ ਦੇਖੇ ਗਏ",
+    "reviews": "ਸਮੀਖਿਆਵਾਂ",
+    "read_more": "ਹੋਰ ਪੜ੍ਹੋ...",
+    "search_input_label": "ਖੋਜ",
+    "search_input_placeholder": "ਖੋਜ",
+    "search": "ਖੋਜ",
+    "search_results": "ਖੋਜ ਨਤੀਜੇ",
+    "search_results_label": "ਖੋਜ ਨਤੀਜੇ",
+    "search_results_no_results": "\" {{ terms }} \" ਲਈ ਕੋਈ ਨਤੀਜਾ ਨਹੀਂ ਮਿਲਿਆ। ਕੋਈ ਹੋਰ ਖੋਜ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+    "search_results_no_results_check_spelling": "\" {{ terms }} \" ਲਈ ਕੋਈ ਨਤੀਜਾ ਨਹੀਂ ਮਿਲਿਆ। ਸਪੈਲਿੰਗ ਦੀ ਜਾਂਚ ਕਰੋ ਜਾਂ ਕੋਈ ਵੱਖਰਾ ਸ਼ਬਦ ਜਾਂ ਵਾਕੰਸ਼ ਵਰਤੋ।",
+    "search_results_resource_articles": "ਬਲੌਗ ਪੋਸਟਾਂ",
+    "search_results_resource_collections": "ਸੰਗ੍ਰਹਿ",
+    "search_results_resource_pages": "ਪੰਨੇ",
+    "search_results_resource_products": "ਉਤਪਾਦ",
+    "search_results_resource_products_count": {
+      "one": "{{ count }} ਉਤਪਾਦ",
+      "other": "{{ count }} ਉਤਪਾਦ"
+    },
+    "search_results_resource_queries": "ਖੋਜ ਸੁਝਾਅ",
+    "search_results_view_all": "ਸਾਰੇ ਵੇਖੋ",
+    "search_results_view_all_button": "ਸਾਰੇ ਵੇਖੋ",
+    "seller_note": "ਵਿਸ਼ੇਸ਼ ਹਦਾਇਤਾਂ",
+    "shipping_policy": "ਸ਼ਿਪਿੰਗ ਚੈੱਕਆਉਟ 'ਤੇ ਗਿਣਿਆ ਗਿਆ।",
+    "shipping_policy_html": "<a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">ਸ਼ਿਪਿੰਗ</a> ਚੈੱਕਆਉਟ 'ਤੇ ਗਿਣਿਆ ਗਿਆ।",
+    "taxes_at_checkout_shipping_at_checkout_with_policy_html": "ਟੈਕਸ, ਛੋਟਾਂ ਅਤੇ <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">ਸ਼ਿਪਿੰਗ ਦੀ</a> ਗਣਨਾ ਚੈੱਕਆਉਟ ਵੇਲੇ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।",
+    "taxes_at_checkout_shipping_at_checkout_with_policy_without_discounts_html": "ਟੈਕਸ ਅਤੇ <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">ਸ਼ਿਪਿੰਗ ਦੀ</a> ਗਣਨਾ ਚੈੱਕਆਉਟ 'ਤੇ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।",
+    "taxes_at_checkout_shipping_at_checkout_without_policy": "ਟੈਕਸ, ਛੋਟਾਂ ਅਤੇ ਸ਼ਿਪਿੰਗ ਦੀ ਗਣਨਾ ਚੈੱਕਆਉਟ ਵੇਲੇ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।",
+    "taxes_at_checkout_shipping_at_checkout_without_policy_without_discounts": "ਟੈਕਸ ਅਤੇ ਸ਼ਿਪਿੰਗ ਦੀ ਗਣਨਾ ਚੈੱਕਆਉਟ 'ਤੇ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।",
+    "taxes_included": "ਟੈਕਸ ਸ਼ਾਮਲ ਹਨ।",
+    "taxes_included_shipping_at_checkout_with_policy_html": "ਟੈਕਸ ਸ਼ਾਮਲ ਹਨ। ਛੋਟਾਂ ਅਤੇ <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">ਸ਼ਿਪਿੰਗ ਦੀ</a> ਗਣਨਾ ਚੈੱਕਆਉਟ ਵੇਲੇ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।",
+    "taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "ਟੈਕਸ ਸ਼ਾਮਲ ਹਨ। ਸ਼ਿਪਿੰਗ ਦੀ ਗਣਨਾ ਚੈੱਕਆਉਟ 'ਤੇ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।",
+    "taxes_included_shipping_at_checkout_without_policy": "ਟੈਕਸ ਸ਼ਾਮਲ ਹਨ। ਛੋਟਾਂ ਅਤੇ ਸ਼ਿਪਿੰਗ ਦੀ ਗਣਨਾ ਚੈੱਕਆਉਟ ਵੇਲੇ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।",
+    "taxes_included_shipping_at_checkout_without_policy_without_discounts": "ਟੈਕਸ ਸ਼ਾਮਲ ਹਨ। ਸ਼ਿਪਿੰਗ ਦੀ ਗਣਨਾ ਚੈੱਕਆਉਟ 'ਤੇ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।",
+    "unavailable": "ਉਪਲਬਧ ਨਹੀਂ",
+    "use_fewer_filters_html": "ਘੱਟ ਫਿਲਟਰ ਵਰਤਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ, ਜਾਂ <a class=\"&lt;span class='notranslate'&gt;{{ class }}&lt;/span&gt;\" href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">ਸਾਰੇ ਫਿਲਟਰ ਸਾਫ਼ ਕਰੋ</a> ।",
+    "view_more_details": "ਹੋਰ ਵੇਰਵੇ ਵੇਖੋ",
+    "your_cart_is_empty": "ਤੁਹਾਡਾ ਕਾਰਟ ਖਾਲੀ ਹੈ।",
+    "product_count": "ਉਤਪਾਦ ਦੀ ਗਿਣਤੀ",
+    "errors": "ਗਲਤੀਆਂ",
+    "wrong_password": "ਗਲਤ ਪਾਸਵਰਡ"
+  },
+  "fields": {
+    "separator": "ਨੂੰ"
+  },
+  "gift_cards": {
+    "issued": {
+      "how_to_use_gift_card": "ਗਿਫਟ ​​ਕਾਰਡ ਕੋਡ ਨੂੰ ਔਨਲਾਈਨ ਜਾਂ ਸਟੋਰ ਵਿੱਚ QR ਕੋਡ ਦੀ ਵਰਤੋਂ ਕਰੋ",
+      "title": "ਇਹ ਰਿਹਾ ਤੁਹਾਡਾ { {{ shop }} {{ value }} ਗਿਫਟ ਕਾਰਡ ਬੈਲੇਂਸ!",
+      "subtext": "ਤੁਹਾਡਾ ਗਿਫ਼ਟ ਕਾਰਡ"
+    }
   }
 }
