@@ -1001,7 +1001,145 @@
       "add_button": "ਜੋੜੋ"
     },
     "orders": {
-      "list_layout_accessibility_label": "ਲੇਆਉਟ ਵਿਕਲਪ"
+      "list_layout_accessibility_label": "ਲੇਆਉਟ ਵਿਕਲਪ",
+      "list_title": "ਆਰਡਰ",
+      "list_title_with_pending_orders": "ਆਰਡਰ:",
+      "list_title_confirmed_orders_accessibility_label": "ਆਰਡਰ: ਪੁਸ਼ਟੀ ਕੀਤੇ ਗਏ",
+      "list_title_pending_orders_accessibility_label": "ਆਰਡਰ: ਵਿਚਾਰ-ਅਧੀਨ",
+      "switch_order_type_pending_orders_accessibility_label": "ਆਰਡਰ ਦੀ ਕਿਸਮ ਬਦਲੋ, ਵਰਤਮਾਨ ਵਿੱਚ ਲੰਬਿਤ ਆਰਡਰ ਦੇਖ ਰਹੇ ਹੋ",
+      "switch_order_type_confirmed_orders_accessibility_label": "ਆਰਡਰ ਦੀ ਕਿਸਮ ਬਦਲੋ, ਇਸ ਵੇਲੇ ਪੁਸ਼ਟੀ ਕੀਤੇ ਆਰਡਰ ਦੇਖ ਰਹੇ ਹੋ",
+      "order_list": {
+        "column_headers": {
+          "order": "ਆਰਡਰ",
+          "total": "ਕੁੱਲ",
+          "actions_accessibility_label": "ਕਾਰਵਾਈਆਂ",
+          "products_accessibility_label": "ਉਤਪਾਦ"
+        },
+        "delivered": "ਡਿਲੀਵਰ ਕੀਤਾ ਗਿਆ {{date}}",
+        "empty_state_order_source_description": "ਇੱਥੇ ਸਿਰਫ਼ {{email}} ਦੁਆਰਾ ਦਿੱਤੇ ਗਏ ਆਰਡਰ ਹੀ ਦਿਖਾਏ ਜਾਣਗੇ।",
+        "empty_state_subtitle": "ਆਰਡਰ ਦੇਣ ਲਈ ਦੁਕਾਨ ਤੇ ਜਾਓ।",
+        "empty_state_title": "ਹਾਲੇ ਕੋਈ ਆਰਡਰ ਨਹੀਂ ਹਨ",
+        "empty_state_with_location_title": "{{locationName}} ਲਈ ਕੋਈ ਆਰਡਰ ਨਹੀਂ ਹਨ।",
+        "empty_state_title_for_pending_orders": "ਕੋਈ ਲੰਬਿਤ ਆਰਡਰ ਨਹੀਂ ਹਨ",
+        "no_order_banner": "ਆਰਡਰ ਸਥਿਤੀ ਪੰਨੇ 'ਤੇ ਆਪਣੀ ਐਕਸਟੈਂਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰਨ ਲਈ, ਇੱਕ ਆਰਡਰ ਬਣਾਓ।",
+        "estimated_shortform": "ਅੰਦਾਜ਼ਨ {{date}}",
+        "estimated_delivery": "ਉਮੀਦ ਕੀਤੀ ਗਈ {{date}}",
+        "one_images_accessibility_label": "ਆਰਡਰ ਵਿੱਚ {{lineItemName1}} ਸ਼ਾਮਲ ਹੈ",
+        "two_images_accessibility_label": "ਆਰਡਰ ਵਿੱਚ {{lineItemName1}} , {{lineItemName2}} ਸ਼ਾਮਲ ਹਨ।",
+        "three_images_accessibility_label": "ਆਰਡਰ ਵਿੱਚ {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}} ਸ਼ਾਮਲ ਹਨ।",
+        "four_images_accessibility_label": "ਆਰਡਰ ਵਿੱਚ {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}} , {{lineItemName4}} ਸ਼ਾਮਲ ਹਨ।",
+        "more_than_three_products_accessibility_label": "ਆਰਡਰ ਵਿੱਚ {{lineItemName1}} , {{lineItemName2}} , ਅਤੇ {{numberOfAdditionalProducts}} ਹੋਰ ਉਤਪਾਦ ਸ਼ਾਮਲ ਹਨ।",
+        "more_than_four_products_accessibility_label": "ਆਰਡਰ ਵਿੱਚ {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}} , ਅਤੇ {{numberOfAdditionalProducts}} ਹੋਰ ਉਤਪਾਦ ਸ਼ਾਮਲ ਹਨ।",
+        "plus_more": "+ {{numberOfAdditionalProducts}}",
+        "plus_more_products": "+ {{numberOfAdditionalProducts}} ਉਤਪਾਦ",
+        "carousel": {
+          "one_products_accessibility_label": "ਆਰਡਰ ਵਿੱਚ {{lineItemName1}} ਮਾਤਰਾ {{lineItemQuantity1}} ਸ਼ਾਮਲ ਹੈ।",
+          "two_products_accessibility_label": "ਆਰਡਰ ਵਿੱਚ {{lineItemName1}} ਮਾਤਰਾ {{lineItemQuantity1}} , {{lineItemName2}} ਮਾਤਰਾ {{lineItemQuantity2}} ਸ਼ਾਮਲ ਹੈ।",
+          "three_products_accessibility_label": "ਆਰਡਰ ਵਿੱਚ {{lineItemName1}} ਮਾਤਰਾ {{lineItemQuantity1}} , {{lineItemName2}} ਮਾਤਰਾ {{lineItemQuantity2}} , {{lineItemName3}} ਮਾਤਰਾ {{lineItemQuantity3}} ਸ਼ਾਮਲ ਹੈ।",
+          "four_products_accessibility_label": "ਆਰਡਰ ਵਿੱਚ {{lineItemName1}} ਮਾਤਰਾ {{lineItemQuantity1}} , {{lineItemName2}} ਮਾਤਰਾ {{lineItemQuantity2}} , {{lineItemName3}} ਮਾਤਰਾ {{lineItemQuantity3}} , {{lineItemName4}} ਮਾਤਰਾ {{lineItemQuantity4}} ਸ਼ਾਮਲ ਹਨ।",
+          "five_products_accessibility_label": "ਆਰਡਰ ਵਿੱਚ {{lineItemName1}} ਮਾਤਰਾ {{lineItemQuantity1}} , {{lineItemName2}} ਮਾਤਰਾ {{lineItemQuantity2}} , {{lineItemName3}} ਮਾਤਰਾ {{lineItemQuantity3}} , {{lineItemName4}} ਮਾਤਰਾ {{lineItemQuantity4}} , {{lineItemName5}} ਮਾਤਰਾ {{lineItemQuantity5}} ਸ਼ਾਮਲ ਹਨ।",
+          "six_products_accessibility_label": "ਆਰਡਰ ਵਿੱਚ ਸ਼ਾਮਲ ਹਨ {{lineItemName1}} ਮਾਤਰਾ {{lineItemQuantity1}} , {{lineItemName2}} ਮਾਤਰਾ {{lineItemQuantity2}} , {{lineItemName3}} ਮਾਤਰਾ {{lineItemQuantity3}} , {{lineItemName4}} ਮਾਤਰਾ {{lineItemQuantity4}} , {{lineItemName5}} ਮਾਤਰਾ {{lineItemQuantity5}} , {{lineItemName6}} ਮਾਤਰਾ {{lineItemQuantity6}}",
+          "six_and_more_products_accessibility_label": "ਆਰਡਰ ਵਿੱਚ {{lineItemName1}} ਮਾਤਰਾ {{lineItemQuantity1}} , {{lineItemName2}} ਮਾਤਰਾ {{lineItemQuantity2}} , {{lineItemName3}} ਮਾਤਰਾ {{lineItemQuantity3}} , {{lineItemName4}} ਮਾਤਰਾ {{lineItemQuantity4}} , {{lineItemName5}} ਮਾਤਰਾ {{lineItemQuantity5}} , {{lineItemName6}} ਮਾਤਰਾ {{lineItemQuantity6}} ਅਤੇ ਹੋਰ ਬਹੁਤ ਕੁਝ ਸ਼ਾਮਲ ਹੈ।",
+          "view_order_details": "ਆਰਡਰ ਵੇਰਵੇ ਵੇਖੋ",
+          "previous": "ਪਿਛਲਾ",
+          "next": "ਅਗਲਾ"
+        },
+        "items": {
+          "one": "{{count}} ਆਈਟਮ",
+          "other": "{{count}} ਆਈਟਮਾਂ"
+        },
+        "no_filtered_results_description": "ਆਪਣੇ ਆਰਡਰ ਦੇਖਣ ਲਈ ਫਿਲਟਰ ਹਟਾਓ ਜਾਂ ਵਿਵਸਥਿਤ ਕਰੋ",
+        "no_filtered_results_title": "ਕੋਈ ਫਿਲਟਰ ਕੀਤੇ ਨਤੀਜੇ ਨਹੀਂ",
+        "order_link": "ਆਰਡਰ ਵੇਖੋ {{name}}",
+        "order_number": "ਆਰਡਰ {{name}}",
+        "orders_title": "ਪੁਸ਼ਟੀ ਕੀਤੀ ਗਈ",
+        "pagination": {
+          "nav_accessibility_label": "ਆਰਡਰ ਨੈਵੀਗੇਸ਼ਨ ਬਟਨ",
+          "next": "ਅਗਲਾ",
+          "next_accessibility_label": "ਅਗਲੇ ਆਰਡਰ",
+          "previous": "ਪਿਛਲਾ",
+          "previous_accessibility_label": "ਪਿਛਲੇ ਆਰਡਰ",
+          "load_more": "ਹੋਰ ਲੋਡ ਕਰੋ",
+          "load_more_accessibility_label": "ਹੋਰ ਆਰਡਰ ਲੋਡ ਕਰੋ"
+        },
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "ਵੇਰਵਿਆਂ ਲਈ ਆਰਡਰ ਵੇਖੋ",
+            "estimated_delivery": "ਉਮੀਦ ਕੀਤੀ ਗਈ {{date}}",
+            "last_updated": "ਆਖਰੀ ਵਾਰ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "ਅੰਦਾਜ਼ਨ ਡਿਲੀਵਰੀ {{date}}"
+          }
+        },
+        "payment_status": {
+          "gallery_view": {
+            "overdue": "ਭੁਗਤਾਨ ਬਕਾਇਆ ਹੈ",
+            "due": "ਭੁਗਤਾਨ ਦੀ ਆਖਰੀ ਤਾਰੀਖ {{date}}",
+            "due_today": "ਭੁਗਤਾਨ ਅੱਜ ਬਾਕੀ ਹੈ",
+            "due_without_date": "ਭੁਗਤਾਨ ਬਾਕੀ ਹੈ",
+            "due_on_fulfillment": "ਪੂਰਤੀ 'ਤੇ ਬਕਾਇਆ ਭੁਗਤਾਨ",
+            "pay_to_confirm": "ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਭੁਗਤਾਨ ਕਰੋ",
+            "payment_not_due": "ਭੁਗਤਾਨ ਅਜੇ ਬਾਕੀ ਨਹੀਂ ਹੈ"
+          },
+          "list_view": {
+            "overdue": "ਬਕਾਇਆ",
+            "due": "ਅਦਾਇਗੀ {{date}}",
+            "due_today": "ਅੱਜ ਦੇਣਯੋਗ ਹੈ",
+            "paid": "ਭੁਗਤਾਨ ਕੀਤਾ",
+            "due_without_date": "ਬਕਾਇਆ",
+            "due_on_fulfillment": "ਪੂਰਤੀ 'ਤੇ ਬਕਾਇਆ",
+            "pay_to_confirm": "ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਭੁਗਤਾਨ ਕਰੋ",
+            "payment_not_due": "ਅਜੇ ਬਕਾਇਆ ਨਹੀਂ ਹੈ"
+          }
+        },
+        "sort_by": "ਇਸ ਅਨੁਸਾਰ ਛਾਂਟੋ: {{option}}",
+        "sort_hide_options_accessibility_label": "ਪੁਸ਼ਟੀ ਕੀਤੇ ਆਰਡਰਾਂ ਲਈ ਛਾਂਟੀ ਦੇ ਵਿਕਲਪ ਲੁਕਾਓ।",
+        "sort_show_options_accessibility_label": "ਪੁਸ਼ਟੀ ਕੀਤੇ ਆਰਡਰਾਂ ਲਈ ਛਾਂਟੀ ਦੇ ਵਿਕਲਪ ਦਿਖਾਓ।",
+        "sort_currently_sorted_by_accessibility_label": "ਵਰਤਮਾਨ ਵਿੱਚ ਇਸ ਅਨੁਸਾਰ ਕ੍ਰਮਬੱਧ: {{option}}",
+        "sort_title": "ਕ੍ਰਮਬੱਧ ਕਰੋ",
+        "sort": {
+          "date": {
+            "newest": "ਸਭ ਤੋਂ ਨਵੇਂ ਤੋਂ ਪੁਰਾਣੇ ਤੱਕ",
+            "oldest": "ਸਭ ਤੋਂ ਪੁਰਾਣਾ ਤੋਂ ਨਵਾਂ"
+          },
+          "location": {
+            "ascending": "ਸਥਾਨ (AZ)",
+            "descending": "ਸਥਾਨ (ZA)"
+          },
+          "order_number": {
+            "ascending": "ਆਰਡਰ ਨੰਬਰ (ਘੱਟ ਤੋਂ ਵੱਧ)",
+            "descending": "ਆਰਡਰ ਨੰਬਰ (ਉੱਚ ਤੋਂ ਘੱਟ)"
+          },
+          "order_total": {
+            "ascending": "ਕੁੱਲ ਆਰਡਰ (ਘੱਟ ਤੋਂ ਵੱਧ)",
+            "descending": "ਕੁੱਲ ਆਰਡਰ (ਵੱਧ ਤੋਂ ਘੱਟ)"
+          }
+        },
+        "location_filter_picker": {
+          "all_location": "ਸਾਰੇ ਟਿਕਾਣੇ",
+          "current_location": "ਮੌਜੂਦਾ ਸਥਾਨ",
+          "switch_view": "ਦ੍ਰਿਸ਼ ਬਦਲੋ"
+        },
+        "filter_title": "ਫਿਲਟਰ",
+        "filter": {
+          "clear_section": "ਭਾਗ ਸਾਫ਼ ਕਰੋ",
+          "clear_all": "ਸਭ ਸਾਫ਼ ਕਰੋ",
+          "apply": "ਲਾਗੂ ਕਰੋ",
+          "date": {
+            "start_date": "ਤਾਰੀਖ ਸ਼ੁਰੂ",
+            "end_date": "ਸਮਾਪਤੀ ਮਿਤੀ",
+            "title": "ਆਰਡਰ ਦੀ ਮਿਤੀ",
+            "today": "ਅੱਜ",
+            "last_7_days": "ਪਿਛਲੇ 7 ਦਿਨ",
+            "last_30_days": "ਪਿਛਲੇ 30 ਦਿਨ",
+            "last_90_days": "ਪਿਛਲੇ 90 ਦਿਨ",
+            "last_365_days": "ਪਿਛਲੇ 12 ਮਹੀਨੇ",
+            "custom": "ਕਸਟਮ"
+          }
+        },
+        "show_order_actions_accessibility_label": "ਆਰਡਰ {{name}} ਲਈ ਆਰਡਰ ਕਾਰਵਾਈਆਂ ਦਿਖਾਓ"
+      }
     },
     "payment_method_brands": {
       "visa": "ਵੀਜ਼ਾ",
