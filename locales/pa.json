@@ -702,6 +702,65 @@
         "loading_accessibility_message": "ਬੈਂਕ ਖਾਤਾ ਬਟਨ ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ",
         "iframe_title_accessibility_label": "ਬੈਂਕ ਖਾਤਾ ਸੈੱਟਅੱਪ",
         "display_name": "ਬੈਂਕ ਖਾਤਾ"
+      },
+      "card_fields": {
+        "tooltip": {
+          "card_verification_value_explanation": "3-ਅੰਕਾਂ ਵਾਲਾ ਸੁਰੱਖਿਆ ਕੋਡ ਆਮ ਤੌਰ 'ਤੇ ਤੁਹਾਡੇ ਕਾਰਡ ਦੇ ਪਿਛਲੇ ਪਾਸੇ ਪਾਇਆ ਜਾਂਦਾ ਹੈ। ਅਮਰੀਕਨ ਐਕਸਪ੍ਰੈਸ ਕਾਰਡਾਂ ਵਿੱਚ 4-ਅੰਕਾਂ ਵਾਲਾ ਕੋਡ ਸਾਹਮਣੇ ਵਾਲਾ ਹੁੰਦਾ ਹੈ।",
+          "card_security_notice": "ਸਾਰੇ ਲੈਣ-ਦੇਣ ਸੁਰੱਖਿਅਤ ਅਤੇ ਏਨਕ੍ਰਿਪਟਡ ਹਨ।"
+        },
+        "field_errors": {
+          "credit_card_name_invalid": "ਆਪਣਾ ਨਾਮ ਬਿਲਕੁਲ ਉਸੇ ਤਰ੍ਹਾਂ ਦਰਜ ਕਰੋ ਜਿਵੇਂ ਇਹ ਤੁਹਾਡੇ ਕਾਰਡ 'ਤੇ ਲਿਖਿਆ ਹੈ।",
+          "credit_card_number_invalid": "ਇੱਕ ਵੈਧ ਕਾਰਡ ਨੰਬਰ ਦਾਖਲ ਕਰੋ",
+          "credit_card_expiry_invalid": "ਕਾਰਡ ਦੀ ਵੈਧ ਮਿਆਦ ਪੁੱਗਣ ਦੀ ਤਾਰੀਖ ਦਰਜ ਕਰੋ",
+          "credit_card_verification_value_blank": "ਆਪਣੇ ਕਾਰਡ 'ਤੇ CVV ਜਾਂ ਸੁਰੱਖਿਆ ਕੋਡ ਦਰਜ ਕਰੋ"
+        },
+        "unavailable": {
+          "text": "ਕ੍ਰੈਡਿਟ ਅਤੇ ਡੈਬਿਟ ਕਾਰਡ ਭੁਗਤਾਨ ਇਸ ਵੇਲੇ ਉਪਲਬਧ ਨਹੀਂ ਹਨ।",
+          "link_text": "ਇਸ ਪੰਨੇ ਨੂੰ ਤਾਜ਼ਾ ਕਰੋ",
+          "suffix": "ਜਾਂ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+        }
+      },
+      "payment_delete": {
+        "title": "ਭੁਗਤਾਨ ਵਿਧੀ ਮਿਟਾਓ",
+        "description_without_replacement": "ਇਹ ਭੁਗਤਾਨ ਵਿਧੀ ਹੁਣ ਭਵਿੱਖ ਦੀਆਂ ਖਰੀਦਾਂ ਲਈ ਉਪਲਬਧ ਨਹੀਂ ਹੋਵੇਗੀ।",
+        "description_with_replacement": "ਇਸ ਭੁਗਤਾਨ ਵਿਧੀ ਨੂੰ ਮਿਟਾਉਣ ਨਾਲ ਪਹਿਲਾਂ ਤੋਂ ਅਧਿਕਾਰਤ ਭੁਗਤਾਨ ਪ੍ਰਭਾਵਿਤ ਹੋਣਗੇ। ਤੁਸੀਂ ਆਉਣ ਵਾਲੇ ਆਰਡਰ ਪ੍ਰਾਪਤ ਕਰਨਾ ਜਾਰੀ ਰੱਖਣ ਲਈ ਵਿਕਲਪਿਕ ਤੌਰ 'ਤੇ ਇਸਨੂੰ ਕਿਸੇ ਹੋਰ ਭੁਗਤਾਨ ਵਿਧੀ ਨਾਲ ਬਦਲ ਸਕਦੇ ਹੋ।",
+        "warning_message_with_replacement": {
+          "with_pending_orders_and_subscriptions": "ਇਸ ਭੁਗਤਾਨ ਵਿਧੀ ਨੂੰ ਮਿਟਾਉਣ ਨਾਲ ਪਹਿਲਾਂ ਤੋਂ ਅਧਿਕਾਰਤ ਭੁਗਤਾਨ ਪ੍ਰਭਾਵਿਤ ਹੋਣਗੇ। ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ ਕੋਈ ਵਿਕਲਪਿਕ ਭੁਗਤਾਨ ਵਿਧੀ ਨਹੀਂ ਚੁਣਦੇ, ਇਸ ਭੁਗਤਾਨ ਵਿਧੀ ਤੋਂ ਮੌਜੂਦਾ ਆਰਡਰਾਂ 'ਤੇ ਕਿਸੇ ਵੀ ਬਕਾਇਆ ਬਕਾਏ ਲਈ ਅਜੇ ਵੀ ਚਾਰਜ ਲਿਆ ਜਾਵੇਗਾ। ਇੱਕ ਵਿਕਲਪਿਕ ਭੁਗਤਾਨ ਵਿਧੀ ਚੁਣਨ ਨਾਲ ਤੁਸੀਂ ਆਉਣ ਵਾਲੇ ਗਾਹਕੀ ਆਰਡਰ ਬਿਨਾਂ ਕਿਸੇ ਰੁਕਾਵਟ ਦੇ ਪ੍ਰਾਪਤ ਕਰ ਸਕੋਗੇ।",
+          "with_pending_orders": "ਇਸ ਭੁਗਤਾਨ ਵਿਧੀ ਨੂੰ ਮਿਟਾਉਣ ਨਾਲ ਇਹ ਤੁਹਾਡੇ ਖਾਤੇ ਤੋਂ ਹਟਾ ਦਿੱਤੀ ਜਾਵੇਗੀ ਅਤੇ ਭਵਿੱਖ ਦੀਆਂ ਖਰੀਦਾਂ ਲਈ ਉਪਲਬਧ ਨਹੀਂ ਰਹੇਗੀ। ਜਦੋਂ ਤੱਕ ਤੁਸੀਂ ਕੋਈ ਵਿਕਲਪਿਕ ਭੁਗਤਾਨ ਵਿਧੀ ਨਹੀਂ ਚੁਣਦੇ, ਉਦੋਂ ਤੱਕ ਮੌਜੂਦਾ ਆਰਡਰਾਂ 'ਤੇ ਕਿਸੇ ਵੀ ਬਕਾਇਆ ਬਕਾਏ ਲਈ ਇਸ ਤੋਂ ਖਰਚਾ ਲਿਆ ਜਾਵੇਗਾ।",
+          "with_subscriptions": "ਇਸ ਭੁਗਤਾਨ ਵਿਧੀ ਨੂੰ ਮਿਟਾਉਣ ਨਾਲ ਪਹਿਲਾਂ ਤੋਂ ਅਧਿਕਾਰਤ ਭੁਗਤਾਨ ਪ੍ਰਭਾਵਿਤ ਹੋਣਗੇ। ਆਉਣ ਵਾਲੇ ਆਰਡਰ ਪ੍ਰਾਪਤ ਕਰਨਾ ਜਾਰੀ ਰੱਖਣ ਲਈ ਇਸਨੂੰ ਕਿਸੇ ਵਿਕਲਪਿਕ ਭੁਗਤਾਨ ਵਿਧੀ ਨਾਲ ਬਦਲੋ।"
+        },
+        "warning_message_without_replacement": {
+          "with_pending_orders_and_subscriptions": "ਇਸ ਭੁਗਤਾਨ ਵਿਧੀ ਨੂੰ ਮਿਟਾਉਣ ਨਾਲ ਪਹਿਲਾਂ ਤੋਂ ਅਧਿਕਾਰਤ ਭੁਗਤਾਨ ਪ੍ਰਭਾਵਿਤ ਹੋਣਗੇ। ਇਸ ਭੁਗਤਾਨ ਵਿਧੀ ਤੋਂ ਅਜੇ ਵੀ ਮੌਜੂਦਾ ਆਰਡਰਾਂ 'ਤੇ ਕਿਸੇ ਵੀ ਬਕਾਇਆ ਬਕਾਏ ਲਈ ਚਾਰਜ ਕੀਤਾ ਜਾਵੇਗਾ, ਪਰ ਤੁਹਾਨੂੰ ਆਉਣ ਵਾਲੇ ਗਾਹਕੀ ਆਰਡਰ ਪ੍ਰਾਪਤ ਨਹੀਂ ਹੋਣਗੇ। ਗਾਹਕੀ ਆਰਡਰ ਪ੍ਰਾਪਤ ਕਰਨਾ ਜਾਰੀ ਰੱਖਣ ਲਈ ਇੱਕ ਵਿਕਲਪਿਕ ਭੁਗਤਾਨ ਵਿਧੀ ਸ਼ਾਮਲ ਕਰੋ।",
+          "with_pending_orders": "ਇਸ ਭੁਗਤਾਨ ਵਿਧੀ ਨੂੰ ਮਿਟਾਉਣ ਨਾਲ ਇਹ ਤੁਹਾਡੇ ਖਾਤੇ ਤੋਂ ਹਟਾ ਦਿੱਤੀ ਜਾਵੇਗੀ ਅਤੇ ਭਵਿੱਖ ਦੀਆਂ ਖਰੀਦਾਂ ਲਈ ਉਪਲਬਧ ਨਹੀਂ ਰਹੇਗੀ। ਇਸ ਤੋਂ ਅਜੇ ਵੀ ਮੌਜੂਦਾ ਆਰਡਰਾਂ 'ਤੇ ਕਿਸੇ ਵੀ ਬਕਾਇਆ ਬਕਾਏ ਲਈ ਖਰਚਾ ਲਿਆ ਜਾਵੇਗਾ।",
+          "with_subscriptions": "ਇਸ ਭੁਗਤਾਨ ਵਿਧੀ ਨੂੰ ਮਿਟਾਉਣ ਨਾਲ ਪਹਿਲਾਂ ਤੋਂ ਅਧਿਕਾਰਤ ਭੁਗਤਾਨ ਪ੍ਰਭਾਵਿਤ ਹੋਣਗੇ। ਆਉਣ ਵਾਲੇ ਆਰਡਰ ਪ੍ਰਾਪਤ ਕਰਨਾ ਜਾਰੀ ਰੱਖਣ ਲਈ ਇੱਕ ਵਿਕਲਪਿਕ ਭੁਗਤਾਨ ਵਿਧੀ ਸ਼ਾਮਲ ਕਰੋ।"
+        },
+        "payment_method_selector_placeholder": "ਇੱਕ ਬਦਲਵੀਂ ਭੁਗਤਾਨ ਵਿਧੀ ਚੁਣੋ (ਵਿਕਲਪਿਕ)",
+        "payment_method_selector_no_alternative_payment": "ਕੋਈ ਬਦਲੀ ਵਿਧੀ ਨਹੀਂ",
+        "replace_method_with_new_method_description": "ਤੁਹਾਡਾ {{currentPaymentMethodName}} ਮਿਟਾ ਦਿੱਤਾ ਜਾਵੇਗਾ ਅਤੇ ਤੁਹਾਡੇ {{newPaymentMethodName}} ਨਾਲ ਬਦਲ ਦਿੱਤਾ ਜਾਵੇਗਾ।",
+        "error_when_deleting": "ਅਸੀਂ ਮਾਫ਼ੀ ਚਾਹੁੰਦੇ ਹਾਂ ਪਰ ਕੁਝ ਗਲਤ ਹੋ ਗਿਆ ਅਤੇ ਅਸੀਂ ਇਸ ਭੁਗਤਾਨ ਵਿਧੀ ਨੂੰ ਮਿਟਾ ਨਹੀਂ ਸਕੇ। ਕਿਰਪਾ ਕਰਕੇ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਜਾਂ ਪੰਨੇ ਨੂੰ ਰਿਫ੍ਰੈਸ਼ ਕਰੋ।",
+        "delete_and_replace_button": "ਮਿਟਾਓ ਅਤੇ ਬਦਲੋ",
+        "delete_and_replace_button_accessibility_label": "{{currentPaymentMethodName}} ਨੂੰ ਮਿਟਾਓ ਅਤੇ {{newPaymentMethodName}} ਨਾਲ ਬਦਲੋ।",
+        "deleted_successfully": "ਭੁਗਤਾਨ ਵਿਧੀ ਸਫਲਤਾਪੂਰਵਕ ਮਿਟਾ ਦਿੱਤੀ ਗਈ।",
+        "loading_available_payment_methods_accessibility_label": "ਉਪਲਬਧ ਭੁਗਤਾਨ ਵਿਧੀਆਂ ਲੋਡ ਕੀਤੀਆਂ ਜਾ ਰਹੀਆਂ ਹਨ"
+      },
+      "add_payment_method": {
+        "title": "ਭੁਗਤਾਨ ਵਿਧੀ ਸ਼ਾਮਲ ਕਰੋ",
+        "payment_method_added_confirmation": "ਭੁਗਤਾਨ ਵਿਧੀ ਸ਼ਾਮਲ ਕੀਤੀ ਗਈ",
+        "replace_mode_warning": "ਇਸ ਭੁਗਤਾਨ ਵਿਧੀ ਨੂੰ ਮਿਟਾਉਣ ਨਾਲ ਗਾਹਕੀਆਂ ਜਾਂ ਪੂਰਵ-ਆਰਡਰ ਪ੍ਰਭਾਵਿਤ ਹੋਣਗੇ। ਆਉਣ ਵਾਲੇ ਆਰਡਰ ਪ੍ਰਾਪਤ ਕਰਨਾ ਜਾਰੀ ਰੱਖਣ ਲਈ ਇਸਨੂੰ ਕਿਸੇ ਵਿਕਲਪਿਕ ਭੁਗਤਾਨ ਵਿਧੀ ਨਾਲ ਬਦਲੋ।",
+        "choose_from_list": "ਸੂਚੀ ਵਿੱਚੋਂ ਚੁਣੋ",
+        "add_new_button": "ਨਵਾਂ ਸ਼ਾਮਲ ਕਰੋ",
+        "billing_address": {
+          "title": "ਬਿਲਿੰਗ ਪਤਾ",
+          "add_billing_address_button": "ਨਵਾਂ ਸ਼ਾਮਲ ਕਰੋ",
+          "add_billing_address_button_accessibility_label": "ਨਵਾਂ ਬਿਲਿੰਗ ਪਤਾ ਸ਼ਾਮਲ ਕਰੋ",
+          "choose_billing_address_from_list_button": "ਸੂਚੀ ਵਿੱਚੋਂ ਚੁਣੋ",
+          "choose_billing_address_from_list_button_accessibility_label": "ਸੂਚੀ ਵਿੱਚੋਂ ਇੱਕ ਬਿਲਿੰਗ ਪਤਾ ਚੁਣੋ।",
+          "missing_billing_address_error_message": "ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਬਿਲਿੰਗ ਪਤਾ ਦੱਸੋ।",
+          "default_checkbox": "ਡਿਫੌਲਟ ਭੁਗਤਾਨ ਵਿਧੀ ਵਜੋਂ ਸੈੱਟ ਕਰੋ"
+        }
+      },
+      "three_d_secure": {
+        "title": "3D ਸੁਰੱਖਿਅਤ"
       }
     },
     "date": {
@@ -823,6 +882,200 @@
     },
     "orders": {
       "list_layout_accessibility_label": "ਲੇਆਉਟ ਵਿਕਲਪ"
+    },
+    "payment_method_brands": {
+      "visa": "ਵੀਜ਼ਾ",
+      "mastercard": "ਮਾਸਟਰਕਾਰਡ",
+      "americanexpress": "ਅਮਰੀਕਨ ਐਕਸਪ੍ਰੈਸ",
+      "discover": "ਖੋਜ ਕਰੋ",
+      "dinersclub": "ਡਾਇਨਰਜ਼ ਕਲੱਬ",
+      "jcb": "ਜੇ.ਸੀ.ਬੀ.",
+      "elo": "ਏਲੋ",
+      "visaelectron": "ਵੀਜ਼ਾ ਇਲੈਕਟ੍ਰਾਨ",
+      "maestro": "ਮਾਸਟਰੋ",
+      "forbrugsforeningen": "ਫੋਰਬ੍ਰਗਸਫੋਰਨਿੰਗਨ",
+      "dankort": "ਡੈਨਕੋਰਟ",
+      "hipercard": "ਹਾਈਪਰਕਾਰਡ",
+      "unionpay": "ਯੂਨੀਅਨਪੇ",
+      "laser": "ਲੇਜ਼ਰ",
+      "shoppay": "ਦੁਕਾਨ ਦਾ ਭੁਗਤਾਨ",
+      "applepay": "ਐਪਲ ਪੇ",
+      "googlepay": "ਗੂਗਲ ਪੇ",
+      "paypal": "ਪੇਪਾਲ",
+      "storecredit": "ਸਟੋਰ ਕ੍ਰੈਡਿਟ",
+      "bogus": "ਜਾਅਲੀ"
+    },
+    "privacy_banner": {
+      "cookie_preferences_link": "ਕੂਕੀ ਪਸੰਦਾਂ"
+    },
+    "ui_components": {
+      "clear": "ਸਾਫ਼",
+      "clipboardCopied": "ਕਾਪੀ ਕੀਤਾ ਗਿਆ",
+      "clipboardFailedToCopy": "ਕਾਪੀ ਕਰਨਾ ਅਸਫਲ ਰਿਹਾ",
+      "closeNotification": "ਬੰਦ ਕਰੋ",
+      "expandNotification": "ਹੋਰ ਵੇਖੋ",
+      "closeModal": "ਬੰਦ ਕਰੋ",
+      "submit": "ਜਮ੍ਹਾਂ ਕਰੋ",
+      "processing": "ਪ੍ਰਕਿਰਿਆ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ...",
+      "increase": "{{type}} ਵਧਾਓ",
+      "decrease": "ਘਟਾਓ {{type}}",
+      "minimumReached": "ਘੱਟੋ-ਘੱਟ {{value}} ਤੱਕ ਪਹੁੰਚ ਗਿਆ",
+      "maximumReached": "ਵੱਧ ਤੋਂ ਵੱਧ {{value}} ਤੱਕ ਪਹੁੰਚ ਗਿਆ",
+      "january": "ਜਨਵਰੀ",
+      "february": "ਫਰਵਰੀ",
+      "march": "ਮਾਰਚ",
+      "april": "ਅਪ੍ਰੈਲ",
+      "may": "ਮਈ",
+      "june": "ਜੂਨ",
+      "july": "ਜੁਲਾਈ",
+      "august": "ਅਗਸਤ",
+      "september": "ਸਤੰਬਰ",
+      "october": "ਅਕਤੂਬਰ",
+      "november": "ਨਵੰਬਰ",
+      "december": "ਦਸੰਬਰ",
+      "monday": "ਸੋਮਵਾਰ",
+      "tuesday": "ਮੰਗਲਵਾਰ",
+      "wednesday": "ਬੁੱਧਵਾਰ",
+      "thursday": "ਵੀਰਵਾਰ",
+      "friday": "ਸ਼ੁੱਕਰਵਾਰ",
+      "saturday": "ਸ਼ਨੀਵਾਰ",
+      "sunday": "ਐਤਵਾਰ",
+      "mondayAbbreviation": "ਮੋ",
+      "tuesdayAbbreviation": "ਟੂ",
+      "wednesdayAbbreviation": "ਅਸੀਂ",
+      "thursdayAbbreviation": "ਵ",
+      "fridayAbbreviation": "ਸ਼੍ਰੀ",
+      "saturdayAbbreviation": "ਸ਼ਨੀ",
+      "sundayAbbreviation": "ਸੁ",
+      "showNextMonth": "ਅਗਲਾ ਮਹੀਨਾ ਦਿਖਾਓ, {{month}} {{year}}",
+      "showPreviousMonth": "ਪਿਛਲਾ ਮਹੀਨਾ ਦਿਖਾਓ, {{month}} {{year}}"
     }
+  },
+  "accessibility": {
+    "new_window": "ਇੱਕ ਨਵੀਂ ਵਿੰਡੋ ਵਿੱਚ ਖੁੱਲ੍ਹਦਾ ਹੈ।",
+    "open_cart_drawer": "ਕਾਰਟ ਦਰਾਜ਼ ਖੋਲ੍ਹੋ",
+    "pause_video": "ਵੀਡੀਓ ਰੋਕੋ",
+    "play_model": "3D ਮਾਡਲ ਚਲਾਓ",
+    "play_video": "ਵੀਡੀਓ ਚਲਾਓ",
+    "loading_product_recommendations": "ਉਤਪਾਦ ਸਿਫ਼ਾਰਸ਼ਾਂ ਲੋਡ ਕੀਤੀਆਂ ਜਾ ਰਹੀਆਂ ਹਨ",
+    "remove_item": "{{ title}} ਹਟਾਓ",
+    "reset_search": "ਖੋਜ ਰੀਸੈੱਟ ਕਰੋ",
+    "scroll_to": "{{ title }} ਤੱਕ ਸਕ੍ਰੌਲ ਕਰੋ",
+    "search_results_count": "\" {{ query }} \" ਲਈ {{ count }} ਖੋਜ ਨਤੀਜੇ ਮਿਲੇ।",
+    "search_results_no_results": "\" {{ query }} \" ਲਈ ਕੋਈ ਨਤੀਜਾ ਨਹੀਂ ਮਿਲਿਆ।",
+    "skip_to_product_info": "ਉਤਪਾਦ ਜਾਣਕਾਰੀ 'ਤੇ ਜਾਓ",
+    "skip_to_results_list": "ਨਤੀਜਿਆਂ ਦੀ ਸੂਚੀ 'ਤੇ ਜਾਓ",
+    "skip_to_text": "ਸਮੱਗਰੀ 'ਤੇ ਜਾਓ",
+    "slide_status": "{ {{ length }} {{ index }} }}",
+    "slideshow_next": "ਅਗਲੀ ਸਲਾਈਡ",
+    "slideshow_pause": "ਸਲਾਈਡਸ਼ੋ ਰੋਕੋ",
+    "slideshow_play": "ਸਲਾਈਡਸ਼ੋ ਚਲਾਓ",
+    "slideshow_previous": "ਪਿਛਲੀ ਸਲਾਈਡ",
+    "unit_price": "ਯੂਨਿਟ ਮੁੱਲ"
+  },
+  "actions": {
+    "add": "ਜੋੜੋ",
+    "add_to_cart": "ਠੇਲ੍ਹੇ ਵਿੱਚ ਪਾਓ",
+    "added": "ਜੋੜਿਆ ਗਿਆ",
+    "apply": "ਲਾਗੂ ਕਰੋ",
+    "back": "ਪਿੱਛੇ",
+    "choose": "ਚੁਣੋ",
+    "clear": "ਸਾਫ਼",
+    "clear_all": "ਸਭ ਸਾਫ਼ ਕਰੋ",
+    "close": "ਬੰਦ ਕਰੋ",
+    "continue_shopping": "ਖਰੀਦਦਾਰੀ ਜਾਰੀ ਰੱਖੋ",
+    "enter_password": "ਪਾਸਵਰਡ ਦਰਜ ਕਰੋ",
+    "log_in_html": "ਕੀ ਤੁਹਾਡਾ ਕੋਈ ਖਾਤਾ ਹੈ? ਤੇਜ਼ੀ ਨਾਲ ਚੈੱਕ ਆਊਟ ਕਰਨ ਲਈ <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">ਲੌਗ ਇਨ ਕਰੋ</a> ।",
+    "log_in": "ਸਾਈਨ - ਇਨ",
+    "log_out": "ਲਾਗ ਆਊਟ ਕਰੋ",
+    "open_image_in_full_screen": "ਪੂਰੀ ਸਕ੍ਰੀਨ ਵਿੱਚ ਚਿੱਤਰ ਖੋਲ੍ਹੋ",
+    "remove": "ਹਟਾਓ",
+    "remove_discount": "ਛੋਟ ਹਟਾਓ {{ code }}",
+    "see_items": {
+      "one": "{{ count }} ਆਈਟਮ ਵੇਖੋ",
+      "other": "{{ count }} ਆਈਟਮਾਂ ਵੇਖੋ"
+    },
+    "show_filters": "ਫਿਲਟਰ",
+    "show_less": "ਘੱਟ ਦਿਖਾਓ",
+    "show_more": "ਹੋਰ ਦਿਖਾਓ",
+    "sign_in_options": "ਹੋਰ ਸਾਈਨ ਇਨ ਵਿਕਲਪ",
+    "view_in_your_space": "ਆਪਣੀ ਜਗ੍ਹਾ ਵਿੱਚ ਦੇਖੋ",
+    "view_all": "ਸਾਰੇ ਵੇਖੋ",
+    "more": "ਹੋਰ",
+    "zoom": "ਜ਼ੂਮ ਕਰੋ",
+    "close_dialog": "ਡਾਇਲੌਗ ਬੰਦ ਕਰੋ",
+    "reset": "ਰੀਸੈੱਟ",
+    "enter_using_password": "ਪਾਸਵਰਡ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਦਰਜ ਕਰੋ",
+    "sign_up": "ਸਾਇਨ ਅਪ",
+    "submit": "ਜਮ੍ਹਾਂ ਕਰੋ",
+    "view_store_information": "ਸਟੋਰ ਜਾਣਕਾਰੀ ਵੇਖੋ"
+  },
+  "blocks": {
+    "contact_form": {
+      "name": "ਨਾਮ",
+      "email": "ਈਮੇਲ",
+      "phone": "ਫ਼ੋਨ",
+      "comment": "ਟਿੱਪਣੀ ਕਰੋ",
+      "post_success": "ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰਨ ਲਈ ਧੰਨਵਾਦ। ਅਸੀਂ ਜਿੰਨੀ ਜਲਦੀ ਹੋ ਸਕੇ ਤੁਹਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰਾਂਗੇ।",
+      "error_heading": "ਕਿਰਪਾ ਕਰਕੇ ਹੇਠ ਲਿਖਿਆਂ ਨੂੰ ਵਿਵਸਥਿਤ ਕਰੋ:"
+    },
+    "email_signup": {
+      "label": "ਈਮੇਲ",
+      "placeholder": "ਈਮੇਲ ਪਤਾ",
+      "success": "ਸਬਸਕ੍ਰਾਈਬ ਕਰਨ ਲਈ ਧੰਨਵਾਦ!"
+    },
+    "filter": "ਫਿਲਟਰ",
+    "load_video": "ਵੀਡੀਓ ਲੋਡ ਕਰੋ: {{ description }}",
+    "sold_out": "ਸਭ ਵਿੱਕ ਗਇਆ",
+    "unit_price": {
+      "per_item": {
+        "single": "{{price}} ਹਰੇਕ",
+        "one": "{{price}} ਪ੍ਰਤੀ {{count}} ਆਈਟਮ",
+        "other": "{{price}} ਪ੍ਰਤੀ {{count}} ਆਈਟਮਾਂ"
+      },
+      "unit": {
+        "mg": "ਮਿਲੀਗ੍ਰਾਮ",
+        "kg": "ਕਿਲੋਗ੍ਰਾਮ",
+        "ml": "ਮਿ.ਲੀ.",
+        "cl": "ਸੀ.ਐਲ.",
+        "m3": "ਮੀਟਰ³",
+        "mm": "ਮਿਲੀਮੀਟਰ",
+        "cm": "ਸੈ.ਮੀ.",
+        "m2": "ਵਰਗ ਮੀਟਰ",
+        "oz": "ਔਂਸ",
+        "lb": "ਪੌਂਡ",
+        "floz": "ਫਲੋ ਔਂਸ",
+        "pt": "ਅੰਕੜਾ",
+        "gal": "ਕੁੜੀ",
+        "in": "ਵਿੱਚ",
+        "ft": "ਫੁੱਟ",
+        "yd": "ਗਜ਼",
+        "ft2": "ਫੁੱਟ²",
+        "item": "ਵਸਤੂ"
+      }
+    },
+    "payment_methods": "ਭੁਗਤਾਨ ਵਿਧੀਆਂ"
+  },
+  "blogs": {
+    "article": {
+      "comments_heading": {
+        "one": "{{ count }} ਟਿੱਪਣੀ",
+        "other": "{{ count }} ਟਿੱਪਣੀਆਂ"
+      }
+    },
+    "comment_form": {
+      "email": "ਈਮੇਲ",
+      "error": "ਟਿੱਪਣੀ ਪੋਸਟ ਨਹੀਂ ਹੋ ਸਕੀ, ਕਿਰਪਾ ਕਰਕੇ ਹੇਠ ਲਿਖਿਆਂ ਨੂੰ ਸੰਬੋਧਨ ਕਰੋ:",
+      "heading": "ਇੱਕ ਟਿੱਪਣੀ ਛੱਡੋ",
+      "message": "ਸੁਨੇਹਾ",
+      "moderated": "ਕਿਰਪਾ ਕਰਕੇ ਧਿਆਨ ਦਿਓ, ਟਿੱਪਣੀਆਂ ਪ੍ਰਕਾਸ਼ਿਤ ਹੋਣ ਤੋਂ ਪਹਿਲਾਂ ਉਹਨਾਂ ਨੂੰ ਮਨਜ਼ੂਰੀ ਦੇਣ ਦੀ ਲੋੜ ਹੈ।",
+      "name": "ਨਾਮ",
+      "post": "ਟਿੱਪਣੀ ਪੋਸਟ ਕਰੋ",
+      "success_moderated": "ਟਿੱਪਣੀ ਪੋਸਟ ਕੀਤੀ ਗਈ, ਸੰਚਾਲਨ ਦੀ ਉਡੀਕ ਹੈ।",
+      "success": "ਟਿੱਪਣੀ ਪੋਸਟ ਕੀਤੀ ਗਈ"
+    }
+  },
+  "content": {
+    "account_title": "ਖਾਤਾ"
   }
 }
