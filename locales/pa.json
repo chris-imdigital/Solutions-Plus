@@ -123,7 +123,127 @@
             "selected_pickup_option_no_longer_available": "ਪਹਿਲਾਂ ਚੁਣਿਆ ਗਿਆ ਪਿਕਅੱਪ ਵਿਕਲਪ ਹੁਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
             "local_pickup_no_delivery_strategy_available": "ਕੋਈ ਉਪਲਬਧ ਸਥਾਨਕ ਪਿਕਅੱਪ ਡਿਲੀਵਰੀ ਰਣਨੀਤੀ ਨਹੀਂ ਮਿਲੀ।",
             "origin_location_id_required": "ਜਦੋਂ RETAIL ਡਿਲੀਵਰੀ ਵਿਧੀ ਦੀ ਬੇਨਤੀ ਕੀਤੀ ਜਾਂਦੀ ਹੈ ਤਾਂ ਇੱਕ ਮੂਲ ਸਥਾਨ ID ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ।",
-            "invalid_origin_location_id": "ਮੂਲ ਸਥਾਨ ID ਨਾਲ ਮੇਲ ਖਾਂਦਾ ਸਥਾਨ ਨਹੀਂ ਲੱਭ ਸਕਿਆ।"
+            "invalid_origin_location_id": "ਮੂਲ ਸਥਾਨ ID ਨਾਲ ਮੇਲ ਖਾਂਦਾ ਸਥਾਨ ਨਹੀਂ ਲੱਭ ਸਕਿਆ।",
+            "origin_location_id_not_allowed": "ਬੇਨਤੀ ਕੀਤੇ ਡਿਲੀਵਰੀ ਤਰੀਕੇ ਮੂਲ ਸਥਾਨ ID ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦੇ।",
+            "auto_fulfill_not_allowed": "ਇਹ ਸੈਸ਼ਨ ਪੂਰਤੀ ਵਿਵਹਾਰ ਨੂੰ ਓਵਰਰਾਈਡ ਕਰਨ ਲਈ ਅਧਿਕਾਰਤ ਨਹੀਂ ਹੈ।",
+            "auto_fulfill_required": "ਜਦੋਂ RETAIL ਡਿਲੀਵਰੀ ਵਿਧੀ ਦੀ ਬੇਨਤੀ ਕੀਤੀ ਜਾਂਦੀ ਹੈ ਤਾਂ ਆਟੋਫਿਲ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ।",
+            "prefetch_shipping_rates_used": "ਪਹਿਲਾਂ ਤੋਂ ਪ੍ਰਾਪਤ ਕੀਤੀਆਂ ਸ਼ਿਪਿੰਗ ਦਰਾਂ ਕਦੇ ਵੀ ਦਰਾਂ ਵਾਪਸ ਨਹੀਂ ਕਰਨੀਆਂ ਚਾਹੀਦੀਆਂ।",
+            "fulfillment_constraints_not_satisfied": "ਇੱਕ ਜਾਂ ਵੱਧ ਪੂਰਤੀ ਸੀਮਾਵਾਂ ਪੂਰੀਆਂ ਨਹੀਂ ਹੋਈਆਂ।",
+            "must_fulfill_from_constraint_not_satisfied": "ਪੂਰਤੀ ਦੀਆਂ ਸੀਮਾਵਾਂ ਪੂਰੀਆਂ ਨਹੀਂ ਹੁੰਦੀਆਂ ਕਿਉਂਕਿ ਚੀਜ਼ਾਂ ਲੋੜੀਂਦੀਆਂ ਥਾਵਾਂ ਤੋਂ ਪੂਰੀਆਂ ਨਹੀਂ ਕੀਤੀਆਂ ਜਾ ਸਕਦੀਆਂ।",
+            "must_fulfill_from_same_location_constraint_not_satisfied": "ਪੂਰਤੀ ਦੀਆਂ ਸੀਮਾਵਾਂ ਪੂਰੀਆਂ ਨਹੀਂ ਹੁੰਦੀਆਂ ਕਿਉਂਕਿ ਚੀਜ਼ਾਂ ਇੱਕੋ ਜਗ੍ਹਾ ਤੋਂ ਪੂਰੀਆਂ ਨਹੀਂ ਕੀਤੀਆਂ ਜਾ ਸਕਦੀਆਂ।",
+            "delivery_strategy_conditions_not_satisfied": "ਇਸ ਸਥਾਨ ਲਈ ਡਿਲੀਵਰੀ ਰਣਨੀਤੀਆਂ ਉਪਲਬਧ ਹਨ, ਪਰ ਉਨ੍ਹਾਂ ਦੀਆਂ ਸ਼ਰਤਾਂ ਸੰਤੁਸ਼ਟ ਨਹੀਂ ਹਨ।",
+            "out_of_stock_at_origin_location": "ਮੂਲ ਸਥਾਨ 'ਤੇ ਕੋਈ ਸਟਾਕ ਨਹੀਂ ਹੈ।",
+            "invalid_signature": "ਅਵੈਧ ਛੋਟ ਦਸਤਖਤ।"
+          },
+          "discount": {
+            "discounts_not_allowed_for_b2b": "B2B ਸਟੋਰਾਂ ਵਿੱਚ ਛੋਟਾਂ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ।",
+            "custom_discount_not_honoured": "ਸਪਲਾਈ ਕੀਤੀ ਗਈ ਕਸਟਮ ਛੋਟ ਦਾ ਸਨਮਾਨ ਨਹੀਂ ਕੀਤਾ ਗਿਆ।",
+            "unsupported_expectation": "ਸਪਲਾਈ ਕੀਤੀ ਗਈ ਛੋਟ ਲਾਈਨ ਵਿੱਚ ਇੱਕ ਉਮੀਦ ਸੀ ਕਿ ਨੀਤੀ ਵਿਆਖਿਆ ਨਹੀਂ ਕਰ ਸਕਦੀ।",
+            "additional_requested_discount_code_discarded": "{{code}} ਵੈਧ ਹੈ ਪਰ ਲਾਗੂ ਨਹੀਂ ਹੈ। ਛੋਟ ਦੀਆਂ ਸ਼ਰਤਾਂ ਦੀ ਜਾਂਚ ਕਰੋ।",
+            "additional_requested_discount_discarded": "ਤੁਹਾਡੀ ਛੋਟ ਵੈਧ ਹੈ ਪਰ ਲਾਗੂ ਨਹੀਂ ਹੈ। ਛੋਟ ਦੀਆਂ ਸ਼ਰਤਾਂ ਦੀ ਜਾਂਚ ਕਰੋ।",
+            "allocations_mismatch": "ਤੁਹਾਡਾ ਛੋਟ ਕੋਡ ਬਦਲ ਗਿਆ ਹੈ। ਆਪਣੇ ਕਾਰਟ ਦੀ ਸਮੀਖਿਆ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+            "discount_code_not_honoured": "<strong style=\"text-transform:uppercase\">%{ਛੂਟ_ਅਸਵੀਕਾਰ_ਸੁਨੇਹਾ}</strong>",
+            "discount_title_too_long": "ਛੋਟ ਦਾ ਸਿਰਲੇਖ 255 ਅੱਖਰਾਂ ਤੋਂ ਵੱਧ ਨਹੀਂ ਹੋ ਸਕਦਾ।"
+          },
+          "tax": {
+            "new_tax_must_be_accepted": "ਤੁਹਾਡੇ ਆਰਡਰ ਨਾਲ ਜੁੜੇ ਟੈਕਸ ਬਦਲ ਗਏ ਹਨ। ਸਮੀਖਿਆ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+            "unresolvable_tax_terms": "ਮੌਜੂਦਾ ਗੱਲਬਾਤ ਸੰਦਰਭ ਦੇ ਮੱਦੇਨਜ਼ਰ ਪ੍ਰਸਤਾਵਿਤ ਸ਼ਰਤਾਂ ਅਣਸੁਲਝੀਆਂ ਹਨ।",
+            "delivery_price_is_abstract": "ਸੰਬੰਧਿਤ ਡਿਲੀਵਰੀ ਕੀਮਤ ਸੰਖੇਪ ਹੈ।",
+            "tax_inclusivity_mismatch": "ਠੋਸ totalTaxAndDutyAmount ਜਾਂ totalAmountIncludedInTarget ਮੁੱਲ ਨਾਲ ਮੁੜ ਗੱਲਬਾਤ ਕਰੋ।",
+            "tax_exemption_not_supported": "ਮੌਜੂਦਾ ਗੱਲਬਾਤ ਸੈਸ਼ਨ ਲਈ ਟੈਕਸ ਛੋਟਾਂ ਸਮਰਥਿਤ ਨਹੀਂ ਹਨ।",
+            "delivery_tax_exemption_not_supported": "ਡਿਲੀਵਰੀ ਲਾਈਨਾਂ ਲਈ ਟੈਕਸ ਛੋਟਾਂ ਵਰਤਮਾਨ ਵਿੱਚ ਸਮਰਥਿਤ ਨਹੀਂ ਹਨ।",
+            "proposed_allocations_required": "'ਪ੍ਰਸਤਾਵਿਤ ਵੰਡ' ਖੇਤਰ ਗੁੰਮ ਹੈ।",
+            "merchandise_terms_must_be_defined": "ਵਪਾਰਕ ਸਮਾਨ ਦੀਆਂ ਸ਼ਰਤਾਂ ਪਰਿਭਾਸ਼ਿਤ ਹੋਣੀਆਂ ਚਾਹੀਦੀਆਂ ਹਨ।",
+            "delivery_terms_must_be_defined": "ਡਿਲੀਵਰੀ ਦੀਆਂ ਸ਼ਰਤਾਂ ਪਰਿਭਾਸ਼ਿਤ ਹੋਣੀਆਂ ਚਾਹੀਦੀਆਂ ਹਨ।",
+            "merchandise_discount_terms_must_be_defined": "ਵਪਾਰਕ ਵਸਤੂਆਂ ਦੀ ਛੋਟ ਦੀਆਂ ਸ਼ਰਤਾਂ ਪਰਿਭਾਸ਼ਿਤ ਹੋਣੀਆਂ ਚਾਹੀਦੀਆਂ ਹਨ।",
+            "delivery_discount_terms_must_be_defined": "ਡਿਲੀਵਰੀ ਛੋਟ ਦੀਆਂ ਸ਼ਰਤਾਂ ਪਰਿਭਾਸ਼ਿਤ ਹੋਣੀਆਂ ਚਾਹੀਦੀਆਂ ਹਨ।",
+            "allocated_required": "'ਨਿਰਧਾਰਤ' ਖੇਤਰ ਗੁੰਮ ਹੈ।",
+            "value_required": "'ਮੁੱਲ' ਖੇਤਰ ਗੁੰਮ ਹੈ।",
+            "line_splits_not_supported": "'ਵਪਾਰਕ ਲਾਈਨਾਂ' ਖੇਤਰ ਨੂੰ ਇਸ ਤਰ੍ਹਾਂ ਵੰਡਿਆ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ ਕਿ ਹਰੇਕ ਵਿੱਚ ਵਿਕਰੇਤਾ ਪ੍ਰਸਤਾਵ ਵਿੱਚ ਇੱਕ ਸਿੰਗਲ ਲਾਈਨ ਭਾਗ ਹੋਵੇ।"
+          },
+          "payment": {
+            "manual_payments_not_allowed_for_b2b": "B2B ਸਟੋਰਾਂ ਵਿੱਚ ਹੱਥੀਂ ਭੁਗਤਾਨ ਦੀ ਆਗਿਆ ਨਹੀਂ ਹੈ।",
+            "positive_amount_expected": "ਭੁਗਤਾਨ ਕੀਤੀ ਜਾਣ ਵਾਲੀ ਰਕਮ 0 ਤੋਂ ਵੱਧ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ।",
+            "total_amount_mismatch": "ਭੁਗਤਾਨ ਕਰਨ ਲਈ ਕੁੱਲ ਰਕਮ ਭੁਗਤਾਨ ਦੀ ਰਕਮ ਦੇ ਜੋੜ ਨਾਲ ਮੇਲ ਨਹੀਂ ਖਾਂਦੀ।",
+            "subscription_terms_not_accepted": "ਗਾਹਕੀ ਦੀਆਂ ਸ਼ਰਤਾਂ ਸਵੀਕਾਰ ਨਹੀਂ ਕੀਤੀਆਂ ਗਈਆਂ।",
+            "missing_session_id": "ਕ੍ਰੈਡਿਟ ਕਾਰਡ ਸੈਸ਼ਨ ਜਾਣਕਾਰੀ ਗੁੰਮ ਹੈ।",
+            "gateway_not_supported": "ਭੁਗਤਾਨ ਗੇਟਵੇ ਭੁਗਤਾਨ ਵਿਧੀ ਨੂੰ ਸਟੋਰ ਕਰਨ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦਾ।",
+            "credit_card_last_name_required": "'ਆਖਰੀ ਨਾਮ' ਫ਼ੀਲ ਨਹੀਂ ਹੋ ਸਕਦਾ।",
+            "credit_card_update_failed": "ਕ੍ਰੈਡਿਟ ਕਾਰਡ ਅੱਪਡੇਟ ਅਸਫਲ ਰਿਹਾ।",
+            "installments_amount_invalid": "ਕਿਸ਼ਤਾਂ ਦੇ ਲੈਣ-ਦੇਣ ਲਈ ਅਵੈਧ ਰਕਮ।",
+            "installments_test_mode_not_allowed": "ਟੈਸਟ ਮੋਡ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ।",
+            "installments_gift_card_not_allowed": "ਕਿਸ਼ਤਾਂ ਵਿੱਚ ਗਿਫਟ ਕਾਰਡਾਂ ਦੀ ਵਰਤੋਂ ਦੀ ਆਗਿਆ ਨਹੀਂ ਹੈ।",
+            "installments_unsupported_currency": "ਕਿਸ਼ਤਾਂ ਇਸ ਮੁਦਰਾ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦੀਆਂ।",
+            "installments_unsupported_shipping": "ਕਿਸ਼ਤਾਂ ਇਸ ਪਤੇ 'ਤੇ ਸ਼ਿਪਿੰਗ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦੀਆਂ।",
+            "installments_unsupported_billing": "ਕਿਸ਼ਤਾਂ ਇਸ ਬਿਲਿੰਗ ਪਤੇ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦੀਆਂ।",
+            "installments_unsupported_subscriptions": "ਕਿਸ਼ਤਾਂ ਗਾਹਕੀਆਂ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦੀਆਂ।",
+            "installments_ineligible_line_item": "ਇਸ ਖਰੀਦ ਵਿੱਚ ਇੱਕ ਲਾਈਨ ਆਈਟਮ ਲਈ ਕਿਸ਼ਤਾਂ ਬੰਦ ਹਨ।",
+            "shop_cash_not_found": "ਦੁਕਾਨ ਦੀ ਨਕਦੀ ਨਹੀਂ ਮਿਲੀ।",
+            "shop_cash_not_allowed": "ਸ਼ਾਪ ਪੇਅ ਤੋਂ ਬਿਨਾਂ ਸ਼ਾਪ ਕੈਸ਼ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ।",
+            "shop_cash_unsupported_checkout_source": "ਸ਼ਾਪ ਕੈਸ਼ ਇਸ ਚੈੱਕਆਉਟ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦਾ।",
+            "shop_cash_gift_card_not_allowed": "ਸ਼ਾਪ ਕੈਸ਼ ਗਿਫਟ ਕਾਰਡ ਖਰੀਦਣ ਦੀ ਆਗਿਆ ਨਹੀਂ ਦਿੰਦਾ।",
+            "shop_cash_not_enabled": "ਇਸ ਦੁਕਾਨ ਲਈ ਸ਼ਾਪ ਕੈਸ਼ ਚਾਲੂ ਨਹੀਂ ਹੈ।",
+            "shop_cash_not_available": "ਇਸ ਚੈੱਕਆਉਟ ਵਿੱਚ ਸ਼ਾਪ ਕੈਸ਼ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ।",
+            "shop_cash_unsupported_subscriptions": "ਸ਼ਾਪ ਕੈਸ਼ ਗਾਹਕੀਆਂ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦਾ।",
+            "shop_cash_unsupported_shipping": "ਸ਼ਾਪ ਕੈਸ਼ ਬਿਨਾਂ ਸ਼ਿਪਿੰਗ ਦੇ ਵਪਾਰਕ ਸਮਾਨ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦਾ।",
+            "invalid_address_type": "ਇਸ ਭੁਗਤਾਨ ਵਿਧੀ ਲਈ ਦਿੱਤਾ ਗਿਆ ਪਤਾ ਕਿਸਮ ਅਵੈਧ ਹੈ।",
+            "missing_retail_attributions": "ਹੱਥੀਂ ਦਾਖਲ ਕੀਤੇ ਕ੍ਰੈਡਿਟ ਕਾਰਡ ਭੁਗਤਾਨਾਂ ਲਈ ਪ੍ਰਚੂਨ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ।",
+            "unexpected_retail_attributions": "ਕ੍ਰੈਡਿਟ ਕਾਰਡ ਭੁਗਤਾਨ ਲਈ ਅਚਾਨਕ ਪ੍ਰਚੂਨ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਪ੍ਰਦਾਨ ਕੀਤੀਆਂ ਗਈਆਂ।",
+            "invalid_card_source": "ਇਸ ਸੈਸ਼ਨ ਨੂੰ ਇਸ ਕਾਰਡ ਸਰੋਤ ਦੀ ਵਰਤੋਂ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ।",
+            "wallet_content_missing": "ਵਾਲਿਟ ਸਮੱਗਰੀ ਗੁੰਮ ਹੈ।",
+            "payment_instrument_not_found": "ਭੁਗਤਾਨ ਵਿਧੀ ਨਹੀਂ ਲੱਭੀ ਜਾ ਸਕੀ",
+            "unauthorized_capture_method": "ਭੁਗਤਾਨ ਕੈਪਚਰ ਵਿਧੀ ਨੂੰ ਕੌਂਫਿਗਰ ਕਰਨ ਦੀ ਆਗਿਆ ਨਹੀਂ ਹੈ।",
+            "saved_payment_methods_not_allowed": "ਰੱਖਿਅਤ ਕੀਤੇ ਭੁਗਤਾਨ ਵਿਧੀਆਂ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ।",
+            "saved_payment_methods_not_enabled": "ਇਸ ਦੁਕਾਨ ਲਈ ਰੱਖਿਅਤ ਕੀਤੇ ਭੁਗਤਾਨ ਵਿਧੀਆਂ ਚਾਲੂ ਨਹੀਂ ਹਨ।",
+            "saved_payment_methods_cvv_verification_disabled": "ਚੁਣੀ ਗਈ ਭੁਗਤਾਨ ਵਿਧੀ ਲਈ CVV ਤਸਦੀਕ ਦੀ ਲੋੜ ਹੈ ਜੋ ਇਸ ਦੁਕਾਨ ਲਈ ਯੋਗ ਨਹੀਂ ਹੈ। ਕੋਈ ਵੱਖਰੀ ਭੁਗਤਾਨ ਵਿਧੀ ਚੁਣੋ।",
+            "store_credit_not_enabled": "ਇਸ ਦੁਕਾਨ ਲਈ ਸਟੋਰ ਕ੍ਰੈਡਿਟ ਚਾਲੂ ਨਹੀਂ ਹੈ।",
+            "store_credit_account_not_found": "ਸਟੋਰ ਕ੍ਰੈਡਿਟ ਖਾਤਾ ਨਹੀਂ ਮਿਲਿਆ।",
+            "store_credit_account_mismatch": "ਸਟੋਰ ਕ੍ਰੈਡਿਟ ਖਾਤਾ ਖਰੀਦਦਾਰ ਪਛਾਣ ਨਾਲ ਮੇਲ ਨਹੀਂ ਖਾਂਦਾ।",
+            "store_credit_mismatched_currency": "ਸਟੋਰ ਕ੍ਰੈਡਿਟ ਖਾਤੇ ਦੀ ਮੁਦਰਾ ਚੈੱਕਆਉਟ ਮੁਦਰਾ ਨਾਲ ਮੇਲ ਨਹੀਂ ਖਾਂਦੀ।",
+            "store_credit_insufficient_funds": "ਸਟੋਰ ਕ੍ਰੈਡਿਟ ਖਾਤੇ ਵਿੱਚ ਕਾਫ਼ੀ ਫੰਡ ਨਹੀਂ ਹਨ।",
+            "store_credit_buying_gift_card": "ਤੁਸੀਂ ਗਿਫਟ ਕਾਰਡ ਖਰੀਦਣ ਲਈ ਸਟੋਰ ਕ੍ਰੈਡਿਟ ਦੀ ਵਰਤੋਂ ਨਹੀਂ ਕਰ ਸਕਦੇ।",
+            "gift_cards_not_allowed_for_b2b": "B2B ਸਟੋਰਾਂ ਵਿੱਚ ਗਿਫਟ ਕਾਰਡਾਂ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ।",
+            "method_required": "ਇੱਕ ਭੁਗਤਾਨ ਵਿਧੀ ਪ੍ਰਸਤਾਵਿਤ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ।",
+            "paypal_express_address_invalid": "PayPal ਨੇ ਇੱਕ ਅਵੈਧ ਪਤਾ ਵਾਪਸ ਕਰ ਦਿੱਤਾ।",
+            "shop_cash_unsupported_currency": "ਸ਼ਾਪ ਕੈਸ਼ ਇਸ ਮੁਦਰਾ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦਾ।"
+          },
+          "tip": {
+            "not_accepted_by_shop": "ਦੁਕਾਨ ਸੁਝਾਅ ਸਵੀਕਾਰ ਨਹੀਂ ਕਰਦੀ।",
+            "only_one_tip_line_allowed": "ਕਈ ਸੁਝਾਅ ਲਾਈਨਾਂ ਸਮਰਥਿਤ ਨਹੀਂ ਹਨ।",
+            "tips_not_allowed_for_b2b": "B2B ਸਟੋਰਾਂ ਵਿੱਚ ਸੁਝਾਅ ਦੇਣ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ।",
+            "currency_change_reset": "ਮੁਦਰਾ ਤਬਦੀਲੀ ਦੇ ਕਾਰਨ ਟਿਪ ਰੀਸੈਟ ਕਰ ਦਿੱਤੀ ਗਈ ਹੈ।",
+            "tips_not_allowed_for_deferred_purchase_options": "ਸਥਗਤ ਖਰੀਦ ਵਿਕਲਪਾਂ ਲਈ ਸੁਝਾਅ ਅਜੇ ਸਮਰਥਿਤ ਨਹੀਂ ਹਨ।"
+          },
+          "sale_attribution": {
+            "draft_order_not_exist": "ਇਹ ਡਰਾਫਟ ਆਰਡਰ ਮੌਜੂਦਾ ਦੁਕਾਨ ਵਿੱਚ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।",
+            "staff_member_not_exist": "ਇਹ ਸਟਾਫ਼ ਮੌਜੂਦਾ ਦੁਕਾਨ ਵਿੱਚ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।",
+            "location_not_exist": "ਇਹ ਸਥਾਨ ਮੌਜੂਦਾ ਦੁਕਾਨ ਵਿੱਚ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।",
+            "point_of_sale_device_not_exist": "ਇਹ ਪੁਆਇੰਟ ਆਫ਼ ਸੇਲ ਡਿਵਾਈਸ ਮੌਜੂਦਾ ਦੁਕਾਨ ਵਿੱਚ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।",
+            "unresolvable_target_merchandise_lines": "ਮੌਜੂਦਾ ਗੱਲਬਾਤ ਸੰਦਰਭ ਦੇ ਮੱਦੇਨਜ਼ਰ ਪ੍ਰਸਤਾਵਿਤ ਵਿਕਰੀ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਅਣਸੁਲਝੀਆਂ ਹਨ।"
+          },
+          "non_negotiable": {
+            "missing_non_negotiable_terms": "ਤੁਹਾਡੇ ਖਰੀਦਦਾਰ ਦੇ ਪ੍ਰਸਤਾਵ ਵਿੱਚ ਗੈਰ-ਗੱਲਬਾਤਯੋਗ_ਸ਼ਰਤਾਂ ਹੋਣੀਆਂ ਚਾਹੀਦੀਆਂ ਹਨ।",
+            "invalid_signature": "{{target_terms}} ਲਈ ਦਸਤਖਤ ਅਵੈਧ ਹੈ।"
+          },
+          "inventory": {
+            "missing_quantity_value": "ਖਰੀਦਦਾਰ ਦੀਆਂ ਵਸਤੂ ਸੂਚੀਆਂ ਵਿੱਚ ਮਾਤਰਾ ਖੇਤਰ ਗੁੰਮ ਹੈ।",
+            "changing_behavior_not_allowed": "ਇਸ ਕਲਾਇੰਟ ਕੋਲ ਵਸਤੂ-ਸੂਚੀ ਵਿਵਹਾਰ ਨੂੰ ਬਦਲਣ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ।",
+            "only_one_inventory_behavior_allowed": "ਵਰਤਮਾਨ ਵਿੱਚ ਪ੍ਰਤੀ ਚੈੱਕਆਉਟ ਸਿਰਫ਼ ਇੱਕ ਵਸਤੂ ਸੂਚੀ ਵਿਵਹਾਰ ਦੀ ਆਗਿਆ ਹੈ।"
+          },
+          "optional_duties": {
+            "optional_duties_not_permitted": "ਇਸ ਚੈੱਕਆਉਟ ਲਈ ਡਿਊਟੀਆਂ ਤੋਂ ਇਨਕਾਰ ਕਰਨ ਦੀ ਇਜਾਜ਼ਤ ਨਹੀਂ ਹੈ।"
+          },
+          "attribution": {
+            "retail_attribution_not_allowed": "ਇਸ ਚੈੱਕਆਉਟ ਲਈ ਪ੍ਰਚੂਨ ਵਿਸ਼ੇਸ਼ਤਾ ਦੀ ਆਗਿਆ ਨਹੀਂ ਹੈ।",
+            "retail_attribution_required": "ਇਸ ਚੈੱਕਆਉਟ ਲਈ ਪ੍ਰਚੂਨ ਵਿਸ਼ੇਸ਼ਤਾ ਦੀ ਲੋੜ ਹੈ।"
+          },
+          "captcha": {
+            "metadata_missing": "ਇਸ ਚੈੱਕਆਉਟ ਲਈ ਕੈਪਚਾ ਭਰਨਾ ਜ਼ਰੂਰੀ ਹੈ।",
+            "metadata_mismatch": "ਦਿੱਤਾ ਗਿਆ ਕੈਪਚਾ ਪ੍ਰਦਾਤਾ ਅਤੇ ਕਿਸਮ ਉਮੀਦ ਕੀਤੇ ਮੁੱਲਾਂ ਨਾਲ ਮੇਲ ਨਹੀਂ ਖਾਂਦੇ।",
+            "token_missing": "ਇਸ ਚੈੱਕਆਉਟ ਨੂੰ ਪੂਰਾ ਕਰਨ ਲਈ ਇੱਕ ਕੈਪਚਾ ਟੋਕਨ ਪ੍ਰਦਾਨ ਕਰਨਾ ਲਾਜ਼ਮੀ ਹੈ।",
+            "job_enqueue_failed": "ਕੈਪਚਾ ਪ੍ਰਮਾਣਿਕਤਾ ਕੰਮ ਨੂੰ ਕਤਾਰਬੱਧ ਕਰਨ ਵਿੱਚ ਅਸਫਲ ਰਿਹਾ।",
+            "job_already_queued": "ਇਸ ਕੈਪਚਾ ਟੋਕਨ ਲਈ ਕੈਪਚਾ ਪ੍ਰਮਾਣਿਕਤਾ ਪਹਿਲਾਂ ਹੀ ਕਤਾਰ ਵਿੱਚ ਹੈ।",
+            "token_expired": "ਦਿੱਤੇ ਗਏ ਕੈਪਚਾ ਟੋਕਨ ਦੀ ਮਿਆਦ ਪੁੱਗ ਗਈ ਹੈ। ਚੈੱਕਆਉਟ ਜਾਰੀ ਰੱਖਣ ਲਈ ਇੱਕ ਨਵਾਂ ਕੈਪਚਾ ਪੂਰਾ ਕਰੋ।"
           }
         }
       },
