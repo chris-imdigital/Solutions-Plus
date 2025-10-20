@@ -1005,7 +1005,38 @@
             "reduction_code": "ਇੱਕ ਵੈਧ ਛੋਟ ਕੋਡ ਜਾਂ ਗਿਫ਼ਟ ਕਾਰਡ ਦਾਖਲ ਕਰੋ",
             "billing_must_match_shipping": "ਸ਼ਿਪਿੰਗ ਪਤੇ ਨਾਲ ਮੇਲ ਖਾਣਾ ਲਾਜ਼ਮੀ ਹੈ",
             "billing_zip": "ਇੱਕ ਵੈਧ ਬਿਲਿੰਗ ਪਤਾ ਜ਼ਿਪ / ਡਾਕ ਕੋਡ ਦਰਜ ਕਰੋ"
-          }
+          },
+          "missing": {
+            "first_name": "ਪਹਿਲਾ ਨਾਮ ਦਰਜ ਕਰੋ",
+            "billing_first_name": "ਬਿਲਿੰਗ ਪਤੇ ਦਾ ਪਹਿਲਾ ਨਾਮ ਦਰਜ ਕਰੋ",
+            "last_name": "ਇੱਕ ਆਖਰੀ ਨਾਮ ਦਰਜ ਕਰੋ",
+            "address1": "ਪਤਾ ਦਰਜ ਕਰੋ",
+            "billing_address1": "ਬਿਲਿੰਗ ਪਤਾ ਦਰਜ ਕਰੋ",
+            "address2": "ਕਿਸੇ ਅਪਾਰਟਮੈਂਟ, ਸੂਟ, ਆਦਿ ਵਿੱਚ ਦਾਖਲ ਹੋਵੋ।",
+            "billing_address2": "ਅਪਾਰਟਮੈਂਟ, ਸੂਟ, ਆਦਿ ਦਾ ਬਿਲਿੰਗ ਪਤਾ ਦਰਜ ਕਰੋ।",
+            "city": "ਕੋਈ ਸ਼ਹਿਰ ਦਾਖਲ ਕਰੋ",
+            "billing_city": "ਬਿਲਿੰਗ ਪਤਾ ਸ਼ਹਿਰ ਦਰਜ ਕਰੋ",
+            "province": "ਕੋਈ ਰਾਜ / ਸੂਬਾ ਚੁਣੋ",
+            "billing_province": "ਇੱਕ ਬਿਲਿੰਗ ਪਤਾ ਰਾਜ / ਪ੍ਰਾਂਤ ਚੁਣੋ",
+            "country": "ਕੋਈ ਦੇਸ਼/ਖੇਤਰ ਚੁਣੋ",
+            "zip": "ਇੱਕ ਜ਼ਿਪ / ਡਾਕ ਕੋਡ ਦਰਜ ਕਰੋ",
+            "billing_zip": "ਬਿਲਿੰਗ ਪਤਾ ਜ਼ਿਪ / ਡਾਕ ਕੋਡ ਦਰਜ ਕਰੋ",
+            "phone": "ਇੱਕ ਫ਼ੋਨ ਨੰਬਰ ਦਰਜ ਕਰੋ",
+            "contact_info": "ਸੰਪਰਕ ਜਾਣਕਾਰੀ ਦਰਜ ਕਰੋ"
+          },
+          "formatting": {
+            "name_contains_emojis": "ਆਪਣੇ ਨਾਮ ਤੋਂ ਇਮੋਜੀ ਮਿਟਾਓ",
+            "postal_code_contains_emoji": "ਆਪਣੇ ਡਾਕ ਕੋਡ ਤੋਂ ਇਮੋਜੀ ਮਿਟਾਓ",
+            "first_name_too_long": "ਪਹਿਲੇ ਨਾਮ ਵਿੱਚ ਬਹੁਤ ਸਾਰੇ ਅੱਖਰ ਹਨ",
+            "last_name_too_long": "ਆਖਰੀ ਨਾਮ ਵਿੱਚ ਬਹੁਤ ਸਾਰੇ ਅੱਖਰ ਹਨ",
+            "address_too_long": "ਪਤਾ ਲਾਈਨ ਬਹੁਤ ਲੰਬੀ ਹੈ।"
+          },
+          "select_different_shipping_address_to_resolve_errors": "ਤੁਹਾਡਾ ਸ਼ਿਪਿੰਗ ਪਤਾ ਅਵੈਧ ਹੈ। ਕੋਈ ਵੱਖਰਾ ਪਤਾ ਚੁਣੋ ਜਾਂ ਇੱਕ ਨਵਾਂ ਵਰਤੋ।"
+        },
+        "scrim": {
+          "continue_purchase_in_window": "{{walletName}} ਵਿੰਡੋ ਵਿੱਚ ਆਪਣੀ ਖਰੀਦਦਾਰੀ ਜਾਰੀ ਰੱਖੋ।",
+          "and_return_to_checkout": "ਅਤੇ ਚੈੱਕਆਉਟ ਤੇ ਵਾਪਸ ਜਾਓ",
+          "cancel": "ਰੱਦ ਕਰੋ"
         }
       },
       "marketing": {
@@ -1280,6 +1311,65 @@
           "title": "ਨਾ ਖਰੀਦਿਆ ਜਾਣ ਵਾਲਾ ਉਤਪਾਦ",
           "header": "ਕੁਝ ਆਈਟਮਾਂ ਤੁਹਾਡੇ ਕਾਰਟ ਵਿੱਚੋਂ ਹਟਾ ਦਿੱਤੀਆਂ ਗਈਆਂ ਸਨ।"
         }
+      },
+      "note": {
+        "length_exceeds_maximum": "ਨੋਟ ਦਾ ਆਕਾਰ 5000 ਜਾਂ ਘੱਟ ਅੱਖਰਾਂ ਤੱਕ ਘਟਾਓ।"
+      },
+      "offsite_payment_failed": {
+        "payment_not_processed_title": "ਭੁਗਤਾਨ ਅਸਫਲ ਰਿਹਾ",
+        "payment_not_processed_text": "QR ਕੋਡ ਨੂੰ ਦੁਬਾਰਾ ਸਕੈਨ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਜੇਕਰ ਇਹ ਫਿਰ ਵੀ ਕੰਮ ਨਹੀਂ ਕਰਦਾ, ਤਾਂ ਸਾਡੇ ਸਟਾਫ ਨੂੰ ਦੱਸੋ ਅਤੇ ਕੋਈ ਵੱਖਰੀ ਭੁਗਤਾਨ ਵਿਧੀ ਅਜ਼ਮਾਓ।",
+        "payment_link_expired_title": "ਭੁਗਤਾਨ ਲਿੰਕ ਦੀ ਮਿਆਦ ਸਮਾਪਤ ਹੋ ਗਈ ਹੈ",
+        "payment_link_expired_text": "QR ਕੋਡ ਨੂੰ ਦੁਬਾਰਾ ਸਕੈਨ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+      },
+      "one": {
+        "errors": {
+          "merchandise": {
+            "gift_card_price_must_be_greater_than_zero": "ਗਿਫ਼ਟ ਕਾਰਡ ਦੀ ਕੀਮਤ 0 ਤੋਂ ਵੱਧ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ।",
+            "gift_card_price_must_not_exceed_limit": "ਗਿਫ਼ਟ ਕਾਰਡ ਦੀ ਕੀਮਤ %{gift_card_limit} ਤੋਂ ਵੱਧ ਨਹੀਂ ਹੋਣੀ ਚਾਹੀਦੀ।",
+            "subtotal_limit_reached": "ਲਾਈਨ ਆਈਟਮਾਂ ਦਾ ਵੱਧ ਤੋਂ ਵੱਧ ਮੁੱਲ ਪੂਰਾ ਹੋ ਗਿਆ ਹੈ।",
+            "signature_mismatch": "ਲਾਈਨ %{stable_id} ਲਈ ਵਪਾਰਕ ਹਸਤਾਖਰ ਮੇਲ ਨਹੀਂ ਖਾਂਦੇ।"
+          }
+        }
+      },
+      "remote": {
+        "errors": {
+          "only_remote_merchandise_lines": "ਚੈੱਕਆਉਟ ਵਿੱਚ ਸਿਰਫ਼ ਰਿਮੋਟ ਵਪਾਰਕ ਸਮਾਨ ਹੁੰਦਾ ਹੈ। ਚੈੱਕਆਉਟ ਪੂਰਾ ਕਰਨ ਲਈ ਰਿਮੋਟ ਦੁਕਾਨ 'ਤੇ ਰੀਡਾਇਰੈਕਟ ਦੀ ਲੋੜ ਹੁੰਦੀ ਹੈ।",
+          "currency_mismatch": "ਇਸ ਆਈਟਮ ਨੂੰ ਤੁਹਾਡੇ ਕਾਰਟ ਵਿੱਚ ਸ਼ਾਮਲ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ ਕਿਉਂਕਿ ਇਹ ਇੱਕ ਅਜਿਹੇ ਸਟੋਰ ਤੋਂ ਹੈ ਜੋ ਇੱਕ ਵੱਖਰੀ ਮੁਦਰਾ ਦੀ ਵਰਤੋਂ ਕਰਦਾ ਹੈ।",
+          "max_remote_shops_exceeded": "ਇਸ ਉਤਪਾਦ ਨੂੰ ਸ਼ਾਮਲ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ ਕਿਉਂਕਿ ਤੁਹਾਡੀ ਕਾਰਟ ਵਿੱਚ ਪਹਿਲਾਂ ਹੀ ਦੂਜੇ ਸਟੋਰਾਂ ਤੋਂ ਵੱਧ ਤੋਂ ਵੱਧ ਖਰੀਦਦਾਰੀ ਹੈ।"
+        }
+      },
+      "units": {
+        "milligram": "ਮਿਲੀਗ੍ਰਾਮ",
+        "kilogram": "ਕਿਲੋਗ੍ਰਾਮ",
+        "milliliter": "ਮਿ.ਲੀ.",
+        "centiliter": "ਸੀ.ਐਲ.",
+        "cubic_meter": "ਮੀਟਰ³",
+        "millimeter": "ਮਿਲੀਮੀਟਰ",
+        "centimeter": "ਸੈ.ਮੀ.",
+        "square_meter": "ਵਰਗ ਮੀਟਰ",
+        "ounce": "ਔਂਸ",
+        "pound": "ਪੌਂਡ",
+        "fluid_ounce": "ਫਲੋ ਔਂਸ",
+        "pint": "ਅੰਕੜਾ",
+        "gallon": "ਕੁੜੀ",
+        "inch": "ਵਿੱਚ",
+        "foot": "ਫੁੱਟ",
+        "yard": "ਗਜ਼",
+        "square_foot": "ਫੁੱਟ²",
+        "item": "ਵਸਤੂ"
+      },
+      "memberships": {
+        "delivery_promise_unfulfillable": "ਇਹ ਪਤਾ ਮੌਜੂਦਾ ਮੈਂਬਰਸ਼ਿਪ ਲਈ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ।",
+        "items_split_across_locations_unsupported": "ਤੁਹਾਡੇ ਆਰਡਰ ਲਈ ਪ੍ਰਾਈਮ ਡਿਲੀਵਰੀ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਤੁਹਾਡੇ ਸ਼ਿਪਿੰਗ ਵਿਕਲਪ ਅੱਪਡੇਟ ਕਰ ਦਿੱਤੇ ਗਏ ਹਨ।"
+      },
+      "editor": {
+        "navigation": {
+          "store_logo_accessibility_label": "ਔਨਲਾਈਨ ਸਟੋਰ 'ਤੇ ਜਾਓ"
+        }
+      },
+      "tooltip": {
+        "accessibility_label_context": "%{context} ਬਾਰੇ ਹੋਰ ਜਾਣਕਾਰੀ",
+        "additional_payment_methods": "ਵਾਧੂ ਭੁਗਤਾਨ ਵਿਧੀਆਂ"
       }
     },
     "store_availability": {
@@ -1375,7 +1465,13 @@
             "shopify_support_link_text": "Shopify ਸਹਾਇਤਾ"
           }
         }
-      }
+      },
+      "blank": "ਖਾਲੀ ਨਹੀਂ ਹੋ ਸਕਦਾ",
+      "blocked_address": "ਇਹ ਟਿਕਾਣਾ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ।",
+      "credit_card_session_expired": "ਕ੍ਰੈਡਿਟ ਕਾਰਡ ਪ੍ਰਮਾਣੀਕਰਨ ਦੀ ਮਿਆਦ ਖਤਮ ਹੋ ਗਈ ਹੈ, ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੀ ਭੁਗਤਾਨ ਜਾਣਕਾਰੀ ਦੁਬਾਰਾ ਦਰਜ ਕਰੋ। ਤੁਹਾਡੇ ਕਾਰਡ ਤੋਂ ਖਰਚਾ ਨਹੀਂ ਲਿਆ ਗਿਆ ਹੈ।",
+      "empty": "ਖਾਲੀ ਨਹੀਂ ਹੋ ਸਕਦਾ",
+      "invalid_email": "ਇੱਕ ਵੈਧ ਈਮੇਲ ਪਤਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ।",
+      "discount_disabled": "ਇਹ ਛੋਟ ਬੰਦ ਕਰ ਦਿੱਤੀ ਗਈ ਹੈ।"
     },
     "notices": {
       "customer": {
@@ -1436,6 +1532,53 @@
           "fraud": "ਧੋਖਾਧੜੀ ਵਾਲਾ ਆਰਡਰ",
           "customer": "ਗਾਹਕ ਨੇ ਆਰਡਰ ਬਦਲਿਆ/ਰੱਦ ਕੀਤਾ"
         }
+      }
+    },
+    "pagination": {
+      "previous": "ਪਿਛਲਾ",
+      "next": "ਅਗਲਾ"
+    },
+    "links": {
+      "powered_by_shopify": "Shopify ਦੁਆਰਾ ਸੰਚਾਲਿਤ",
+      "learn_more": "ਜਿਆਦਾ ਜਾਣੋ"
+    },
+    "feed": {
+      "more": "ਹੋਰ"
+    },
+    "attributes": {
+      "email": "ਈਮੇਲ",
+      "password": "ਪਾਸਵਰਡ",
+      "password_confirmation": "ਪਾਸਵਰਡ ਦੀ ਪੁਸ਼ਟੀ",
+      "first_name": "ਪਹਿਲਾ ਨਾਂ",
+      "last_name": "ਆਖਰੀ ਨਾਂਮ",
+      "body": "ਸਰੀਰ",
+      "signature": "ਪਤਾ"
+    },
+    "addresses": {
+      "zip_code": "ਜ਼ਿਪ ਕੋਡ",
+      "postal_code": "ਡਾਕ ਕੋਡ",
+      "postcode": "ਪੋਸਟਕੋਡ",
+      "pincode": "ਪਿੰਨਕੋਡ",
+      "region": "ਖੇਤਰ",
+      "prefecture": "ਪ੍ਰੀਫੈਕਚਰ",
+      "province": "ਸੂਬਾ",
+      "state": "ਰਾਜ",
+      "state_and_territory": "ਰਾਜ/ਖੇਤਰ",
+      "county": "ਕਾਉਂਟੀ",
+      "emirate": "ਅਮੀਰਾਤ",
+      "governorate": "ਗਵਰਨੋਰੇਟ",
+      "confirm": "ਕੀ ਤੁਸੀਂ ਯਕੀਨਨ ਇਸ ਪਤੇ ਨੂੰ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+    },
+    "collections": {
+      "sorting": {
+        "manual": "ਫੀਚਰਡ",
+        "best_selling": "ਸਭ ਤੋਂ ਵੱਧ ਵਿਕਣ ਵਾਲਾ",
+        "az": "ਵਰਣਮਾਲਾ ਅਨੁਸਾਰ, AZ",
+        "za": "ਵਰਣਮਾਲਾ ਅਨੁਸਾਰ, ZA",
+        "price_ascending": "ਕੀਮਤ, ਘੱਟ ਤੋਂ ਵੱਧ",
+        "price_descending": "ਕੀਮਤ, ਵੱਧ ਤੋਂ ਘੱਟ",
+        "date_ascending": "ਤਾਰੀਖ, ਪੁਰਾਣੀ ਤੋਂ ਨਵੀਂ",
+        "date_descending": "ਤਾਰੀਖ, ਨਵੀਂ ਤੋਂ ਪੁਰਾਣੀ"
       }
     }
   },
