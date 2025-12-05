@@ -1,0 +1,4 @@
+# Ignore most files in .shopify directory except metafields.json
+*
+!metafields.json
+!.gitignore

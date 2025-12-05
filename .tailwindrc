@@ -1,0 +1,61 @@
+# TailwindCSS Quick Reference
+# This is a quick reference file for TailwindCSS setup in this project
+
+## Project Structure
+src/styles/theme.css           → Source CSS with Tailwind directives (tracked in git)
+src/styles/_base-theme.css     → Original theme CSS base (tracked in git)
+assets/theme.css               → Compiled CSS (auto-generated, don't edit, ignored)
+tailwind.config.js             → Tailwind configuration (Preflight disabled)
+postcss.config.js              → PostCSS configuration
+
+## Commands
+npm run dev-init               → Install all dependencies (first time setup)
+npm run dev                    → Start dev server + CSS watch
+npm run build                  → Build CSS for production (minified)
+npm run css                    → Build CSS once
+npm run css:watch              → Watch and rebuild CSS on changes
+
+## Files Changed
+✓ package.json                 → Added tailwindcss, autoprefixer, scripts
+✓ layout/theme.liquid          → Uses theme.css (original + Tailwind integrated)
+✓ .gitignore                   → Ignores theme.css, theme.css.backup, ecom-* files
+✓ .shopifyignore               → Added src/ and config files to ignore
+
+## New Files Created
+✓ tailwind.config.js           → Tailwind config (Preflight: false)
+✓ postcss.config.js            → PostCSS pipeline configuration
+✓ src/styles/theme.css         → Source CSS file
+✓ assets/theme.css.backup      → Original theme backup
+✓ TAILWIND_SETUP.md            → Complete setup documentation
+✓ TAILWIND_EXAMPLES.md         → Practical Liquid + Tailwind examples
+
+## Getting Started
+1. Run: npm run dev-init
+2. Run: npm run dev
+3. Start using Tailwind classes in your .liquid files
+4. See TAILWIND_EXAMPLES.md for examples
+
+## Plugins Included
+- @tailwindcss/forms           → Better form styling
+- @tailwindcss/typography      → Beautiful typography defaults
+
+## Important Configuration
+- Preflight: DISABLED (preserves theme's CSS variables)
+- Load order: Tailwind Components → Utilities → Original Theme CSS (last wins)
+- Original theme styles take priority over Tailwind defaults
+- EComposer files (ecom-*.css/js) are ignored by git
+
+## CSS Compilation Flow
+1. Tailwind Components
+2. Tailwind Utilities
+3. Original Theme CSS (theme.css.backup)
+4. Custom @layer components/utilities
+   ↓
+5. Output: assets/theme.css (Original + Tailwind integrated)
+
+## Notes
+- CSS is automatically recompiled when you save changes to src/styles/theme.css
+- Original theme CSS variables are preserved (e.g., var(--font-body-size))
+- Custom components and utilities can be added in src/styles/theme.css using @layer
+- EComposer files are managed by Shopify, not tracked in git
+
