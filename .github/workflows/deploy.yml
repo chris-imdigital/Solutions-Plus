@@ -1,0 +1,144 @@
+name: Deploy Shopify themes
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+
+jobs:
+  deploy-develop:
+    name: Deploy develop → staging store
+    if: github.ref == 'refs/heads/develop'
+    runs-on: ubuntu-latest
+    environment: staging
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build assets
+        run: npm run build
+
+      - name: Install Shopify CLI
+        run: npm install -g @shopify/cli
+
+      - name: Validate theme files
+        run: |
+          echo "🔍 Validating Liquid templates..."
+          shopify theme check --fail-level error --output=text || true
+          echo "✅ Validation complete"
+
+      - name: Pull admin-managed files
+        env:
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.STAGING_THEME_TOKEN }}
+          SHOPIFY_FLAG_STORE: ${{ secrets.STAGING_SHOPIFY_STORE }}
+        run: |
+          echo "📥 Pulling admin-managed files (templates, EComposer, blocks)..."
+          shopify theme pull --theme ${{ secrets.STAGING_THEME_ID }} --path .
+          git checkout -- .
+          echo "✅ Admin files preserved, tracked files restored to Git state"
+
+      - name: Deploy to staging store
+        env:
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.STAGING_THEME_TOKEN }}
+          SHOPIFY_FLAG_STORE: ${{ secrets.STAGING_SHOPIFY_STORE }}
+        run: |
+          echo "🚀 Deploying to staging store..."
+          shopify theme push \
+            --theme ${{ secrets.STAGING_THEME_ID }} \
+            --nodelete \
+            --allow-live
+          echo "✅ Staging deployment complete"
+
+  deploy-main:
+    name: Deploy main → prod live
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: production  # Requires manual approval
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build production assets
+        run: NODE_ENV=production npm run build
+
+      - name: Install Shopify CLI
+        run: npm install -g @shopify/cli
+
+      - name: Validate theme files
+        run: |
+          echo "🔍 Validating Liquid templates for PRODUCTION..."
+          shopify theme check --fail-level error --output=text
+          echo "✅ Production validation complete"
+
+      - name: Backup current production theme
+        id: backup
+        env:
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.PROD_THEME_TOKEN }}
+          SHOPIFY_FLAG_STORE: ${{ secrets.PROD_SHOPIFY_STORE }}
+        run: |
+          echo "📦 Creating backup of production theme..."
+          BACKUP_DIR="backup-$(date +%Y%m%d-%H%M%S)"
+          mkdir -p $BACKUP_DIR
+          shopify theme pull --theme ${{ secrets.PROD_LIVE_THEME_ID }} --path $BACKUP_DIR
+          echo "backup_dir=$BACKUP_DIR" >> $GITHUB_OUTPUT
+          echo "✅ Backup complete: $BACKUP_DIR"
+
+      - name: Upload backup artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.backup.outputs.backup_dir }}
+          path: ${{ steps.backup.outputs.backup_dir }}
+          retention-days: 30
+
+      - name: Pull app-managed files (EComposer, etc.)
+        env:
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.PROD_THEME_TOKEN }}
+          SHOPIFY_FLAG_STORE: ${{ secrets.PROD_SHOPIFY_STORE }}
+        run: |
+          echo "📥 Pulling app-managed files..."
+          # Only pull files that are in .gitignore (app-generated, not theme code)
+          shopify theme pull --theme ${{ secrets.PROD_LIVE_THEME_ID }} --only 'sections/ecom-*.liquid' --path .
+          shopify theme pull --theme ${{ secrets.PROD_LIVE_THEME_ID }} --only 'assets/ecom-*.css' --path .
+          shopify theme pull --theme ${{ secrets.PROD_LIVE_THEME_ID }} --only 'assets/ecom-*.js' --path .
+          echo "✅ App files preserved"
+
+      - name: Deploy to production
+        env:
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.PROD_THEME_TOKEN }}
+          SHOPIFY_FLAG_STORE: ${{ secrets.PROD_SHOPIFY_STORE }}
+        run: |
+          echo "🚀 Deploying to PRODUCTION..."
+          shopify theme push \
+            --theme ${{ secrets.PROD_LIVE_THEME_ID }} \
+            --nodelete \
+            --allow-live
+          echo "✅ Production deployment complete"
+
+      - name: Create release tag
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          TAG_NAME="v$(date +'%Y.%m.%d')-$(git rev-parse --short HEAD)"
+          git tag -a $TAG_NAME -m "Production deployment on $(date)"
+          git push origin $TAG_NAME
