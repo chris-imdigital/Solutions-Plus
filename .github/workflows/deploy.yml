@@ -34,6 +34,8 @@ jobs:
       - name: Validate theme files
         run: |
           echo "🔍 Validating Liquid templates..."
+          # Only check locales tracked in Git (remove base theme locales like Czech)
+          git clean -fd locales/
           shopify theme check --fail-level error --output=text || true
           echo "✅ Validation complete"
 
@@ -91,6 +93,8 @@ jobs:
       - name: Validate theme files
         run: |
           echo "🔍 Validating Liquid templates for PRODUCTION..."
+          # Only check locales tracked in Git (remove base theme locales like Czech)
+          git clean -fd locales/
           shopify theme check --fail-level error --output=text
           echo "✅ Production validation complete"
 
