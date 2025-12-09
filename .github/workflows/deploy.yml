@@ -70,6 +70,8 @@ jobs:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment: production  # Requires manual approval
+    permissions:
+      contents: write  # Required for pushing git tags
 
     steps:
       - name: Checkout repo
