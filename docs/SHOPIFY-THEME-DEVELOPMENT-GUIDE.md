@@ -1,10 +1,10 @@
 # Shopify Theme Development & Deployment Guide
 
-> **Version:** 2.0  
+> **Version:** 2.1  
 > **Last Updated:** December 2025  
 > **Status:** Official Process
 
-This document defines the official methodology for Shopify theme development, testing, and deployment. It establishes a multi-store architecture that properly isolates environments and follows Shopify best practices.
+This document defines the official methodology for Shopify theme development, testing, and deployment. It establishes a single-store architecture with Release Candidate (RC) and Live themes for proper release management.
 
 ---
 
@@ -28,23 +28,21 @@ This document defines the official methodology for Shopify theme development, te
 
 ## 1. Core Mental Model
 
-We treat Shopify development with three distinct primitives:
+We treat Shopify development with two distinct primitives:
 
 | Primitive | What It Represents | Example |
 |-----------|-------------------|---------|
-| **Stores** | Environments | Staging store, Production store |
 | **Themes** | Deploy targets | Live theme, RC theme, Preview themes |
 | **Branches** | Code states | `main`, `develop`, `feature/*` |
 
-### Why This Matters
+### Single-Store Architecture
 
-**Stores = Environments** because:
-- Apps install per-store, not per-theme
-- Payment gateways configure per-store
-- Checkout customizations are per-store
-- Markets, shipping rules, and tax settings are per-store
+This project uses a **single production store** with two primary themes:
 
-Testing a theme on a "staging theme" within the production store **does not** validate integrations, checkout, or app behavior. True staging requires a separate store.
+- **Live Theme**: Customer-facing, deployed from `main` branch
+- **RC (Release Candidate) Theme**: Pre-release testing, deployed from `develop` branch
+
+This approach provides a clean separation between "what's live" and "what's being tested" while operating within a single store.
 
 ---
 
@@ -53,50 +51,38 @@ Testing a theme on a "staging theme" within the production store **does not** va
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                              PRODUCTION STORE                               │
-│                     (client-prod.myshopify.com)                             │
+│                     (solutions-plus.myshopify.com)                          │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
 │   ┌──────────────────────┐         ┌──────────────────────┐                 │
 │   │     LIVE THEME       │         │      RC THEME        │                 │
-│   │   ← main branch      │         │   ← manual deploy    │                 │
-│   │   (auto-deploy)      │         │   from develop       │                 │
+│   │   ← main branch      │         │   ← develop branch   │                 │
+│   │   (auto-deploy       │         │   (auto-deploy)      │                 │
+│   │    with approval)    │         │                      │                 │
 │   │                      │         │                      │                 │
 │   │   🟢 Customer-facing │         │   🟡 Pre-release     │                 │
 │   └──────────────────────┘         └──────────────────────┘                 │
+│                                                                             │
+│   ┌──────────────────────────────────────────────────────┐                  │
+│   │              PREVIEW THEMES                          │                  │
+│   │         ← feature/* via shopify theme dev            │                  │
+│   │                                                      │                  │
+│   │         ⚪ Dev testing (local CLI)                   │                  │
+│   └──────────────────────────────────────────────────────┘                  │
 │                                                                             │
 │   • Real apps, integrations, payments                                       │
 │   • Real checkout behavior                                                  │
 │   • Production data                                                         │
 └─────────────────────────────────────────────────────────────────────────────┘
-
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                              STAGING STORE                                  │
-│                     (client-staging.myshopify.com)                          │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                             │
-│   ┌──────────────────────┐         ┌──────────────────────┐                 │
-│   │    STAGING THEME     │         │   PREVIEW THEMES     │                 │
-│   │   ← develop branch   │         │   ← feature/* via    │                 │
-│   │   (auto-deploy)      │         │   shopify theme dev  │                 │
-│   │                      │         │                      │                 │
-│   │   🔵 QA & UAT        │         │   ⚪ Dev testing     │                 │
-│   └──────────────────────┘         └──────────────────────┘                 │
-│                                                                             │
-│   • Test apps (sandbox/dev versions)                                        │
-│   • Test checkout (Shopify Payments test mode)                              │
-│   • Sample/test data                                                        │
-└─────────────────────────────────────────────────────────────────────────────┘
-
 ```
 
 ### Environment Purposes
 
-| Environment | Store | Theme | Purpose |
-|-------------|-------|-------|---------|
-| **Production** | Production | Live theme | Real customers, real transactions |
-| **Release Candidate** | Production | RC theme | Final pre-release check on prod infra |
-| **Staging/UAT** | Staging | Staging theme | QA testing, client UAT approval |
-| **Development** | Staging | Preview themes | Developer testing via CLI |
+| Environment | Theme | Purpose |
+|-------------|-------|---------|
+| **Production** | Live theme | Real customers, real transactions |
+| **Release Candidate** | RC theme | Pre-release QA/UAT testing |
+| **Development** | Preview themes | Developer testing via CLI |
 
 ---
 
@@ -109,7 +95,7 @@ Only **two** long-lived branches:
 | Branch | Purpose | Deploys To |
 |--------|---------|------------|
 | `main` | "What's live" - production code | Production store → Live theme |
-| `develop` | "What's coming next" - integrated, approved features | Staging store → Staging theme |
+| `develop` | "What's coming next" - integrated, approved features | Production store → RC theme |
 
 ### Short-Lived Branches
 
@@ -129,22 +115,22 @@ Only **two** long-lived branches:
 
 ### Automatic Deployments
 
-| Trigger | Source | Target Store | Target Theme | Purpose |
-|---------|--------|--------------|--------------|---------|
-| Push to `develop` | develop branch | Staging | Staging theme | QA/UAT environment |
-| Push to `main` | main branch | Production | Live theme | Customer-facing (requires approval) |
+| Trigger | Source | Target Theme | Purpose |
+|---------|--------|--------------|---------|
+| Push to `develop` | develop branch | RC theme | QA/UAT environment |
+| Push to `main` | main branch | Live theme | Customer-facing (requires approval) |
 
 ### Manual Deployments
 
-| Workflow | Default Ref | Target Store | Target Theme | Purpose |
-|----------|-------------|--------------|--------------|---------|
-| Deploy Release Candidate | `develop` | Production | RC theme | Final pre-release validation |
+| Workflow | Default Ref | Target Theme | Purpose |
+|----------|-------------|--------------|---------|
+| Deploy Release Candidate | `develop` | RC theme | On-demand RC deploy from any ref |
 
 ---
 
 ## 5. GitHub Actions Workflows
 
-### 5.1 deploy.yml – Staging + Production Live
+### 5.1 deploy.yml – RC + Production Live
 
 ```yaml
 name: Deploy Shopify themes
@@ -157,10 +143,9 @@ on:
 
 jobs:
   deploy-develop:
-    name: Deploy develop → staging store
+    name: Deploy develop → prod RC theme
     if: github.ref == 'refs/heads/develop'
     runs-on: ubuntu-latest
-    environment: staging
 
     steps:
       - name: Checkout repo
@@ -189,25 +174,29 @@ jobs:
 
       - name: Pull admin-managed files
         env:
-          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.STAGING_THEME_TOKEN }}
-          SHOPIFY_FLAG_STORE: ${{ secrets.STAGING_SHOPIFY_STORE }}
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.PROD_THEME_TOKEN }}
+          SHOPIFY_FLAG_STORE: ${{ secrets.PROD_SHOPIFY_STORE }}
         run: |
           echo "📥 Pulling admin-managed files (templates, EComposer, blocks)..."
-          shopify theme pull --theme ${{ secrets.STAGING_THEME_ID }} --path .
+          shopify theme pull --theme ${{ secrets.PROD_RC_THEME_ID }} --path .
           git checkout -- .
           echo "✅ Admin files preserved, tracked files restored to Git state"
 
-      - name: Deploy to staging store
+      - name: Deploy to prod RC theme
         env:
-          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.STAGING_THEME_TOKEN }}
-          SHOPIFY_FLAG_STORE: ${{ secrets.STAGING_SHOPIFY_STORE }}
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.PROD_THEME_TOKEN }}
+          SHOPIFY_FLAG_STORE: ${{ secrets.PROD_SHOPIFY_STORE }}
         run: |
-          echo "🚀 Deploying to staging store..."
+          echo "🚀 Deploying to RC theme on production store..."
           shopify theme push \
-            --theme ${{ secrets.STAGING_THEME_ID }} \
-            --nodelete \
-            --allow-live
-          echo "✅ Staging deployment complete"
+            --theme ${{ secrets.PROD_RC_THEME_ID }} \
+            --nodelete
+          echo "✅ RC deployment complete"
+          echo ""
+          echo "📋 Next steps:"
+          echo "   1. Test on production RC theme"
+          echo "   2. When approved, PR develop → main"
+          echo "   3. Merge and approve production deployment"
 
   deploy-main:
     name: Deploy main → prod live
@@ -280,7 +269,6 @@ jobs:
           TAG_NAME="v$(date +'%Y.%m.%d')-$(git rev-parse --short HEAD)"
           git tag -a $TAG_NAME -m "Production deployment on $(date)"
           git push origin $TAG_NAME
-          echo "✅ Created release tag: $TAG_NAME"
 ```
 
 ### 5.2 deploy-rc.yml – Manual RC Deploy
@@ -345,19 +333,11 @@ jobs:
 
 ### Required GitHub Secrets
 
-#### Staging Store
-
-| Secret | Description | Example |
-|--------|-------------|---------|
-| `STAGING_SHOPIFY_STORE` | Staging store URL | `client-staging.myshopify.com` |
-| `STAGING_THEME_TOKEN` | Theme Access token for staging | `shptka_xxxxx...` |
-| `STAGING_THEME_ID` | Staging theme ID | `123456789012` |
-
 #### Production Store
 
 | Secret | Description | Example |
 |--------|-------------|---------|
-| `PROD_SHOPIFY_STORE` | Production store URL | `client-prod.myshopify.com` |
+| `PROD_SHOPIFY_STORE` | Production store URL | `solutions-plus.myshopify.com` |
 | `PROD_THEME_TOKEN` | Theme Access token for prod | `shptka_xxxxx...` |
 | `PROD_LIVE_THEME_ID` | Live theme ID | `123456789013` |
 | `PROD_RC_THEME_ID` | Release Candidate theme ID | `123456789014` |
@@ -371,15 +351,12 @@ jobs:
 5. Enable: `read_themes`, `write_themes`
 6. Click **Install app** and copy the token
 
-> **Note:** Create separate tokens for staging and production stores.
-
 ### GitHub Environments
 
-Create these environments in GitHub repository settings:
+Create this environment in GitHub repository settings:
 
 | Environment | Protection Rules |
 |-------------|-----------------|
-| `staging` | None required |
 | `production` | Required reviewers (add team members who can approve) |
 
 ---
@@ -398,7 +375,7 @@ git checkout -b feature/TICKET-123-description
 
 # 3. Develop locally with Shopify CLI
 npm run dev
-# or: shopify theme dev --store client-staging.myshopify.com
+# This connects to the production store for local development
 
 # 4. Push and create PR to develop
 git push origin feature/TICKET-123-description
@@ -407,18 +384,9 @@ git push origin feature/TICKET-123-description
 
 ### QA & UAT Process
 
-1. **Merge to develop** triggers auto-deploy to staging store
-2. **QA team** tests on staging store
-3. **Client/stakeholder** approves on staging store (UAT)
-
-### Pre-Release (RC) Validation
-
-1. After staging approval, run **Deploy Release Candidate** workflow
-2. Test on RC theme in production store:
-   - Real apps and integrations
-   - Real payment gateways
-   - Production data (but not live theme)
-3. Verify everything works on production infrastructure
+1. **Merge to develop** triggers auto-deploy to RC theme
+2. **QA team** tests on RC theme (preview the RC theme in Shopify Admin)
+3. **Client/stakeholder** approves on RC theme
 
 ### Go Live
 
@@ -560,7 +528,7 @@ This eliminates the need for custom sync workflows.
 1. **Connect theme to GitHub** in Shopify Admin → Online Store → Themes → Edit code → Connect to GitHub
 2. **Select the appropriate branch**:
    - Production live theme → `main` branch
-   - Staging theme → `develop` branch
+   - RC theme → `develop` branch
 3. **Ensure branch protection** allows Shopify's commits
 
 ### Benefits Over Custom Sync Workflows
@@ -686,21 +654,17 @@ shopify theme push --theme THEME_ID --allow-live
 | Branch | Purpose | Auto-Deploy? | Target |
 |--------|---------|--------------|--------|
 | `feature/*` | Work in progress | No | — |
-| `develop` | Approved, ready for QA | Yes | Staging store |
-| `main` | Production releases | Yes (with approval) | Production live |
+| `develop` | Approved, ready for QA | Yes | RC theme |
+| `main` | Production releases | Yes (with approval) | Live theme |
 
 ### Deployment Flow
 
 ```
-feature/* ──PR──▶ develop ──auto──▶ Staging Store
-                     │
-                     │ (manual RC deploy for pre-release check)
-                     ▼
-              Production RC Theme
+feature/* ──PR──▶ develop ──auto──▶ RC Theme (QA/UAT)
                      │
                      │ (PR + approval)
                      ▼
-                   main ──auto──▶ Production Live Theme
+                   main ──auto──▶ Live Theme
 ```
 
 ### Key Commands
@@ -710,9 +674,8 @@ feature/* ──PR──▶ develop ──auto──▶ Staging Store
 git checkout develop && git pull
 git checkout -b feature/TICKET-123-description
 
-# Local development
+# Local development (connects to production store)
 npm run dev
-# or: shopify theme dev --store staging-store.myshopify.com
 
 # Sync long-running branch
 git checkout develop && git pull
@@ -728,9 +691,6 @@ git checkout -b hotfix/critical-fix
 
 ### Secrets Checklist
 
-- [ ] `STAGING_SHOPIFY_STORE`
-- [ ] `STAGING_THEME_TOKEN`
-- [ ] `STAGING_THEME_ID`
 - [ ] `PROD_SHOPIFY_STORE`
 - [ ] `PROD_THEME_TOKEN`
 - [ ] `PROD_LIVE_THEME_ID`
@@ -738,7 +698,6 @@ git checkout -b hotfix/critical-fix
 
 ### Environment Checklist
 
-- [ ] `staging` environment created
 - [ ] `production` environment created with required reviewers
 
 ---
@@ -746,6 +705,14 @@ git checkout -b hotfix/critical-fix
 ## 13. Project-Specific Deviations
 
 This project has intentional deviations from the standard guide:
+
+### Single-Store Architecture
+
+**Standard Guide:** Recommends separate staging and production stores for full environment isolation.
+
+**This Project:** Uses a **single production store** with Live and RC themes.
+
+**Rationale:** Solutions Plus does not have a separate staging store. The RC theme provides adequate pre-release testing while keeping the workflow simple.
 
 ### Templates Not Tracked in Git
 
@@ -771,6 +738,5 @@ This works well when:
 - **Shopify CLI**: [shopify.dev/docs/api/shopify-cli](https://shopify.dev/docs/api/shopify-cli)
 - **Theme Check**: [shopify.dev/docs/themes/tools/theme-check](https://shopify.dev/docs/themes/tools/theme-check)
 - **GitHub Actions**: [docs.github.com/en/actions](https://docs.github.com/en/actions)
-
 
 

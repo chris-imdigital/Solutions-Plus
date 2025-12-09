@@ -8,10 +8,9 @@ on:
 
 jobs:
   deploy-develop:
-    name: Deploy develop → staging store
+    name: Deploy develop → prod RC theme
     if: github.ref == 'refs/heads/develop'
     runs-on: ubuntu-latest
-    environment: staging
 
     steps:
       - name: Checkout repo
@@ -40,25 +39,29 @@ jobs:
 
       - name: Pull admin-managed files
         env:
-          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.STAGING_THEME_TOKEN }}
-          SHOPIFY_FLAG_STORE: ${{ secrets.STAGING_SHOPIFY_STORE }}
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.PROD_THEME_TOKEN }}
+          SHOPIFY_FLAG_STORE: ${{ secrets.PROD_SHOPIFY_STORE }}
         run: |
           echo "📥 Pulling admin-managed files (templates, EComposer, blocks)..."
-          shopify theme pull --theme ${{ secrets.STAGING_THEME_ID }} --path .
+          shopify theme pull --theme ${{ secrets.PROD_RC_THEME_ID }} --path .
           git checkout -- .
           echo "✅ Admin files preserved, tracked files restored to Git state"
 
-      - name: Deploy to staging store
+      - name: Deploy to prod RC theme
         env:
-          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.STAGING_THEME_TOKEN }}
-          SHOPIFY_FLAG_STORE: ${{ secrets.STAGING_SHOPIFY_STORE }}
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.PROD_THEME_TOKEN }}
+          SHOPIFY_FLAG_STORE: ${{ secrets.PROD_SHOPIFY_STORE }}
         run: |
-          echo "🚀 Deploying to staging store..."
+          echo "🚀 Deploying to RC theme on production store..."
           shopify theme push \
-            --theme ${{ secrets.STAGING_THEME_ID }} \
-            --nodelete \
-            --allow-live
-          echo "✅ Staging deployment complete"
+            --theme ${{ secrets.PROD_RC_THEME_ID }} \
+            --nodelete
+          echo "✅ RC deployment complete"
+          echo ""
+          echo "📋 Next steps:"
+          echo "   1. Test on production RC theme"
+          echo "   2. When approved, PR develop → main"
+          echo "   3. Merge and approve production deployment"
 
   deploy-main:
     name: Deploy main → prod live

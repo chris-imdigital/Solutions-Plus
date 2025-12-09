@@ -43,15 +43,6 @@ sections/ecom-*.liquid
 assets/ecom-*.css
 assets/ecom-*.js
 
-# AI-generated blocks - Managed in Shopify Admin
-blocks/ai_gen_block_*.liquid
-
-# App-managed template files
-# Managed externally (Shogun, Bloggle, EComposer) - preserved on deploy
-templates/*.shogun.*.liquid
-templates/*bloggle*.liquid
-templates/*.ecom*.liquid
-
 # Templates with admin customizations
 # These are managed via Theme Editor and preserved during deployment
 templates/**/*.json

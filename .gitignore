@@ -35,12 +35,6 @@ assets/*.min.js.map
 !assets/lib-*.min.js
 !assets/lib-*.min.js.map
 
-# AI-generated blocks from Shopify #
-#####################################
-# Only AI-generated blocks are ignored (e.g., ai_gen_block_*.liquid)
-# Regular theme blocks ARE tracked (they're real code)
-blocks/ai_gen_block_*.liquid
-
 # Templates with admin customizations #
 ########################################
 # Templates are customized via Shopify Admin and should not be overwritten
@@ -48,21 +42,6 @@ blocks/ai_gen_block_*.liquid
 
 # Templates with admin customizations (including subfolders)
 templates/**/*.json
-
-# App-managed template files #
-###############################
-# Templates created by page builder and app extensions
-# Managed externally (Shogun, Bloggle, EComposer) - not tracked + ignored on deploy
-templates/*.shogun.*.liquid
-templates/*bloggle*.liquid
-templates/*.ecom*.liquid
-
-# EComposer App Files #
-########################
-# EComposer manages these files - preserved during deployment
-sections/ecom-*.liquid
-assets/ecom-*.css
-assets/ecom-*.js
 
 # Backup directories created by workflows #
 ############################################

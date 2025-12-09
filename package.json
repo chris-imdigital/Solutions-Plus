@@ -12,9 +12,7 @@
     "js:build": "node esbuild.config.js",
     "js:watch": "node esbuild.config.js --watch",
     "js": "npm run js:build",
-    "dev": "concurrently \"npm run css:watch\" \"npm run js:watch\" \"shopify theme dev\"",
-    "dev:staging": "concurrently \"npm run css:watch\" \"npm run js:watch\" \"shopify theme dev --store=$STAGING_STORE\"",
-    "dev:prod": "concurrently \"npm run css:watch\" \"npm run js:watch\" \"shopify theme dev --store=$PROD_STORE\"",
+    "dev": "concurrently \"npm run css:watch\" \"npm run js:watch\" \"shopify theme dev --store=$PROD_STORE\"",
     "build": "NODE_ENV=production npm run css:build && npm run js:build"
   },
   "dependencies": {
