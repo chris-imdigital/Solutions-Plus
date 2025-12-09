@@ -1,4 +1,8 @@
+{% doc %}
+  Renders the blog post info text (date and author).
 
+  @param {string} [alignment] - Text alignment override (defaults to block.settings.alignment)
+{% enddoc %}
 
 {% assign alignment = alignment | default: block.settings.alignment %}
 

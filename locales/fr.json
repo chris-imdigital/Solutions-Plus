@@ -232,6 +232,8 @@
     "account_orders": "Commandes",
     "account_profile": "Profil",
     "discount_code": "Code de réduction",
+    "discount_code_error": "Le code de réduction ne peut pas être appliqué à votre panier",
+    "shipping_policy": "Expédition calculée lors du paiement.",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "Droits de douane et taxes inclus. L’expédition est calculée lors du paiement.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy_without_discounts": "Droits de douane et taxes inclus. L’expédition est calculée lors du paiement.",
     "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_without_discounts_html": "Droits de douane inclus. L’expédition est calculée lors du paiement.",
