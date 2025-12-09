@@ -143,7 +143,9 @@
     "enter_password": "Introducir la contraseña",
     "view_store_information": "Ver la información de la tienda",
     "apply": "Aplicar",
-    "open_image_in_full_screen": "Abrir imagen a pantalla completa"
+    "open_image_in_full_screen": "Abrir imagen a pantalla completa",
+    "sign_in_options": "Otras opciones de inicio de sesión",
+    "sign_up": "Registrarse"
   },
   "content": {
     "reviews": "reseñas",
@@ -229,6 +231,7 @@
     "account_orders": "Pedidos",
     "account_profile": "Perfil",
     "discount_code": "Código de descuento",
+    "discount_code_error": "El código de descuento no se puede aplicar a tu carrito",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "Aranceles e impuestos incluidos. Los gastos de envío se calculan en la página de pago.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy_without_discounts": "Aranceles e impuestos incluidos. Los gastos de envío se calculan en la página de pago.",
     "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_without_discounts_html": "Aranceles incluidos. Los gastos de envío se calculan en la página de pago.",
@@ -245,7 +248,11 @@
     "view_more_details": "Ver más información",
     "page_placeholder_title": "Título de la página",
     "page_placeholder_content": "Selecciona una página para mostrar su contenido.",
-    "placeholder_image": "Imagen marcadora de posición"
+    "placeholder_image": "Imagen marcadora de posición",
+    "inventory_low_stock": "Pocas unidades",
+    "inventory_in_stock": "En stock",
+    "inventory_out_of_stock": "Agotado",
+    "shipping_policy": "El envío se calcula en la página de pago."
   },
   "gift_cards": {
     "issued": {
@@ -272,7 +279,9 @@
       "add_to_cart": "Agregar al carrito",
       "added_to_cart": "Agregado al carrito",
       "adding_to_cart": "Agregando...",
-      "add_to_cart_error": "Error al agregar al carrito"
+      "add_to_cart_error": "Error al agregar al carrito",
+      "sold_out": "Agotado",
+      "unavailable": "No disponible"
     }
   },
   "fields": {
