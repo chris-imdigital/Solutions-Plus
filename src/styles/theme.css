@@ -1,0 +1,26 @@
+/**
+ * Solutions Plus Theme - Main CSS Entry Point
+ * 
+ * This file is processed by PostCSS to generate assets/theme.css
+ * Run `npm run build` or `npm run css:watch` to compile
+ */
+
+/* Tailwind CSS Layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Custom Component Styles
+ * Add theme-specific component styles below
+ */
+
+/* Example: Custom button variants */
+@layer components {
+  /* Add custom component classes here */
+}
+
+/* Example: Custom utility classes */
+@layer utilities {
+  /* Add custom utility classes here */
+}

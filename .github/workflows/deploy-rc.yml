@@ -1,0 +1,57 @@
+name: Deploy Release Candidate to Prod
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 'Git ref to deploy (branch, tag, or commit)'
+        required: false
+        default: 'develop'
+
+jobs:
+  deploy-rc:
+    name: Deploy to prod RC theme
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.ref }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build assets
+        run: npm run build
+
+      - name: Install Shopify CLI
+        run: npm install -g @shopify/cli
+
+      - name: Validate theme files
+        run: |
+          echo "🔍 Validating Liquid templates for RC deployment..."
+          shopify theme check --fail-level error --output=text
+          echo "✅ Validation complete"
+
+      - name: Deploy to prod RC theme
+        env:
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.PROD_THEME_TOKEN }}
+          SHOPIFY_FLAG_STORE: ${{ secrets.PROD_SHOPIFY_STORE }}
+        run: |
+          echo "🚀 Deploying to RC theme on production store..."
+          shopify theme push \
+            --theme ${{ secrets.PROD_RC_THEME_ID }} \
+            --nodelete
+          echo "✅ RC deployment complete"
+          echo ""
+          echo "📋 Next steps:"
+          echo "   1. Test on production RC theme"
+          echo "   2. When approved, PR develop → main"
+          echo "   3. Merge and approve production deployment"
