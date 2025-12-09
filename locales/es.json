@@ -106,7 +106,8 @@
     "discount": "Aplicar un código de descuento",
     "discount_applied": "Aplicar código de descuento: {{ code }}",
     "open_cart_drawer": "Abrir el carrito lateral",
-    "pause_video": "Pausar el video"
+    "pause_video": "Pausar el video",
+    "inventory_status": "Estado de inventario"
   },
   "actions": {
     "add_to_cart": "Agregar al carrito",
