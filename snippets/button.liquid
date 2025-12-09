@@ -1,8 +1,12 @@
 {% doc %}
+  Renders a button or link element.
   Intended for use in a block similar to the button block.
 
-  @param {string} link - link to render, will override settings.link
-  @param {object} [block] - The block
+  Note: This snippet uses the `block` object from the parent block context.
+  When rendered from a block file, `block` is automatically available in scope.
+
+  @param {string} [link] - Link URL (defaults to block.settings.link)
+  @param {object} [block] - The parent block object (available automatically in block context)
 
   @example
   {% render 'button', link: '/collections/all' %}

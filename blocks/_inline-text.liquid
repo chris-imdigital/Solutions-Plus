@@ -1,4 +1,8 @@
+{% doc %}
+  Renders inline text with custom typography.
 
+  @param {string} [suffix] - Optional suffix to append after the text
+{% enddoc %}
 
 {% assign plain_text = block.settings.text | strip_newlines | strip_html | strip %}
 

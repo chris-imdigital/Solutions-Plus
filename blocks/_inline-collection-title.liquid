@@ -1,4 +1,8 @@
+{% doc %}
+  Renders an inline collection title with custom typography.
 
+  @param {string} [suffix] - Optional suffix to append after the collection title
+{% enddoc %}
 
 {% if block.settings.collection == blank and request.design_mode %}
   {% assign collection_title = 'placeholders.collection_title' | t %}

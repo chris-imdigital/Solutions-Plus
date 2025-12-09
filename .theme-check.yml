@@ -1,0 +1,55 @@
+# Theme Check Configuration
+# https://shopify.dev/docs/storefronts/themes/tools/theme-check/configuration
+
+# Extends Shopify's recommended checks
+extends:
+  - theme-check:recommended
+
+# Paths to ignore
+ignore:
+  - 'node_modules/**'
+
+# =============================================================================
+# Check Configuration
+# =============================================================================
+
+# UndefinedObject: For blocks using content_for parameters
+# This check validates that variables are declared via assign, capture, or @param
+UndefinedObject:
+  enabled: true
+  severity: warning
+
+# Snippet argument validation
+# Ensures render tags include all required @param arguments from LiquidDoc
+MissingRenderSnippetArguments:
+  enabled: true
+  severity: warning
+
+# Validates that arguments passed to render match declared @param in LiquidDoc
+UnrecognizedRenderSnippetArguments:
+  enabled: true
+  severity: warning
+
+# RemoteAsset: False positive for skip-to-content anchor links
+# The href="#MainContent" is not a remote asset, it's an internal anchor
+RemoteAsset:
+  enabled: true
+  severity: warning
+  ignore:
+    - 'layout/*.liquid'
+
+# HardcodedRoutes: Prefer routes object over hardcoded paths
+HardcodedRoutes:
+  enabled: true
+  severity: warning
+
+# Translation checks - keep strict for production quality
+MatchingTranslations:
+  enabled: true
+  severity: error
+
+# App blocks only exist when apps are installed on the store
+# They won't be present in the theme repo
+JSONMissingBlock:
+  enabled: true
+  severity: warning

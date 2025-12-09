@@ -1,8 +1,11 @@
+{% doc %}
+  Renders a heading block with customizable typography.
 
+  @param {string} [text] - Fallback text if block.settings.text is empty
+{% enddoc %}
 
 {% render 'text', width: '100%', block: block, fallback_text: text %}
 
-{% # theme-check-disable %}
 {% schema %}
 {
   "name": "t:names.heading",
@@ -330,4 +333,3 @@
   ]
 }
 {% endschema %}
-{% # theme-check-enable %}
