@@ -137,6 +137,13 @@ export class QuickAddComponent extends Component {
       productHeader.appendChild(productPrice);
       productGrid.appendChild(productHeader);
       productGrid.appendChild(variantPicker);
+
+      // Extract custom engraving inputs before removing product details
+      const engravingInputs = productDetails.querySelector('.custom-engraving-inputs');
+      if (engravingInputs) {
+        productGrid.appendChild(engravingInputs);
+      }
+
       productGrid.appendChild(productFormComponent);
       productDetails.remove();
     }

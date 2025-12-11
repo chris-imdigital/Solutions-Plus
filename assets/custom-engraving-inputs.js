@@ -54,3 +54,11 @@ if (document.readyState === 'loading') {
 document.addEventListener('shopify:section:load', () => {
   new CustomEngravingInputs();
 });
+
+// Re-initialize when quick-add dialog opens (inputs are morphed into modal)
+document.addEventListener('dialog:open', (event) => {
+  if (event.target?.id === 'quick-add-dialog') {
+    // Small delay to ensure morph is complete
+    requestAnimationFrame(() => new CustomEngravingInputs());
+  }
+});
