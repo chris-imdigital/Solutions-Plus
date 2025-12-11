@@ -221,21 +221,6 @@
               },
               "blocks": {}
             },
-            "custom_engraving_inputs_HWLaGR": {
-              "type": "custom-engraving-inputs",
-              "name": "Custom engraving inputs",
-              "settings": {
-                "product": "{{ closest.product }}",
-                "heading": "Custom engraving",
-                "placeholder": "Enter text",
-                "required": false,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
             "buy_buttons_eYQEYi": {
               "type": "buy-buttons",
               "settings": {
@@ -611,7 +596,6 @@
             "divider_VJhene",
             "discount_kit_product_volume_9PC87G",
             "variant_picker_R3rGDr",
-            "custom_engraving_inputs_HWLaGR",
             "buy_buttons_eYQEYi",
             "divider_eN4qzW",
             "text_7PdjBn",
