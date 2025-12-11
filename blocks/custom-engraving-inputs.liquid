@@ -4,8 +4,8 @@
     assign product = collections.all.products.first
   endif
 
-  assign num_lines = product.metafields.custom.custom_engraving_inputs.value | default: 0
-  assign char_limit = product.metafields.custom.custom_line_character_limit.value | default: 0
+  assign num_lines = product.metafields.custom.custom_engraving_inputs.value | default: 0 | plus: 0
+  assign char_limit = product.metafields.custom.custom_line_character_limit.value | default: 0 | plus: 0
   assign product_form_id = 'BuyButtons-ProductForm-' | append: section.id
 %}
 
