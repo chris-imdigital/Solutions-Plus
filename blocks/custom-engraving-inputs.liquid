@@ -88,20 +88,21 @@
       <p class="custom-engraving-inputs__heading">{{ block.settings.heading }}</p>
     {% endif %}
 
+    {%- assign line_label = block.settings.line_label | default: 'Engraving Line' -%}
     {% for i in (1..num_lines) %}
       <div class="custom-engraving-inputs__field">
         <label
           class="custom-engraving-inputs__label"
           for="engraving-line-{{ i }}-{{ section.id }}"
         >
-          {{ 'Line' }} {{ i }}
+          {{ line_label }} {{ i }}
           {% if block.settings.required %}<span aria-hidden="true">*</span>{% endif %}
         </label>
         <div class="custom-engraving-inputs__input-wrapper">
           <input
             type="text"
             id="engraving-line-{{ i }}-{{ section.id }}"
-            name="properties[Line {{ i }}]"
+            name="properties[{{ line_label }} {{ i }}]"
             form="{{ product_form_id }}"
             class="custom-engraving-inputs__input"
             placeholder="{{ block.settings.placeholder }}"
@@ -147,6 +148,13 @@
       "id": "heading",
       "label": "Heading",
       "default": "Custom engraving"
+    },
+    {
+      "type": "text",
+      "id": "line_label",
+      "label": "Line label (shown in cart)",
+      "default": "Engraving Line",
+      "info": "This label appears before the line number in cart and checkout (e.g. 'Engraving Line 1')"
     },
     {
       "type": "text",
