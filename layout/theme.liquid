@@ -1,9 +1,14 @@
+{%- comment %}<locksmith:b210>{% endcomment -%}
+  {%- include 'locksmith' -%}
+{%- comment %}</locksmith:b210>{% endcomment -%}
+
 <!doctype html>
 <html
   class="no-js{% if request.design_mode %} shopify-design-mode{% endif %}"
   lang="{{ request.locale.iso_code }}"
 >
   <head>
+    {{ locksmith_initializations }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
 
     {%- if settings.favicon != blank -%}
