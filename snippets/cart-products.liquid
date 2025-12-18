@@ -107,6 +107,19 @@
     display: inline-block;
   }
 
+  .cart-items__properties {
+    display: flex;
+    gap: 0.25em;
+  }
+
+  .cart-items__properties dt {
+    font-weight: 500;
+  }
+
+  .cart-items__properties dd {
+    margin: 0;
+  }
+
   .cart-items__quantity {
     grid-area: quantity;
     margin-block-start: var(--margin-xs);
@@ -584,7 +597,7 @@
                         {%- assign property_first_char = property.first | slice: 0 -%}
                         {%- if property.last != blank and property_first_char != '_' -%}
                           <div class="cart-items__properties">
-                            <dt class="visually-hidden">{{ property.first }}:</dt>
+                            <dt>{{ property.first }}:</dt>
                             <dd>
                               {%- if property.last contains '/uploads/' -%}
                                 <a href="{{ property.last }}">{{ property.last | split: '/' | last }}</a>

@@ -1,0 +1,226 @@
+{% liquid
+  assign product = block.settings.product
+  if request.visual_preview_mode and product == blank
+    assign product = collections.all.products.first
+  endif
+
+  assign num_lines = product.metafields.custom.custom_engraving_inputs.value | default: 0 | plus: 0
+  assign char_limit = product.metafields.custom.custom_line_character_limit.value | default: 0 | plus: 0
+  assign product_form_id = 'BuyButtons-ProductForm-' | append: section.id
+%}
+
+{% stylesheet %}
+  .custom-engraving-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+    width: 100%;
+  }
+
+  .custom-engraving-inputs__heading {
+    font-family: var(--font-body--family);
+    font-size: var(--font-size--md);
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .custom-engraving-inputs__field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs);
+  }
+
+  .custom-engraving-inputs__label {
+    font-family: var(--font-body--family);
+    font-size: var(--font-size--sm);
+    font-weight: 500;
+  }
+
+  .custom-engraving-inputs__input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .custom-engraving-inputs__input {
+    width: 100%;
+    padding: var(--padding-sm) var(--padding-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--input-border-radius, 0);
+    font-family: var(--font-body--family);
+    font-size: var(--font-size--md);
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    transition: border-color 0.2s ease;
+  }
+
+  .custom-engraving-inputs__input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+  }
+
+  .custom-engraving-inputs__input::placeholder {
+    color: var(--color-foreground);
+    opacity: 0.5;
+  }
+
+  .custom-engraving-inputs__char-count {
+    font-family: var(--font-body--family);
+    font-size: var(--font-size--xs);
+    color: var(--color-foreground);
+    opacity: 0.7;
+    text-align: right;
+  }
+
+  .custom-engraving-inputs__char-count--limit {
+    color: var(--color-error, #dc2626);
+    opacity: 1;
+  }
+{% endstylesheet %}
+
+{% if num_lines > 0 %}
+  <div
+    class="custom-engraving-inputs spacing-style"
+    style="{% render 'spacing-style', settings: block.settings %}"
+    {{ block.shopify_attributes }}
+  >
+    {% if block.settings.heading != blank %}
+      <p class="custom-engraving-inputs__heading">{{ block.settings.heading }}</p>
+    {% endif %}
+
+    {%- assign line_label = block.settings.line_label | default: 'Engraving Line' -%}
+    {% for i in (1..num_lines) %}
+      <div class="custom-engraving-inputs__field">
+        <label
+          class="custom-engraving-inputs__label"
+          for="engraving-line-{{ i }}-{{ section.id }}"
+        >
+          {{ line_label }} {{ i }}
+          {% if block.settings.required %}<span aria-hidden="true">*</span>{% endif %}
+        </label>
+        <div class="custom-engraving-inputs__input-wrapper">
+          <input
+            type="text"
+            id="engraving-line-{{ i }}-{{ section.id }}"
+            name="properties[{{ line_label }} {{ i }}]"
+            form="{{ product_form_id }}"
+            class="custom-engraving-inputs__input"
+            placeholder="{{ block.settings.placeholder }}"
+            {% if char_limit > 0 %}
+              maxlength="{{ char_limit }}"
+              data-char-limit="{{ char_limit }}"
+            {% endif %}
+            {% if block.settings.required %}required{% endif %}
+            autocomplete="off"
+          >
+          {% if char_limit > 0 %}
+            <span
+              class="custom-engraving-inputs__char-count"
+              data-char-count-for="engraving-line-{{ i }}-{{ section.id }}"
+            >
+              <span data-current-count>0</span> / {{ char_limit }}
+            </span>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  <script src="{{ 'custom-engraving-inputs.js' | asset_url }}" type="module"></script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Custom engraving inputs",
+  "tag": null,
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Number of input lines is controlled by the product metafield: custom.custom_engraving_inputs"
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "t:settings.product"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Custom engraving"
+    },
+    {
+      "type": "text",
+      "id": "line_label",
+      "label": "Line label (shown in cart)",
+      "default": "Engraving Line",
+      "info": "This label appears before the line number in cart and checkout (e.g. 'Engraving Line 1')"
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Input placeholder",
+      "default": "Enter text"
+    },
+    {
+      "type": "checkbox",
+      "id": "required",
+      "label": "Require input",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "t:settings.left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "t:settings.right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom engraving inputs",
+      "category": "t:categories.product",
+      "settings": {
+        "product": "{{ closest.product }}"
+      }
+    }
+  ]
+}
+{% endschema %}

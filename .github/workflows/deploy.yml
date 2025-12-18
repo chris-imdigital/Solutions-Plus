@@ -365,6 +365,8 @@ jobs:
     if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'production'))
     runs-on: ubuntu-latest
     environment: production  # Requires manual approval
+    permissions:
+      contents: write  # Required for pushing git tags
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
