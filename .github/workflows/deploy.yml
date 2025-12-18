@@ -51,6 +51,7 @@ jobs:
 
       - name: Build assets (CSS + JS)
         run: |
+          set -e
           echo "🏗️ Building CSS and JavaScript..."
           npm run build
           echo "✅ Build complete (CSS + JS minified)"
@@ -217,6 +218,7 @@ jobs:
 
       - name: Build assets (CSS + JS)
         run: |
+          set -e
           echo "🏗️ Building CSS and JavaScript..."
           npm run build
           echo "✅ Build complete (CSS + JS minified)"
@@ -389,7 +391,12 @@ jobs:
           NODE_ENV=production npm run build
           echo "✅ Production build complete (CSS + JS minified)"
           echo "📦 Output files:"
-          ls -lh assets/theme.css assets/*.min.js | awk '{print "   " $9 " - " $5}'
+          ls -lh assets/theme.css 2>/dev/null || echo "   (theme.css not found)"
+          if ls assets/*.min.js 1>/dev/null 2>&1; then
+            ls -lh assets/*.min.js | awk '{print "   " $9 " - " $5}'
+          else
+            echo "   (No .min.js files - no JS files in src/scripts/)"
+          fi
 
       - name: Install Shopify CLI
         run: |
