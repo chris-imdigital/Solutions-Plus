@@ -5,7 +5,7 @@ on:
     branches:
       - staging
       - develop
-      - master
+      - main
   workflow_dispatch:
     inputs:
       environment:
@@ -362,7 +362,7 @@ jobs:
           echo "🔗 Develop deployment completed."
 
   deploy_production:
-    if: github.ref == 'refs/heads/master' && (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'production'))
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'production'))
     runs-on: ubuntu-latest
     environment: production  # Requires manual approval
     steps:
@@ -528,7 +528,7 @@ jobs:
           
           # Store the current commit SHA for conflict detection
           BEFORE_PULL_SHA=$(git rev-parse HEAD)
-          echo "📌 Current master commit: $BEFORE_PULL_SHA"
+          echo "📌 Current main commit: $BEFORE_PULL_SHA"
           
           # Identify files that are being deployed (changed in this commit)
           # Compare HEAD with previous commit to see what's being deployed
@@ -818,7 +818,7 @@ jobs:
           echo "⚠️  This will update the live theme!"
           echo ""
           echo "✅ Current working directory contains:"
-          echo "   - All code changes (from master branch)"
+          echo "   - All code changes (from main branch)"
           echo "   - All admin-managed files (templates, EComposer, blocks) pulled from Shopify"
           echo "   - Admin files are safe to deploy because they're in .gitignore"
           echo ""
@@ -843,7 +843,7 @@ jobs:
           echo "🌐 Live store: https://${{ secrets.SHOPIFY_STORE }}"
 
   create_release_tag:
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     needs: deploy_production
     runs-on: ubuntu-latest
     permissions:
@@ -897,4 +897,3 @@ jobs:
           **Deployed on:** '"$(date)"'
           **Commit:** ${{ github.sha }}
           **Environment:** production'
-

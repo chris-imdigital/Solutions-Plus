@@ -13,14 +13,21 @@ const entryPoints = globSync('src/scripts/**/*.js');
 // Check if running in watch mode
 const isWatch = process.argv.includes('--watch');
 
+// If no entry points, exit gracefully
+if (entryPoints.length === 0) {
+  console.log('📦 No JavaScript files found in src/scripts/ - skipping JS build');
+  process.exit(0);
+}
+
 // Common build options
 const buildOptions = {
   entryPoints,
   outdir: 'assets',
-  bundle: false, // Don't bundle - keep separate files for Shopify
-  minify: true,
-  sourcemap: true,
-  target: 'es2020',
+  bundle: true,
+  minify: process.env.NODE_ENV === 'production',
+  sourcemap: process.env.NODE_ENV !== 'production',
+  target: ['es2020'],
+  format: 'iife',
   outExtension: { '.js': '.min.js' }, // Output as .min.js
   logLevel: 'info',
 };
@@ -50,4 +57,3 @@ async function build() {
 }
 
 build();
-

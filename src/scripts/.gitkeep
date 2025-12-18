@@ -1,0 +1,6 @@
+# This directory contains custom JavaScript source files
+# Files here are compiled by esbuild to assets/*.min.js
+# 
+# Example usage:
+# Create a file like src/scripts/custom-feature.js
+# It will be compiled to assets/custom-feature.min.js

@@ -1,8 +1,8 @@
 {
-  "name": "bestway",
+  "name": "solutions-plus-theme",
   "version": "1.0.0",
   "private": true,
-  "description": "Bestway website",
+  "description": "Solutions Plus Shopify Theme",
   "main": "index.js",
   "scripts": {
     "dev-init": "npm install && echo '\n✅ Dependencies installed! Run npm run dev to start development.\n'",
@@ -12,7 +12,7 @@
     "js:build": "node esbuild.config.js",
     "js:watch": "node esbuild.config.js --watch",
     "js": "npm run js:build",
-    "dev": "concurrently \"npm run css:watch\" \"npm run js:watch\" \"shopify theme dev --store=acjpp0-dk.myshopify.com --store-password=shothi\"",
+    "dev": "concurrently \"npm run css:watch\" \"npm run js:watch\" \"shopify theme dev --store=$PROD_STORE\"",
     "build": "NODE_ENV=production npm run css:build && npm run js:build"
   },
   "dependencies": {
