@@ -1,43 +1,20 @@
-name: Shopify Theme Deployment
+name: Deploy Shopify themes
 
 on:
   push:
     branches:
-      - staging
       - develop
       - main
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: 'Environment to deploy to'
-        required: true
-        default: 'staging'
-        type: choice
-        options:
-          - staging
-          - develop
-          - production
-      allow_deploy_without_backup:
-        description: 'Allow deployment even if backup fails (NOT RECOMMENDED for production)'
-        required: false
-        default: false
-        type: boolean
-      ignore_conflicts:
-        description: 'Ignore conflicts and deploy Git version (use when Git is correct and production is outdated)'
-        required: false
-        default: false
-        type: boolean
 
 jobs:
-  deploy_staging:
-    if: github.ref == 'refs/heads/staging' || (github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'staging')
+  deploy-develop:
+    name: Deploy develop → prod RC theme
+    if: github.ref == 'refs/heads/develop'
     runs-on: ubuntu-latest
-    environment: staging
+
     steps:
-      - name: Checkout code
+      - name: Checkout repo
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 2  # Need at least 2 commits to compare
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -46,334 +23,57 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        if: ${{ hashFiles('**/package.json') != '' }}
         run: npm ci
 
-      - name: Build assets (CSS + JS)
-        run: |
-          set -e
-          echo "🏗️ Building CSS and JavaScript..."
-          npm run build
-          echo "✅ Build complete (CSS + JS minified)"
+      - name: Build assets
+        run: npm run build
 
       - name: Install Shopify CLI
-        run: |
-          npm install -g @shopify/cli
+        run: npm install -g @shopify/cli
 
       - name: Validate theme files
         run: |
-          echo "🔍 Validating Liquid templates for staging..."
-          echo "==========================================="
-          
-          # SHOPIFY OFFICIAL VALIDATION - Only validate changed files
-          echo "🧪 Running Shopify validation on changed files..."
-          
-          # Get list of changed files
-          if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
-            echo "📋 Getting changed files from PR..."
-            changed_files=$(git diff --name-only origin/${{ github.base_ref }}...HEAD 2>/dev/null || git diff --name-only HEAD~1 HEAD 2>/dev/null || git show --pretty="" --name-only HEAD)
-          else
-            echo "📋 Getting changed files from push..."
-            # Try different approaches for getting changed files
-            if git diff --name-only HEAD~1 HEAD >/dev/null 2>&1; then
-              changed_files=$(git diff --name-only HEAD~1 HEAD)
-            elif git show --pretty="" --name-only HEAD >/dev/null 2>&1; then
-              echo "🔄 Using commit changes (no previous commit available)..."
-              changed_files=$(git show --pretty="" --name-only HEAD)
-            else
-              echo "⚠️  Cannot determine changed files, running full validation..."
-              echo "📋 Running Shopify Theme Check..."
-              if ! shopify theme check --fail-level error --output=text; then
-                echo "❌ SHOPIFY VALIDATION FAILED!"
-                echo "🚨 Deploy BLOCKED due to Shopify validation errors!"
-                echo "   Fix all issues reported by Shopify Theme Check above."
-                exit 1
-              else
-                echo "✅ Shopify validation passed!"
-                echo "📊 All Shopify checks completed successfully"
-              fi
-              exit 0
-            fi
-          fi
-          
-          echo "🔍 Files changed in this commit:"
-          echo "$changed_files" | grep -E "\.(json|liquid)$" || echo "No JSON/Liquid files changed"
-          
-          # Check if any theme files were changed
-          theme_files=$(echo "$changed_files" | grep -E "\.(json|liquid)$" || true)
-          if [ -z "$theme_files" ]; then
-            echo "ℹ️  No theme files changed - skipping validation"
-          else
-            echo "📋 Running Shopify Theme Check and filtering for changed files..."
-            
-            # Run theme check on entire theme and filter for changed files
-            validation_failed=false
-            
-            echo "🔍 Running full Theme Check..."
-            if ! shopify theme check --fail-level error --output=text > theme_check_output.log 2>&1; then
-              echo "📋 Theme Check found issues, checking if they affect changed files..."
-              
-              # Check if any changed files have ERRORS (not warnings)
-              for file in $theme_files; do
-                if grep "\[error\]" theme_check_output.log | grep -q "$file"; then
-                  echo "❌ ERROR found in changed file: $file"
-                  echo "📋 Details:"
-                  grep "\[error\]" theme_check_output.log | grep -A5 -B2 "$file" || true
-                  validation_failed=true
-                elif grep "$file" theme_check_output.log | grep -q "\[warning\]"; then
-                  echo "⚠️  Warning found in changed file: $file (not blocking deploy)"
-                  echo "📋 Details:"
-                  grep "$file" theme_check_output.log | grep "\[warning\]" | head -3 || true
-                fi
-              done
-              
-              if [ "$validation_failed" = false ]; then
-                echo "✅ No ERRORS found in changed files"
-                echo "📊 Warnings may exist but don't block deployment"
-              fi
-            else
-              echo "✅ No Theme Check issues found in entire theme"
-            fi
-            
-            if [ "$validation_failed" = true ]; then
-              echo ""
-              echo "❌ SHOPIFY VALIDATION FAILED!"
-              echo "🚨 Deploy BLOCKED due to ERROR-level issues!"
-              echo "   Fix all ERROR issues reported by Shopify Theme Check above."
-              exit 1
-            else
-              echo "✅ Shopify validation passed!"
-              echo "📊 All changed files passed ERROR-level checks"
-            fi
-          fi
+          echo "🔍 Validating Liquid templates..."
+          shopify theme check --fail-level error --output=text || true
+          echo "✅ Validation complete"
 
-      - name: Pull theme before deploy (Staging)
+      - name: Pull admin-managed files
         env:
-          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
-          SHOPIFY_FLAG_STORE: ${{ secrets.SHOPIFY_STORE }}
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.PROD_THEME_TOKEN }}
+          SHOPIFY_FLAG_STORE: ${{ secrets.PROD_SHOPIFY_STORE }}
         run: |
-          echo "📥 Pulling entire staging theme to ensure all files exist locally"
-          echo "   (This includes templates, EComposer, blocks, etc.)"
-          echo "   This ensures Admin changes in IGNORED files are preserved"
-          shopify theme pull --theme ${{ secrets.STAGING_THEME_ID }} --path .
-          echo "✅ Pull complete - All theme files should now be local"
-          
-          # Reset ONLY tracked files to Git state (restore developer code)
-          # IMPORTANT: git checkout -- . only affects tracked files (not ignored files)
-          # Ignored files (templates/*.json, EComposer, blocks) will remain from pull
-          echo ""
-          echo "🔄 Resetting tracked files to Git state..."
-          echo "   ⚠️  This restores tracked files (sections, snippets, config) from Git"
-          echo "   ✅ Ignored files (templates, EComposer, blocks) remain from pull (Admin version)"
+          echo "📥 Pulling admin-managed files (templates, EComposer, blocks)..."
+          shopify theme pull --theme ${{ secrets.PROD_RC_THEME_ID }} --path .
           git checkout -- .
-          echo "✅ Tracked files restored to Git state, ignored files remain from pull"
+          echo "✅ Admin files preserved, tracked files restored to Git state"
 
-
-      - name: Deploy to Staging Theme
+      - name: Deploy to prod RC theme
         env:
-          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
-          SHOPIFY_FLAG_STORE: ${{ secrets.SHOPIFY_STORE }}
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.PROD_THEME_TOKEN }}
+          SHOPIFY_FLAG_STORE: ${{ secrets.PROD_SHOPIFY_STORE }}
         run: |
-          echo "🚀 Deploying to staging environment..."
-          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-          echo "ℹ️  Deploying code from Git + Admin-managed files (templates, EComposer, blocks)"
-          echo "   Admin files are safe to deploy because they're in .gitignore"
-          echo ""
+          echo "🚀 Deploying to RC theme on production store..."
           shopify theme push \
-            --theme ${{ secrets.STAGING_THEME_ID }} \
-            --nodelete \
-            --allow-live
-          
+            --theme ${{ secrets.PROD_RC_THEME_ID }} \
+            --nodelete
+          echo "✅ RC deployment complete"
           echo ""
-          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-          echo "✅ Deployment complete - Templates should now be available"
+          echo "📋 Next steps:"
+          echo "   1. Test on production RC theme"
+          echo "   2. When approved, PR develop → main"
+          echo "   3. Merge and approve production deployment"
 
-      - name: Post-deployment check
-        env:
-          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
-          SHOPIFY_FLAG_STORE: ${{ secrets.SHOPIFY_STORE }}
-        run: |
-          echo "✅ Deployment completed!"
-          echo "🔗 Staging deployment completed."
-
-  deploy_develop:
-    if: github.ref == 'refs/heads/develop' || (github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'develop')
-    runs-on: ubuntu-latest
-    environment: develop
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 2  # Need at least 2 commits to compare
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-          cache: 'npm'
-
-      - name: Install dependencies
-        if: ${{ hashFiles('**/package.json') != '' }}
-        run: npm ci
-
-      - name: Build assets (CSS + JS)
-        run: |
-          set -e
-          echo "🏗️ Building CSS and JavaScript..."
-          npm run build
-          echo "✅ Build complete (CSS + JS minified)"
-
-      - name: Install Shopify CLI
-        run: |
-          npm install -g @shopify/cli
-
-      - name: Validate theme files
-        run: |
-          echo "🔍 Validating Liquid templates for develop..."
-          echo "==========================================="
-          
-          # SHOPIFY OFFICIAL VALIDATION - Only validate changed files
-          echo "🧪 Running Shopify validation on changed files..."
-          
-          # Get list of changed files
-          if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
-            echo "📋 Getting changed files from PR..."
-            changed_files=$(git diff --name-only origin/${{ github.base_ref }}...HEAD 2>/dev/null || git diff --name-only HEAD~1 HEAD 2>/dev/null || git show --pretty="" --name-only HEAD)
-          else
-            echo "📋 Getting changed files from push..."
-            # Try different approaches for getting changed files
-            if git diff --name-only HEAD~1 HEAD >/dev/null 2>&1; then
-              changed_files=$(git diff --name-only HEAD~1 HEAD)
-            elif git show --pretty="" --name-only HEAD >/dev/null 2>&1; then
-              echo "🔄 Using commit changes (no previous commit available)..."
-              changed_files=$(git show --pretty="" --name-only HEAD)
-            else
-              echo "⚠️  Cannot determine changed files, running full validation..."
-              echo "📋 Running Shopify Theme Check..."
-              if ! shopify theme check --fail-level error --output=text; then
-                echo "❌ SHOPIFY VALIDATION FAILED!"
-                echo "🚨 Deploy BLOCKED due to Shopify validation errors!"
-                echo "   Fix all issues reported by Shopify Theme Check above."
-                exit 1
-              else
-                echo "✅ Shopify validation passed!"
-                echo "📊 All Shopify checks completed successfully"
-              fi
-              exit 0
-            fi
-          fi
-          
-          echo "🔍 Files changed in this commit:"
-          echo "$changed_files" | grep -E "\.(json|liquid)$" || echo "No JSON/Liquid files changed"
-          
-          # Check if any theme files were changed
-          theme_files=$(echo "$changed_files" | grep -E "\.(json|liquid)$" || true)
-          if [ -z "$theme_files" ]; then
-            echo "ℹ️  No theme files changed - skipping validation"
-          else
-            echo "📋 Running Shopify Theme Check and filtering for changed files..."
-            
-            # Run theme check on entire theme and filter for changed files
-            validation_failed=false
-            
-            echo "🔍 Running full Theme Check..."
-            if ! shopify theme check --fail-level error --output=text > theme_check_output.log 2>&1; then
-              echo "📋 Theme Check found issues, checking if they affect changed files..."
-              
-              # Check if any changed files have ERRORS (not warnings)
-              for file in $theme_files; do
-                if grep "\[error\]" theme_check_output.log | grep -q "$file"; then
-                  echo "❌ ERROR found in changed file: $file"
-                  echo "📋 Details:"
-                  grep "\[error\]" theme_check_output.log | grep -A5 -B2 "$file" || true
-                  validation_failed=true
-                elif grep "$file" theme_check_output.log | grep -q "\[warning\]"; then
-                  echo "⚠️  Warning found in changed file: $file (not blocking deploy)"
-                  echo "📋 Details:"
-                  grep "$file" theme_check_output.log | grep "\[warning\]" | head -3 || true
-                fi
-              done
-              
-              if [ "$validation_failed" = false ]; then
-                echo "✅ No ERRORS found in changed files"
-                echo "📊 Warnings may exist but don't block deployment"
-              fi
-            else
-              echo "✅ No Theme Check issues found in entire theme"
-            fi
-            
-            if [ "$validation_failed" = true ]; then
-              echo ""
-              echo "❌ SHOPIFY VALIDATION FAILED!"
-              echo "🚨 Deploy BLOCKED due to ERROR-level issues!"
-              echo "   Fix all ERROR issues reported by Shopify Theme Check above."
-              exit 1
-            else
-              echo "✅ Shopify validation passed!"
-              echo "📊 All changed files passed ERROR-level checks"
-            fi
-          fi
-
-      - name: Pull theme before deploy (Develop)
-        env:
-          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
-          SHOPIFY_FLAG_STORE: ${{ secrets.SHOPIFY_STORE }}
-        run: |
-          echo "📥 Pulling entire develop theme to ensure all files exist locally"
-          echo "   (This includes templates, EComposer, blocks, etc.)"
-          echo "   This ensures Admin changes in IGNORED files are preserved"
-          shopify theme pull --theme ${{ secrets.DEVELOP_THEME_ID }} --path .
-          echo "✅ Pull complete - All theme files should now be local"
-          
-          # Reset ONLY tracked files to Git state (restore developer code)
-          # IMPORTANT: git checkout -- . only affects tracked files (not ignored files)
-          # Ignored files (templates/*.json, EComposer, blocks) will remain from pull
-          echo ""
-          echo "🔄 Resetting tracked files to Git state..."
-          echo "   ⚠️  This restores tracked files (sections, snippets, config) from Git"
-          echo "   ✅ Ignored files (templates, EComposer, blocks) remain from pull (Admin version)"
-          git checkout -- .
-          echo "✅ Tracked files restored to Git state, ignored files remain from pull"
-
-
-      - name: Deploy to Develop Theme
-        env:
-          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
-          SHOPIFY_FLAG_STORE: ${{ secrets.SHOPIFY_STORE }}
-        run: |
-          echo "🚀 Deploying to develop environment..."
-          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-          echo "ℹ️  Deploying code from Git + Admin-managed files (templates, EComposer, blocks)"
-          echo "   Admin files are safe to deploy because they're in .gitignore"
-          echo ""
-          shopify theme push \
-            --theme ${{ secrets.DEVELOP_THEME_ID }} \
-            --nodelete \
-            --allow-live
-          
-          echo ""
-          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-          echo "✅ Deployment complete - Templates should now be available"
-
-      - name: Post-deployment check
-        env:
-          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
-          SHOPIFY_FLAG_STORE: ${{ secrets.SHOPIFY_STORE }}
-        run: |
-          echo "✅ Deployment completed!"
-          echo "🔗 Develop deployment completed."
-
-  deploy_production:
-    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'production'))
+  deploy-main:
+    name: Deploy main → prod live
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment: production  # Requires manual approval
     permissions:
       contents: write  # Required for pushing git tags
+
     steps:
-      - name: Checkout code
+      - name: Checkout repo
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 2  # Need at least 2 commits to compare
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -384,429 +84,35 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build production assets (CSS + JS)
-        run: |
-          set -euo pipefail
-          echo "🏗️ Building production assets (CSS + JS)..."
-          NODE_ENV=production npm run build
-          echo "✅ Production build complete (CSS + JS minified)"
-          echo "📦 Output files:"
-          ls -lh assets/theme.css 2>/dev/null || echo "   (theme.css not found)"
-          if ls assets/*.min.js 1>/dev/null 2>&1; then
-            ls -lh assets/*.min.js | awk '{print "   " $9 " - " $5}'
-          else
-            echo "   (No .min.js files - no JS files in src/scripts/)"
-          fi
+      - name: Build production assets
+        run: NODE_ENV=production npm run build
 
       - name: Install Shopify CLI
-        run: |
-          npm install -g @shopify/cli
+        run: npm install -g @shopify/cli
 
       - name: Validate theme files
         run: |
           echo "🔍 Validating Liquid templates for PRODUCTION..."
-          echo "============================================="
-          echo "🎯 PRODUCTION VALIDATION - STRICTER CHECKS"
-          
-          # SHOPIFY OFFICIAL VALIDATION - Only validate changed files
-          echo "🧪 Running Shopify Production validation on changed files..."
-          
-          # Get list of changed files
-          if [ "$GITHUB_EVENT_NAME" = "pull_request" ]; then
-            echo "📋 Getting changed files from PR..."
-            changed_files=$(git diff --name-only origin/${{ github.base_ref }}...HEAD 2>/dev/null || git diff --name-only HEAD~1 HEAD 2>/dev/null || git show --pretty="" --name-only HEAD)
-          else
-            echo "📋 Getting changed files from push..."
-            # Try different approaches for getting changed files
-            if git diff --name-only HEAD~1 HEAD >/dev/null 2>&1; then
-              changed_files=$(git diff --name-only HEAD~1 HEAD)
-            elif git show --pretty="" --name-only HEAD >/dev/null 2>&1; then
-              echo "🔄 Using commit changes (no previous commit available)..."
-              changed_files=$(git show --pretty="" --name-only HEAD)
-            else
-              echo "⚠️  Cannot determine changed files, running full validation..."
-              echo "📋 Running Shopify Theme Check (full validation)..."
-              if ! shopify theme check --fail-level error --output=text; then
-                echo "❌ SHOPIFY PRODUCTION VALIDATION FAILED!"
-                echo "🚨 Production deploy BLOCKED due to Shopify validation errors!"
-                echo "   Fix all issues reported by Shopify Theme Check above."
-                echo "   Test fixes in staging first."
-                exit 1
-              else
-                echo "✅ Shopify Production validation passed!"
-                echo "🎆 Ready for production deployment."
-              fi
-              exit 0
-            fi
-          fi
-          
-          echo "🔍 Files changed in this commit:"
-          echo "$changed_files" | grep -E "\.(json|liquid)$" || echo "No JSON/Liquid files changed"
-          
-          # Check if any theme files were changed
-          theme_files=$(echo "$changed_files" | grep -E "\.(json|liquid)$" || true)
-          if [ -z "$theme_files" ]; then
-            echo "ℹ️  No theme files changed - skipping validation"
-            echo "🎆 Ready for production deployment."
-          else
-            echo "📋 Running Shopify Theme Check and filtering for changed files..."
-            
-            # Run theme check on entire theme and filter for changed files
-            validation_failed=false
-            
-            echo "🔍 Running full Theme Check..."
-            if ! shopify theme check --fail-level error --output=text > theme_check_output.log 2>&1; then
-              echo "📋 Theme Check found issues, checking if they affect changed files..."
-              
-              # Check if any changed files have ERRORS (not warnings)
-              for file in $theme_files; do
-                if grep "\[error\]" theme_check_output.log | grep -q "$file"; then
-                  echo "❌ ERROR found in changed file: $file"
-                  echo "📋 Details:"
-                  grep "\[error\]" theme_check_output.log | grep -A5 -B2 "$file" || true
-                  validation_failed=true
-                elif grep "$file" theme_check_output.log | grep -q "\[warning\]"; then
-                  echo "⚠️  Warning found in changed file: $file (not blocking deploy)"
-                  echo "📋 Details:"
-                  grep "$file" theme_check_output.log | grep "\[warning\]" | head -3 || true
-                fi
-              done
-              
-              if [ "$validation_failed" = false ]; then
-                echo "✅ No ERRORS found in changed files"
-                echo "📊 Warnings may exist but don't block deployment"
-              fi
-            else
-              echo "✅ No Theme Check issues found in entire theme"
-            fi
-            
-            if [ "$validation_failed" = true ]; then
-              echo ""
-              echo "❌ SHOPIFY PRODUCTION VALIDATION FAILED!"
-              echo "🚨 Production deploy BLOCKED due to ERROR-level issues!"
-              echo "   Fix all ERROR issues reported by Shopify Theme Check above."
-              echo "   Test fixes in staging first."
-              exit 1
-            else
-              echo "✅ Shopify Production validation passed!"
-              echo "📊 All changed files passed ERROR-level checks"
-              echo "🎆 Ready for production deployment."
-            fi
-          fi
+          shopify theme check --fail-level error --output=text
+          echo "✅ Production validation complete"
 
       - name: Backup current production theme
         id: backup
         env:
-          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
-          SHOPIFY_FLAG_STORE: ${{ secrets.SHOPIFY_STORE }}
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.PROD_THEME_TOKEN }}
+          SHOPIFY_FLAG_STORE: ${{ secrets.PROD_SHOPIFY_STORE }}
         run: |
-          echo "📦 Creating backup of current production theme BEFORE deployment..."
+          echo "📦 Creating backup of production theme..."
           BACKUP_DIR="backup-$(date +%Y%m%d-%H%M%S)"
           mkdir -p $BACKUP_DIR
-          
-          # Attempt backup - CRITICAL: This happens BEFORE any deployment
-          if shopify theme pull --theme ${{ secrets.PRODUCTION_THEME_ID }} --path $BACKUP_DIR; then
-            echo "✅ Backup successful! Theme backed up BEFORE deployment."
-            echo "📂 Backup location: $BACKUP_DIR"
+          if shopify theme pull --theme ${{ secrets.PROD_LIVE_THEME_ID }} --path $BACKUP_DIR; then
+            echo "✅ Backup complete: $BACKUP_DIR"
             echo "backup_dir=$BACKUP_DIR" >> $GITHUB_OUTPUT
             echo "backup_success=true" >> $GITHUB_OUTPUT
           else
-            echo "❌ Backup failed!"
-            echo "backup_success=false" >> $GITHUB_OUTPUT
-            
-            # Check if deployment without backup is allowed
-            if [[ "${{ github.event.inputs.allow_deploy_without_backup }}" != "true" && "${{ secrets.ALLOW_DEPLOY_WITHOUT_BACKUP }}" != "true" ]]; then
-              echo "🛑 Backup is mandatory for production deployment!"
-              echo "⚠️  Set 'allow_deploy_without_backup' input to true or add ALLOW_DEPLOY_WITHOUT_BACKUP secret to proceed without backup"
-              exit 1
-            else
-              echo "⚠️  Proceeding without backup as explicitly allowed"
-            fi
+            echo "❌ Backup failed - aborting deployment"
+            exit 1
           fi
-
-      - name: Check for conflicts between Git and live theme (Conflict Detection)
-        if: steps.backup.outputs.backup_success == 'true'
-        env:
-          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
-          SHOPIFY_FLAG_STORE: ${{ secrets.SHOPIFY_STORE }}
-        run: |
-          echo "🔄 CONFLICT DETECTION: Checking for admin changes that conflict with this deployment..."
-          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-          echo "This step checks if admin modified files that are being deployed in this commit"
-          echo ""
-          
-          # Store the current commit SHA for conflict detection
-          BEFORE_PULL_SHA=$(git rev-parse HEAD)
-          echo "📌 Current main commit: $BEFORE_PULL_SHA"
-          
-          # Identify files that are being deployed (changed in this commit)
-          # Compare HEAD with previous commit to see what's being deployed
-          # IMPORTANT: Only check theme files (sections, snippets, templates, assets, layout, config, locales)
-          # Ignore non-theme files (.github, node_modules, src, etc.) as admin can't modify them
-          if git diff --name-only HEAD~1 HEAD > /dev/null 2>&1; then
-            ALL_CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD)
-            # Filter to only theme files (admin can modify these)
-            FILES_BEING_DEPLOYED=$(echo "$ALL_CHANGED_FILES" | grep -E "^(sections|snippets|templates|assets|layout|config|locales)/" || true)
-            echo "📋 Files being deployed in this commit (theme files only):"
-            if [[ -n "$FILES_BEING_DEPLOYED" ]]; then
-              echo "$FILES_BEING_DEPLOYED" | head -20
-              if [ $(echo "$FILES_BEING_DEPLOYED" | wc -l) -gt 20 ]; then
-                echo "   ... and $(( $(echo "$FILES_BEING_DEPLOYED" | wc -l) - 20 )) more files"
-              fi
-            else
-              echo "   (No theme files changed - only non-theme files like .github/, package.json, etc.)"
-            fi
-            echo ""
-          else
-            # If we can't compare with previous commit, check all files in this commit
-            ALL_CHANGED_FILES=$(git show --pretty="" --name-only HEAD)
-            # Filter to only theme files
-            FILES_BEING_DEPLOYED=$(echo "$ALL_CHANGED_FILES" | grep -E "^(sections|snippets|templates|assets|layout|config|locales)/" || true)
-            echo "📋 Files in this commit (theme files only, cannot compare with previous commit):"
-            if [[ -n "$FILES_BEING_DEPLOYED" ]]; then
-              echo "$FILES_BEING_DEPLOYED" | head -20
-              if [ $(echo "$FILES_BEING_DEPLOYED" | wc -l) -gt 20 ]; then
-                echo "   ... and $(( $(echo "$FILES_BEING_DEPLOYED" | wc -l) - 20 )) more files"
-              fi
-            else
-              echo "   (No theme files changed - only non-theme files like .github/, package.json, etc.)"
-            fi
-            echo ""
-          fi
-          
-          # If no theme files are being deployed, skip conflict detection
-          if [[ -z "$FILES_BEING_DEPLOYED" ]]; then
-            echo "✅ No theme files being deployed in this commit"
-            echo "   (Only non-theme files changed like .github/, package.json, etc.)"
-            echo "   Skipping conflict detection - admin cannot modify these files"
-            echo ""
-            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-            echo "✅ Conflict Detection Complete - No theme files to check"
-            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-            exit 0
-          fi
-          
-          # Pull the LIVE theme to check for admin modifications
-          echo "📥 Pulling live theme to check for admin modifications..."
-          shopify theme pull --theme ${{ secrets.PRODUCTION_THEME_ID }} --path .
-          
-          # Files to ignore during conflict detection (expected to differ or not critical)
-          IGNORE_PATTERNS=(
-            "assets/*.min.js"
-            "assets/*.min.js.map"
-            "assets/*.min.css"
-            "assets/*.css.map"
-            "config/settings_data.json"
-            "assets/lib-*.min.js"
-            "assets/lib-*.min.js.map"
-            "assets/lib-*.min.css"
-          )
-          
-          # Function to check if file should be ignored
-          should_ignore_file() {
-            local file="$1"
-            
-            # Check ignore patterns
-            for pattern in "${IGNORE_PATTERNS[@]}"; do
-              if [[ "$file" == $pattern ]]; then
-                return 0  # Should ignore
-              fi
-            done
-            
-            # Check if file is in .gitignore
-            if git check-ignore -q "$file" 2>/dev/null; then
-              return 0  # Should ignore
-            fi
-            
-            return 1  # Should not ignore
-          }
-          
-          # Check for conflicts: files being deployed that were modified by admin
-          # Logic: Compare production version with the previous commit (HEAD~1)
-          # If production differs from HEAD~1, it means admin modified it
-          # If the file is also being deployed (modified in HEAD), it's a conflict
-          CONFLICT_COUNT=0
-          CONFLICT_FILES=""
-          
-          if [[ -n "$FILES_BEING_DEPLOYED" ]]; then
-            echo "🔍 Checking if admin modified any files being deployed..."
-            echo ""
-            echo "   Logic: Compare production version with previous commit (HEAD~1)"
-            echo "   - If production == HEAD~1: No admin modification (safe to deploy)"
-            echo "   - If production != HEAD~1: Admin modified (conflict if file is being deployed)"
-            echo ""
-            echo "   Note: Files in .gitignore (templates/*.json, ecom-*.liquid, blocks/, etc.)"
-            echo "         are automatically skipped - they are admin-managed and not tracked"
-            echo ""
-            
-            for file in $FILES_BEING_DEPLOYED; do
-              # Skip ignored files (templates/*.json, ecom-*.liquid, blocks/, etc.)
-              # These are managed by admin and should not be checked for conflicts
-              if should_ignore_file "$file"; then
-                echo "ℹ️  Ignored (admin-managed, in .gitignore): $file"
-                continue
-              fi
-              
-              # Check if we can compare with previous commit
-              if ! git diff --name-only HEAD~1 HEAD > /dev/null 2>&1; then
-                # Can't compare with previous commit, skip conflict detection for this file
-                echo "ℹ️  Skipping $file (cannot compare with previous commit)"
-                continue
-              fi
-              
-              # Compare production version (after pull) with HEAD (what we're deploying)
-              # If they match, no conflict - we're deploying what's already in production
-              if git diff --quiet HEAD -- "$file" 2>/dev/null; then
-                # Production version matches HEAD (no conflict - already in sync)
-                echo "ℹ️  No conflict: $file (production already matches HEAD)"
-                continue
-              fi
-              
-              # Production version differs from HEAD - check if it's a real conflict
-              # Compare production version with previous commit (HEAD~1)
-              # If production == HEAD~1, admin didn't modify (safe to deploy)
-              # If production != HEAD~1, admin modified (potential conflict)
-              if git diff --quiet HEAD~1 -- "$file" 2>/dev/null; then
-                # Production version matches HEAD~1 (no admin modification)
-                # Safe to deploy - Git version will update production
-                continue
-              fi
-              
-              # Production version differs from BOTH HEAD~1 AND HEAD - REAL CONFLICT!
-              # This means:
-              # 1. Admin modified the file in production (production != HEAD~1)
-              # 2. Developer also modified it differently (production != HEAD)
-              CONFLICT_COUNT=$((CONFLICT_COUNT + 1))
-              CONFLICT_FILES="$CONFLICT_FILES\n  - $file"
-              echo "⚠️  CONFLICT: $file"
-              echo "     ├─ Being deployed: Modified in commit $BEFORE_PULL_SHA (HEAD)"
-              echo "     ├─ Previous version: HEAD~1 (what was in production before)"
-              echo "     └─ Production version: Different from both HEAD~1 and HEAD (admin modified it)"
-            done
-          fi
-          
-          echo ""
-          echo "📊 Summary:"
-          echo "   • Files being deployed: $(echo "$FILES_BEING_DEPLOYED" | wc -l)"
-          echo "   • Critical conflicts (admin modified files being deployed): $CONFLICT_COUNT"
-          
-          if [ $CONFLICT_COUNT -gt 0 ]; then
-              # Check if conflicts should be ignored
-              IGNORE_CONFLICTS="${{ github.event.inputs.ignore_conflicts }}"
-              if [[ "$IGNORE_CONFLICTS" == "true" ]]; then
-                echo ""
-                echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-                echo "⚠️  CONFLICTS DETECTED BUT IGNORING (ignore_conflicts=true)"
-                echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-                echo ""
-                echo "⚠️  WARNING: $CONFLICT_COUNT conflicts detected but proceeding with deployment"
-                echo "   Git version will overwrite Shopify version"
-                echo "   This assumes Git is correct and production is outdated"
-                echo ""
-                echo "📊 Conflicts that will be overwritten:"
-                if [[ -n "$CONFLICT_FILES" ]]; then
-                  printf "%b\n" "$CONFLICT_FILES"
-                else
-                  echo "   (No conflict files listed)"
-                fi
-                echo ""
-                echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-                echo "✅ Proceeding with deployment (conflicts ignored as requested)"
-                echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-              else
-                echo ""
-                echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-                echo "🚨 DEPLOYMENT ABORTED: Admin modified files that are being deployed!"
-                echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-                echo ""
-                echo "The following files are being deployed AND were modified by admin:"
-                echo "(These are real conflicts - both developer and admin changed the same files)"
-                echo ""
-                if [[ -n "$CONFLICT_FILES" ]]; then
-                  printf "%b\n" "$CONFLICT_FILES"
-                else
-                  echo "   (No conflict files listed)"
-                fi
-                echo ""
-                echo "📊 Summary:"
-                echo "   • Files being deployed: $(echo "$FILES_BEING_DEPLOYED" | wc -l)"
-                echo "   • Critical conflicts (admin modified same files): $CONFLICT_COUNT"
-                echo "   • Git commit: $BEFORE_PULL_SHA"
-                echo ""
-                echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-                echo "🔧 HOW TO RESOLVE:"
-                echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-                echo ""
-                echo "OPTION 1: Accept admin changes (Recommended if admin made important edits)"
-                echo "  1. Wait for theme-sync workflow to create PR (runs Mon-Fri 8:00 AM BRT)"
-                echo "  2. Review and merge the PR to incorporate admin changes"
-                echo "  3. Re-run this deployment"
-                echo ""
-                echo "OPTION 2: Accept developer changes (If Git version is correct)"
-                echo "  1. Re-run this deployment with 'ignore_conflicts' set to true"
-                echo "     (This will overwrite admin changes with Git version)"
-                echo "  2. Or manually: shopify theme push --theme ${{ secrets.PRODUCTION_THEME_ID }} --allow-live"
-                echo ""
-                echo "OPTION 3: Manual merge (If both changes are important)"
-                echo "  1. Review Git changes:"
-                echo "     git show HEAD -- <filename>"
-                echo "  2. Review Shopify changes:"
-                echo "     Download backup artifact from this workflow run"
-                echo "  3. Manually merge both versions"
-                echo "  4. Commit merged version to Git"
-                echo "  5. Re-run this deployment"
-                echo ""
-                echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-                echo "💡 TIP: Run theme-sync workflow manually for immediate PR:"
-                echo "   Actions → Theme Sync - Pull Production Changes → Run workflow"
-                echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-                echo ""
-                echo "❌ Deployment aborted to prevent overwriting admin changes."
-                echo ""
-                exit 1
-              fi
-          else
-            echo "✅ No conflicts detected!"
-            echo "ℹ️  Admin did not modify any files being deployed - safe to proceed."
-          fi
-          
-          echo ""
-          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-          echo "✅ Conflict Detection Complete - No conflicts found"
-          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-          
-          # Reset working directory to Git state (restore tracked files only)
-          # Ignored files (templates, EComposer, blocks) will remain but will be re-pulled
-          echo ""
-          echo "🔄 Resetting tracked files to Git state..."
-          git checkout -- .
-          
-          # Clean up ignored files that were pulled during conflict detection
-          # We'll pull them fresh in the next step
-          echo "🧹 Cleaning up ignored files (will be re-pulled)..."
-          rm -rf templates/*.json templates/*.shogun.*.liquid templates/*bloggle*.liquid templates/*.ecom*.liquid 2>/dev/null || true
-          rm -f sections/ecom-*.liquid assets/ecom-*.css assets/ecom-*.js 2>/dev/null || true
-          rm -rf blocks/ 2>/dev/null || true
-
-      - name: Pull ignored files only (Production)
-        env:
-          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
-          SHOPIFY_FLAG_STORE: ${{ secrets.SHOPIFY_STORE }}
-        run: |
-          echo "📥 Pulling only ignored files from production theme"
-          echo "   These files are in .gitignore so devs can't modify them"
-          echo "   Pulling ensures we have Admin versions to deploy"
-          # Pull templates
-          shopify theme pull --theme ${{ secrets.PRODUCTION_THEME_ID }} --only 'templates/' --path . || true
-          # Pull EComposer sections
-          shopify theme pull --theme ${{ secrets.PRODUCTION_THEME_ID }} --only 'sections/ecom-*.liquid' --path . || true
-          # Pull EComposer assets
-          shopify theme pull --theme ${{ secrets.PRODUCTION_THEME_ID }} --only 'assets/ecom-*.css' --only 'assets/ecom-*.js' --path . || true
-          # Pull app-managed templates
-          shopify theme pull --theme ${{ secrets.PRODUCTION_THEME_ID }} --only 'templates/*.shogun.*.liquid' --only 'templates/*bloggle*.liquid' --only 'templates/*.ecom*.liquid' --path . || true
-          # Pull blocks
-          shopify theme pull --theme ${{ secrets.PRODUCTION_THEME_ID }} --only 'blocks/' --path . || true
-          echo "✅ Pull complete (files are in .gitignore, safe to deploy)"
 
       - name: Upload backup as artifact
         if: steps.backup.outputs.backup_success == 'true'
@@ -817,92 +123,41 @@ jobs:
           retention-days: 30
           compression-level: 9
 
-      - name: Deploy to Production Theme (Official Workflow Step 5)
+      - name: Pull app-managed files (EComposer, etc.)
         env:
-          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
-          SHOPIFY_FLAG_STORE: ${{ secrets.SHOPIFY_STORE }}
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.PROD_THEME_TOKEN }}
+          SHOPIFY_FLAG_STORE: ${{ secrets.PROD_SHOPIFY_STORE }}
         run: |
-          echo "🚀 OFFICIAL WORKFLOW: Deploying to PRODUCTION environment..."
-          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-          echo "⚠️  This will update the live theme!"
-          echo ""
-          echo "✅ Current working directory contains:"
-          echo "   - All code changes (from main branch)"
-          echo "   - All admin-managed files (templates, EComposer, blocks) pulled from Shopify"
-          echo "   - Admin files are safe to deploy because they're in .gitignore"
-          echo ""
-          
-          # Deploy code changes + admin-managed files (no --ignore flags)
-          echo "ℹ️  Deploying code from Git + Admin-managed files (templates, EComposer, blocks)"
+          echo "📥 Pulling app-managed files..."
+          # Only pull files that are in .gitignore (app-generated, not theme code)
+          shopify theme pull --theme ${{ secrets.PROD_LIVE_THEME_ID }} --only 'sections/ecom-*.liquid' --path . || true
+          shopify theme pull --theme ${{ secrets.PROD_LIVE_THEME_ID }} --only 'assets/ecom-*.css' --path . || true
+          shopify theme pull --theme ${{ secrets.PROD_LIVE_THEME_ID }} --only 'assets/ecom-*.js' --path . || true
+          echo "✅ App files preserved"
+
+      - name: Deploy to production
+        env:
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.PROD_THEME_TOKEN }}
+          SHOPIFY_FLAG_STORE: ${{ secrets.PROD_SHOPIFY_STORE }}
+        run: |
+          echo "🚀 Deploying to PRODUCTION..."
           shopify theme push \
-            --theme ${{ secrets.PRODUCTION_THEME_ID }} \
+            --theme ${{ secrets.PROD_LIVE_THEME_ID }} \
             --nodelete \
             --allow-live
-          
-          echo ""
-          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-          echo "✅ Official Workflow Complete: Code + Admin changes deployed together"
+          echo "✅ Production deployment complete"
 
-      - name: Post-deployment verification
-        env:
-          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
-          SHOPIFY_FLAG_STORE: ${{ secrets.SHOPIFY_STORE }}
+      - name: Create release tag
         run: |
-          echo "✅ Production deployment completed!"
-          echo "🌐 Live store: https://${{ secrets.SHOPIFY_STORE }}"
-
-  create_release_tag:
-    if: github.ref == 'refs/heads/main'
-    needs: deploy_production
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Configure Git
-        run: |
-          git config --local user.email "caian@imdigital.com"
-          git config --local user.name "Caian Meireles"
-
-      - name: Create and push release tag
-        id: tag
-        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
           TAG_NAME="v$(date +'%Y.%m.%d')-$(git rev-parse --short HEAD)"
-          echo "Creating tag: $TAG_NAME"
           
           # Check if tag already exists
           if git tag -l | grep -q "^$TAG_NAME$"; then
-            echo "Tag $TAG_NAME already exists, appending timestamp"
             TAG_NAME="$TAG_NAME-$(date +'%H%M%S')"
           fi
           
           git tag -a $TAG_NAME -m "Production deployment on $(date)"
           git push origin $TAG_NAME
           echo "✅ Created release tag: $TAG_NAME"
-          
-          # Output the final tag name for use in subsequent steps
-          echo "name=$TAG_NAME" >> "$GITHUB_OUTPUT"
-          echo "title=Production Release $(date +'%Y.%m.%d')" >> "$GITHUB_OUTPUT"
-
-      - name: Setup GitHub CLI
-        run: |
-          # GitHub CLI is pre-installed on GitHub runners
-          gh --version
-
-      - name: Create GitHub Release
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          # Create release using the exact tag name from previous step
-          gh release create "${{ steps.tag.outputs.name }}" \
-            --title "${{ steps.tag.outputs.title }}" \
-            --notes '🚀 **Production Deployment**
-
-          **Deployed on:** '"$(date)"'
-          **Commit:** ${{ github.sha }}
-          **Environment:** production'
