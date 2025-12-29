@@ -18,7 +18,6 @@ assets/theme.css
 assets/theme.css.map
 assets/theme.min.css
 assets/theme.min.css.map
-docs/
 snippets/inline.css.liquid
 assets/application.css.liquid
 shopify.theme.toml
