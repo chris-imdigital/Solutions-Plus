@@ -91,8 +91,8 @@ jobs:
 
       - name: Pull live production theme
         env:
-          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
-          SHOPIFY_FLAG_STORE: ${{ secrets.SHOPIFY_STORE }}
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.PROD_THEME_TOKEN }}
+          SHOPIFY_FLAG_STORE: ${{ secrets.PROD_SHOPIFY_STORE }}
         run: |
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
           echo "🔄 THEME SYNC: Pulling live production theme..."
@@ -105,8 +105,8 @@ jobs:
           echo ""
           
           # Pull the live theme
-          echo "📥 Pulling theme ${{ secrets.PRODUCTION_THEME_ID }} from ${{ secrets.SHOPIFY_STORE }}..."
-          shopify theme pull --theme ${{ secrets.PRODUCTION_THEME_ID }} --path .
+          echo "📥 Pulling theme ${{ secrets.PROD_LIVE_THEME_ID }} from ${{ secrets.PROD_SHOPIFY_STORE }}..."
+          shopify theme pull --theme ${{ secrets.PROD_LIVE_THEME_ID }} --path .
           
           echo ""
           echo "✅ Theme pull complete!"
