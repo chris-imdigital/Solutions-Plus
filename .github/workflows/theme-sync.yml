@@ -191,6 +191,19 @@ jobs:
             BLOCKS_REMOVED + GENERATED_REMOVED))
           echo "📊 Total files removed: $TOTAL_REMOVED"
           
+          # Restore ignored files from Git to prevent committing deletions
+          # Files in .gitignore that are tracked in Git should not be deleted by production sync
+          # The production pull may have removed/changed these files, but we keep Git's version
+          echo ""
+          echo "🔄 Restoring ignored files from Git to prevent deletions..."
+          
+          # Restore blocks, templates, and theme.css from Git HEAD if they were tracked
+          # This prevents Git from seeing deletions for files that should be ignored
+          git checkout HEAD -- blocks/ templates/*.json assets/theme.css 2>/dev/null || true
+          
+          echo "✅ Ignored files restored from Git (deletions prevented)"
+          echo ""
+          
           # Count files after cleanup
           TOTAL_AFTER=$(git status --porcelain | wc -l)
           echo "📊 Files after cleanup: $TOTAL_AFTER"

@@ -1,7 +1,7 @@
 # Theme & Repo Workflow Management Plan
 
-> **Status:** Pending Implementation  
-> **Created:** December 2024  
+> **Status:** Pending Implementation (as of December 2024)  
+> **Note:** Current workflow tracks templates in `.gitignore` per [`SHOPIFY-THEME-DEVELOPMENT-GUIDE.md`](SHOPIFY-THEME-DEVELOPMENT-GUIDE.md#13-project-specific-deviations). This plan proposes changing that approach.  
 > **Goal:** Track all theme files in Git, rely on native GitHub integration for sync, establish ownership and communication protocols.
 
 ---
