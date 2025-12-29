@@ -1,87 +1,24 @@
 {
-  "article": [
-    {
-      "key": "blog_related_products",
-      "namespace": "custom",
-      "name": "Blog Related Products",
-      "description": "List of blog post related products",
-      "type": {
-        "name": "list.product_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "blog_related_posts",
-      "namespace": "custom",
-      "name": "Blog Related Posts",
-      "description": "Blogs posts related",
-      "type": {
-        "name": "list.article_reference",
-        "category": "REFERENCE"
-      }
-    }
-  ],
+  "article": [],
   "blog": [],
-  "collection": [
+  "collection": [],
+  "company": [
     {
-      "key": "collections",
-      "namespace": "ecomposer",
-      "name": "Define sub collections for current collection",
-      "description": "Set the sub collection for curernt collection.",
-      "type": {
-        "name": "list.collection_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "collection_card",
+      "key": "volume_discounts",
       "namespace": "custom",
-      "name": "collection card",
+      "name": "Volume Discounts",
       "description": "",
       "type": {
-        "name": "metaobject_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "section_description",
-      "namespace": "custom",
-      "name": "section description",
-      "description": "",
-      "type": {
-        "name": "metaobject_reference",
-        "category": "REFERENCE"
+        "name": "boolean",
+        "category": "TRUE_FALSE"
       }
     }
   ],
-  "company": [],
   "company_location": [],
   "location": [],
   "market": [],
-  "order": [
-    {
-      "key": "bc_order_number",
-      "namespace": "custom",
-      "name": "BC Order ID",
-      "description": "",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    }
-  ],
-  "page": [
-    {
-      "key": "recall_id",
-      "namespace": "custom",
-      "name": "Recall ID",
-      "description": "",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    }
-  ],
+  "order": [],
+  "page": [],
   "product": [
     {
       "key": "color-pattern",
@@ -94,202 +31,12 @@
       }
     },
     {
-      "key": "recommended-age-group",
+      "key": "size",
       "namespace": "shopify",
-      "name": "Recommended age group",
-      "description": "Identifies the suitable age range for a product, typically toys and games; e.g. babies, teens",
+      "name": "Size",
+      "description": "Used to specify the size of a product, such as 0-3 months or Extra large (XL)",
       "type": {
         "name": "list.metaobject_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "toy-game-material",
-      "namespace": "shopify",
-      "name": "Toy/Game material",
-      "description": "Identifies the main material used in a toy or game, such as plastic or wood",
-      "type": {
-        "name": "list.metaobject_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "shape",
-      "namespace": "shopify",
-      "name": "Shape",
-      "description": "Describes the geometric form or shape of a product, such as round or heart",
-      "type": {
-        "name": "list.metaobject_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "suitable-space",
-      "namespace": "shopify",
-      "name": "Suitable space",
-      "description": "Defines the ideal location for product use, e.g. indoors, above ground",
-      "type": {
-        "name": "list.metaobject_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "material",
-      "namespace": "shopify",
-      "name": "Material",
-      "description": "Defines a product's primary material, such as cotton or wool",
-      "type": {
-        "name": "list.metaobject_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "age-group",
-      "namespace": "shopify",
-      "name": "Age group",
-      "description": "Defines the target age range for a product, such as adults or kids",
-      "type": {
-        "name": "list.metaobject_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "bedding-size",
-      "namespace": "shopify",
-      "name": "Bedding size",
-      "description": "Defines the size category for bedding items, e.g. standard, king",
-      "type": {
-        "name": "list.metaobject_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "air-mattress-features",
-      "namespace": "shopify",
-      "name": "Air mattress features",
-      "description": "Describes unique characteristics of an air mattress, like easy to inflate or puncture resistant",
-      "type": {
-        "name": "list.metaobject_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "countdown",
-      "namespace": "ecomposer",
-      "name": "EComposer product countdown end at",
-      "description": "Set date and time countdown end at",
-      "type": {
-        "name": "date_time",
-        "category": "DATE_TIME"
-      }
-    },
-    {
-      "key": "countdown_from",
-      "namespace": "ecomposer",
-      "name": "EComposer product countdown start at",
-      "description": "Set date and time countdown start at",
-      "type": {
-        "name": "date_time",
-        "category": "DATE_TIME"
-      }
-    },
-    {
-      "key": "files_attachments",
-      "namespace": "custom",
-      "name": "Files & Attachments",
-      "description": "",
-      "type": {
-        "name": "list.metaobject_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "bullet_points",
-      "namespace": "salsify",
-      "name": "Bullet Points",
-      "description": "",
-      "type": {
-        "name": "list.single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "technical_specifications",
-      "namespace": "salsify",
-      "name": "Technical Specifications",
-      "description": "",
-      "type": {
-        "name": "list.single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "category_description",
-      "namespace": "salsify",
-      "name": "Category Description",
-      "description": "",
-      "type": {
-        "name": "multi_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "contents",
-      "namespace": "salsify",
-      "name": "Contents",
-      "description": "",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "season",
-      "namespace": "salsify",
-      "name": "Season",
-      "description": "",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "a_content",
-      "namespace": "salsify",
-      "name": "A+ Content",
-      "description": "",
-      "type": {
-        "name": "list.url",
-        "category": "URL"
-      }
-    },
-    {
-      "key": "parts",
-      "namespace": "custom",
-      "name": "Parts",
-      "description": "",
-      "type": {
-        "name": "list.product_reference",
-        "category": "REFERENCE"
-      }
-    },
-    {
-      "key": "factory_id_number",
-      "namespace": "salsify",
-      "name": "Factory Item Number",
-      "description": "",
-      "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
-      }
-    },
-    {
-      "key": "compatible_replacement_parts",
-      "namespace": "custom",
-      "name": "Compatible Replacement Parts",
-      "description": "",
-      "type": {
-        "name": "list.product_reference",
         "category": "REFERENCE"
       }
     },
@@ -334,9 +81,19 @@
       }
     },
     {
-      "key": "category_level_1",
+      "key": "material",
+      "namespace": "shopify",
+      "name": "Material",
+      "description": "Defines a product's primary material, such as cotton or wool",
+      "type": {
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "bundle_deal",
       "namespace": "custom",
-      "name": "Category Level 1",
+      "name": "Bundle Deal",
       "description": "",
       "type": {
         "name": "single_line_text_field",
@@ -344,9 +101,9 @@
       }
     },
     {
-      "key": "category_level_2",
+      "key": "custom_engraving_inputs",
       "namespace": "custom",
-      "name": "Category Level 2",
+      "name": "Custom Engraving Inputs",
       "description": "",
       "type": {
         "name": "single_line_text_field",
@@ -354,53 +111,84 @@
       }
     },
     {
-      "key": "category_level_3",
+      "key": "product_files",
       "namespace": "custom",
-      "name": "Category Level 3",
+      "name": "Product Files",
       "description": "",
       "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
       }
     },
     {
-      "key": "item_type",
-      "namespace": "salsify",
-      "name": "Item Type",
+      "key": "where_to_buy_links",
+      "namespace": "custom",
+      "name": "Where to Buy Links",
       "description": "",
       "type": {
-        "name": "single_line_text_field",
-        "category": "TEXT"
+        "name": "list.metaobject_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "custom_line_character_limit",
+      "namespace": "custom",
+      "name": "Custom Line Character Limit",
+      "description": "",
+      "type": {
+        "name": "number_integer",
+        "category": "NUMBER"
       }
     }
   ],
-  "variant": [],
+  "variant": [
+    {
+      "key": "ltl",
+      "namespace": "custom",
+      "name": "LTL",
+      "description": "",
+      "type": {
+        "name": "boolean",
+        "category": "TRUE_FALSE"
+      }
+    },
+    {
+      "key": "image_gallery",
+      "namespace": "custom",
+      "name": "Image Gallery",
+      "description": "",
+      "type": {
+        "name": "list.file_reference",
+        "category": "REFERENCE"
+      }
+    },
+    {
+      "key": "video_gallery",
+      "namespace": "custom",
+      "name": "Video Gallery",
+      "description": "Used to show Product Videos that should be included in the variant media gallery afg",
+      "type": {
+        "name": "list.url",
+        "category": "URL"
+      }
+    }
+  ],
   "shop": [
     {
-      "key": "product_registration_settings",
-      "namespace": "custom",
-      "name": "Product Registration Settings",
-      "description": "",
+      "key": "alpine_sports",
+      "namespace": "test_data",
+      "name": "Alpine sport types",
+      "description": "The set of alpine sports that this sport shop specializes in",
       "type": {
-        "name": "json",
-        "category": "JSON"
+        "name": "list.single_line_text_field",
+        "category": "TEXT"
       }
     },
     {
-      "key": "warranty_settings",
-      "namespace": "custom",
-      "name": "Warranty Settings",
-      "description": "",
-      "type": {
-        "name": "json",
-        "category": "JSON"
-      }
-    },
-    {
-      "key": "callback_settings",
-      "namespace": "custom",
-      "name": "Callback Settings",
-      "description": "",
+      "key": "campaign",
+      "namespace": "discount_kit",
+      "name": "Campaign Information",
+      "description": "A list of discount information for Discount Kit discounts.",
       "type": {
         "name": "json",
         "category": "JSON"
