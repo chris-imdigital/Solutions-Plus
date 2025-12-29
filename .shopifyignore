@@ -4,38 +4,33 @@ package-lock.json
 tailwind.config.js
 postcss.config.js
 postcss.config.json
-esbuild.config.js
 .stylelint
 .eslintrc
+.env.example
+.env
 .editorconfig
 .husky
 .vscode
+tailwind
 bs-config.json
-node_modules/
-
-# Environment & Secrets
-.env
-.env.example
-.env.*
-
-# Source Files (compiled output goes to assets/)
-src/
-
-# Scripts & Utilities
 subtree.sh
 update.sh
+apps
+src/
+node_modules/
+TAILWIND_SETUP.md
+TAILWIND_EXAMPLES.md
+esbuild.config.js
+
+# Environment & Secrets
+.env.*
 
 # Documentation
 docs/
-TAILWIND_SETUP.md
-TAILWIND_EXAMPLES.md
 CodeBaseSetup.md
 ThemeDescription.md
 learnings.md
 README.md
-
-# App directories
-apps
 
 # EComposer App - Managed in Shopify Admin
 # These files are pulled before deploy and preserved

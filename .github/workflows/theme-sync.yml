@@ -1,0 +1,352 @@
+name: Theme Sync - Pull Production Changes
+
+on:
+  schedule:
+    # Runs Monday to Friday at 8:00 AM BRT (11:00 UTC)
+    - cron: '0 11 * * 1-5'
+  
+  workflow_dispatch:
+    inputs:
+      branch_name:
+        description: 'Target branch for sync (default: production-sync)'
+        required: false
+        default: 'production-sync'
+      reviewer:
+        description: 'GitHub username to assign as reviewer (leave empty for workflow actor)'
+        required: false
+        default: ''
+
+jobs:
+  sync_production_theme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config --local user.email "caian@imdigital.com"
+          git config --local user.name "Caian Meireles"
+
+      - name: Install Shopify CLI
+        run: |
+          npm install -g @shopify/cli
+
+      - name: Determine target branch
+        id: branch
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            BRANCH_NAME="${{ github.event.inputs.branch_name }}"
+          else
+            BRANCH_NAME="production-sync"
+          fi
+          echo "name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+          echo "📌 Target branch: $BRANCH_NAME"
+
+      - name: Create or reset sync branch from main
+        run: |
+          BRANCH_NAME="${{ steps.branch.outputs.name }}"
+          
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "🔄 Preparing sync branch: $BRANCH_NAME"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo ""
+          
+          # Fetch all branches
+          git fetch origin
+          
+          # Start from main (which should be in sync with production)
+          # This ensures we detect differences between production theme and Git main
+          echo "📌 Starting from main branch (production baseline)..."
+          git checkout main || git checkout -b main
+          git pull origin main || true
+          
+          # Delete old sync branch if it exists (locally and remotely)
+          if git ls-remote --heads origin "$BRANCH_NAME" | grep -q "$BRANCH_NAME"; then
+            echo "🗑️  Deleting existing remote branch $BRANCH_NAME..."
+            git push origin --delete "$BRANCH_NAME" || true
+          fi
+          
+          if git show-ref --verify --quiet "refs/heads/$BRANCH_NAME"; then
+            echo "🗑️  Deleting existing local branch $BRANCH_NAME..."
+            git branch -D "$BRANCH_NAME" || true
+          fi
+          
+          # Create fresh branch from current main
+          echo "🆕 Creating fresh branch $BRANCH_NAME from main..."
+          git checkout -b "$BRANCH_NAME"
+          
+          echo ""
+          echo "✅ Branch $BRANCH_NAME created from latest main"
+          echo "   This ensures we detect differences between production theme and Git main"
+          echo "   PR will be created to develop for review before merging to main"
+          echo ""
+
+      - name: Pull live production theme
+        env:
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.PROD_THEME_TOKEN }}
+          SHOPIFY_FLAG_STORE: ${{ secrets.PROD_SHOPIFY_STORE }}
+        run: |
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "🔄 THEME SYNC: Pulling live production theme..."
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo ""
+          
+          # Store current commit for comparison
+          BEFORE_PULL_SHA=$(git rev-parse HEAD)
+          echo "📌 Current commit: $BEFORE_PULL_SHA"
+          echo ""
+          
+          # Pull the live theme
+          echo "📥 Pulling theme ${{ secrets.PROD_LIVE_THEME_ID }} from ${{ secrets.PROD_SHOPIFY_STORE }}..."
+          shopify theme pull --theme ${{ secrets.PROD_LIVE_THEME_ID }} --path .
+          
+          echo ""
+          echo "✅ Theme pull complete!"
+          echo ""
+
+      - name: Remove ignored files from sync
+        run: |
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "🧹 Removing files that match .gitignore patterns..."
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo ""
+          
+          # Count files before cleanup
+          TOTAL_BEFORE=$(git status --porcelain | wc -l)
+          echo "📊 Files before cleanup: $TOTAL_BEFORE"
+          echo ""
+          
+          # Remove files that match .gitignore
+          # This ensures PRs only show important changes (settings, non-ecom sections, etc)
+          echo "🗑️  Removing ignored files:"
+          
+          # Templates (admin-managed)
+          TEMPLATES_REMOVED=$(find templates -name "*.json" 2>/dev/null | wc -l || echo "0")
+          find templates -name "*.json" -delete 2>/dev/null || true
+          echo "   • templates/*.json: $TEMPLATES_REMOVED files"
+          
+          # App-managed templates (Shogun, Bloggle, EComposer)
+          APP_TEMPLATES_REMOVED=0
+          APP_TEMPLATES_REMOVED=$((APP_TEMPLATES_REMOVED + $(find templates -name "*.shogun.*.liquid" 2>/dev/null | wc -l || echo "0")))
+          find templates -name "*.shogun.*.liquid" -delete 2>/dev/null || true
+          APP_TEMPLATES_REMOVED=$((APP_TEMPLATES_REMOVED + $(find templates -name "*bloggle*.liquid" 2>/dev/null | wc -l || echo "0")))
+          find templates -name "*bloggle*.liquid" -delete 2>/dev/null || true
+          APP_TEMPLATES_REMOVED=$((APP_TEMPLATES_REMOVED + $(find templates -name "*.ecom*.liquid" 2>/dev/null | wc -l || echo "0")))
+          find templates -name "*.ecom*.liquid" -delete 2>/dev/null || true
+          echo "   • App templates (Shogun/Bloggle/EComposer): $APP_TEMPLATES_REMOVED files"
+          
+          # EComposer sections
+          ECOM_SECTIONS_REMOVED=$(find sections -name "ecom-*.liquid" 2>/dev/null | wc -l || echo "0")
+          find sections -name "ecom-*.liquid" -delete 2>/dev/null || true
+          echo "   • sections/ecom-*.liquid: $ECOM_SECTIONS_REMOVED files"
+          
+          # EComposer assets
+          ECOM_CSS_REMOVED=$(find assets -name "ecom-*.css" 2>/dev/null | wc -l || echo "0")
+          find assets -name "ecom-*.css" -delete 2>/dev/null || true
+          echo "   • assets/ecom-*.css: $ECOM_CSS_REMOVED files"
+          
+          ECOM_JS_REMOVED=$(find assets -name "ecom-*.js" 2>/dev/null | wc -l || echo "0")
+          find assets -name "ecom-*.js" -delete 2>/dev/null || true
+          echo "   • assets/ecom-*.js: $ECOM_JS_REMOVED files"
+          
+          # AI-generated blocks
+          BLOCKS_REMOVED=0
+          if [ -d "blocks" ]; then
+            BLOCKS_REMOVED=$(find blocks -name "*.liquid" 2>/dev/null | wc -l || echo "0")
+            rm -rf blocks/ 2>/dev/null || true
+          fi
+          echo "   • blocks/*.liquid: $BLOCKS_REMOVED files"
+          
+          # Generated files
+          GENERATED_REMOVED=0
+          if [ -f "assets/theme.css" ]; then
+            rm assets/theme.css 2>/dev/null || true
+            GENERATED_REMOVED=$((GENERATED_REMOVED + 1))
+          fi
+          if [ -f "assets/theme.css.map" ]; then
+            rm assets/theme.css.map 2>/dev/null || true
+            GENERATED_REMOVED=$((GENERATED_REMOVED + 1))
+          fi
+          # Count files BEFORE deleting them
+          MIN_JS_COUNT=$(find assets -name "*.min.js" ! -name "lib-*.min.js" 2>/dev/null | wc -l || echo "0")
+          MIN_JS_MAP_COUNT=$(find assets -name "*.min.js.map" ! -name "lib-*.min.js.map" 2>/dev/null | wc -l || echo "0")
+          # Now delete the files
+          find assets -name "*.min.js" ! -name "lib-*.min.js" -delete 2>/dev/null || true
+          find assets -name "*.min.js.map" ! -name "lib-*.min.js.map" -delete 2>/dev/null || true
+          # Add the previously captured counts
+          GENERATED_REMOVED=$((GENERATED_REMOVED + MIN_JS_COUNT + MIN_JS_MAP_COUNT))
+          echo "   • Generated files: $GENERATED_REMOVED files"
+          
+          echo ""
+          TOTAL_REMOVED=$((TEMPLATES_REMOVED + APP_TEMPLATES_REMOVED + \
+            ECOM_SECTIONS_REMOVED + ECOM_CSS_REMOVED + ECOM_JS_REMOVED + \
+            BLOCKS_REMOVED + GENERATED_REMOVED))
+          echo "📊 Total files removed: $TOTAL_REMOVED"
+          
+          # Restore ignored files from Git to prevent committing deletions
+          # Files in .gitignore that are tracked in Git should not be deleted by production sync
+          # The production pull may have removed/changed these files, but we keep Git's version
+          echo ""
+          echo "🔄 Restoring ignored files from Git to prevent deletions..."
+          
+          # Restore blocks, templates, and theme.css from Git HEAD if they were tracked
+          # This prevents Git from seeing deletions for files that should be ignored
+          git checkout HEAD -- blocks/ templates/*.json assets/theme.css 2>/dev/null || true
+          
+          echo "✅ Ignored files restored from Git (deletions prevented)"
+          echo ""
+          
+          # Count files after cleanup
+          TOTAL_AFTER=$(git status --porcelain | wc -l)
+          echo "📊 Files after cleanup: $TOTAL_AFTER"
+          echo ""
+          
+          if [ $TOTAL_AFTER -gt 0 ]; then
+            echo "✅ Remaining changes are IMPORTANT (settings, custom sections, etc)"
+            echo "   These will be included in the PR for review."
+          else
+            echo "ℹ️  All changes were in ignored files (templates, EComposer)"
+            echo "   No PR will be created (nothing important changed)."
+          fi
+          echo ""
+
+      - name: Detect and commit changes
+        id: commit
+        run: |
+          echo "🔍 Checking for important changes..."
+          
+          if [[ -n $(git status --porcelain) ]]; then
+            echo "📝 Important changes detected!"
+            echo ""
+            
+            # Show summary of changes
+            echo "📊 Changed files (important only):"
+            git status --short
+            echo ""
+            
+            # Count changes by type (only non-ignored files)
+            SECTIONS_CHANGED=$(git status --porcelain | grep "sections/" | grep -v "ecom-" | wc -l || echo "0")
+            SNIPPETS_CHANGED=$(git status --porcelain | grep "snippets/" | wc -l || echo "0")
+            CONFIG_CHANGED=$(git status --porcelain | grep "config/" | wc -l || echo "0")
+            ASSETS_CHANGED=$(git status --porcelain | grep "assets/" | grep -v "ecom-" | wc -l || echo "0")
+            LOCALES_CHANGED=$(git status --porcelain | grep "locales/" | wc -l || echo "0")
+            LAYOUT_CHANGED=$(git status --porcelain | grep "layout/" | wc -l || echo "0")
+            
+            echo "📈 Important changes summary:"
+            echo "   Sections (custom): $SECTIONS_CHANGED"
+            echo "   Snippets:          $SNIPPETS_CHANGED"
+            echo "   Config:            $CONFIG_CHANGED"
+            echo "   Assets (custom):   $ASSETS_CHANGED"
+            echo "   Locales:           $LOCALES_CHANGED"
+            echo "   Layout:            $LAYOUT_CHANGED"
+            echo ""
+            echo "ℹ️  Admin-managed files (templates, EComposer) were excluded from this PR"
+            echo ""
+            
+            # Add all changes
+            git add .
+            
+            # Create detailed commit message
+            git commit -m "chore(theme-sync): sync important production changes on $(date +'%Y-%m-%d %H:%M:%S UTC')" \
+              -m "Automatic sync of important production theme changes." \
+              -m "" \
+              -m "Changes detected:" \
+              -m "- Custom Sections: $SECTIONS_CHANGED file(s)" \
+              -m "- Snippets:        $SNIPPETS_CHANGED file(s)" \
+              -m "- Config:          $CONFIG_CHANGED file(s)" \
+              -m "- Custom Assets:   $ASSETS_CHANGED file(s)" \
+              -m "- Locales:         $LOCALES_CHANGED file(s)" \
+              -m "- Layout:          $LAYOUT_CHANGED file(s)" \
+              -m "" \
+              -m "Note: Admin-managed files (templates, EComposer) are excluded." \
+              -m "Those files are ignored during deployment and remain under admin control."
+            
+            echo "✅ Changes committed!"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "ℹ️  No important changes detected."
+            echo "   All changes were in ignored files (templates, EComposer, etc)"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Push changes to remote
+        if: steps.commit.outputs.has_changes == 'true'
+        run: |
+          BRANCH_NAME="${{ steps.branch.outputs.name }}"
+          echo "📤 Pushing changes to $BRANCH_NAME..."
+          git push origin "$BRANCH_NAME"
+          echo "✅ Changes pushed successfully!"
+
+      - name: Create Pull Request (if changes detected)
+        if: steps.commit.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BRANCH_NAME="${{ steps.branch.outputs.name }}"
+          
+          # Determine reviewer
+          if [ -n "${{ github.event.inputs.reviewer }}" ]; then
+            REVIEWER="${{ github.event.inputs.reviewer }}"
+          else
+            REVIEWER="${{ github.actor }}"
+          fi
+          
+          echo "👤 Reviewer: $REVIEWER"
+          
+          # Check if PR already exists
+          EXISTING_PR=$(gh pr list --head "$BRANCH_NAME" --state open --json number --jq '.[0].number' || echo "")
+          
+          if [ -z "$EXISTING_PR" ]; then
+            echo "🆕 Creating new Pull Request..."
+            gh pr create \
+              --title "Theme Sync: Important production changes on $(date +'%Y-%m-%d')" \
+              --body "Automatic sync of important production theme changes. This PR includes config files, custom sections, snippets, locales, and layout files. Excluded: templates, EComposer, and generated files (managed by admin and ignored on deploy). Review and merge into develop when ready." \
+              --base develop \
+              --head "$BRANCH_NAME" \
+              --reviewer "$REVIEWER"
+            echo "✅ Pull Request created and assigned to @$REVIEWER!"
+          else
+            echo "ℹ️  Pull Request #$EXISTING_PR already exists for branch $BRANCH_NAME"
+            echo "   Updating existing PR with new commits..."
+            # Add reviewer to existing PR if not already added
+            gh pr edit "$EXISTING_PR" --add-reviewer "$REVIEWER" 2>/dev/null || true
+            echo "✅ Reviewer @$REVIEWER added to existing PR!"
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          echo ""
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "📋 THEME SYNC SUMMARY"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo ""
+          if [ "${{ steps.commit.outputs.has_changes }}" = "true" ]; then
+            echo "✅ Important changes detected and pushed to ${{ steps.branch.outputs.name }}"
+            echo "📋 Pull Request created/updated for review (base: develop)"
+            echo ""
+            echo "📦 PR includes:"
+            echo "   • Config, custom sections, snippets, locales, layout"
+            echo ""
+            echo "🚫 PR excludes (ignored files):"
+            echo "   • Templates, EComposer, generated files"
+            echo ""
+            echo "⚠️  Review the PR to detect conflicts with develop early!"
+            echo "🔄 These changes will reach main with the next develop → main PR"
+          else
+            echo "✅ No important changes detected"
+            echo "   All changes were in ignored files (templates, EComposer)"
+            echo "   No PR created - admin-managed files are protected by deploy workflow"
+          fi
+          echo ""
+          echo "🔄 Next automatic sync: Monday-Friday at 8:00 AM BRT (or run manually)"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+

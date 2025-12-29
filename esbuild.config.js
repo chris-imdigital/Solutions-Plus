@@ -1,11 +1,17 @@
+/**
+ * esbuild Configuration for Custom Scripts
+ * Compiles custom JavaScript files from src/scripts/ to assets/
+ */
+
 const esbuild = require('esbuild');
-const glob = require('glob');
+const { globSync } = require('glob');
 const path = require('path');
 
-const isWatch = process.argv.includes('--watch');
+// Get all JS files from src/scripts
+const entryPoints = globSync('src/scripts/**/*.js');
 
-// Find all JavaScript entry points in src/scripts/
-const entryPoints = glob.sync('src/scripts/**/*.js');
+// Check if running in watch mode
+const isWatch = process.argv.includes('--watch');
 
 // If no entry points, exit gracefully
 if (entryPoints.length === 0) {
@@ -13,30 +19,36 @@ if (entryPoints.length === 0) {
   process.exit(0);
 }
 
+// Common build options
 const buildOptions = {
   entryPoints,
+  outdir: 'assets',
   bundle: true,
   minify: process.env.NODE_ENV === 'production',
   sourcemap: process.env.NODE_ENV !== 'production',
-  outdir: 'assets',
-  // Generate .min.js files to match gitignore pattern
-  outExtension: { '.js': '.min.js' },
-  // Use the filename without path as the output name
-  entryNames: '[name]',
   target: ['es2020'],
   format: 'iife',
+  outExtension: { '.js': '.min.js' }, // Output as .min.js
   logLevel: 'info',
 };
 
 async function build() {
   try {
     if (isWatch) {
+      // Watch mode for development
+      console.log('🔍 Watching for changes in src/scripts/...\n');
+      
       const ctx = await esbuild.context(buildOptions);
       await ctx.watch();
-      console.log('👀 Watching for changes in src/scripts/...');
+      
+      console.log('✅ esbuild is watching for changes');
     } else {
+      // Single build for production
+      console.log('📦 Building JavaScript files...\n');
+      
       await esbuild.build(buildOptions);
-      console.log('✅ JavaScript build complete');
+      
+      console.log('\n✅ JavaScript build complete!');
     }
   } catch (error) {
     console.error('❌ Build failed:', error);
@@ -45,4 +57,3 @@ async function build() {
 }
 
 build();
-
