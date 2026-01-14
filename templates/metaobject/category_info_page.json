@@ -14,6 +14,7 @@
       "name": "Simple Hero",
       "settings": {
         "full_width": true,
+        "max_height": 0,
         "desktop_image": "{{ metaobjects.hero_image[\"hero-image-q8kskn8t\"].desktop_image.value }}",
         "mobile_image": "{{ metaobjects.hero_image[\"hero-image-q8kskn8t\"].mobile_image.value }}",
         "show_overlay": false,
