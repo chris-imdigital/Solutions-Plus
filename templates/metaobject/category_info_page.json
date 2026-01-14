@@ -23,7 +23,7 @@
         "description": "",
         "text_color": "#ffffff",
         "button_text": "{{ metaobjects.hero_image[\"hero-image-q8kskn8t\"].button_text.value }}",
-        "button_link": ""
+        "button_link": "{{ metaobject.system.url }}"
       }
     }
   },
