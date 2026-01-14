@@ -8,6 +8,26 @@
  * ------------------------------------------------------------
  */
 {
-  "sections": {},
-  "order": []
+  "sections": {
+    "collection_hero_LxaDXL": {
+      "type": "collection-hero",
+      "name": "Simple Hero",
+      "settings": {
+        "full_width": true,
+        "desktop_image": "{{ metaobjects.hero_image[\"hero-image-q8kskn8t\"].desktop_image.value }}",
+        "mobile_image": "{{ metaobjects.hero_image[\"hero-image-q8kskn8t\"].mobile_image.value }}",
+        "show_overlay": false,
+        "overlay_color": "#000000",
+        "overlay_opacity": 40,
+        "title": "",
+        "description": "",
+        "text_color": "#ffffff",
+        "button_text": "",
+        "button_link": ""
+      }
+    }
+  },
+  "order": [
+    "collection_hero_LxaDXL"
+  ]
 }
