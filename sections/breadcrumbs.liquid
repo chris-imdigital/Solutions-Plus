@@ -1,0 +1,66 @@
+<style>
+  .breadcrumbs,
+  .breadcrumbs a;
+  .breadcrumbs span {
+    color: var(--labels-quarternary, #7a7e85) !important;
+  }
+</style>
+
+<div
+  class="breadcrumbs-section-wrapper {% if section.settings.enable_container %}container{% endif %}"
+  style="
+    padding-top: {{ section.settings.padding_top | divided_by: 16.0 }}rem;
+    padding-bottom: {{ section.settings.padding_bottom | divided_by: 16.0 }}rem;
+  "
+>
+  {% render 'breadcrumbs' %}
+</div>
+
+{% schema %}
+{
+  "name": {
+    "en": "Breadcrumbs"
+  },
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_container",
+      "label": {
+        "en": "Enable container"
+      },
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": {
+        "en": "Padding top in px"
+      },
+      "default": 24,
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": {
+        "en": "Padding bottom in px"
+      },
+      "default": 24,
+      "min": 0,
+      "max": 100,
+      "step": 1
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": {
+        "en": "Breadcrumbs"
+      },
+      "category": "Navigation"
+    }
+  ]
+}
+{% endschema %}
