@@ -94,6 +94,8 @@
   {%- render 'ecom_header', ECOM_THEME: true -%}
    {{ content_for_header }}
 
+
+  {% render 'shogun-head' %}
 </head>
 
 <body class="template-{{ template | split: '.' | first }}">
