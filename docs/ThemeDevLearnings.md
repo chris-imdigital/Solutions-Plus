@@ -1,6 +1,7 @@
 # Theme Development Learnings
 
-> **Historical Context:** This document explains the evolution of our workflow. For current processes, see [`SHOPIFY-THEME-DEVELOPMENT-GUIDE.md`](SHOPIFY-THEME-DEVELOPMENT-GUIDE.md).
+> **Historical Context:** This document explains the evolution of our workflow. For current processes, see [`SHOPIFY-THEME-DEVELOPMENT-GUIDE.md`](SHOPIFY-THEME-DEVELOPMENT-GUIDE.md).  
+> **See also:** [`DECISION-LOG.md`](DECISION-LOG.md) for chronological decision history.
 
 ## The Problem We Solved
 
