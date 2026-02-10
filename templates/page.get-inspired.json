@@ -11,8 +11,16 @@
   "sections": {
     "inspiration_grid": {
       "type": "inspiration-grid",
-      "settings": {}
+      "settings": {
+        "heading": "Get Inspired",
+        "description": "We've gathered a wealth of ideas and designs to help you visualize, plan, and create beautiful plant-filled environments.",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
-  "order": ["inspiration_grid"]
+  "order": [
+    "inspiration_grid"
+  ]
 }
