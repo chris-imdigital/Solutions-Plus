@@ -57,6 +57,9 @@ blocks/
 
 # Templates with admin customizations (including subfolders)
 templates/**/*.json
+# Exception: custom feature templates that must be version-controlled
+!templates/page.get-inspired.json
+!templates/metaobject/inspiration.json
 
 # App-managed template files #
 ###############################

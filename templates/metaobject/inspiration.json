@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "hero": {
+      "type": "inspiration-hero",
+      "settings": {}
+    },
+    "related": {
+      "type": "inspiration-related",
+      "settings": {}
+    }
+  },
+  "order": ["hero", "related"]
+}

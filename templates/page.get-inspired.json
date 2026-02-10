@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "inspiration_grid": {
+      "type": "inspiration-grid",
+      "settings": {}
+    }
+  },
+  "order": ["inspiration_grid"]
+}
