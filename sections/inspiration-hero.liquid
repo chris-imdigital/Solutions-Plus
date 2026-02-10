@@ -1,0 +1,314 @@
+{% stylesheet %}
+  .inspiration-hero-wrapper {
+    background: #f9f8f2;
+  }
+
+  .inspiration-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: var(--page-width, 1280px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px var(--page-margin, 40px) 72px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .inspiration-hero {
+      flex-direction: row;
+    }
+  }
+
+  .inspiration-hero__image-wrapper {
+    border-radius: 12px;
+    overflow: clip;
+    flex-shrink: 0;
+  }
+
+  @media screen and (min-width: 750px) {
+    .inspiration-hero__image-wrapper {
+      position: sticky;
+      top: calc(var(--header-height, 60px) + 20px);
+      width: 562px;
+      align-self: flex-start;
+    }
+  }
+
+  .inspiration-hero__image-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .inspiration-hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 24px;
+    flex: 1;
+    padding: 20px 0;
+  }
+
+  .inspiration-hero__back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+    border-radius: 6px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -0.32px;
+    color: #1e2122;
+    text-decoration: none;
+  }
+
+  .inspiration-hero__back-link:hover {
+    text-decoration: underline;
+  }
+
+  .inspiration-hero__back-link svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .inspiration-hero__title {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.1;
+    letter-spacing: -1.6px;
+    color: #1e2122;
+    margin: 0;
+  }
+
+  @media screen and (min-width: 750px) {
+    .inspiration-hero__title {
+      font-size: 40px;
+    }
+  }
+
+  .inspiration-hero__category {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -0.32px;
+    color: #898d8f;
+    margin: -16px 0 0;
+  }
+
+  .inspiration-hero__description {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -0.6px;
+    color: #45484a;
+  }
+
+  .inspiration-hero__description p {
+    margin: 0;
+  }
+
+  .inspiration-hero__products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px 16px;
+  }
+
+  .inspiration-hero__product-card {
+    width: 179px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  @media screen and (max-width: 749px) {
+    .inspiration-hero__product-card {
+      width: calc(50% - 8px);
+    }
+  }
+
+  .inspiration-hero__product-image {
+    position: relative;
+    border-radius: 12px;
+    overflow: clip;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #f0f0f0;
+  }
+
+  .inspiration-hero__product-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .inspiration-hero__product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .inspiration-hero__product-zone {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: -0.12px;
+    color: #a262ae;
+    margin: 0;
+  }
+
+  .inspiration-hero__product-name {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: -0.48px;
+    color: #1e2122;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
+  @media screen and (max-width: 749px) {
+    .inspiration-hero__product-name {
+      font-size: 18px;
+    }
+  }
+
+  .inspiration-hero__product-common {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -0.32px;
+    color: #585d5f;
+    margin: 0;
+  }
+{% endstylesheet %}
+
+{%- liquid
+  assign products = metaobject.products.value
+-%}
+
+<div class="inspiration-hero-wrapper">
+<div
+  class="inspiration-hero section"
+  style="
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  {%- if metaobject.hero_image.value -%}
+    <div class="inspiration-hero__image-wrapper">
+      {{
+        metaobject.hero_image.value
+        | image_url: width: 1200
+        | image_tag:
+          widths: '450, 562, 800, 1000, 1200',
+          sizes: '(min-width: 750px) 562px, 100vw',
+          alt: metaobject.title.value
+      }}
+    </div>
+  {%- endif -%}
+
+  <div class="inspiration-hero__content">
+    <a href="/pages/get-inspired" class="inspiration-hero__back-link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+      {{ 'inspiration.back_to_all' | t }}
+    </a>
+
+    <h1 class="inspiration-hero__title">{{ metaobject.title.value }}</h1>
+    <p class="inspiration-hero__category">{{ metaobject.category.value }}</p>
+
+    {%- if metaobject.description.value != blank -%}
+      <div class="inspiration-hero__description">
+        {{ metaobject.description | metafield_tag }}
+      </div>
+    {%- endif -%}
+
+    {%- if products.size > 0 -%}
+      <div class="inspiration-hero__products">
+        {%- for product in products -%}
+          <a href="{{ product.url }}" class="inspiration-hero__product-card">
+            {%- if product.featured_image -%}
+              <div class="inspiration-hero__product-image">
+                {{
+                  product.featured_image
+                  | image_url: width: 400
+                  | image_tag:
+                    widths: '179, 300, 400',
+                    sizes: '(min-width: 750px) 179px, 50vw',
+                    loading: 'lazy',
+                    alt: product.title
+                }}
+              </div>
+            {%- endif -%}
+
+            <div class="inspiration-hero__product-info">
+              {%- if product.vendor != blank -%}
+                <p class="inspiration-hero__product-zone">{{ product.vendor }}</p>
+              {%- endif -%}
+
+              <h3 class="inspiration-hero__product-name">{{ product.title }}</h3>
+
+              {%- if product.type != blank -%}
+                <p class="inspiration-hero__product-common">{{ product.type }}</p>
+              {%- endif -%}
+            </div>
+          </a>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+</div>
+
+{% schema %}
+{
+  "name": "t:names.inspiration_hero",
+  "tag": "section",
+  "class": "section-wrapper",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:settings.color_scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 72
+    }
+  ]
+}
+{% endschema %}

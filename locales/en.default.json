@@ -304,6 +304,13 @@
       "unavailable": "Unavailable"
     }
   },
+  "inspiration": {
+    "filter_all": "All Inspiration",
+    "load_more": "Load more",
+    "back_to_all": "Back to all inspiration",
+    "shop_the_look": "Shop the look",
+    "related_heading": "You may also want to see"
+  },
   "shopify": {
     "checkout": {
       "order_summary": {
