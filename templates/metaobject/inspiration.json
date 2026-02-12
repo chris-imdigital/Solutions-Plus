@@ -17,6 +17,77 @@
         "padding_bottom": 72
       }
     },
+    "blocks_jUUTF9": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_e724bf3_7mzRaq": {
+          "type": "ai_gen_block_e724bf3",
+          "settings": {
+            "layout": "row",
+            "vertical_alignment": "center",
+            "content_width": 1200,
+            "padding": 60,
+            "spacing": 20,
+            "heading": "Authentic Design",
+            "subheading": "Minimalist and sophisticated",
+            "body_text": "<p>This block features a clean, minimalist design with a focus on typography and subtle design elements. The lightweight aesthetic conveys sophistication and authenticity.</p>",
+            "button_text": "Learn more",
+            "button_link": "",
+            "image": "shopify://shop_images/sections.png",
+            "image_aspect_ratio": 100,
+            "heading_size": 40,
+            "heading_weight": "500",
+            "letter_spacing": 0,
+            "subheading_size": 18,
+            "subheading_weight": "400",
+            "body_size": 16,
+            "button_size": 14,
+            "background_color": "#ffffff",
+            "text_color": "#333333",
+            "heading_color": "#111111",
+            "subheading_color": "#555555",
+            "button_color": "#ffffff",
+            "button_text_color": "#111111",
+            "button_border_color": "#111111",
+            "button_hover_color": "#111111",
+            "button_hover_text_color": "#ffffff",
+            "placeholder_color": "#f5f5f5"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_e724bf3_7mzRaq"
+      ],
+      "name": "Authentic Content",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "related": {
       "type": "inspiration-related",
       "settings": {
@@ -29,6 +100,7 @@
   },
   "order": [
     "hero",
+    "blocks_jUUTF9",
     "related"
   ]
 }
