@@ -1,5 +1,5 @@
-{% if section.settings.iframe_url != blank %}
-  <div class="ai-app">
+<div class="section section--page-width ai-app">
+  {% if section.settings.iframe_url != blank %}
     <iframe
       src="{{ section.settings.iframe_url }}"
       class="ai-app__frame"
@@ -9,18 +9,14 @@
       sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
       referrerpolicy="strict-origin-when-cross-origin"
     ></iframe>
-  </div>
-{% else %}
-  <div class="ai-app ai-app--empty">
-    <p>No application URL configured.</p>
-  </div>
-{% endif %}
+  {% else %}
+    <p class="ai-app__empty">No application URL configured.</p>
+  {% endif %}
+</div>
 
 {% stylesheet %}
   .ai-app {
-    width: 100%;
     height: calc(100dvh - var(--header-height, 0px));
-    overflow: hidden;
   }
 
   .ai-app__frame {
@@ -30,10 +26,11 @@
     border: 0;
   }
 
-  .ai-app--empty {
+  .ai-app__empty {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
     color: rgba(0, 0, 0, 0.4);
   }
 {% endstylesheet %}
