@@ -1,0 +1,8 @@
+{
+  "sections": {
+    "main": {
+      "type": "ai-app-iframe"
+    }
+  },
+  "order": ["main"]
+}

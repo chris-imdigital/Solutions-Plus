@@ -1,0 +1,82 @@
+{% if section.settings.iframe_url != blank %}
+  <div
+    class="ai-app"
+    style="--header-offset: {{ section.settings.header_offset }}px"
+  >
+    <iframe
+      src="{{ section.settings.iframe_url }}"
+      class="ai-app__frame"
+      title="{{ section.settings.frame_title | escape }}"
+      loading="eager"
+      allow="clipboard-write"
+      sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+      referrerpolicy="strict-origin-when-cross-origin"
+    ></iframe>
+  </div>
+{% else %}
+  <div class="ai-app ai-app--empty">
+    <p>No application URL configured.</p>
+  </div>
+{% endif %}
+
+{% stylesheet %}
+  .ai-app {
+    width: 100%;
+    height: calc(100dvh - var(--header-offset, 0px));
+    overflow: hidden;
+  }
+
+  .ai-app__frame {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
+  .ai-app--empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.4);
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:names.ai_app_iframe",
+  "tag": "section",
+  "class": "ai-app-section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "text",
+      "id": "iframe_url",
+      "label": "t:settings.iframe_url",
+      "info": "t:info.iframe_url"
+    },
+    {
+      "type": "text",
+      "id": "frame_title",
+      "label": "t:settings.frame_title",
+      "default": "AI Assistant"
+    },
+    {
+      "type": "range",
+      "id": "header_offset",
+      "label": "t:settings.header_offset",
+      "info": "t:info.header_offset",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.ai_app_iframe",
+      "category": "t:categories.other_sections"
+    }
+  ]
+}
+{% endschema %}
