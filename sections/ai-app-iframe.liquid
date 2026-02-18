@@ -1,37 +1,12 @@
 <div class="section section--page-width ai-app">
-  {% if section.settings.iframe_url != blank %}
-    <iframe
-      src="{{ section.settings.iframe_url }}"
-      class="ai-app__frame"
-      title="{{ section.settings.frame_title | escape }}"
-      loading="eager"
-      allow="clipboard-write"
-      sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-      referrerpolicy="strict-origin-when-cross-origin"
-    ></iframe>
-  {% else %}
-    <p class="ai-app__empty">No application URL configured.</p>
-  {% endif %}
+  <ag-ui-iframe src="{{ section.settings.iframe_url }}"></ag-ui-iframe>
 </div>
+
+<script src="{{ 'ag-ui-iframe.js' | asset_url }}" defer></script>
 
 {% stylesheet %}
   .ai-app {
     height: calc(100dvh - var(--header-height, 0px));
-  }
-
-  .ai-app__frame {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-
-  .ai-app__empty {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    color: rgba(0, 0, 0, 0.4);
   }
 {% endstylesheet %}
 
@@ -47,12 +22,6 @@
       "id": "iframe_url",
       "label": "t:settings.iframe_url",
       "info": "t:info.iframe_url"
-    },
-    {
-      "type": "text",
-      "id": "frame_title",
-      "label": "t:settings.frame_title",
-      "default": "AI Assistant"
     }
   ],
   "presets": [
