@@ -11,7 +11,11 @@
   "sections": {
     "main": {
       "type": "ai-app-iframe",
-      "settings": {}
+      "settings": {
+        "iframe_url": "https://overdevest-ai-ui.vercel.app/",
+        "frame_title": "AI Assistant",
+        "header_offset": 0
+      }
     }
   },
   "order": [
