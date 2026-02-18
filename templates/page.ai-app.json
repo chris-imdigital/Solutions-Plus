@@ -13,8 +13,7 @@
       "type": "ai-app-iframe",
       "settings": {
         "iframe_url": "https://overdevest-ai-ui.vercel.app/",
-        "frame_title": "AI Assistant",
-        "header_offset": 0
+        "frame_title": "Flora Bloom - AI Assistant"
       }
     }
   },
