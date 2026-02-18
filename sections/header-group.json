@@ -32,8 +32,8 @@
           "type": "_header-menu",
           "static": true,
           "settings": {
-            "menu": "header-menu",
-            "menu_style": "collection_images",
+            "menu": "overdevest",
+            "menu_style": "text",
             "featured_products_aspect_ratio": "4 / 5",
             "featured_collections_aspect_ratio": "16 / 9",
             "image_border_radius": 0,
@@ -60,8 +60,8 @@
           "type": "_header-menu",
           "static": true,
           "settings": {
-            "menu": "main-menu",
-            "menu_style": "collection_images",
+            "menu": "overdevest",
+            "menu_style": "text",
             "featured_products_aspect_ratio": "4 / 5",
             "featured_collections_aspect_ratio": "16 / 9",
             "image_border_radius": 0,
@@ -80,7 +80,7 @@
             "color_scheme_navigation_bar": "",
             "drawer_accordion": false,
             "drawer_accordion_expand_first": false,
-            "drawer_dividers": false
+            "drawer_dividers": true
           },
           "blocks": {}
         },
