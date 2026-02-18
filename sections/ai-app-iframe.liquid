@@ -1,8 +1,5 @@
 {% if section.settings.iframe_url != blank %}
-  <div
-    class="ai-app"
-    style="--header-offset: {{ section.settings.header_offset }}px"
-  >
+  <div class="ai-app">
     <iframe
       src="{{ section.settings.iframe_url }}"
       class="ai-app__frame"
@@ -22,7 +19,7 @@
 {% stylesheet %}
   .ai-app {
     width: 100%;
-    height: calc(100dvh - var(--header-offset, 0px));
+    height: calc(100dvh - var(--header-height, 0px));
     overflow: hidden;
   }
 
@@ -59,17 +56,6 @@
       "id": "frame_title",
       "label": "t:settings.frame_title",
       "default": "AI Assistant"
-    },
-    {
-      "type": "range",
-      "id": "header_offset",
-      "label": "t:settings.header_offset",
-      "info": "t:info.header_offset",
-      "min": 0,
-      "max": 200,
-      "step": 4,
-      "unit": "px",
-      "default": 0
     }
   ],
   "presets": [
