@@ -292,6 +292,13 @@
   "fields": {
     "separator": "à"
   },
+  "inspiration": {
+    "filter_all": "Toutes les inspirations",
+    "load_more": "Charger plus",
+    "back_to_all": "Retour à toutes les inspirations",
+    "shop_the_look": "Acheter le look",
+    "related_heading": "Vous aimerez aussi"
+  },
   "blogs": {
     "article": {
       "comment_author_separator": "•",

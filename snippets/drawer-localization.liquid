@@ -22,7 +22,6 @@
     {% render 'localization-form',
       show_country: show_country,
       show_language: show_language,
-      country_style: country_style,
       localization_style: 'dropdown'
     %}
   </div>
@@ -108,7 +107,6 @@
         {% render 'localization-form',
           show_country: show_country,
           show_language: show_language,
-          country_style: section.settings.country_selector_style,
           localization_style: 'drawer',
           form_style: form_style
         %}

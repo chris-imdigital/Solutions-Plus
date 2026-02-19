@@ -80,8 +80,7 @@
           {% if variant_style == 'swatch' %}
             {% render 'swatch',
               swatch: product_option_value.swatch,
-              variant_image: featured_media,
-              show_variant_image: settings.show_variant_image
+              variant_image: featured_media
             %}
           {% else %}
             <span>{{ product_option_value | escape }}</span>
