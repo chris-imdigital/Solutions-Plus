@@ -180,6 +180,45 @@
     text-align: center;
   }
 
+  shopify-account {
+    --shopify-account-signed-in-avatar-size: 1.625rem;
+    --shopify-account-signed-in-avatar-color-background: var(--color-primary-button-background);
+    --shopify-account-signed-in-avatar-color-text: var(--color-primary-button-text);
+    --shopify-account-font-body: var(--font-body--family);
+    --shopify-account-font-body-weight: var(--font-body--weight);
+    --shopify-account-font-heading: var(--font-heading--family);
+    --shopify-account-font-heading-weight: var(--font-heading--weight);
+    --shopify-account-color-accent: var(--color-primary-button-background);
+    --shopify-account-color-accent-text: var(--color-primary-button-text);
+    --shopify-account-color-background: var(--color-background);
+    --shopify-account-color-text: var(--color-foreground);
+    --shopify-account-color-border: var(--color-border);
+    --shopify-account-radius-button: var(--style-border-radius-buttons-primary);
+    --shopify-account-radius-dialog: var(--style-border-radius-popover);
+  }
+
+  shopify-account::part(signed-out-avatar) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--button-size);
+    height: var(--button-size);
+    color: var(--color-foreground);
+    padding: 0;
+    transition: color var(--animation-speed) var(--animation-easing);
+  }
+
+  .shopify-account__signed-out-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .shopify-account__signed-out-avatar svg {
+    width: var(--icon-size-md);
+    height: var(--icon-size-md);
+  }
+
   header-actions {
     display: flex;
 
@@ -260,8 +299,11 @@
   {{- block.shopify_attributes -}}
 >
   {% if shop.customer_accounts_enabled %}
-    {% render 'account-popover' %}
-    {% render 'account-drawer' %}
+    <shopify-account menu="{{ customer_account_menu | default: 'customer-account-main-menu' }}">
+      <div slot="signed-out-avatar" class="shopify-account__signed-out-avatar">
+        {{- 'icon-account.svg' | inline_asset_content -}}
+      </div>
+    </shopify-account>
   {% endif %}
 
   {% if settings.cart_type == 'drawer' and template.name != 'cart' %}
