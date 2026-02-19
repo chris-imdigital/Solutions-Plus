@@ -58,7 +58,7 @@
   endcapture
 
   capture actions
-    render 'header-actions', customer_account_menu: section.settings.customer_account_menu
+    render 'header-actions'
   endcapture
 
   if shop.customer_accounts_enabled
@@ -291,6 +291,7 @@
         [role='menuitem']:is([aria-expanded='true']),
         nav[header-menu]:is(:focus-within),
         .menu-list__link[data-animating],
+        .account-popover[open],
         .localization-wrapper:not([hidden])
       ) {
       /* should be opaque, negate all transparent properties */
@@ -312,6 +313,7 @@
   :is(
       .header[transparent]:not([data-sticky-state='active']),
       .header[transparent='always'][data-sticky-state='active'],
+      .account-popover[open],
       .localization-wrapper:not([hidden])
     )
     .header__row:not(:hover):not(
@@ -492,7 +494,7 @@
         grid-area: leftB;
       }
 
-      &:not(:has(shopify-account)) .search-action {
+      &:not(:has(.account-actions)) .search-action {
         grid-area: rightA;
       }
 
@@ -645,12 +647,6 @@
     {
       "type": "paragraph",
       "content": "t:content.manage_customer_accounts"
-    },
-    {
-      "type": "link_list",
-      "id": "customer_account_menu",
-      "label": "t:settings.customer_account_menu",
-      "default": "customer-account-main-menu"
     },
     {
       "type": "header",
