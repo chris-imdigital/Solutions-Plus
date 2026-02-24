@@ -140,7 +140,7 @@
         }
       {% endif %}
     {%- elsif prs == 'orankl' -%}
-      {% assign rating = product.metafields.orankl.review_countt %}
+      {% assign rating = product.metafields.orankl.review_count %}
       {% if rating and rating != "0" %}
         ,"aggregateRating": {
         "@type": "AggregateRating",

@@ -63,7 +63,7 @@
 {% endcapture %}
 {% assign product_card_size = product_card_size | strip %}
 
-<style>
+{% style %}
   @media (min-width: 750px) {
     {% case section.settings.layout_type %}
       {% when 'grid' %}
@@ -119,7 +119,7 @@
       padding-block-end: var(--zoom-out-padding-block-end, 0);
     }
   }
-</style>
+{% endstyle %}
 
 <div
   id="ResultsList"
