@@ -1,11 +1,3 @@
-<style>
-  .breadcrumbs,
-  .breadcrumbs a;
-  .breadcrumbs span {
-    color: var(--labels-quarternary, #7a7e85) !important;
-  }
-</style>
-
 <div
   class="breadcrumbs-section-wrapper {% if section.settings.enable_container %}container{% endif %}"
   style="
@@ -16,26 +8,29 @@
   {% render 'breadcrumbs' %}
 </div>
 
+{% stylesheet %}
+  .breadcrumbs,
+  .breadcrumbs a,
+  .breadcrumbs span {
+    color: var(--labels-quarternary, #7a7e85) !important;
+  }
+{% endstylesheet %}
+
 {% schema %}
 {
-  "name": {
-    "en": "Breadcrumbs"
-  },
+  "name": "t:names.breadcrumbs",
+  "tag": "section",
   "settings": [
     {
       "type": "checkbox",
       "id": "enable_container",
-      "label": {
-        "en": "Enable container"
-      },
+      "label": "Enable container",
       "default": true
     },
     {
       "type": "range",
       "id": "padding_top",
-      "label": {
-        "en": "Padding top in px"
-      },
+      "label": "t:settings.padding_top",
       "default": 24,
       "min": 0,
       "max": 100,
@@ -44,9 +39,7 @@
     {
       "type": "range",
       "id": "padding_bottom",
-      "label": {
-        "en": "Padding bottom in px"
-      },
+      "label": "t:settings.padding_bottom",
       "default": 24,
       "min": 0,
       "max": 100,
@@ -56,9 +49,7 @@
   "blocks": [],
   "presets": [
     {
-      "name": {
-        "en": "Breadcrumbs"
-      },
+      "name": "t:names.breadcrumbs",
       "category": "Navigation"
     }
   ]

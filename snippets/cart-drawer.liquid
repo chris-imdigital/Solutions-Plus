@@ -7,7 +7,7 @@
   type="module"
 ></script>
 
-<style>
+{% style %}
   .cart-items__wrapper,
   .cart-drawer__summary {
     --cart-secondary-font-family: var(--font-{{settings.cart_price_font}}--family);
@@ -72,7 +72,7 @@
     bottom: 0;
     z-index: 1;
   }
-</style>
+{% endstyle %}
 
 <cart-drawer-component
   class="cart-drawer"
