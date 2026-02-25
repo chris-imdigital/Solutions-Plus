@@ -21,9 +21,19 @@ This is a Shopify theme (Liquid + TailwindCSS + esbuild). There is no backend, n
 ### Running the dev server
 
 - `npm run dev` starts CSS watcher + JS watcher + `shopify theme dev`
-- Requires `PROD_STORE` env var (e.g. `solutions-plus.myshopify.com`) and Shopify CLI authentication
-- Auth options: `SHOPIFY_CLI_THEME_TOKEN` env var (theme access token), or interactive Shopify partner login
+- Requires `PROD_STORE` env var and Shopify CLI authentication via `SHOPIFY_CLI_THEME_TOKEN`
+- The store is **password-protected**. `shopify theme dev` needs the storefront password via `--store-password` flag or `STORE_PASSWORD` env var. Without it, the CLI fails in non-interactive mode with "Failed to prompt: Enter your store password".
+- The provided `SHOPIFY_CLI_THEME_TOKEN` is an Admin API token (`shpat_` prefix). Admin API tokens have a known limitation: they cannot handle password-protected storefronts for `shopify theme dev`. Using a Theme Access app token (`shptka_` prefix) would remove this limitation and also enable hot module reloading.
+- **Workaround for cloud agents**: use `shopify theme push --development` to upload, then open the preview URL in a browser after entering the store password. Or run `shopify theme dev --store-password="$STORE_PASSWORD" --store="$PROD_STORE" --password="$SHOPIFY_CLI_THEME_TOKEN"`.
 - There is no local mock of Shopify; the CLI proxies against a real store
+
+### Deploying to preview without dev server
+
+If `shopify theme dev` is blocked, you can still verify theme changes by pushing to a development theme:
+```
+shopify theme push --development --password="$SHOPIFY_CLI_THEME_TOKEN" --json
+```
+The JSON output includes `preview_url` and `editor_url`.
 
 ### Key commands reference
 
@@ -32,3 +42,11 @@ See `package.json` scripts and `docs/SHOPIFY-THEME-DEVELOPMENT-GUIDE.md` for ful
 ### Node.js version
 
 Node.js 22 is used (per CI workflows). The environment comes with nvm; ensure the active version is 22.x.
+
+### Required secrets
+
+| Secret | Purpose |
+|--------|---------|
+| `PROD_STORE` | Store URL (e.g. `solutions-plus.myshopify.com`) |
+| `SHOPIFY_CLI_THEME_TOKEN` | Admin API token for Shopify CLI (`shpat_` prefix) |
+| `STORE_PASSWORD` | Storefront password for password-protected store (needed for `shopify theme dev` and browser preview) |
