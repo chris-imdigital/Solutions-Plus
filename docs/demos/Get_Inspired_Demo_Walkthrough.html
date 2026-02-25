@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Inspired — Build Story</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root {
+  --bg: #f8f7f4;
+  --bg-2: #f0eeea;
+  --bg-card: #ffffff;
+  --bg-glass: rgba(255,255,255,0.8);
+  --border: #e2dfd9;
+  --border-glow: #d4d0c8;
+  --text: #1e1c1a;
+  --text-2: #5c5850;
+  --text-3: #9a958c;
+  --purple: #a262ae;
+  --purple-soft: #8a4e96;
+  --purple-glow: rgba(162,98,174,0.1);
+  --purple-deep: #7a4585;
+  --blue: #4a7fb0;
+  --blue-glow: rgba(74,127,176,0.08);
+  --green: #3d8a4a;
+  --green-glow: rgba(61,138,74,0.06);
+  --warm: #b07d4a;
+  --warm-glow: rgba(176,125,74,0.06);
+  --serif: 'Instrument Serif', Georgia, serif;
+  --sans: 'Outfit', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+  --max-w: 960px;
+  --gutter: clamp(24px, 5vw, 64px);
+  --ease: cubic-bezier(0.23, 1, 0.32, 1);
+}
+html { scroll-behavior: smooth; background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+body { overflow-x: hidden; }
+code { font-family: var(--mono); font-size: 0.8em; color: var(--purple-soft); background: rgba(162,98,174,0.08); padding: 2px 7px; border-radius: 5px; }
+.wrap { max-width: calc(var(--max-w) + var(--gutter)*2); margin: 0 auto; padding: 0 var(--gutter); }
+
+/* ====== GRAIN + MESH OVERLAYS ====== */
+body::before { content: ''; position: fixed; inset: 0; pointer-events: none; z-index: 1; opacity: 0.018; background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") repeat; background-size: 128px; }
+.orb { position: absolute; border-radius: 50%; filter: blur(100px); pointer-events: none; will-change: transform; }
+.orb-1 { width: 600px; height: 600px; top: -200px; right: -150px; background: radial-gradient(circle, var(--purple-glow), transparent 70%); animation: orbFloat 20s ease-in-out infinite; }
+.orb-2 { width: 500px; height: 500px; bottom: -100px; left: -200px; background: radial-gradient(circle, var(--blue-glow), transparent 70%); animation: orbFloat 25s ease-in-out infinite reverse; }
+@keyframes orbFloat { 0%,100% { transform: translate(0,0); } 50% { transform: translate(30px,-40px); } }
+
+/* ====== HERO ====== */
+.hero { position: relative; padding: clamp(100px,20vh,220px) var(--gutter) clamp(80px,12vh,140px); text-align: center; overflow: hidden; width: 100%; background: var(--bg-2); }
+.hero-badge { display: inline-flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--purple-soft); margin-bottom: 32px; padding: 7px 18px; border-radius: 100px; background: var(--purple-glow); backdrop-filter: blur(10px); border: 1px solid rgba(162,98,174,0.2); }
+.hero-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--purple); box-shadow: 0 0 10px var(--purple), 0 0 30px var(--purple-glow); animation: pulse 2.5s ease-in-out infinite; }
+@keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.6; transform: scale(0.85); } }
+.hero h1 { font-family: var(--serif); font-size: clamp(42px,8vw,80px); font-weight: 400; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 28px; }
+.hero h1 em { font-style: italic; background: linear-gradient(135deg, var(--purple-soft), var(--blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hero-sub { font-size: clamp(16px,2vw,19px); color: var(--text-2); max-width: 52ch; margin: 0 auto; line-height: 1.7; font-weight: 300; }
+.hero-stats { display: flex; justify-content: center; gap: 16px; margin-top: 56px; flex-wrap: wrap; }
+.stat-card { background: var(--bg-glass); backdrop-filter: blur(20px); border: 1px solid var(--border); border-radius: 16px; padding: 24px 32px; text-align: center; min-width: 130px; transition: transform 0.4s var(--ease), border-color 0.4s ease; }
+.stat-card:hover { transform: translateY(-4px); border-color: var(--border-glow); }
+.stat-num { font-family: var(--serif); font-size: 40px; line-height: 1; color: var(--text); }
+.stat-label { font-size: 11px; color: var(--text-3); text-transform: uppercase; letter-spacing: 0.12em; font-weight: 600; margin-top: 8px; }
+
+/* ====== CHAPTERS ====== */
+.chapter { padding: clamp(72px,12vh,140px) 0; position: relative; }
+.ch-divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border), var(--purple-glow), var(--border), transparent); }
+.ch-label { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--purple-soft); margin-bottom: 14px; }
+.chapter h2 { font-family: var(--serif); font-size: clamp(30px,5vw,48px); font-weight: 400; line-height: 1.1; margin-bottom: 18px; }
+.ch-intro { font-size: 17px; color: var(--text-2); max-width: 58ch; line-height: 1.7; font-weight: 300; }
+
+/* ====== TIMELINE ====== */
+.timeline { margin-top: 56px; display: grid; gap: 0; position: relative; }
+.tl-item { display: grid; grid-template-columns: 100px 40px 1fr; gap: 0; align-items: start; position: relative; }
+.tl-date { font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--text-3); padding-top: 24px; text-align: right; padding-right: 0; }
+.tl-track { display: flex; flex-direction: column; align-items: center; position: relative; }
+.tl-dot { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--border-glow); background: var(--bg); margin-top: 26px; position: relative; z-index: 2; transition: all 0.3s ease; }
+.tl-item:hover .tl-dot { border-color: var(--purple); }
+.tl-item.final .tl-dot { background: var(--purple); border-color: var(--purple); }
+.tl-line { width: 1px; flex: 1; background: linear-gradient(to bottom, var(--border-glow), var(--border)); min-height: 20px; }
+.tl-item:last-child .tl-line { display: none; }
+.tl-card { margin: 12px 0 12px 0; padding: 24px 28px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; transition: all 0.4s var(--ease); }
+.tl-card:hover { border-color: var(--border-glow); transform: translateX(4px); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+.tl-item.final .tl-card { border-color: rgba(162,98,174,0.3); background: linear-gradient(135deg, var(--bg-card), rgba(162,98,174,0.04)); }
+.tl-title { font-size: 17px; font-weight: 600; margin-bottom: 6px; line-height: 1.3; }
+.tl-desc { font-size: 14px; color: var(--text-2); line-height: 1.6; }
+@media (max-width: 640px) { .tl-item { grid-template-columns: 32px 1fr; } .tl-date { display: none; } .tl-card::before { content: attr(data-date); font-family: var(--mono); font-size: 12px; color: var(--text-3); display: block; margin-bottom: 8px; } }
+
+/* ====== PHASE CARDS ====== */
+.phases { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 48px; }
+@media (max-width: 700px) { .phases { grid-template-columns: 1fr; } }
+.phase { padding: 32px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 18px; position: relative; overflow: hidden; transition: border-color 0.4s ease, box-shadow 0.4s ease; }
+.phase:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+.phase::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
+.phase.data { border-color: rgba(107,163,214,0.2); }
+.phase.data:hover { border-color: rgba(107,163,214,0.4); }
+.phase.data::before { background: linear-gradient(90deg, var(--blue), transparent 80%); }
+.phase.fe { border-color: rgba(162,98,174,0.2); }
+.phase.fe:hover { border-color: rgba(162,98,174,0.4); }
+.phase.fe::before { background: linear-gradient(90deg, var(--purple), transparent 80%); }
+.phase-icon { font-size: 28px; margin-bottom: 16px; }
+.phase-tag { font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; }
+.phase.data .phase-tag { color: var(--blue); }
+.phase.fe .phase-tag { color: var(--purple-soft); }
+.phase h3 { font-family: var(--serif); font-size: 26px; font-weight: 400; margin-bottom: 12px; }
+.phase p { font-size: 14.5px; color: var(--text-2); line-height: 1.6; }
+.phase-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+.pill { font-size: 11px; font-weight: 600; padding: 4px 11px; border-radius: 6px; background: var(--bg); border: 1px solid var(--border); color: var(--text-3); }
+.phase-list { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border); display: grid; gap: 6px; }
+.phase-list-item { display: flex; gap: 12px; font-size: 13.5px; color: var(--text-2); padding: 4px 0; }
+.phase-list-num { font-family: var(--mono); font-size: 11px; font-weight: 700; width: 16px; flex-shrink: 0; text-align: right; }
+.phase.data .phase-list-num { color: var(--blue); }
+.phase.fe .phase-list-num { color: var(--purple-soft); }
+
+/* ====== FLOW ====== */
+.flow { margin-top: 48px; display: grid; gap: 28px; }
+.flow-phase { font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-3); padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+.flow-phase.p1 { color: var(--blue); border-color: rgba(107,163,214,0.2); }
+.flow-phase.p2 { color: var(--purple-soft); border-color: rgba(162,98,174,0.2); }
+.flow-chain { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; padding: 4px 0; }
+.fnode { padding: 9px 16px; border-radius: 10px; font-size: 13px; font-weight: 500; white-space: nowrap; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-2); transition: all 0.3s ease; }
+.fnode:hover { border-color: var(--border-glow); transform: translateY(-1px); }
+.fnode.gql { background: rgba(74,127,176,0.07); border-color: rgba(74,127,176,0.25); color: var(--blue); font-weight: 600; }
+.fnode.fig { background: rgba(162,98,174,0.06); border-color: rgba(162,98,174,0.25); color: var(--purple); font-weight: 600; }
+.fnode.out { background: rgba(61,138,74,0.06); border-color: rgba(61,138,74,0.2); color: var(--green); font-weight: 600; }
+.farrow { color: var(--text-3); font-size: 16px; flex-shrink: 0; opacity: 0.5; }
+
+/* ====== SPOTLIGHT ====== */
+.spotlights { margin-top: 48px; display: grid; gap: 20px; }
+.spot { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 28px 32px; overflow: hidden; position: relative; transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+.spot:hover { border-color: var(--border-glow); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+.spot::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; border-radius: 0 2px 2px 0; }
+.spot.s-warm::before { background: var(--warm); }
+.spot.s-green::before { background: var(--green); }
+.spot.s-blue::before { background: var(--blue); }
+.spot-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
+.spot.s-warm .spot-tag { color: var(--warm); }
+.spot.s-green .spot-tag { color: var(--green); }
+.spot.s-blue .spot-tag { color: var(--blue); }
+.spot-title { font-size: 18px; font-weight: 600; margin-bottom: 6px; }
+.spot-desc { font-size: 14px; color: var(--text-2); line-height: 1.55; margin-bottom: 14px; }
+.spot-file { font-family: var(--mono); font-size: 11px; color: var(--text-3); margin-bottom: 10px; }
+pre { background: #2a2830; border: 1px solid #3a3848; border-radius: 10px; padding: 18px 22px; overflow-x: auto; font-family: var(--mono); font-size: 12.5px; line-height: 1.65; color: #bfbab2; }
+pre .kw { color: #c992d4; } pre .str { color: #74c280; } pre .cm { color: #6b665e; font-style: italic; } pre .fn { color: #6ba3d6; } pre .num { color: #d4a574; }
+
+/* ====== FILE TREE ====== */
+.file-tree { margin-top: 40px; display: grid; gap: 20px; }
+.ft-group { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 24px 28px; transition: border-color 0.3s ease; }
+.ft-group:hover { border-color: var(--border-glow); }
+.ft-folder { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.ft-folder-icon { font-size: 18px; }
+.ft-folder-name { font-family: var(--mono); font-size: 14px; font-weight: 600; color: var(--text); }
+.ft-folder-count { font-size: 11px; color: var(--text-3); font-weight: 600; margin-left: auto; background: rgba(255,255,255,0.04); padding: 2px 8px; border-radius: 4px; }
+.ft-files { display: grid; gap: 10px; }
+.ft-file { display: flex; align-items: baseline; gap: 12px; padding: 6px 0; }
+.ft-file-name { font-family: var(--mono); font-size: 13px; color: var(--purple-soft); flex-shrink: 0; }
+.ft-file-desc { font-size: 13px; color: var(--text-3); line-height: 1.4; }
+.ft-file-sep { flex: 1; border-bottom: 1px dotted var(--border); min-width: 20px; margin: 0 4px; align-self: center; }
+
+/* ====== TAKEAWAYS ====== */
+.takes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 36px; }
+@media (max-width: 640px) { .takes { grid-template-columns: 1fr; } }
+.take { padding: 24px 28px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; transition: all 0.3s var(--ease); }
+.take:hover { border-color: var(--border-glow); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+.take-num { font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--purple); margin-bottom: 10px; }
+.take-title { font-weight: 600; font-size: 15px; margin-bottom: 6px; }
+.take-desc { font-size: 13.5px; color: var(--text-2); line-height: 1.5; }
+
+/* ====== RESOURCES ====== */
+.resources { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
+@media (max-width: 700px) { .resources { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .resources { grid-template-columns: 1fr; } }
+.res { padding: 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; display: flex; flex-direction: column; gap: 10px; transition: all 0.3s var(--ease); }
+.res:hover { border-color: var(--border-glow); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+.res-icon { font-size: 24px; line-height: 1; }
+.res-name { font-size: 15px; font-weight: 600; line-height: 1.3; }
+.res-desc { font-size: 13px; color: var(--text-2); line-height: 1.5; }
+.res-type { font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-3); margin-top: auto; padding-top: 8px; }
+.res.input .res-type { color: var(--blue); }
+.res.tool .res-type { color: var(--purple-soft); }
+.res.output .res-type { color: var(--green); }
+
+/* ====== FOOTER ====== */
+.footer { text-align: center; padding: 64px var(--gutter) 40px; font-size: 13px; color: var(--text-3); }
+.footer-line { height: 1px; background: linear-gradient(90deg, transparent, var(--border), var(--purple-glow), var(--border), transparent); margin-bottom: 40px; }
+
+/* ====== REVEALS ====== */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
+.reveal.vis { opacity: 1; transform: translateY(0); }
+.rd1 { transition-delay: 0.08s; } .rd2 { transition-delay: 0.16s; } .rd3 { transition-delay: 0.24s; }
+</style>
+</head>
+<body>
+
+<!-- ========== HERO ========== -->
+<header class="hero" style="position:relative">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="hero-badge"><span class="dot"></span> Case Study</div>
+  <h1>From meeting notes<br>to <em>working feature</em></h1>
+  <p class="hero-sub">The full story of how a vague "Design Shop" concept became a working Shopify feature — from discovery and spec writing through GraphQL data setup and Figma-driven frontend implementation, orchestrated with Claude Code and MCPs.</p>
+  <div class="hero-stats">
+    <div class="stat-card"><div class="stat-num">1</div><div class="stat-label">Spec Document</div></div>
+    <div class="stat-card"><div class="stat-num">9</div><div class="stat-label">Files Created</div></div>
+    <div class="stat-card"><div class="stat-num">2</div><div class="stat-label">MCPs Used</div></div>
+  </div>
+</header>
+
+<div class="ch-divider"></div>
+
+<!-- ========== CH 1: JOURNEY ========== -->
+<section class="chapter">
+  <div class="wrap">
+    <div class="ch-label reveal">Chapter 1</div>
+    <h2 class="reveal">How the feature actually took shape</h2>
+    <p class="ch-intro reveal">This wasn't "write a prompt, get a feature." The build had real discovery behind it — evaluating approaches, ruling out dead ends, and documenting the decisions that mattered before any code was written.</p>
+
+    <div class="timeline reveal">
+      <div class="tl-item">
+        <div class="tl-date">Step 1</div>
+        <div class="tl-track"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-card" data-date="Step 1">
+          <div class="tl-title">A vague concept surfaces</div>
+          <div class="tl-desc">Client describes a "Design Shop" idea in a creative call — curated lifestyle photos paired with products. Pinterest-meets-shop-the-look. No technical path, no data model, no implementation plan. Just a direction.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Step 2</div>
+        <div class="tl-track"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-card" data-date="Step 2">
+          <div class="tl-title">Evaluate data model options</div>
+          <div class="tl-desc">Blogs? Collections? Custom pages? Metaobjects? Each was considered for how it handles product references, URL routing, admin editing, and SEO. Metaobjects won — clean semantic model, native product references, and standalone URL routing without a custom app.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Step 3</div>
+        <div class="tl-track"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-card" data-date="Step 3">
+          <div class="tl-title">Solve the filtering problem</div>
+          <div class="tl-desc">The Storefront API doesn't support field-level filtering on metaobjects. Server-side filtering would require a custom app or proxy. For a curated gallery under 250 entries, client-side filtering is fast, simple, and avoids infrastructure. Decision: Liquid renders everything, JS handles show/hide.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Step 4</div>
+        <div class="tl-track"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-card" data-date="Step 4">
+          <div class="tl-title">Build a working POC on a dev store</div>
+          <div class="tl-desc">Architecture validated hands-on: metaobject definition created via GraphQL, test entries populated, Liquid templates wired up, client-side JS written. Two platform gotchas discovered — self-referencing fields need a two-step mutation, and <code>onlineStore</code> capability isn't supported in TOML config.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Step 5</div>
+        <div class="tl-track"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-card" data-date="Step 5">
+          <div class="tl-title">Write the feature spec</div>
+          <div class="tl-desc">Everything distilled into one document: data model, field definitions, capabilities, category choices, theme architecture, frontend behavior, gotchas, POC-vs-production gaps, and a 9-step implementation sequence. This is the artifact Claude Code builds from.</div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Step 6</div>
+        <div class="tl-track"><div class="tl-dot"></div><div class="tl-line"></div></div>
+        <div class="tl-card" data-date="Step 6">
+          <div class="tl-title">Design the visual direction in Figma</div>
+          <div class="tl-desc">Design team creates Figma frames for the index page (masonry grid, filter tabs, product swatches, load more) and detail page (sticky hero, product grid, related entries). These become the visual source of truth for the frontend build.</div>
+        </div>
+      </div>
+      <div class="tl-item final">
+        <div class="tl-date">Step 7</div>
+        <div class="tl-track"><div class="tl-dot"></div></div>
+        <div class="tl-card" data-date="Step 7">
+          <div class="tl-title">Hand off to Claude Code with MCPs</div>
+          <div class="tl-desc">One prompt kicks off the implementation: "Let's use the Figma MCP, Shopify Dev MCP and the get inspired spec doc to start building out this feature." Claude reads the spec, pulls Figma designs, explores the codebase, plans the architecture, and builds 9 files across two phases.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ch-divider"></div>
+
+<!-- ========== CH 2: TWO PHASES ========== -->
+<section class="chapter">
+  <div class="wrap">
+    <div class="ch-label reveal">Chapter 2</div>
+    <h2 class="reveal">Two phases, two conversations with Shopify</h2>
+    <p class="ch-intro reveal">With the spec and Figma designs in hand, Claude Code splits the implementation into two distinct phases. Each talks to a different part of Shopify through different MCP tools — but both are driven by the same spec.</p>
+
+    <div class="phases">
+      <div class="phase data reveal">
+        <div class="phase-icon">&#x1f6e0;&#xfe0f;</div>
+        <div class="phase-tag">Phase 1</div>
+        <h3>Data Layer</h3>
+        <p>Create the metaobject definition, configure capabilities, upload images, populate test entries. Purely store configuration — no theme code.</p>
+        <div class="phase-pills">
+          <span class="pill">Shopify Dev MCP</span>
+          <span class="pill">GraphQL Admin API</span>
+        </div>
+        <div class="phase-list">
+          <div class="phase-list-item"><span class="phase-list-num">1</span> Create metaobject definition (6 fields, 3 capabilities)</div>
+          <div class="phase-list-item"><span class="phase-list-num">2</span> Add self-referencing field (two-step gotcha)</div>
+          <div class="phase-list-item"><span class="phase-list-num">3</span> Upload hero images via staged uploads</div>
+          <div class="phase-list-item"><span class="phase-list-num">4</span> Create test entries across categories</div>
+          <div class="phase-list-item"><span class="phase-list-num">5</span> Wire product refs + related entries</div>
+          <div class="phase-list-item"><span class="phase-list-num">6</span> Verify in Shopify admin</div>
+        </div>
+      </div>
+
+      <div class="phase fe reveal rd1">
+        <div class="phase-icon">&#x1f3a8;</div>
+        <div class="phase-tag">Phase 2</div>
+        <h3>Frontend</h3>
+        <p>Build Liquid sections, JS module, and templates that render the data. Figma provides pixel-level specs. The frontend reads from what Phase 1 created.</p>
+        <div class="phase-pills">
+          <span class="pill">Figma MCP</span>
+          <span class="pill">Shopify Dev MCP</span>
+          <span class="pill">Theme Codebase</span>
+        </div>
+        <div class="phase-list">
+          <div class="phase-list-item"><span class="phase-list-num">1</span> Read spec + pull Figma design context</div>
+          <div class="phase-list-item"><span class="phase-list-num">2</span> Explore existing theme patterns</div>
+          <div class="phase-list-item"><span class="phase-list-num">3</span> Load Shopify Liquid API context</div>
+          <div class="phase-list-item"><span class="phase-list-num">4</span> Plan architecture + file inventory</div>
+          <div class="phase-list-item"><span class="phase-list-num">5</span> Build sections, snippets, JS, templates</div>
+          <div class="phase-list-item"><span class="phase-list-num">6</span> Compile JS via esbuild</div>
+          <div class="phase-list-item"><span class="phase-list-num">7</span> Validate theme code</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ch-divider"></div>
+
+<!-- ========== CH 3: MCP FLOW ========== -->
+<section class="chapter">
+  <div class="wrap">
+    <div class="ch-label reveal">Chapter 3</div>
+    <h2 class="reveal">How the MCPs actually got used</h2>
+    <p class="ch-intro reveal">This isn't theoretical — these are the actual tool call chains from the build. Each MCP was called at a specific moment because Claude needed something concrete before it could take the next step.</p>
+
+    <div class="flow reveal">
+      <div>
+        <div class="flow-phase p1">Phase 1 — Data Layer</div>
+        <div class="flow-chain" style="margin-top:12px">
+          <div class="fnode">Read spec</div>
+          <span class="farrow">&rarr;</span>
+          <div class="fnode gql">introspect_graphql_schema</div>
+          <span class="farrow">&rarr;</span>
+          <div class="fnode">Generate mutations</div>
+          <span class="farrow">&rarr;</span>
+          <div class="fnode gql">validate_graphql_codeblocks</div>
+          <span class="farrow">&rarr;</span>
+          <div class="fnode out">Run on store</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="flow-phase p2">Phase 2 — Frontend</div>
+        <div class="flow-chain" style="margin-top:12px">
+          <div class="fnode fig">get_screenshot</div>
+          <span class="farrow">&rarr;</span>
+          <div class="fnode fig">get_design_context</div>
+          <span class="farrow">&rarr;</span>
+          <div class="fnode">Parse 100K+ tokens</div>
+          <span class="farrow">&rarr;</span>
+          <div class="fnode out">CSS values</div>
+        </div>
+        <div class="flow-chain">
+          <div class="fnode">Explore codebase</div>
+          <span class="farrow">&rarr;</span>
+          <div class="fnode gql">learn_shopify_api</div>
+          <span class="farrow">&rarr;</span>
+          <div class="fnode">Plan</div>
+          <span class="farrow">&rarr;</span>
+          <div class="fnode">Write 9 files</div>
+          <span class="farrow">&rarr;</span>
+          <div class="fnode gql">validate_theme</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ch-divider"></div>
+
+<!-- ========== CH 4: CODE ========== -->
+<section class="chapter">
+  <div class="wrap">
+    <div class="ch-label reveal">Chapter 4</div>
+    <h2 class="reveal">Three patterns worth showing</h2>
+    <p class="ch-intro reveal">Out of 9 files and ~1,000 lines, these three patterns best illustrate how the data layer and frontend come together.</p>
+
+    <div class="spotlights">
+      <div class="spot s-warm reveal">
+        <div class="spot-tag">Pattern</div>
+        <div class="spot-title">Masonry distribution algorithm</div>
+        <div class="spot-desc">Cards distributed round-robin across 4 flex columns. Each column cycles through a different aspect-ratio pattern for visual variety.</div>
+        <div class="spot-file">inspiration-grid.js:10-16</div>
+        <pre><span class="kw">var</span> SIZE_PATTERNS = [
+  [<span class="str">'tall'</span>, <span class="str">'medium'</span>, <span class="str">'short'</span>, <span class="str">'xtall'</span>],   <span class="cm">// Col 1</span>
+  [<span class="str">'medium'</span>, <span class="str">'xtall'</span>, <span class="str">'tall'</span>, <span class="str">'short'</span>],    <span class="cm">// Col 2</span>
+  [<span class="str">'xtall'</span>, <span class="str">'short'</span>, <span class="str">'medium'</span>, <span class="str">'tall'</span>],    <span class="cm">// Col 3</span>
+  [<span class="str">'short'</span>, <span class="str">'medium'</span>, <span class="str">'tall'</span>, <span class="str">'xtall'</span>]     <span class="cm">// Col 4</span>
+];</pre>
+      </div>
+
+      <div class="spot s-green reveal">
+        <div class="spot-tag">Handoff</div>
+        <div class="spot-title">Liquid renders, JS distributes</div>
+        <div class="spot-desc">All cards server-rendered into a hidden pool for SEO. JS clones them into visible columns — zero API calls after page load.</div>
+        <div class="spot-file">inspiration-grid.liquid:198-206</div>
+        <pre>&lt;<span class="kw">div</span> data-card-pool&gt;
+  {%- <span class="fn">paginate</span> shop.metaobjects.inspiration.values <span class="kw">by</span> <span class="num">250</span> -%}
+    {%- <span class="fn">for</span> entry <span class="kw">in</span> shop.metaobjects.inspiration.values -%}
+      &lt;<span class="kw">div</span> data-entry-id=<span class="str">"..."</span>&gt;
+        {% <span class="fn">render</span> <span class="str">'inspiration-card'</span>, entry: entry %}
+      &lt;/<span class="kw">div</span>&gt;
+    {%- <span class="fn">endfor</span> -%}
+  {%- <span class="fn">endpaginate</span> -%}
+&lt;/<span class="kw">div</span>&gt;</pre>
+      </div>
+
+      <div class="spot s-blue reveal">
+        <div class="spot-tag">Layout</div>
+        <div class="spot-title">Sticky hero image</div>
+        <div class="spot-desc">Hero image stays pinned while the user scrolls through the product grid. Top offset accounts for the theme's sticky header.</div>
+        <div class="spot-file">inspiration-hero.liquid:28-36</div>
+        <pre><span class="kw">@media</span> screen and (<span class="fn">min-width</span>: <span class="num">750px</span>) {
+  .<span class="fn">inspiration-hero__image-wrapper</span> {
+    <span class="kw">position</span>: sticky;
+    <span class="kw">top</span>: <span class="fn">calc</span>(<span class="fn">var</span>(<span class="str">--header-height</span>, <span class="num">60px</span>) + <span class="num">20px</span>);
+    <span class="kw">width</span>: <span class="num">562px</span>;
+    <span class="kw">height</span>: <span class="num">734px</span>;
+    <span class="kw">align-self</span>: flex-start;
+  }
+}</pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ch-divider"></div>
+
+<!-- ========== CH 5: OUTPUT ========== -->
+<section class="chapter">
+  <div class="wrap">
+    <div class="ch-label reveal">Chapter 5</div>
+    <h2 class="reveal">What the implementation produced</h2>
+    <p class="ch-intro reveal">9 files across 5 Shopify theme directories — each one traced back to a decision in the spec, a value from Figma, or a pattern from the existing codebase. Nothing was guessed.</p>
+
+    <div class="file-tree">
+      <div class="ft-group reveal">
+        <div class="ft-folder">
+          <span class="ft-folder-icon">&#x1f4c1;</span>
+          <span class="ft-folder-name">snippets/</span>
+          <span class="ft-folder-count">1 file</span>
+        </div>
+        <div class="ft-files">
+          <div class="ft-file">
+            <span class="ft-file-name">inspiration-card.liquid</span>
+            <span class="ft-file-sep"></span>
+            <span class="ft-file-desc">Shared card component — image, product swatches, title, category</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ft-group reveal rd1">
+        <div class="ft-folder">
+          <span class="ft-folder-icon">&#x1f4c1;</span>
+          <span class="ft-folder-name">sections/</span>
+          <span class="ft-folder-count">4 files</span>
+        </div>
+        <div class="ft-files">
+          <div class="ft-file">
+            <span class="ft-file-name">inspiration-grid.liquid</span>
+            <span class="ft-file-sep"></span>
+            <span class="ft-file-desc">Index page — header, filter tabs, masonry, load more</span>
+          </div>
+          <div class="ft-file">
+            <span class="ft-file-name">inspiration-hero.liquid</span>
+            <span class="ft-file-sep"></span>
+            <span class="ft-file-desc">Detail page — sticky hero, product grid, back link</span>
+          </div>
+          <div class="ft-file">
+            <span class="ft-file-name">inspiration-related.liquid</span>
+            <span class="ft-file-sep"></span>
+            <span class="ft-file-desc">Detail page — horizontal scroll of related entries</span>
+          </div>
+          <div class="ft-file">
+            <span class="ft-file-name">inspiration-products.liquid</span>
+            <span class="ft-file-sep"></span>
+            <span class="ft-file-desc">Detail page — product grid section</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ft-group reveal rd2">
+        <div class="ft-folder">
+          <span class="ft-folder-icon">&#x1f4c1;</span>
+          <span class="ft-folder-name">templates/</span>
+          <span class="ft-folder-count">2 files</span>
+        </div>
+        <div class="ft-files">
+          <div class="ft-file">
+            <span class="ft-file-name">page.get-inspired.json</span>
+            <span class="ft-file-sep"></span>
+            <span class="ft-file-desc">Index page template</span>
+          </div>
+          <div class="ft-file">
+            <span class="ft-file-name">metaobject/inspiration.json</span>
+            <span class="ft-file-sep"></span>
+            <span class="ft-file-desc">Detail page template (first metaobject template in theme)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ft-group reveal rd3">
+        <div class="ft-folder">
+          <span class="ft-folder-icon">&#x1f4c1;</span>
+          <span class="ft-folder-name">src/scripts/</span>
+          <span class="ft-folder-count">1 file</span>
+        </div>
+        <div class="ft-files">
+          <div class="ft-file">
+            <span class="ft-file-name">inspiration-grid.js</span>
+            <span class="ft-file-sep"></span>
+            <span class="ft-file-desc">Client-side filtering, column distribution, responsive resize</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ft-group reveal rd3" style="border-color: rgba(116,194,128,0.15)">
+        <div class="ft-folder">
+          <span class="ft-folder-icon">&#x2699;&#xfe0f;</span>
+          <span class="ft-folder-name">assets/</span>
+          <span class="ft-folder-count">compiled</span>
+        </div>
+        <div class="ft-files">
+          <div class="ft-file">
+            <span class="ft-file-name" style="color:var(--green)">inspiration-grid.min.js</span>
+            <span class="ft-file-sep"></span>
+            <span class="ft-file-desc">Compiled output via esbuild (IIFE, ES2020)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ch-divider"></div>
+
+<!-- ========== CH 6: TAKEAWAYS ========== -->
+<section class="chapter">
+  <div class="wrap">
+    <div class="ch-label reveal">Chapter 6</div>
+    <h2 class="reveal">What this demonstrates</h2>
+
+    <div class="takes">
+      <div class="take reveal"><div class="take-num">01</div><div class="take-title">Full-stack with one tool</div><div class="take-desc">Data layer via GraphQL and frontend via Liquid/CSS/JS — all orchestrated through Claude Code with MCPs.</div></div>
+      <div class="take reveal rd1"><div class="take-num">02</div><div class="take-title">Spec-driven development</div><div class="take-desc">Four weeks of discovery distilled into one spec. Claude builds from the spec, not from vibes.</div></div>
+      <div class="take reveal"><div class="take-num">03</div><div class="take-title">Schema-aware GraphQL</div><div class="take-desc">Shopify Dev MCP introspects the actual Admin API before generating mutations. No guessing.</div></div>
+      <div class="take reveal rd1"><div class="take-num">04</div><div class="take-title">Pixel-perfect from Figma</div><div class="take-desc">Design context extracted programmatically — hex codes, font weights, spacing values. No eyeballing.</div></div>
+      <div class="take reveal"><div class="take-num">05</div><div class="take-title">Codebase respect</div><div class="take-desc">Explore agents read existing theme patterns first. New code matches existing conventions.</div></div>
+      <div class="take reveal rd1"><div class="take-num">06</div><div class="take-title">Gotcha handling</div><div class="take-desc">Platform gotchas surfaced from the spec during planning — no surprises at build time.</div></div>
+      <div class="take reveal"><div class="take-num">07</div><div class="take-title">Validation at every layer</div><div class="take-desc">GraphQL validated before execution. Theme code validated before deployment.</div></div>
+      <div class="take reveal rd1"><div class="take-num">08</div><div class="take-title">Parallel execution</div><div class="take-desc">Figma parsing, codebase exploration, and API context loading all run simultaneously.</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="ch-divider"></div>
+
+<!-- ========== CH 7: RESOURCES ========== -->
+<section class="chapter">
+  <div class="wrap">
+    <div class="ch-label reveal">Resources</div>
+    <h2 class="reveal">Everything that fed the build</h2>
+    <p class="ch-intro reveal">No single source was enough on its own. The feature came together from these inputs, tools, and references — each filling a gap the others couldn't.</p>
+
+    <div class="resources">
+      <div class="res input reveal">
+        <div class="res-icon">&#x1f4dd;</div>
+        <div class="res-name">Feature Spec</div>
+        <div class="res-desc">Data model, architecture decisions, gotchas, and implementation sequence — distilled from weeks of discovery.</div>
+        <div class="res-type">Input</div>
+      </div>
+
+      <div class="res input reveal rd1">
+        <div class="res-icon">&#x1f3a8;</div>
+        <div class="res-name">Figma Designs</div>
+        <div class="res-desc">Index and detail page frames with pixel-level specs — colors, typography, spacing, component hierarchy.</div>
+        <div class="res-type">Input</div>
+      </div>
+
+      <div class="res input reveal rd2">
+        <div class="res-icon">&#x1f6d2;</div>
+        <div class="res-name">Shopify Dev Store</div>
+        <div class="res-desc">Live environment for metaobject creation, test data population, and storefront preview.</div>
+        <div class="res-type">Input</div>
+      </div>
+
+      <div class="res input reveal">
+        <div class="res-icon">&#x1f4c1;</div>
+        <div class="res-name">Theme Codebase</div>
+        <div class="res-desc">Horizon-based theme with existing section patterns, CSS architecture, and build pipeline that new code had to match.</div>
+        <div class="res-type">Input</div>
+      </div>
+
+      <div class="res input reveal rd1">
+        <div class="res-icon">&#x1f4cb;</div>
+        <div class="res-name">Meeting Notes</div>
+        <div class="res-desc">Creative calls, design syncs, and scrum notes where the original "Design Shop" concept took shape.</div>
+        <div class="res-type">Input</div>
+      </div>
+
+      <div class="res tool reveal rd2">
+        <div class="res-icon">&#x2728;</div>
+        <div class="res-name">Claude Code</div>
+        <div class="res-desc">Orchestration layer — read the spec, pulled designs, explored the codebase, planned, and built across both phases.</div>
+        <div class="res-type">Tool</div>
+      </div>
+
+      <div class="res tool reveal">
+        <div class="res-icon">&#x1f50c;</div>
+        <div class="res-name">Figma MCP</div>
+        <div class="res-desc">Extracted screenshots and structured design context — hex codes, font weights, spacing values, component structure.</div>
+        <div class="res-type">Tool</div>
+      </div>
+
+      <div class="res tool reveal rd1">
+        <div class="res-icon">&#x1f50c;</div>
+        <div class="res-name">Shopify Dev MCP</div>
+        <div class="res-desc">GraphQL schema introspection, mutation validation, Liquid API context, and theme code validation.</div>
+        <div class="res-type">Tool</div>
+      </div>
+
+      <div class="res output reveal rd2">
+        <div class="res-icon">&#x1f680;</div>
+        <div class="res-name">GraphQL Admin API</div>
+        <div class="res-desc">Metaobject definitions, staged uploads, test entries, and product references — all created via validated mutations.</div>
+        <div class="res-type">API</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-line"></div>
+  Built with Claude Code + Figma MCP + Shopify Dev MCP
+</footer>
+
+<script>
+const obs = new IntersectionObserver(es => {
+  es.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
+}, { threshold: 0.08, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
