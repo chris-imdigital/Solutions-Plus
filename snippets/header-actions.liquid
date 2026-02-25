@@ -188,6 +188,26 @@
     }
   }
 
+  header-actions shopify-account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header-actions shopify-account .account-button__icon {
+    color: var(--color-foreground);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--icon-size-md);
+    height: var(--icon-size-md);
+  }
+
+  header-actions shopify-account .account-button__icon svg {
+    width: var(--icon-size-md);
+    height: var(--icon-size-md);
+  }
+
   .header__column--right header-actions {
     margin-inline-start: calc(var(--gap-md) * -1);
   }
@@ -260,8 +280,11 @@
   {{- block.shopify_attributes -}}
 >
   {% if shop.customer_accounts_enabled %}
-    {% render 'account-popover' %}
-    {% render 'account-drawer' %}
+    <shopify-account menu="{{ customer_account_menu }}">
+      <span slot="signed-out-avatar" class="account-button__icon" aria-hidden="true">
+        {{- 'icon-account.svg' | inline_asset_content -}}
+      </span>
+    </shopify-account>
   {% endif %}
 
   {% if settings.cart_type == 'drawer' and template.name != 'cart' %}
