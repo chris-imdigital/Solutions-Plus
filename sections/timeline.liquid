@@ -1,0 +1,252 @@
+{% stylesheet %}
+  .timeline__heading {
+    margin-block-end: 40px;
+    text-align: center;
+  }
+
+  .timeline__entries {
+    position: relative;
+  }
+
+  .timeline__entry {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 0 16px;
+    padding-block-end: 32px;
+    position: relative;
+  }
+
+  .timeline__entry:last-child {
+    padding-block-end: 0;
+  }
+
+  /* Vertical line */
+  .timeline__entry::before {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--timeline-line-color, currentColor);
+    opacity: 0.3;
+  }
+
+  .timeline__entry:first-child::before {
+    top: 5px;
+  }
+
+  .timeline__entry:last-child::before {
+    bottom: calc(100% - 5px);
+  }
+
+  .timeline__dot {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--timeline-line-color, currentColor);
+    justify-self: center;
+    margin-block-start: 5px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .timeline__year {
+    grid-column: 2;
+    grid-row: 1;
+    font-weight: 700;
+  }
+
+  .timeline__description {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .timeline__description :first-child {
+    margin-block-start: 4px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .timeline__entry {
+      grid-template-columns: 1fr 20px 1fr;
+      gap: 0 24px;
+    }
+
+    .timeline__entry::before {
+      left: calc(50% - 1px);
+    }
+
+    .timeline__year {
+      grid-column: 1;
+      grid-row: 1;
+      text-align: right;
+      align-self: center;
+    }
+
+    .timeline__dot {
+      grid-column: 2;
+      grid-row: 1;
+      align-self: center;
+      margin-block-start: 0;
+    }
+
+    .timeline__description {
+      grid-column: 3;
+      grid-row: 1;
+      align-self: center;
+    }
+
+    .timeline__description :first-child {
+      margin-block-start: 0;
+    }
+  }
+{% endstylesheet %}
+
+<div class="timeline color-{{ section.settings.color_scheme }}">
+  <div
+    class="timeline__container spacing-style section section--{{ section.settings.section_width }}"
+    style="
+      {% render 'spacing-style', settings: section.settings %}
+      {% if section.settings.line_color != blank %}
+        --timeline-line-color: {{ section.settings.line_color }};
+      {% endif %}
+    "
+  >
+    {%- if section.settings.heading != blank -%}
+      <h2 class="timeline__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    <div class="timeline__entries">
+      {%- for block in section.blocks -%}
+        <div class="timeline__entry" {{ block.shopify_attributes }}>
+          <div class="timeline__dot"></div>
+          <div class="timeline__year">{{ block.settings.year }}</div>
+          <div class="timeline__description">{{ block.settings.description }}</div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:names.timeline",
+  "tag": "section",
+  "class": "section-wrapper",
+  "blocks": [
+    {
+      "type": "milestone",
+      "name": "t:names.milestone",
+      "settings": [
+        {
+          "type": "text",
+          "id": "year",
+          "label": "t:settings.year"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "t:settings.description"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings.heading"
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "t:settings.width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "t:options.page"
+        },
+        {
+          "value": "full-width",
+          "label": "t:options.full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:settings.color_scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "line_color",
+      "label": "t:settings.line_color"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.timeline",
+      "category": "t:categories.storytelling",
+      "blocks": [
+        {
+          "type": "milestone",
+          "settings": {
+            "year": "2020",
+            "description": "<p>A significant milestone in our journey.</p>"
+          }
+        },
+        {
+          "type": "milestone",
+          "settings": {
+            "year": "2022",
+            "description": "<p>Another chapter begins.</p>"
+          }
+        },
+        {
+          "type": "milestone",
+          "settings": {
+            "year": "2024",
+            "description": "<p>Looking ahead to the future.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
