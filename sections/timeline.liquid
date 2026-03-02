@@ -101,6 +101,72 @@
     .timeline__description :first-child {
       margin-block-start: 0;
     }
+
+    /* Image card - desktop alternating placement */
+    .timeline__entry--has-image:nth-child(odd) .timeline__card {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    .timeline__entry--has-image:nth-child(even) .timeline__card {
+      grid-column: 3;
+      grid-row: 1;
+    }
+  }
+
+  /* Image card entries */
+  .timeline__entry--has-image {
+    --timeline-image-opacity: 1;
+  }
+
+  .timeline__entry--has-image:hover {
+    --timeline-image-opacity: 0.6;
+  }
+
+  .timeline__card {
+    position: relative;
+    overflow: hidden;
+    min-height: var(--timeline-card-min-height, 480px);
+    display: flex;
+    align-items: flex-end;
+    border-radius: var(--timeline-card-radius, 0px);
+    grid-column: 2;
+    grid-row: 1 / -1;
+  }
+
+  .timeline__image-container {
+    position: absolute;
+    inset: 0;
+  }
+
+  .timeline__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: var(--timeline-image-opacity);
+    transition: opacity var(--animation-speed-slow) var(--animation-easing);
+  }
+
+  .timeline__card-content {
+    position: relative;
+    z-index: var(--layer-raised);
+    padding: 24px;
+    color: #fff;
+  }
+
+  .timeline__card-content .timeline__year {
+    grid-column: unset;
+    grid-row: unset;
+    text-align: left;
+  }
+
+  .timeline__card-content .timeline__description {
+    grid-column: unset;
+    grid-row: unset;
+  }
+
+  .timeline__card-content .timeline__description :first-child {
+    margin-block-start: 4px;
   }
 {% endstylesheet %}
 
@@ -120,10 +186,43 @@
 
     <div class="timeline__entries">
       {%- for block in section.blocks -%}
-        <div class="timeline__entry" {{ block.shopify_attributes }}>
+        {%- assign has_image = false -%}
+        {%- if block.settings.image != blank -%}
+          {%- assign has_image = true -%}
+        {%- endif -%}
+
+        <div
+          class="timeline__entry{% if has_image %} timeline__entry--has-image{% endif %}"
+          {% if has_image %}
+            style="--timeline-card-min-height: {{ block.settings.minimum_height }}px; --timeline-card-radius: {{ settings.card_corner_radius | default: 4 }}px;"
+          {% endif %}
+          {{ block.shopify_attributes }}
+        >
           <div class="timeline__dot"></div>
-          <div class="timeline__year">{{ block.settings.year }}</div>
-          <div class="timeline__description">{{ block.settings.description }}</div>
+
+          {%- if has_image -%}
+            <div class="timeline__card">
+              <div class="timeline__image-container">
+                {{
+                  block.settings.image
+                  | image_url: width: block.settings.image.width
+                  | image_tag: loading: 'lazy', class: 'timeline__image', sizes: '(min-width: 750px) 50vw, 100vw'
+                }}
+              </div>
+
+              {%- if block.settings.toggle_overlay -%}
+                {% render 'overlay', settings: block.settings, layer: 'var(--layer-flat)' %}
+              {%- endif -%}
+
+              <div class="timeline__card-content">
+                <div class="timeline__year">{{ block.settings.year }}</div>
+                <div class="timeline__description">{{ block.settings.description }}</div>
+              </div>
+            </div>
+          {%- else -%}
+            <div class="timeline__year">{{ block.settings.year }}</div>
+            <div class="timeline__description">{{ block.settings.description }}</div>
+          {%- endif -%}
         </div>
       {%- endfor -%}
     </div>
@@ -149,6 +248,71 @@
           "type": "richtext",
           "id": "description",
           "label": "t:settings.description"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:settings.image"
+        },
+        {
+          "type": "range",
+          "id": "minimum_height",
+          "label": "t:settings.minimum_height",
+          "min": 200,
+          "max": 600,
+          "step": 20,
+          "unit": "px",
+          "default": 480,
+          "visible_if": "{{ block.settings.image != blank }}"
+        },
+        {
+          "type": "checkbox",
+          "id": "toggle_overlay",
+          "label": "t:settings.media_overlay",
+          "default": true,
+          "visible_if": "{{ block.settings.image != blank }}"
+        },
+        {
+          "type": "color",
+          "id": "overlay_color",
+          "label": "t:settings.overlay_color",
+          "alpha": true,
+          "default": "#0000004D",
+          "visible_if": "{{ block.settings.image != blank and block.settings.toggle_overlay }}"
+        },
+        {
+          "type": "select",
+          "id": "overlay_style",
+          "label": "t:settings.overlay_style",
+          "options": [
+            {
+              "value": "solid",
+              "label": "t:options.solid"
+            },
+            {
+              "value": "gradient",
+              "label": "t:options.gradient"
+            }
+          ],
+          "default": "gradient",
+          "visible_if": "{{ block.settings.image != blank and block.settings.toggle_overlay }}"
+        },
+        {
+          "type": "select",
+          "id": "gradient_direction",
+          "label": "t:settings.gradient_direction",
+          "options": [
+            {
+              "value": "to top",
+              "label": "t:options.up"
+            },
+            {
+              "value": "to bottom",
+              "label": "t:options.down"
+            }
+          ],
+          "default": "to top",
+          "visible_if": "{{ block.settings.image != blank and block.settings.toggle_overlay and block.settings.overlay_style == 'gradient' }}"
         }
       ]
     }
