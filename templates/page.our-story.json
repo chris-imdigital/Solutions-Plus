@@ -1,0 +1,610 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Our Story.</h1>",
+            "width": "100%",
+            "max_width": "narrow",
+            "type_preset": "h1",
+            "alignment": "center",
+            "padding-block-start": 0,
+            "padding-block-end": 0
+          }
+        },
+        "intro": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Family-owned wholesale nursery in southern New Jersey, partnering exclusively with locally-owned garden centers in the Northeast and Mid-Atlantic. Veriflora\u00ae certified since 1952.</p>",
+            "width": "100%",
+            "max_width": "narrow",
+            "type_preset": "rte",
+            "alignment": "center",
+            "padding-block-start": 0,
+            "padding-block-end": 0
+          }
+        }
+      },
+      "block_order": ["heading", "intro"],
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "auto",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 60,
+        "padding-block-end": 40
+      }
+    },
+    "historical_photos": {
+      "type": "_blocks",
+      "blocks": {
+        "photo_1": {
+          "type": "image",
+          "settings": {
+            "image_ratio": "landscape",
+            "width": "fill",
+            "height": "fit"
+          }
+        },
+        "photo_2": {
+          "type": "image",
+          "settings": {
+            "image_ratio": "landscape",
+            "width": "fill",
+            "height": "fit"
+          }
+        },
+        "photo_3": {
+          "type": "image",
+          "settings": {
+            "image_ratio": "landscape",
+            "width": "fill",
+            "height": "fit"
+          }
+        },
+        "photo_4": {
+          "type": "image",
+          "settings": {
+            "image_ratio": "landscape",
+            "width": "fill",
+            "height": "fit"
+          }
+        }
+      },
+      "block_order": ["photo_1", "photo_2", "photo_3", "photo_4"],
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": false,
+        "horizontal_alignment": "center",
+        "vertical_alignment": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 0,
+        "padding-block-end": 40
+      }
+    },
+    "narrative_text": {
+      "type": "_blocks",
+      "blocks": {
+        "paragraph_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our story begins in 1952 when John and Jean Overdevest emigrated from Holland, settling in southern New Jersey. With a deep love for horticulture and a vision for growing quality plants, they started the nursery with a focus on Azaleas, Rhododendrons, Dogwoods, and Japanese Maples.</p>",
+            "width": "100%",
+            "max_width": "narrow",
+            "type_preset": "rte",
+            "alignment": "center",
+            "padding-block-start": 0,
+            "padding-block-end": 0
+          }
+        },
+        "paragraph_2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Now in the third generation, our company continues to emphasize quality, sustainability, and a passionate team that honors the founders' principles. Every plant we grow reflects our commitment to the land and the independent garden centers we proudly serve.</p>",
+            "width": "100%",
+            "max_width": "narrow",
+            "type_preset": "rte",
+            "alignment": "center",
+            "padding-block-start": 0,
+            "padding-block-end": 0
+          }
+        }
+      },
+      "block_order": ["paragraph_1", "paragraph_2"],
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 24,
+        "section_width": "page-width",
+        "section_height": "",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 20,
+        "padding-block-end": 60
+      }
+    },
+    "timeline": {
+      "type": "timeline",
+      "blocks": {
+        "m_1952": {
+          "type": "milestone",
+          "settings": {
+            "year": "1952",
+            "description": "<p>Nursery founded in Deerfield, NJ by John and Jean Overdevest, immigrants from Holland.</p>"
+          }
+        },
+        "m_1975": {
+          "type": "milestone",
+          "settings": {
+            "year": "1975",
+            "description": "<p>Ed Overdevest returns to the nursery after attending Cornell University.</p>"
+          }
+        },
+        "m_1982": {
+          "type": "milestone",
+          "settings": {
+            "year": "1982",
+            "description": "<p>Gail joins Ed at the nursery, leaving her teaching career behind.</p>"
+          }
+        },
+        "m_1988": {
+          "type": "milestone",
+          "settings": {
+            "year": "1988",
+            "description": "<p>Production expands with a new growing facility in Roadstown, NJ.</p>"
+          }
+        },
+        "m_1995": {
+          "type": "milestone",
+          "settings": {
+            "year": "1995",
+            "description": "<p>New Jersey's first tail water-recovery basin installed, pioneering sustainable growing practices.</p>"
+          }
+        },
+        "m_2000": {
+          "type": "milestone",
+          "settings": {
+            "year": "2000",
+            "description": "<p>Office building relocated to the new farm location.</p>"
+          }
+        },
+        "m_2002": {
+          "type": "milestone",
+          "settings": {
+            "year": "2002",
+            "description": "<p>Garden Splendor\u00ae branded plant collection launched.</p>"
+          }
+        },
+        "m_2004": {
+          "type": "milestone",
+          "settings": {
+            "year": "2004",
+            "description": "<p>State-of-the-art open-air roof greenhouse built to improve growing conditions.</p>"
+          }
+        },
+        "m_2006": {
+          "type": "milestone",
+          "settings": {
+            "year": "2006",
+            "description": "<p>Named NMPRo Nursery Grower of the Year.</p>"
+          }
+        },
+        "m_2008": {
+          "type": "milestone",
+          "settings": {
+            "year": "2008",
+            "description": "<p>Bio-degradable pots introduced as part of ongoing sustainability efforts.</p>"
+          }
+        },
+        "m_2012": {
+          "type": "milestone",
+          "settings": {
+            "year": "2012",
+            "description": "<p>Veriflora\u00ae Sustainable Grown certification achieved.</p>"
+          }
+        },
+        "m_2014": {
+          "type": "milestone",
+          "settings": {
+            "year": "2014",
+            "description": "<p>Irrigation water recycling system expanded across the farm.</p>"
+          }
+        },
+        "m_2015": {
+          "type": "milestone",
+          "settings": {
+            "year": "2015",
+            "description": "<p>Third generation welcomed back to carry on the family tradition.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "m_1952", "m_1975", "m_1982", "m_1988", "m_1995",
+        "m_2000", "m_2002", "m_2004", "m_2006", "m_2008",
+        "m_2012", "m_2014", "m_2015"
+      ],
+      "settings": {
+        "heading": "Our Journey",
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "our_farm": {
+      "type": "_blocks",
+      "blocks": {
+        "farm_heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Our Farm</h2>",
+            "width": "100%",
+            "max_width": "narrow",
+            "type_preset": "h2",
+            "alignment": "center",
+            "padding-block-start": 0,
+            "padding-block-end": 0
+          }
+        },
+        "farm_description": {
+          "type": "text",
+          "settings": {
+            "text": "<p>290 acres in southern New Jersey near the city of Bridgeton. Our growing production occurs on 2.7 million sq. feet of 'hoop houses' and 39,000 square feet of heated greenhouse space.</p>",
+            "width": "100%",
+            "max_width": "narrow",
+            "type_preset": "rte",
+            "alignment": "center",
+            "padding-block-start": 0,
+            "padding-block-end": 16
+          }
+        },
+        "farm_images": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "gap": 16,
+            "width": "fill"
+          },
+          "blocks": {
+            "before_image": {
+              "type": "image",
+              "settings": {
+                "image_ratio": "landscape",
+                "width": "fill",
+                "height": "fit"
+              }
+            },
+            "after_image": {
+              "type": "image",
+              "settings": {
+                "image_ratio": "landscape",
+                "width": "fill",
+                "height": "fit"
+              }
+            }
+          },
+          "block_order": ["before_image", "after_image"]
+        }
+      },
+      "block_order": ["farm_heading", "farm_description", "farm_images"],
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "partner_logos": {
+      "type": "_blocks",
+      "blocks": {
+        "logo_1": {
+          "type": "image",
+          "settings": {
+            "image_ratio": "square",
+            "width": "custom",
+            "custom_width": 12,
+            "width_mobile": "custom",
+            "custom_width_mobile": 25,
+            "height": "fit"
+          }
+        },
+        "logo_2": {
+          "type": "image",
+          "settings": {
+            "image_ratio": "square",
+            "width": "custom",
+            "custom_width": 12,
+            "width_mobile": "custom",
+            "custom_width_mobile": 25,
+            "height": "fit"
+          }
+        },
+        "logo_3": {
+          "type": "image",
+          "settings": {
+            "image_ratio": "square",
+            "width": "custom",
+            "custom_width": 12,
+            "width_mobile": "custom",
+            "custom_width_mobile": 25,
+            "height": "fit"
+          }
+        },
+        "logo_4": {
+          "type": "image",
+          "settings": {
+            "image_ratio": "square",
+            "width": "custom",
+            "custom_width": 12,
+            "width_mobile": "custom",
+            "custom_width_mobile": 25,
+            "height": "fit"
+          }
+        },
+        "logo_5": {
+          "type": "image",
+          "settings": {
+            "image_ratio": "square",
+            "width": "custom",
+            "custom_width": 12,
+            "width_mobile": "custom",
+            "custom_width_mobile": 25,
+            "height": "fit"
+          }
+        },
+        "logo_6": {
+          "type": "image",
+          "settings": {
+            "image_ratio": "square",
+            "width": "custom",
+            "custom_width": 12,
+            "width_mobile": "custom",
+            "custom_width_mobile": 25,
+            "height": "fit"
+          }
+        }
+      },
+      "block_order": ["logo_1", "logo_2", "logo_3", "logo_4", "logo_5", "logo_6"],
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": false,
+        "horizontal_alignment": "center",
+        "vertical_alignment": "center",
+        "gap": 24,
+        "section_width": "page-width",
+        "section_height": "",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "team": {
+      "type": "team-grid",
+      "blocks": {
+        "member_ed": {
+          "type": "team_member",
+          "settings": {
+            "name": "Ed",
+            "role": "Owner",
+            "nickname": "The Engineer"
+          }
+        },
+        "member_gail": {
+          "type": "team_member",
+          "settings": {
+            "name": "Gail",
+            "role": "Owner",
+            "nickname": "The Teacher"
+          }
+        },
+        "member_ryan": {
+          "type": "team_member",
+          "settings": {
+            "name": "Ryan",
+            "role": "Finance",
+            "nickname": "The Kid"
+          }
+        },
+        "member_david": {
+          "type": "team_member",
+          "settings": {
+            "name": "David",
+            "role": "Director of Marketing",
+            "nickname": "The Storyteller"
+          }
+        },
+        "member_sue": {
+          "type": "team_member",
+          "settings": {
+            "name": "Sue",
+            "role": "Customer Support",
+            "nickname": "Sue-per Fan"
+          }
+        },
+        "member_lauren": {
+          "type": "team_member",
+          "settings": {
+            "name": "Lauren",
+            "role": "Customer Support",
+            "nickname": ""
+          }
+        },
+        "member_jeff": {
+          "type": "team_member",
+          "settings": {
+            "name": "Jeff",
+            "role": "Director of Shipping",
+            "nickname": "The Chicken Tender"
+          }
+        },
+        "member_jenni": {
+          "type": "team_member",
+          "settings": {
+            "name": "Jenni",
+            "role": "Sales",
+            "nickname": "The Adaptable One"
+          }
+        },
+        "member_jennie_lyn": {
+          "type": "team_member",
+          "settings": {
+            "name": "Jennie Lyn",
+            "role": "Sales",
+            "nickname": "The Sunflower Child"
+          }
+        },
+        "member_karen": {
+          "type": "team_member",
+          "settings": {
+            "name": "Karen",
+            "role": "Office Coordinator",
+            "nickname": "The Dog Whisperer"
+          }
+        },
+        "member_ken": {
+          "type": "team_member",
+          "settings": {
+            "name": "Ken",
+            "role": "Production Manager",
+            "nickname": "Camo Ken"
+          }
+        },
+        "member_phil": {
+          "type": "team_member",
+          "settings": {
+            "name": "Phil",
+            "role": "Operations Manager",
+            "nickname": "Mr. Fix It"
+          }
+        },
+        "member_caryn": {
+          "type": "team_member",
+          "settings": {
+            "name": "Caryn",
+            "role": "IPM Coordinator",
+            "nickname": "Carin' for your Plants"
+          }
+        },
+        "member_felix": {
+          "type": "team_member",
+          "settings": {
+            "name": "Felix",
+            "role": "Manager",
+            "nickname": "Innovator Extraordinaire"
+          }
+        },
+        "member_luciano": {
+          "type": "team_member",
+          "settings": {
+            "name": "Luciano",
+            "role": "Manager",
+            "nickname": "Scouting Specialist"
+          }
+        },
+        "member_teo": {
+          "type": "team_member",
+          "settings": {
+            "name": "Teo",
+            "role": "Manager",
+            "nickname": "Keeper of the Trees"
+          }
+        },
+        "member_caly": {
+          "type": "team_member",
+          "settings": {
+            "name": "Caly",
+            "role": "Mascot",
+            "nickname": "The Hairless One"
+          }
+        },
+        "member_rocky": {
+          "type": "team_member",
+          "settings": {
+            "name": "Rocky",
+            "role": "Mascot",
+            "nickname": "The Hunter"
+          }
+        }
+      },
+      "block_order": [
+        "member_ed", "member_gail", "member_ryan", "member_david",
+        "member_sue", "member_lauren", "member_jeff", "member_jenni",
+        "member_jennie_lyn", "member_karen", "member_ken", "member_phil",
+        "member_caryn", "member_felix", "member_luciano", "member_teo",
+        "member_caly", "member_rocky"
+      ],
+      "settings": {
+        "heading": "Our Team",
+        "subheading": "<p>The people behind the plants.</p>",
+        "columns": 4,
+        "mobile_columns": "2",
+        "gap": 32,
+        "text_alignment": "center",
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "group_photo": {
+      "type": "_blocks",
+      "blocks": {
+        "team_photo": {
+          "type": "image",
+          "settings": {
+            "image_ratio": "landscape",
+            "width": "fill",
+            "height": "fit"
+          }
+        }
+      },
+      "block_order": ["team_photo"],
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "section_width": "full-width",
+        "section_height": "",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "historical_photos",
+    "narrative_text",
+    "timeline",
+    "our_farm",
+    "partner_logos",
+    "team",
+    "group_photo"
+  ]
+}
