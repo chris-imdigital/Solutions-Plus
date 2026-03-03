@@ -114,13 +114,38 @@
     }
   }
 
+  /* Dot tooltip - year label */
+  .timeline__dot-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: var(--layer-raised, 2);
+  }
+
+  .timeline__dot:hover .timeline__dot-label {
+    opacity: 1;
+  }
+
   /* Image card entries */
   .timeline__entry--has-image {
     --timeline-image-opacity: 1;
+    --timeline-card-hover-overlay: 0;
   }
 
-  .timeline__entry--has-image:hover {
+  .timeline__card:hover {
     --timeline-image-opacity: 0.6;
+    --timeline-card-hover-overlay: 1;
   }
 
   .timeline__card {
@@ -128,10 +153,14 @@
     overflow: hidden;
     min-height: var(--timeline-card-min-height, 480px);
     display: flex;
-    align-items: flex-end;
-    border-radius: var(--timeline-card-radius, 0px);
+    flex-direction: column;
+    justify-content: space-between;
+    border: 6px solid rgba(200, 200, 200, 0.4);
+    border-radius: var(--timeline-card-radius, 4px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     grid-column: 2;
     grid-row: 1 / -1;
+    cursor: default;
   }
 
   .timeline__image-container {
@@ -147,26 +176,31 @@
     transition: opacity var(--animation-speed-slow) var(--animation-easing);
   }
 
-  .timeline__card-content {
+  /* Description - hidden by default, shown on card hover */
+  .timeline__card-description {
     position: relative;
-    z-index: var(--layer-raised);
+    z-index: var(--layer-raised, 2);
+    padding: 24px 24px 0;
+    color: #fff;
+    opacity: var(--timeline-card-hover-overlay);
+    transition: opacity var(--animation-speed-slow) var(--animation-easing);
+  }
+
+  .timeline__card-description :first-child {
+    margin-block-start: 0;
+  }
+
+  /* Title - always visible at bottom */
+  .timeline__card-title {
+    position: relative;
+    z-index: var(--layer-raised, 2);
     padding: 24px;
     color: #fff;
-  }
-
-  .timeline__card-content .timeline__year {
-    grid-column: unset;
-    grid-row: unset;
-    text-align: left;
-  }
-
-  .timeline__card-content .timeline__description {
-    grid-column: unset;
-    grid-row: unset;
-  }
-
-  .timeline__card-content .timeline__description :first-child {
-    margin-block-start: 4px;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
   }
 {% endstylesheet %}
 
@@ -198,7 +232,11 @@
           {% endif %}
           {{ block.shopify_attributes }}
         >
-          <div class="timeline__dot"></div>
+          <div class="timeline__dot">
+            {%- if has_image and block.settings.year != blank -%}
+              <span class="timeline__dot-label">{{ block.settings.year }}</span>
+            {%- endif -%}
+          </div>
 
           {%- if has_image -%}
             <div class="timeline__card">
@@ -214,10 +252,17 @@
                 {% render 'overlay', settings: block.settings, layer: 'var(--layer-flat)' %}
               {%- endif -%}
 
-              <div class="timeline__card-content">
-                <div class="timeline__year">{{ block.settings.year }}</div>
-                <div class="timeline__description">{{ block.settings.description }}</div>
-              </div>
+              {%- if block.settings.description != blank -%}
+                <div class="timeline__card-description">
+                  {{ block.settings.description }}
+                </div>
+              {%- endif -%}
+
+              {%- if block.settings.title != blank -%}
+                <div class="timeline__card-title">
+                  {{ block.settings.title }}
+                </div>
+              {%- endif -%}
             </div>
           {%- else -%}
             <div class="timeline__year">{{ block.settings.year }}</div>
@@ -243,6 +288,12 @@
           "type": "text",
           "id": "year",
           "label": "t:settings.year"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:settings.title",
+          "visible_if": "{{ block.settings.image != blank }}"
         },
         {
           "type": "richtext",

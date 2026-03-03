@@ -148,6 +148,7 @@
           "type": "milestone",
           "settings": {
             "year": "1952",
+            "title": "Our Founders",
             "description": "<p>Nursery founded in Deerfield, NJ by John and Jean Overdevest, immigrants from Holland.</p>",
             "image": "shopify://shop_images/Overdevest-1952-John-Jean.jpg",
             "toggle_overlay": true,
@@ -159,6 +160,7 @@
           "type": "milestone",
           "settings": {
             "year": "1975",
+            "title": "Ed Overdevest Returns",
             "description": "<p>Ed Overdevest returns to the nursery after attending Cornell University.</p>",
             "image": "shopify://shop_images/Overdevest-1975-Ed-Graduation.jpg",
             "toggle_overlay": true,
@@ -170,7 +172,8 @@
           "type": "milestone",
           "settings": {
             "year": "1982",
-            "description": "<p>Gail joins Ed at the nursery, leaving her teaching career behind.</p>",
+            "title": "Gail Joins Ed",
+            "description": "<p>Gail Overdevest leaves her teaching position to join Ed at the nursery.</p>",
             "image": "shopify://shop_images/Overdevest-1982-Gail-and-Ed.jpg",
             "toggle_overlay": true,
             "overlay_style": "gradient",
@@ -181,6 +184,7 @@
           "type": "milestone",
           "settings": {
             "year": "1988",
+            "title": "Expanding Production",
             "description": "<p>Production expands with a new growing facility in Roadstown, NJ.</p>",
             "image": "shopify://shop_images/Overdevest-1988-Expanding-Production.jpg",
             "toggle_overlay": true,
@@ -192,6 +196,7 @@
           "type": "milestone",
           "settings": {
             "year": "1995",
+            "title": "Becoming Environmentally Friendly",
             "description": "<p>New Jersey's first tail water-recovery basin installed, pioneering sustainable growing practices.</p>",
             "image": "shopify://shop_images/Overdevest-1995-Water-Recovery-Basin.jpg",
             "toggle_overlay": true,
@@ -203,6 +208,7 @@
           "type": "milestone",
           "settings": {
             "year": "2000",
+            "title": "Office Move",
             "description": "<p>Office building relocated to the new farm location.</p>",
             "image": "shopify://shop_images/Overdevest-2000-Moving-The-office.jpg",
             "toggle_overlay": true,
@@ -214,6 +220,7 @@
           "type": "milestone",
           "settings": {
             "year": "2002",
+            "title": "Garden Splendor Launches",
             "description": "<p>Garden Splendor\u00ae branded plant collection launched.</p>",
             "image": "shopify://shop_images/Overdevest-2002-Garden-Splendor.jpg",
             "toggle_overlay": true,
@@ -225,6 +232,7 @@
           "type": "milestone",
           "settings": {
             "year": "2004",
+            "title": "State of the Art Greenhouse",
             "description": "<p>State-of-the-art open-air roof greenhouse built to improve growing conditions.</p>",
             "image": "shopify://shop_images/Overdevest-2004-State-of-the-Art-Greenhouse.jpg",
             "toggle_overlay": true,
@@ -236,6 +244,7 @@
           "type": "milestone",
           "settings": {
             "year": "2006",
+            "title": "Nursery Grower of the Year",
             "description": "<p>Named NMPRo Nursery Grower of the Year.</p>",
             "image": "shopify://shop_images/Overdevest-2006-Nursery-Grower-Of-The-Year.jpg",
             "toggle_overlay": true,
@@ -247,6 +256,7 @@
           "type": "milestone",
           "settings": {
             "year": "2008",
+            "title": "Bio-Degradable Pots",
             "description": "<p>Bio-degradable pots introduced as part of ongoing sustainability efforts.</p>",
             "image": "shopify://shop_images/Overdevest-2008-Biodegradable.jpg",
             "toggle_overlay": true,
@@ -258,6 +268,7 @@
           "type": "milestone",
           "settings": {
             "year": "2012",
+            "title": "Veriflora\u00ae Sustainable Grown",
             "description": "<p>Veriflora\u00ae Sustainable Grown certification achieved.</p>",
             "image": "shopify://shop_images/Overdevest-2012-Veriflora.jpg",
             "toggle_overlay": true,
@@ -269,6 +280,7 @@
           "type": "milestone",
           "settings": {
             "year": "2014",
+            "title": "Pioneering Technology",
             "description": "<p>Irrigation water recycling system expanded across the farm.</p>",
             "image": "shopify://shop_images/Overdevest-2014-Pioneering-Technology.jpg",
             "toggle_overlay": true,
@@ -280,6 +292,7 @@
           "type": "milestone",
           "settings": {
             "year": "2015",
+            "title": "Welcoming New Family",
             "description": "<p>Third generation welcomed back to carry on the family tradition.</p>",
             "image": "shopify://shop_images/team_IGC_East_2015.jpg",
             "toggle_overlay": true,
