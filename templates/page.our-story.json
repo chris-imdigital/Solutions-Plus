@@ -27,7 +27,7 @@
         "intro": {
           "type": "text",
           "settings": {
-            "text": "<p>Family-owned wholesale nursery in southern New Jersey, partnering exclusively with locally-owned garden centers in the Northeast and Mid-Atlantic. Veriflora\u00ae certified since 1952.</p>",
+            "text": "<p>We are a <strong>family-owned</strong> wholesale nursery dedicated to growing the highest quality plants. Located in southern <strong>New Jersey</strong>, we partner exclusively with <strong>locally-owned</strong> garden centers in the Northeast and Mid-Atlantic. Environmentally conscious since our founding in <strong>1952</strong>, we are proud to be <strong>Veriflora\u00ae</strong> certified.</p>",
             "width": "100%",
             "max_width": "narrow",
             "type_preset": "rte",
@@ -56,6 +56,7 @@
         "photo_1": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-Our-History_1.jpg",
             "image_ratio": "landscape",
             "width": "fill",
             "height": "fit"
@@ -64,6 +65,7 @@
         "photo_2": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-Our-History_2.jpg",
             "image_ratio": "landscape",
             "width": "fill",
             "height": "fit"
@@ -72,6 +74,7 @@
         "photo_3": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-Our-History_3-fixed.jpg",
             "image_ratio": "landscape",
             "width": "fill",
             "height": "fit"
@@ -80,6 +83,7 @@
         "photo_4": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-Our-History_4.jpg",
             "image_ratio": "landscape",
             "width": "fill",
             "height": "fit"
@@ -106,7 +110,7 @@
         "paragraph_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Our story begins in 1952 when John and Jean Overdevest emigrated from Holland, settling in southern New Jersey. With a deep love for horticulture and a vision for growing quality plants, they started the nursery with a focus on Azaleas, Rhododendrons, Dogwoods, and Japanese Maples.</p>",
+            "text": "<p>Our beginning traces back to when our company founders, John and Jean Overdevest, left war-torn <em>Holland</em> and settled in southern New Jersey. The nursery started in <em>1952</em> with a focus on Azaleas, Rhododendrons, Dogwoods, and Japanese Maples. Through sheer <em>determination</em> and a pioneering spirit, they grew a backyard farm into a respected nursery. Their philosophy of <em>excellence</em> paired with <em>integrity</em> and <em>service</em> attracted independently-owned garden centers.</p>",
             "width": "100%",
             "max_width": "narrow",
             "type_preset": "rte",
@@ -118,7 +122,19 @@
         "paragraph_2": {
           "type": "text",
           "settings": {
-            "text": "<p>Now in the third generation, our company continues to emphasize quality, sustainability, and a passionate team that honors the founders' principles. Every plant we grow reflects our commitment to the land and the independent garden centers we proudly serve.</p>",
+            "text": "<p>As the <em>third-generation</em> of family enters the business, our commitment to <em>quality</em> and <em>sustainability</em> grows stronger each year. Our <em>passionate team</em> members carry the founding principles of hard work and hand-crafted excellence, working every day to bring you <em>happiness</em> with each planting.</p>",
+            "width": "100%",
+            "max_width": "narrow",
+            "type_preset": "rte",
+            "alignment": "center",
+            "padding-block-start": 0,
+            "padding-block-end": 0
+          }
+        },
+        "paragraph_3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>While we have achieved awards throughout our history, the <em>best reward</em> continues to be the sincere compliments from our many <em>longstanding customers</em> who rely on us as their trusted source for the highest quality plants.</p>",
             "width": "100%",
             "max_width": "narrow",
             "type_preset": "rte",
@@ -128,7 +144,7 @@
           }
         }
       },
-      "block_order": ["paragraph_1", "paragraph_2"],
+      "block_order": ["paragraph_1", "paragraph_2", "paragraph_3"],
       "settings": {
         "content_direction": "column",
         "horizontal_alignment_flex_direction_column": "center",
@@ -149,7 +165,7 @@
           "settings": {
             "year": "1952",
             "title": "Our Founders",
-            "description": "<p>Nursery founded in Deerfield, NJ by John and Jean Overdevest, immigrants from Holland.</p>",
+            "description": "<p>John and Jean Overdevest started the nursery in Deerfield, NJ.</p>",
             "image": "shopify://shop_images/Overdevest-1952-John-Jean.jpg",
             "toggle_overlay": true,
             "overlay_style": "gradient",
@@ -161,7 +177,7 @@
           "settings": {
             "year": "1975",
             "title": "Ed Overdevest Returns",
-            "description": "<p>Ed Overdevest returns to the nursery after attending Cornell University.</p>",
+            "description": "<p>Ed Overdevest returns to the family business after completing his studies at Cornell University.</p>",
             "image": "shopify://shop_images/Overdevest-1975-Ed-Graduation.jpg",
             "toggle_overlay": true,
             "overlay_style": "gradient",
@@ -185,7 +201,7 @@
           "settings": {
             "year": "1988",
             "title": "Expanding Production",
-            "description": "<p>Production expands with a new growing facility in Roadstown, NJ.</p>",
+            "description": "<p>We expand production to our current farm located in Roadstown, NJ.</p>",
             "image": "shopify://shop_images/Overdevest-1988-Expanding-Production.jpg",
             "toggle_overlay": true,
             "overlay_style": "gradient",
@@ -197,7 +213,7 @@
           "settings": {
             "year": "1995",
             "title": "Becoming Environmentally Friendly",
-            "description": "<p>New Jersey's first tail water-recovery basin installed, pioneering sustainable growing practices.</p>",
+            "description": "<p>We install one of NJ's first tail water-recovery basins for recycling container nursery irrigation runoff.</p>",
             "image": "shopify://shop_images/Overdevest-1995-Water-Recovery-Basin.jpg",
             "toggle_overlay": true,
             "overlay_style": "gradient",
@@ -209,7 +225,7 @@
           "settings": {
             "year": "2000",
             "title": "Office Move",
-            "description": "<p>Office building relocated to the new farm location.</p>",
+            "description": "<p>We move our office building (literally) to our new farm location.</p>",
             "image": "shopify://shop_images/Overdevest-2000-Moving-The-office.jpg",
             "toggle_overlay": true,
             "overlay_style": "gradient",
@@ -221,7 +237,7 @@
           "settings": {
             "year": "2002",
             "title": "Garden Splendor Launches",
-            "description": "<p>Garden Splendor\u00ae branded plant collection launched.</p>",
+            "description": "<p>We partnered with our customers to launch the Garden Splendor\u00ae collection, the industry's first branding collaboration.</p>",
             "image": "shopify://shop_images/Overdevest-2002-Garden-Splendor.jpg",
             "toggle_overlay": true,
             "overlay_style": "gradient",
@@ -233,7 +249,7 @@
           "settings": {
             "year": "2004",
             "title": "State of the Art Greenhouse",
-            "description": "<p>State-of-the-art open-air roof greenhouse built to improve growing conditions.</p>",
+            "description": "<p>Greenhouse construction using open-air roof technology for significant energy reductions.</p>",
             "image": "shopify://shop_images/Overdevest-2004-State-of-the-Art-Greenhouse.jpg",
             "toggle_overlay": true,
             "overlay_style": "gradient",
@@ -245,7 +261,7 @@
           "settings": {
             "year": "2006",
             "title": "Nursery Grower of the Year",
-            "description": "<p>Named NMPRo Nursery Grower of the Year.</p>",
+            "description": "<p>Selected by our peers as NMPRo's Nursery Grower of the Year.</p>",
             "image": "shopify://shop_images/Overdevest-2006-Nursery-Grower-Of-The-Year.jpg",
             "toggle_overlay": true,
             "overlay_style": "gradient",
@@ -257,7 +273,7 @@
           "settings": {
             "year": "2008",
             "title": "Bio-Degradable Pots",
-            "description": "<p>Bio-degradable pots introduced as part of ongoing sustainability efforts.</p>",
+            "description": "<p>Introduced sustainably packaged plants using bio-degradable pots versus industry-standard plastic.</p>",
             "image": "shopify://shop_images/Overdevest-2008-Biodegradable.jpg",
             "toggle_overlay": true,
             "overlay_style": "gradient",
@@ -269,7 +285,7 @@
           "settings": {
             "year": "2012",
             "title": "Veriflora\u00ae Sustainable Grown",
-            "description": "<p>Veriflora\u00ae Sustainable Grown certification achieved.</p>",
+            "description": "<p>Achieved the prestigious Veriflora\u00ae Sustainable Grown certification recognizing our commitment to the environment, employees, and community.</p>",
             "image": "shopify://shop_images/Overdevest-2012-Veriflora.jpg",
             "toggle_overlay": true,
             "overlay_style": "gradient",
@@ -281,7 +297,7 @@
           "settings": {
             "year": "2014",
             "title": "Pioneering Technology",
-            "description": "<p>Irrigation water recycling system expanded across the farm.</p>",
+            "description": "<p>Expanded irrigation water recycling system with pioneering technologies.</p>",
             "image": "shopify://shop_images/Overdevest-2014-Pioneering-Technology.jpg",
             "toggle_overlay": true,
             "overlay_style": "gradient",
@@ -293,7 +309,7 @@
           "settings": {
             "year": "2015",
             "title": "Welcoming New Family",
-            "description": "<p>Third generation welcomed back to carry on the family tradition.</p>",
+            "description": "<p>We welcomed the third-generation of family back to the business.</p>",
             "image": "shopify://shop_images/team_IGC_East_2015.jpg",
             "toggle_overlay": true,
             "overlay_style": "gradient",
@@ -320,7 +336,7 @@
         "farm_heading": {
           "type": "text",
           "settings": {
-            "text": "<h2>Our Farm</h2>",
+            "text": "<h2>Our Farm.</h2>",
             "width": "100%",
             "max_width": "narrow",
             "type_preset": "h2",
@@ -332,7 +348,7 @@
         "farm_description": {
           "type": "text",
           "settings": {
-            "text": "<p>290 acres in southern New Jersey near the city of Bridgeton. Our growing production occurs on 2.7 million sq. feet of 'hoop houses' and 39,000 square feet of heated greenhouse space.</p>",
+            "text": "<p>We got our start producing field-grown plants and shipping them balled-and-burlapped (B&B). Since then, our production has shifted entirely to containerized material. Our farm consists of <strong>290 acres</strong> in southern New Jersey near the city of Bridgeton. Our growing production occurs on 2.7 million sq. feet of 'hoop houses' and 39,000 square feet of heated greenhouse space.</p>",
             "width": "100%",
             "max_width": "narrow",
             "type_preset": "rte",
@@ -385,12 +401,41 @@
         "padding-block-end": 40
       }
     },
+    "partner_logos_heading": {
+      "type": "_blocks",
+      "blocks": {
+        "orgs_heading": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are proud members and supporters of the following organizations:</p>",
+            "width": "100%",
+            "max_width": "narrow",
+            "type_preset": "rte",
+            "alignment": "center",
+            "padding-block-start": 0,
+            "padding-block-end": 0
+          }
+        }
+      },
+      "block_order": ["orgs_heading"],
+      "settings": {
+        "content_direction": "column",
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 0,
+        "section_width": "page-width",
+        "section_height": "",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 40,
+        "padding-block-end": 0
+      }
+    },
     "partner_logos": {
       "type": "_blocks",
       "blocks": {
         "logo_1": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-American-Hort.jpg",
             "image_ratio": "square",
             "width": "custom",
             "custom_width": 12,
@@ -402,6 +447,7 @@
         "logo_2": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-NJNLA.jpg",
             "image_ratio": "square",
             "width": "custom",
             "custom_width": 12,
@@ -413,6 +459,7 @@
         "logo_3": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-IPPS.jpg",
             "image_ratio": "square",
             "width": "custom",
             "custom_width": 12,
@@ -424,6 +471,7 @@
         "logo_4": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/logo-PPA-2.png",
             "image_ratio": "square",
             "width": "custom",
             "custom_width": 12,
@@ -435,6 +483,7 @@
         "logo_5": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-Horticultural-Research-Institute.jpg",
             "image_ratio": "square",
             "width": "custom",
             "custom_width": 12,
@@ -446,6 +495,79 @@
         "logo_6": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/logo-AHS.jpg",
+            "image_ratio": "square",
+            "width": "custom",
+            "custom_width": 12,
+            "width_mobile": "custom",
+            "custom_width_mobile": 25,
+            "height": "fit"
+          }
+        },
+        "logo_7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Overdevest-Bayshore-Center.jpg",
+            "image_ratio": "square",
+            "width": "custom",
+            "custom_width": 12,
+            "width_mobile": "custom",
+            "custom_width_mobile": 25,
+            "height": "fit"
+          }
+        },
+        "logo_8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/logo-PLNA-8.png",
+            "image_ratio": "square",
+            "width": "custom",
+            "custom_width": 12,
+            "width_mobile": "custom",
+            "custom_width_mobile": 25,
+            "height": "fit"
+          }
+        },
+        "logo_9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Overdevest-Cohansey-Area.jpg",
+            "image_ratio": "square",
+            "width": "custom",
+            "custom_width": 12,
+            "width_mobile": "custom",
+            "custom_width_mobile": 25,
+            "height": "fit"
+          }
+        },
+        "logo_10": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/logo-Penn-Hort-Society-1.jpg",
+            "image_ratio": "square",
+            "width": "custom",
+            "custom_width": 12,
+            "width_mobile": "custom",
+            "custom_width_mobile": 25,
+            "height": "fit"
+          }
+        },
+        "logo_11": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/logo-Longwood-Gardens-1.jpg",
+            "image_ratio": "square",
+            "width": "custom",
+            "custom_width": 12,
+            "width_mobile": "custom",
+            "custom_width_mobile": 25,
+            "height": "fit"
+          }
+        },
+        "logo_12": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/logo-NJ-Farm-Bureau.jpg",
             "image_ratio": "square",
             "width": "custom",
             "custom_width": 12,
@@ -455,7 +577,10 @@
           }
         }
       },
-      "block_order": ["logo_1", "logo_2", "logo_3", "logo_4", "logo_5", "logo_6"],
+      "block_order": [
+        "logo_1", "logo_2", "logo_3", "logo_4", "logo_5", "logo_6",
+        "logo_7", "logo_8", "logo_9", "logo_10", "logo_11", "logo_12"
+      ],
       "settings": {
         "content_direction": "row",
         "vertical_on_mobile": false,
@@ -465,7 +590,7 @@
         "section_width": "page-width",
         "section_height": "",
         "color_scheme": "scheme-1",
-        "padding-block-start": 40,
+        "padding-block-start": 16,
         "padding-block-end": 40
       }
     },
@@ -475,6 +600,7 @@
         "member_ed": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-team-Ed.jpg",
             "name": "Ed",
             "role": "Owner",
             "nickname": "The Engineer"
@@ -483,6 +609,7 @@
         "member_gail": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-team-Gail.jpg",
             "name": "Gail",
             "role": "Owner",
             "nickname": "The Teacher"
@@ -491,6 +618,7 @@
         "member_ryan": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-team-Ryan-2.jpg",
             "name": "Ryan",
             "role": "Finance",
             "nickname": "The Kid"
@@ -499,6 +627,7 @@
         "member_david": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-team-David.jpg",
             "name": "David",
             "role": "Director of Marketing",
             "nickname": "The Storyteller"
@@ -507,6 +636,7 @@
         "member_sue": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-team-Sue.jpg",
             "name": "Sue",
             "role": "Customer Support",
             "nickname": "Sue-per Fan"
@@ -515,6 +645,7 @@
         "member_lauren": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-Team-Lauren.png",
             "name": "Lauren",
             "role": "Customer Support",
             "nickname": ""
@@ -523,6 +654,7 @@
         "member_jeff": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/staff-photo-jeff.jpg",
             "name": "Jeff",
             "role": "Director of Shipping",
             "nickname": "The Chicken Tender"
@@ -531,6 +663,7 @@
         "member_jenni": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/jenni2.png",
             "name": "Jenni",
             "role": "Sales",
             "nickname": "The Adaptable One"
@@ -539,6 +672,7 @@
         "member_jennie_lyn": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-Team-Jennie.jpg",
             "name": "Jennie Lyn",
             "role": "Sales",
             "nickname": "The Sunflower Child"
@@ -547,6 +681,7 @@
         "member_karen": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-Team-Karen.jpg",
             "name": "Karen",
             "role": "Office Coordinator",
             "nickname": "The Dog Whisperer"
@@ -555,6 +690,7 @@
         "member_ken": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-team-Ken.jpg",
             "name": "Ken",
             "role": "Production Manager",
             "nickname": "Camo Ken"
@@ -563,6 +699,7 @@
         "member_phil": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-team-Phil.jpg",
             "name": "Phil",
             "role": "Operations Manager",
             "nickname": "Mr. Fix It"
@@ -571,6 +708,7 @@
         "member_caryn": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/Caryn.png",
             "name": "Caryn",
             "role": "IPM Coordinator",
             "nickname": "Carin' for your Plants"
@@ -579,6 +717,7 @@
         "member_felix": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-team-Felix.jpg",
             "name": "Felix",
             "role": "Manager",
             "nickname": "Innovator Extraordinaire"
@@ -587,6 +726,7 @@
         "member_luciano": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-team-Luciano.jpg",
             "name": "Luciano",
             "role": "Manager",
             "nickname": "Scouting Specialist"
@@ -595,6 +735,7 @@
         "member_teo": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-Team-Teo.jpg",
             "name": "Teo",
             "role": "Manager",
             "nickname": "Keeper of the Trees"
@@ -603,6 +744,7 @@
         "member_caly": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/Overdevest-team-Caly.jpg",
             "name": "Caly",
             "role": "Mascot",
             "nickname": "The Hairless One"
@@ -611,6 +753,7 @@
         "member_rocky": {
           "type": "team_member",
           "settings": {
+            "image": "shopify://shop_images/rocky.jpg",
             "name": "Rocky",
             "role": "Mascot",
             "nickname": "The Hunter"
@@ -625,7 +768,7 @@
         "member_caly", "member_rocky"
       ],
       "settings": {
-        "heading": "Our Team",
+        "heading": "Our Team.",
         "subheading": "<p>The people behind the plants.</p>",
         "columns": 4,
         "mobile_columns": "2",
@@ -636,30 +779,6 @@
         "padding-block-start": 40,
         "padding-block-end": 40
       }
-    },
-    "group_photo": {
-      "type": "_blocks",
-      "blocks": {
-        "team_photo": {
-          "type": "image",
-          "settings": {
-            "image_ratio": "landscape",
-            "width": "fill",
-            "height": "fit"
-          }
-        }
-      },
-      "block_order": ["team_photo"],
-      "settings": {
-        "content_direction": "column",
-        "horizontal_alignment_flex_direction_column": "center",
-        "gap": 0,
-        "section_width": "full-width",
-        "section_height": "",
-        "color_scheme": "scheme-1",
-        "padding-block-start": 0,
-        "padding-block-end": 0
-      }
     }
   },
   "order": [
@@ -668,8 +787,8 @@
     "narrative_text",
     "timeline",
     "our_farm",
+    "partner_logos_heading",
     "partner_logos",
-    "team",
-    "group_photo"
+    "team"
   ]
 }
