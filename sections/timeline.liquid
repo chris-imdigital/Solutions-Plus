@@ -144,21 +144,22 @@
       grid-column: 2;
     }
 
-    /* Dot positioned at center line */
+    /* Dot positioned at center line, staggered vertically */
     .timeline__entry--has-image .timeline__dot {
       position: absolute;
-      top: 50%;
       margin-block-start: 0;
       z-index: 2;
     }
 
     .timeline__entry--has-image:nth-child(odd) .timeline__dot {
       right: 0;
+      top: 38%;
       transform: translate(27px, -50%);
     }
 
     .timeline__entry--has-image:nth-child(even) .timeline__dot {
       left: 0;
+      top: 62%;
       transform: translate(-27px, -50%);
     }
   }
