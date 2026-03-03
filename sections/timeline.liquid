@@ -69,13 +69,41 @@
   }
 
   @media screen and (min-width: 750px) {
+    /* 2-column grid for side-by-side image cards */
+    .timeline__entries {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 44px;
+      row-gap: 32px;
+      grid-auto-flow: dense;
+    }
+
+    /* Center line on container replaces per-entry lines */
+    .timeline__entries::after {
+      content: '';
+      position: absolute;
+      left: calc(50% - 1px);
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--timeline-line-color, currentColor);
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
     .timeline__entry {
-      grid-template-columns: 1fr 20px 1fr;
-      gap: 0 24px;
+      padding-block-end: 0;
     }
 
     .timeline__entry::before {
-      left: calc(50% - 1px);
+      display: none;
+    }
+
+    /* Text-only entries span full width, keep internal grid */
+    .timeline__entry:not(.timeline__entry--has-image) {
+      grid-column: 1 / -1;
+      grid-template-columns: 1fr 20px 1fr;
+      gap: 0 24px;
     }
 
     .timeline__year {
@@ -85,7 +113,7 @@
       align-self: center;
     }
 
-    .timeline__dot {
+    .timeline__entry:not(.timeline__entry--has-image) .timeline__dot {
       grid-column: 2;
       grid-row: 1;
       align-self: center;
@@ -102,15 +130,36 @@
       margin-block-start: 0;
     }
 
-    /* Image card - desktop alternating placement */
-    .timeline__entry--has-image:nth-child(odd) .timeline__card {
-      grid-column: 1;
-      grid-row: 1;
+    /* Image entries: single column, paired side-by-side */
+    .timeline__entry--has-image {
+      display: block;
+      position: relative;
     }
 
-    .timeline__entry--has-image:nth-child(even) .timeline__card {
-      grid-column: 3;
-      grid-row: 1;
+    .timeline__entry--has-image:nth-child(odd) {
+      grid-column: 1;
+    }
+
+    .timeline__entry--has-image:nth-child(even) {
+      grid-column: 2;
+    }
+
+    /* Dot positioned at center line */
+    .timeline__entry--has-image .timeline__dot {
+      position: absolute;
+      top: 50%;
+      margin-block-start: 0;
+      z-index: 2;
+    }
+
+    .timeline__entry--has-image:nth-child(odd) .timeline__dot {
+      right: 0;
+      transform: translate(27px, -50%);
+    }
+
+    .timeline__entry--has-image:nth-child(even) .timeline__dot {
+      left: 0;
+      transform: translate(-27px, -50%);
     }
   }
 
