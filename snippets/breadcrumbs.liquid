@@ -1,0 +1,147 @@
+{% doc %}
+  Renders breadcrumb navigation from the product's browse_node metaobject hierarchy.
+  Falls back silently if no browse_node metafield is assigned to the product.
+  Emits JSON-LD BreadcrumbList only when all nodes in the trail have URLs.
+
+  The browse_node hierarchy is a self-referential metaobject tree (leaf -> parent chain).
+  Supports up to 4 ancestors (5 levels total including leaf).
+
+  @example
+  {% render 'breadcrumbs' %}
+{% enddoc %}
+
+{% liquid
+  assign leaf = product.metafields.custom.browse_node.value
+  assign p_1 = leaf.parent.value
+  assign p_2 = p_1.parent.value
+  assign p_3 = p_2.parent.value
+%}
+
+{% if leaf %}
+  <nav aria-label="{{ 'breadcrumbs.label' | t }}" class="breadcrumbs">
+    <ol class="breadcrumbs__list" role="list">
+      <li class="breadcrumbs__item">
+        <a href="{{ routes.root_url }}" class="breadcrumbs__link">{{ 'breadcrumbs.home' | t }}</a>
+      </li>
+
+      {% if p_3 %}
+        <li class="breadcrumbs__item">
+          {% if p_3.url.value != blank %}
+            <a href="{{ p_3.url.value }}" class="breadcrumbs__link">{{- p_3.name.value -}}</a>
+          {% else %}
+            <span class="breadcrumbs__text">{{- p_3.name.value -}}</span>
+          {% endif %}
+        </li>
+      {% endif %}
+
+      {% if p_2 %}
+        <li class="breadcrumbs__item">
+          {% if p_2.url.value != blank %}
+            <a href="{{ p_2.url.value }}" class="breadcrumbs__link">{{- p_2.name.value -}}</a>
+          {% else %}
+            <span class="breadcrumbs__text">{{- p_2.name.value -}}</span>
+          {% endif %}
+        </li>
+      {% endif %}
+
+      {% if p_1 %}
+        <li class="breadcrumbs__item">
+          {% if p_1.url.value != blank %}
+            <a href="{{ p_1.url.value }}" class="breadcrumbs__link">{{- p_1.name.value -}}</a>
+          {% else %}
+            <span class="breadcrumbs__text">{{- p_1.name.value -}}</span>
+          {% endif %}
+        </li>
+      {% endif %}
+
+      <li class="breadcrumbs__item">
+        {% if leaf.url.value != blank %}
+          <a href="{{ leaf.url.value }}" class="breadcrumbs__link">{{- leaf.name.value -}}</a>
+        {% else %}
+          <span class="breadcrumbs__text">{{- leaf.name.value -}}</span>
+        {% endif %}
+      </li>
+
+      <li class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">
+        <span class="breadcrumbs__text">{{ product.title }}</span>
+      </li>
+    </ol>
+  </nav>
+
+  {% liquid
+    assign emit_jsonld = true
+    if leaf.url.value == blank
+      assign emit_jsonld = false
+    endif
+    if p_1
+      if p_1.url.value == blank
+        assign emit_jsonld = false
+      endif
+    endif
+    if p_2
+      if p_2.url.value == blank
+        assign emit_jsonld = false
+      endif
+    endif
+    if p_3
+      if p_3.url.value == blank
+        assign emit_jsonld = false
+      endif
+    endif
+  %}
+
+  {% if emit_jsonld %}
+    {%- assign pos = 1 -%}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": {{ pos }}, "name": {{ 'breadcrumbs.home' | t | json }}, "item": "{{ shop.url }}" }
+        {%- if p_3 -%}{%- assign pos = pos | plus: 1 -%},{ "@type": "ListItem", "position": {{ pos }}, "name": {{ p_3.name.value | json }}, "item": "{{ p_3.url.value }}" }{%- endif -%}
+        {%- if p_2 -%}{%- assign pos = pos | plus: 1 -%},{ "@type": "ListItem", "position": {{ pos }}, "name": {{ p_2.name.value | json }}, "item": "{{ p_2.url.value }}" }{%- endif -%}
+        {%- if p_1 -%}{%- assign pos = pos | plus: 1 -%},{ "@type": "ListItem", "position": {{ pos }}, "name": {{ p_1.name.value | json }}, "item": "{{ p_1.url.value }}" }{%- endif -%}
+        {%- assign pos = pos | plus: 1 -%},{ "@type": "ListItem", "position": {{ pos }}, "name": {{ leaf.name.value | json }}, "item": "{{ leaf.url.value }}" }
+        {%- assign pos = pos | plus: 1 -%},{ "@type": "ListItem", "position": {{ pos }}, "name": {{ product.title | json }}, "item": "{{ shop.url }}{{ product.url }}" }
+      ]
+    }
+    </script>
+  {% endif %}
+{% endif %}
+
+{% stylesheet %}
+.breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs__item {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.breadcrumbs__item + .breadcrumbs__item::before {
+  content: '/';
+  margin-right: 0.25rem;
+  opacity: 0.5;
+}
+
+.breadcrumbs__link {
+  text-decoration: none;
+}
+
+.breadcrumbs__link:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs__item--current .breadcrumbs__text {
+  opacity: 0.6;
+}
+{% endstylesheet %}

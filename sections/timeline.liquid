@@ -1,0 +1,540 @@
+{% stylesheet %}
+  .timeline__heading {
+    margin-block-end: 40px;
+    text-align: center;
+  }
+
+  .timeline__entries {
+    position: relative;
+  }
+
+  .timeline__entry {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 0 16px;
+    padding-block-end: 32px;
+    position: relative;
+  }
+
+  .timeline__entry:last-child {
+    padding-block-end: 0;
+  }
+
+  /* Vertical line */
+  .timeline__entry::before {
+    content: '';
+    position: absolute;
+    left: 9px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--timeline-line-color, currentColor);
+    opacity: 0.3;
+  }
+
+  .timeline__entry:first-child::before {
+    top: 5px;
+  }
+
+  .timeline__entry:last-child::before {
+    bottom: calc(100% - 5px);
+  }
+
+  .timeline__dot {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--timeline-line-color, currentColor);
+    justify-self: center;
+    margin-block-start: 5px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .timeline__year {
+    grid-column: 2;
+    grid-row: 1;
+    font-weight: 700;
+  }
+
+  .timeline__description {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .timeline__description :first-child {
+    margin-block-start: 4px;
+  }
+
+  @media screen and (min-width: 750px) {
+    /* 2-column grid for side-by-side image cards */
+    .timeline__entries {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 44px;
+      row-gap: 32px;
+      grid-auto-flow: dense;
+    }
+
+    /* Center line on container replaces per-entry lines */
+    .timeline__entries::after {
+      content: '';
+      position: absolute;
+      left: calc(50% - 1px);
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--timeline-line-color, currentColor);
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .timeline__entry {
+      padding-block-end: 0;
+    }
+
+    .timeline__entry::before {
+      display: none;
+    }
+
+    /* Text-only entries span full width, keep internal grid */
+    .timeline__entry:not(.timeline__entry--has-image) {
+      grid-column: 1 / -1;
+      grid-template-columns: 1fr 20px 1fr;
+      gap: 0 24px;
+    }
+
+    .timeline__year {
+      grid-column: 1;
+      grid-row: 1;
+      text-align: right;
+      align-self: center;
+    }
+
+    .timeline__entry:not(.timeline__entry--has-image) .timeline__dot {
+      grid-column: 2;
+      grid-row: 1;
+      align-self: center;
+      margin-block-start: 0;
+    }
+
+    .timeline__description {
+      grid-column: 3;
+      grid-row: 1;
+      align-self: center;
+    }
+
+    .timeline__description :first-child {
+      margin-block-start: 0;
+    }
+
+    /* Image entries: single column, paired side-by-side */
+    .timeline__entry--has-image {
+      display: block;
+      position: relative;
+    }
+
+    .timeline__entry--has-image:nth-child(odd) {
+      grid-column: 1;
+    }
+
+    .timeline__entry--has-image:nth-child(even) {
+      grid-column: 2;
+    }
+
+    /* Dot positioned at center line, staggered vertically */
+    .timeline__entry--has-image .timeline__dot {
+      position: absolute;
+      margin-block-start: 0;
+      z-index: 2;
+    }
+
+    .timeline__entry--has-image:nth-child(odd) .timeline__dot {
+      right: 0;
+      top: 38%;
+      transform: translate(27px, -50%);
+    }
+
+    .timeline__entry--has-image:nth-child(even) .timeline__dot {
+      left: 0;
+      top: 62%;
+      transform: translate(-27px, -50%);
+    }
+  }
+
+  /* Dot tooltip - year label */
+  .timeline__dot-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 3;
+  }
+
+  /* Show year on dot hover OR card hover (entire entry) */
+  .timeline__dot:hover .timeline__dot-label,
+  .timeline__entry--has-image:hover .timeline__dot-label {
+    opacity: 1;
+  }
+
+  /* Image card entries */
+  .timeline__entry--has-image {
+    --timeline-image-opacity: 1;
+    --timeline-card-hover-overlay: 0;
+  }
+
+  .timeline__card:hover {
+    --timeline-image-opacity: 0.6;
+    --timeline-card-hover-overlay: 1;
+  }
+
+  .timeline__card {
+    position: relative;
+    overflow: hidden;
+    min-height: var(--timeline-card-min-height, 480px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 6px solid rgba(200, 200, 200, 0.4);
+    border-radius: var(--timeline-card-radius, 4px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    grid-column: 2;
+    grid-row: 1 / -1;
+    cursor: default;
+  }
+
+  .timeline__image-container {
+    position: absolute;
+    inset: 0;
+  }
+
+  .timeline__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: var(--timeline-image-opacity);
+    transition: opacity var(--animation-speed-slow) var(--animation-easing);
+  }
+
+  /* Description - hidden by default, shown on card hover */
+  .timeline__card-description {
+    position: relative;
+    z-index: var(--layer-raised, 2);
+    padding: 24px 24px 0;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    opacity: var(--timeline-card-hover-overlay);
+    transition: opacity var(--animation-speed-slow) var(--animation-easing);
+  }
+
+  .timeline__card-description :first-child {
+    margin-block-start: 0;
+  }
+
+  /* Title - always visible at bottom with dark band */
+  .timeline__card-title {
+    position: relative;
+    z-index: var(--layer-raised, 2);
+    padding: 16px 24px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: clamp(24px, 4vw, 40px);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+
+  /* Responsive card heights */
+  @media screen and (max-width: 749px) {
+    .timeline__card {
+      min-height: var(--timeline-card-min-height-mobile, 370px);
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .timeline__card {
+      min-height: 300px;
+    }
+
+    .timeline__card-title {
+      font-size: 24px;
+    }
+  }
+{% endstylesheet %}
+
+<div class="timeline color-{{ section.settings.color_scheme }}">
+  <div
+    class="timeline__container spacing-style section section--{{ section.settings.section_width }}"
+    style="
+      {% render 'spacing-style', settings: section.settings %}
+      {% if section.settings.line_color != blank %}
+        --timeline-line-color: {{ section.settings.line_color }};
+      {% endif %}
+    "
+  >
+    {%- if section.settings.heading != blank -%}
+      <h2 class="timeline__heading">{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    <div class="timeline__entries">
+      {%- for block in section.blocks -%}
+        {%- assign has_image = false -%}
+        {%- if block.settings.image != blank -%}
+          {%- assign has_image = true -%}
+        {%- endif -%}
+
+        <div
+          class="timeline__entry{% if has_image %} timeline__entry--has-image{% endif %}"
+          {% if has_image %}
+            style="--timeline-card-min-height: {{ block.settings.minimum_height }}px; --timeline-card-radius: {{ settings.card_corner_radius | default: 4 }}px;"
+          {% endif %}
+          {{ block.shopify_attributes }}
+        >
+          <div class="timeline__dot">
+            {%- if has_image and block.settings.year != blank -%}
+              <span class="timeline__dot-label">{{ block.settings.year }}</span>
+            {%- endif -%}
+          </div>
+
+          {%- if has_image -%}
+            <div class="timeline__card">
+              <div class="timeline__image-container">
+                {{
+                  block.settings.image
+                  | image_url: width: block.settings.image.width
+                  | image_tag: loading: 'lazy', class: 'timeline__image', sizes: '(min-width: 750px) 50vw, 100vw'
+                }}
+              </div>
+
+              {%- if block.settings.toggle_overlay -%}
+                {% render 'overlay', settings: block.settings, layer: 'var(--layer-flat)' %}
+              {%- endif -%}
+
+              {%- if block.settings.description != blank -%}
+                <div class="timeline__card-description">
+                  {{ block.settings.description }}
+                </div>
+              {%- endif -%}
+
+              {%- if block.settings.title != blank -%}
+                <div class="timeline__card-title">
+                  {{ block.settings.title }}
+                </div>
+              {%- endif -%}
+            </div>
+          {%- else -%}
+            <div class="timeline__year">{{ block.settings.year }}</div>
+            <div class="timeline__description">{{ block.settings.description }}</div>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:names.timeline",
+  "tag": "section",
+  "class": "section-wrapper",
+  "blocks": [
+    {
+      "type": "milestone",
+      "name": "t:names.milestone",
+      "settings": [
+        {
+          "type": "text",
+          "id": "year",
+          "label": "t:settings.year"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:settings.title",
+          "visible_if": "{{ block.settings.image != blank }}"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "t:settings.description"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:settings.image"
+        },
+        {
+          "type": "range",
+          "id": "minimum_height",
+          "label": "t:settings.minimum_height",
+          "min": 200,
+          "max": 600,
+          "step": 20,
+          "unit": "px",
+          "default": 480,
+          "visible_if": "{{ block.settings.image != blank }}"
+        },
+        {
+          "type": "checkbox",
+          "id": "toggle_overlay",
+          "label": "t:settings.media_overlay",
+          "default": true,
+          "visible_if": "{{ block.settings.image != blank }}"
+        },
+        {
+          "type": "color",
+          "id": "overlay_color",
+          "label": "t:settings.overlay_color",
+          "alpha": true,
+          "default": "#0000004D",
+          "visible_if": "{{ block.settings.image != blank and block.settings.toggle_overlay }}"
+        },
+        {
+          "type": "select",
+          "id": "overlay_style",
+          "label": "t:settings.overlay_style",
+          "options": [
+            {
+              "value": "solid",
+              "label": "t:options.solid"
+            },
+            {
+              "value": "gradient",
+              "label": "t:options.gradient"
+            }
+          ],
+          "default": "gradient",
+          "visible_if": "{{ block.settings.image != blank and block.settings.toggle_overlay }}"
+        },
+        {
+          "type": "select",
+          "id": "gradient_direction",
+          "label": "t:settings.gradient_direction",
+          "options": [
+            {
+              "value": "to top",
+              "label": "t:options.up"
+            },
+            {
+              "value": "to bottom",
+              "label": "t:options.down"
+            }
+          ],
+          "default": "to top",
+          "visible_if": "{{ block.settings.image != blank and block.settings.toggle_overlay and block.settings.overlay_style == 'gradient' }}"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings.heading"
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "t:settings.width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "t:options.page"
+        },
+        {
+          "value": "full-width",
+          "label": "t:options.full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:settings.color_scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "line_color",
+      "label": "t:settings.line_color"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.timeline",
+      "category": "t:categories.storytelling",
+      "blocks": [
+        {
+          "type": "milestone",
+          "settings": {
+            "year": "2020",
+            "description": "<p>A significant milestone in our journey.</p>"
+          }
+        },
+        {
+          "type": "milestone",
+          "settings": {
+            "year": "2022",
+            "description": "<p>Another chapter begins.</p>"
+          }
+        },
+        {
+          "type": "milestone",
+          "settings": {
+            "year": "2024",
+            "description": "<p>Looking ahead to the future.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

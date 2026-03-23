@@ -9,6 +9,14 @@
  */
 {
   "sections": {
+    "breadcrumbs_pdp": {
+      "type": "breadcrumbs",
+      "settings": {
+        "enable_container": true,
+        "padding_top": 16,
+        "padding_bottom": 8
+      }
+    },
     "main": {
       "type": "product-information",
       "blocks": {
@@ -821,6 +829,7 @@
     }
   },
   "order": [
+    "breadcrumbs_pdp",
     "main",
     "product_recommendations_qggXJq"
   ]

@@ -1,0 +1,297 @@
+{% stylesheet %}
+  .team-grid__header {
+    text-align: center;
+    margin-block-end: 40px;
+  }
+
+  .team-grid__heading {
+    margin-block-end: 8px;
+  }
+
+  .team-grid__subheading :first-child {
+    margin-block-start: 0;
+  }
+
+  .team-grid__grid {
+    display: grid;
+    grid-template-columns: repeat(var(--team-grid-mobile-columns, 1), 1fr);
+    gap: var(--team-grid-gap, 24px);
+  }
+
+  @media screen and (min-width: 750px) {
+    .team-grid__grid {
+      grid-template-columns: repeat(var(--team-grid-columns, 3), 1fr);
+    }
+  }
+
+  .team-grid__member {
+    text-align: var(--team-grid-text-alignment, center);
+  }
+
+  .team-grid__photo {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-block-end: 12px;
+  }
+
+  .team-grid__placeholder {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-block-end: 12px;
+  }
+
+  .team-grid__name {
+    font-weight: 700;
+    margin-block-end: 2px;
+  }
+
+  .team-grid__role {
+    opacity: 0.7;
+    margin-block-end: 2px;
+  }
+
+  .team-grid__nickname {
+    font-style: italic;
+    opacity: 0.6;
+  }
+{% endstylesheet %}
+
+<div class="team-grid color-{{ section.settings.color_scheme }}">
+  <div
+    class="team-grid__container spacing-style section section--{{ section.settings.section_width }}"
+    style="
+      {% render 'spacing-style', settings: section.settings %}
+      --team-grid-columns: {{ section.settings.columns }};
+      --team-grid-mobile-columns: {{ section.settings.mobile_columns }};
+      --team-grid-gap: {{ section.settings.gap }}px;
+      --team-grid-text-alignment: {{ section.settings.text_alignment }};
+    "
+  >
+    {%- if section.settings.heading != blank or section.settings.subheading != blank -%}
+      <div class="team-grid__header">
+        {%- if section.settings.heading != blank -%}
+          <h2 class="team-grid__heading">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.subheading != blank -%}
+          <div class="team-grid__subheading">{{ section.settings.subheading }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <div class="team-grid__grid">
+      {%- for block in section.blocks -%}
+        <div class="team-grid__member" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank -%}
+            {{
+              block.settings.image
+              | image_url: width: 600
+              | image_tag:
+                width: block.settings.image.width,
+                widths: '150, 300, 450, 600',
+                height: block.settings.image.height,
+                class: 'team-grid__photo',
+                sizes: '(min-width: 750px) 200px, 150px'
+            }}
+          {%- else -%}
+            <div class="team-grid__placeholder">
+              <placeholder-image
+                data-block-id="{{ block.id }}"
+                data-type="general"
+              ></placeholder-image>
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.name != blank -%}
+            <div class="team-grid__name">{{ block.settings.name }}</div>
+          {%- endif -%}
+          {%- if block.settings.role != blank -%}
+            <div class="team-grid__role">{{ block.settings.role }}</div>
+          {%- endif -%}
+          {%- if block.settings.nickname != blank -%}
+            <div class="team-grid__nickname">"{{ block.settings.nickname }}"</div>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:names.team_grid",
+  "tag": "section",
+  "class": "section-wrapper",
+  "blocks": [
+    {
+      "type": "team_member",
+      "name": "t:names.team_member",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:settings.image"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "t:settings.name"
+        },
+        {
+          "type": "text",
+          "id": "role",
+          "label": "t:settings.role"
+        },
+        {
+          "type": "text",
+          "id": "nickname",
+          "label": "t:settings.nickname"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:settings.heading"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "t:settings.text"
+    },
+    {
+      "type": "header",
+      "content": "t:content.grid"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "t:settings.columns",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "select",
+      "id": "mobile_columns",
+      "label": "t:settings.mobile_columns",
+      "options": [
+        {
+          "value": "1",
+          "label": "1"
+        },
+        {
+          "value": "2",
+          "label": "2"
+        }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "t:settings.gap",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "text_alignment",
+      "id": "text_alignment",
+      "label": "t:settings.alignment",
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "t:content.layout"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "t:settings.width",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "t:options.page"
+        },
+        {
+          "value": "full-width",
+          "label": "t:options.full"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "t:content.appearance"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:settings.color_scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:content.padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "t:settings.top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "t:settings.bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:names.team_grid",
+      "category": "t:categories.storytelling",
+      "blocks": [
+        {
+          "type": "team_member",
+          "settings": {
+            "name": "Team Member",
+            "role": "Role"
+          }
+        },
+        {
+          "type": "team_member",
+          "settings": {
+            "name": "Team Member",
+            "role": "Role"
+          }
+        },
+        {
+          "type": "team_member",
+          "settings": {
+            "name": "Team Member",
+            "role": "Role"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
