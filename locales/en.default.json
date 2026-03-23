@@ -311,6 +311,10 @@
     "shop_the_look": "Shop the look",
     "related_heading": "You may also want to see"
   },
+  "breadcrumbs": {
+    "label": "Breadcrumb",
+    "home": "Home"
+  },
   "shopify": {
     "checkout": {
       "order_summary": {
