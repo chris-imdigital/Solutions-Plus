@@ -48,6 +48,7 @@
         "heading",
         "page-content"
       ],
+      "disabled": true,
       "settings": {
         "content_direction": "column",
         "gap": 32,
@@ -56,29 +57,88 @@
         "padding-block-end": 80
       }
     },
-    "1765564497e6eefa25": {
+    "17756710054653335d": {
       "type": "_blocks",
       "blocks": {
-        "forms_inline_X7mRgN": {
-          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+        "text_cFBBhR": {
+          "type": "text",
+          "name": "t:names.heading",
           "settings": {
-            "form_id": "788122",
-            "text_color": "#202020",
-            "button_background_color": "#202020",
-            "button_label_color": "#FFFFFF",
-            "links_color": "#1878B9",
-            "errors_color": "#E02229",
-            "text_alignment": "center",
-            "form_alignment": "center",
-            "padding_top": 0,
-            "padding_bottom": 24,
-            "padding_right": 0,
-            "padding_left": 0
+            "text": "<h2>#LivingwithGROHE</h2>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_akwiTL": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>Keep sharing and tagging us on Instagram and other social media channels to appear in our curated gallery.</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "var(--color-foreground)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "moast_grid_4nAQ79": {
+          "type": "shopify://apps/moast/blocks/grid/1ac7547b-5443-446c-868c-7fab4566ee16",
+          "settings": {
+            "dynamic": true,
+            "feed": "default",
+            "feed_usage": "back_up",
+            "autoplay_mode": "all",
+            "product_cards": "none",
+            "show_captions": true,
+            "background_color": "#ffffff",
+            "slide_rounding": "0",
+            "padding_top": 8,
+            "slide_spacing": 8,
+            "custom_css": "",
+            "columns_desktop": 3,
+            "columns_tablet": 3,
+            "columns_mobile": 2,
+            "click_action": "fullscreen",
+            "float_location": "bottom_right",
+            "float_size": "medium"
           }
         }
       },
       "block_order": [
-        "forms_inline_X7mRgN"
+        "text_cFBBhR",
+        "text_akwiTL",
+        "moast_grid_4nAQ79"
       ],
       "settings": {
         "content_direction": "column",
@@ -86,7 +146,7 @@
         "horizontal_alignment": "flex-start",
         "vertical_alignment": "center",
         "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
+        "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
         "gap": 12,
         "section_width": "page-width",
@@ -111,6 +171,6 @@
   },
   "order": [
     "main",
-    "1765564497e6eefa25"
+    "17756710054653335d"
   ]
 }
